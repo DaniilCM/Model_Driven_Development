@@ -1,0 +1,17 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<TemplateID>{677bc15d-9fe0-41bc-9e25-8b6182531bc6}</TemplateID>
+		<Name Package="{be39daec-fbd1-404b-9f14-75443666ee53}" ID="103"/>
+		<Description Package="{be39daec-fbd1-404b-9f14-75443666ee53}" ID="102"/>
+		<Icon Package="{be39daec-fbd1-404b-9f14-75443666ee53}" ID="201" />
+		<ProjectType>VisualBasic</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCM_DSLProyectoIPS</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.JDCCCAJDOMDCM_DSLProyectoIPS">JDCCCAJDOMDCM_DSLProyectoIPS.JDCCCAJDOMDCM_DSLProyectoIPS</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.JDCCCAJDOMDCM_DSLProyectoIPS.diagram">JDCCCAJDOMDCM_DSLProyectoIPS.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+

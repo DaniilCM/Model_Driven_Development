@@ -1,0 +1,32 @@
+﻿<VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>CSharp\1033\JDCCCAJDOMDCMProyectoIPS</RelativePathOnDisk>
+    <TemplateFileName>CSharp.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{e15477a4-70e1-461b-8aee-ff2c40febcb4}</TemplateID>
+        <Name Package="{be39daec-fbd1-404b-9f14-75443666ee53}" ID="103" />
+        <Description Package="{be39daec-fbd1-404b-9f14-75443666ee53}" ID="102" />
+        <Icon Package="{be39daec-fbd1-404b-9f14-75443666ee53}" ID="201" />
+        <ProjectType>CSharp</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCM_DSLProyectoIPS</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>VisualBasic\1033\JDCCCAJDOMDCMProyectoIPS</RelativePathOnDisk>
+    <TemplateFileName>VisualBasic.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{677bc15d-9fe0-41bc-9e25-8b6182531bc6}</TemplateID>
+        <Name Package="{be39daec-fbd1-404b-9f14-75443666ee53}" ID="103" />
+        <Description Package="{be39daec-fbd1-404b-9f14-75443666ee53}" ID="102" />
+        <Icon Package="{be39daec-fbd1-404b-9f14-75443666ee53}" ID="201" />
+        <ProjectType>VisualBasic</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCM_DSLProyectoIPS</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+</VSTemplateManifest>
