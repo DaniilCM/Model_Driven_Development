@@ -82,7 +82,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		{
 			get
 			{
-				return global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel.SingletonResourceManager.GetString("JDCCCAJDOMDCMProyectoIPSToolboxTab", global::System.Globalization.CultureInfo.CurrentUICulture);
+				return global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel.SingletonResourceManager.GetString("VentanasToolboxTab", global::System.Globalization.CultureInfo.CurrentUICulture);
 			}
 		}
 		
@@ -94,7 +94,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		{
 			get
 			{
-				return 0;
+				return 2;
 			}
 		}
 		
@@ -143,6 +143,38 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
 			switch(itemId)
 			{
+				case "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipalToolToolboxItem":
+					// Add VentanaPrincipalTool shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipalToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						1, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("VentanaPrincipalToolToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("VentanaPrincipalToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanasToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("VentanasToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"VentanaPrincipalTool", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("VentanaPrincipalToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundariaToolToolboxItem":
+					// Add VentanaSecundariaTool shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundariaToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						2, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("VentanaSecundariaToolToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("VentanaSecundariaToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanasToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("VentanasToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"VentanaSecundariaTool", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("VentanaSecundariaToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
 				default:
 					break;
 			} // end switch

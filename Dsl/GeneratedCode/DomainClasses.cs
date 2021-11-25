@@ -12,20 +12,20 @@ using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 {
 	/// <summary>
-	/// DomainClass ExampleModel
+	/// DomainClass TapizVentanas
 	/// The root in which all other elements are embedded. Appears as a diagram.
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ExampleModel.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ExampleModel.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("83352336-ba2d-41b8-9689-fe4530564284")]
-	public partial class ExampleModel : DslModeling::ModelElement
+	public partial class TapizVentanas : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// ExampleModel domain class Id.
+		/// TapizVentanas domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x83352336, 0xba2d, 0x41b8, 0x96, 0x89, 0xfe, 0x45, 0x30, 0x56, 0x42, 0x84);
 		/// <summary>
@@ -33,7 +33,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ExampleModel(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public TapizVentanas(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -43,9 +43,763 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ExampleModel(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public TapizVentanas(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
+		}
+		#endregion
+		#region solucionTapiz domain property code
+		
+		/// <summary>
+		/// solucionTapiz domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid solucionTapizDomainPropertyId = new global::System.Guid(0xf15178db, 0xa2a2, 0x469f, 0x86, 0xc5, 0x9c, 0x24, 0x58, 0x6b, 0xc9, 0xa5);
+		
+		/// <summary>
+		/// Storage for solucionTapiz
+		/// </summary>
+		private global::System.String solucionTapizPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of solucionTapiz domain property.
+		/// Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas.Solucion Tapiz
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas/solucionTapiz.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas/solucionTapiz.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("f15178db-a2a2-469f-86c5-9c24586bc9a5")]
+		public global::System.String solucionTapiz
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return solucionTapizPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				solucionTapizPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the TapizVentanas.solucionTapiz domain property.
+		/// </summary>
+		internal sealed partial class solucionTapizPropertyHandler : DslModeling::DomainPropertyValueHandler<TapizVentanas, global::System.String>
+		{
+			private solucionTapizPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the TapizVentanas.solucionTapiz domain property value handler.
+			/// </summary>
+			public static readonly solucionTapizPropertyHandler Instance = new solucionTapizPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the TapizVentanas.solucionTapiz domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return solucionTapizDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(TapizVentanas element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.solucionTapizPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(TapizVentanas element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.solucionTapizPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region VentanaPrincipal opposite domain role accessor
+		/// <summary>
+		/// Gets or sets VentanaPrincipal.
+		/// Description for
+		/// UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.TapizVentanas
+		/// </summary>
+		public virtual VentanaPrincipal VentanaPrincipal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.TapizVentanasDomainRoleId) as VentanaPrincipal;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.TapizVentanasDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region VentanaSecundaria opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of VentanaSecundaria.
+		/// Description for
+		/// UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria.TapizVentanas
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<VentanaSecundaria> VentanaSecundaria
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<VentanaSecundaria>, VentanaSecundaria>(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria.TapizVentanasDomainRoleId);
+			}
+		}
+		#endregion
+		#region ElementGroupPrototype Merge methods
+		/// <summary>
+		/// Returns a value indicating whether the source element represented by the
+		/// specified root ProtoElement can be added to this element.
+		/// </summary>
+		/// <param name="rootElement">
+		/// The root ProtoElement representing a source element.  This can be null, 
+		/// in which case the ElementGroupPrototype does not contain an ProtoElements
+		/// and the code should inspect the ElementGroupPrototype context information.
+		/// </param>
+		/// <param name="elementGroupPrototype">The ElementGroupPrototype that contains the root ProtoElement.</param>
+		/// <returns>true if the source element represented by the ProtoElement can be added to this target element.</returns>
+		protected override bool CanMerge(DslModeling::ProtoElementBase rootElement, DslModeling::ElementGroupPrototype elementGroupPrototype)
+		{
+			if ( elementGroupPrototype == null ) throw new global::System.ArgumentNullException("elementGroupPrototype");
+			
+			if (rootElement != null)
+			{
+				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal.DomainClassId)) 
+				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: TapizVentanasHasVentanaPrincipal.VentanaPrincipal
+					if (this.VentanaPrincipal != null)
+					{
+						return false;
+					}
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria.DomainClassId)) 
+				{
+					return true;
+				}
+			}
+			return base.CanMerge(rootElement, elementGroupPrototype);
+		}
+		
+		/// <summary>
+		/// Called by the Merge process to create a relationship between 
+		/// this target element and the specified source element. 
+		/// Typically, a parent-child relationship is established
+		/// between the target element (the parent) and the source element 
+		/// (the child), but any relationship can be established.
+		/// </summary>
+		/// <param name="sourceElement">The element that is to be related to this model element.</param>
+		/// <param name="elementGroup">The group of source ModelElements that have been rehydrated into the target store.</param>
+		/// <remarks>
+		/// This method is overriden to create the relationship between the target element and the specified source element.
+		/// The base method does nothing.
+		/// </remarks>
+		protected override void MergeRelate(DslModeling::ModelElement sourceElement, DslModeling::ElementGroup elementGroup)
+		{
+			// In general, sourceElement is allowed to be null, meaning that the elementGroup must be parsed for special cases.
+			// However this is not supported in generated code.  Use double-deriving on this class and then override MergeRelate completely if you 
+			// need to support this case.
+			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
+		
+				
+			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal sourceVentanaPrincipal1 = sourceElement as global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal;
+			if (sourceVentanaPrincipal1 != null)
+			{
+				// Create link for path TapizVentanasHasVentanaPrincipal.VentanaPrincipal
+				this.VentanaPrincipal = sourceVentanaPrincipal1;
+
+				return;
+			}
+				
+			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria sourceVentanaSecundaria2 = sourceElement as global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria;
+			if (sourceVentanaSecundaria2 != null)
+			{
+				// Create link for path TapizVentanasHasVentanaSecundaria.VentanaSecundaria
+				this.VentanaSecundaria.Add(sourceVentanaSecundaria2);
+
+				return;
+			}
+		
+			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
+			// during a "Paste".
+			if (sourceElement is DslModeling::ExtensionElement
+				&& sourceElement.Store.TransactionManager.CurrentTransaction.TopLevelTransaction.Context.ContextInfo.ContainsKey("{9DAFD42A-DC0E-4d78-8C3F-8266B2CF8B33}"))
+			{
+				return;
+			}
+		
+			// Fall through to base class if this class hasn't handled the merge.
+			base.MergeRelate(sourceElement, elementGroup);
+		}
+		
+		/// <summary>
+		/// Performs operation opposite to MergeRelate - i.e. disconnects a given
+		/// element from the current one (removes links created by MergeRelate).
+		/// </summary>
+		/// <param name="sourceElement">Element to be unmerged/disconnected.</param>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		protected override void MergeDisconnect(DslModeling::ModelElement sourceElement)
+		{
+			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
+				
+			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal sourceVentanaPrincipal1 = sourceElement as global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal;
+			if (sourceVentanaPrincipal1 != null)
+			{
+				// Delete link for path TapizVentanasHasVentanaPrincipal.VentanaPrincipal
+				
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.GetLinks((global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas)this, sourceVentanaPrincipal1))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.TapizVentanasDomainRoleId, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.VentanaPrincipalDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria sourceVentanaSecundaria2 = sourceElement as global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria;
+			if (sourceVentanaSecundaria2 != null)
+			{
+				// Delete link for path TapizVentanasHasVentanaSecundaria.VentanaSecundaria
+				
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria.GetLinks((global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas)this, sourceVentanaSecundaria2))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria.TapizVentanasDomainRoleId, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria.VentanaSecundariaDomainRoleId);
+				}
+
+				return;
+			}
+			// Fall through to base class if this class hasn't handled the unmerge.
+			base.MergeDisconnect(sourceElement);
+		}
+		#endregion
+	}
+}
+namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
+{
+	/// <summary>
+	/// DomainClass Ventana
+	/// Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("0753d527-b320-4229-8abb-ad0c333b812a")]
+	public abstract partial class Ventana : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// Ventana domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x0753d527, 0xb320, 0x4229, 0x8a, 0xbb, 0xad, 0x0c, 0x33, 0x3b, 0x81, 0x2a);
+		/// <summary>
+		/// Constructor.
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		protected Ventana(DslModeling::Partition partition, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region nombre domain property code
+		
+		/// <summary>
+		/// nombre domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid nombreDomainPropertyId = new global::System.Guid(0x8adcd444, 0xc069, 0x45ff, 0x96, 0x44, 0x23, 0x24, 0xa6, 0x52, 0xcb, 0x45);
+		
+		/// <summary>
+		/// Storage for nombre
+		/// </summary>
+		private global::System.String nombrePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of nombre domain property.
+		/// Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana.Nombre
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana/nombre.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana/nombre.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("8adcd444-c069-45ff-9644-2324a652cb45")]
+		public global::System.String nombre
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombrePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				nombrePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Ventana.nombre domain property.
+		/// </summary>
+		internal sealed partial class nombrePropertyHandler : DslModeling::DomainPropertyValueHandler<Ventana, global::System.String>
+		{
+			private nombrePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Ventana.nombre domain property value handler.
+			/// </summary>
+			public static readonly nombrePropertyHandler Instance = new nombrePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Ventana.nombre domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return nombreDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Ventana element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombrePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Ventana element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombrePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region altura domain property code
+		
+		/// <summary>
+		/// altura domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid alturaDomainPropertyId = new global::System.Guid(0xe0dd34fd, 0xaf58, 0x431b, 0xa2, 0xc4, 0x56, 0x4a, 0x2f, 0x5b, 0xe1, 0xb8);
+		
+		/// <summary>
+		/// Storage for altura
+		/// </summary>
+		private global::System.Int16 alturaPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of altura domain property.
+		/// Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana.Altura
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana/altura.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana/altura.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("e0dd34fd-af58-431b-a2c4-564a2f5be1b8")]
+		public global::System.Int16 altura
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return alturaPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				alturaPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Ventana.altura domain property.
+		/// </summary>
+		internal sealed partial class alturaPropertyHandler : DslModeling::DomainPropertyValueHandler<Ventana, global::System.Int16>
+		{
+			private alturaPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Ventana.altura domain property value handler.
+			/// </summary>
+			public static readonly alturaPropertyHandler Instance = new alturaPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Ventana.altura domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return alturaDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int16 GetValue(Ventana element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.alturaPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Ventana element, global::System.Int16 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int16 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.alturaPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region anchura domain property code
+		
+		/// <summary>
+		/// anchura domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid anchuraDomainPropertyId = new global::System.Guid(0x797730df, 0xd486, 0x43df, 0x8f, 0x19, 0xd9, 0x28, 0x1a, 0x79, 0x0a, 0x65);
+		
+		/// <summary>
+		/// Storage for anchura
+		/// </summary>
+		private global::System.Int16 anchuraPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of anchura domain property.
+		/// Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana.Anchura
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana/anchura.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana/anchura.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("797730df-d486-43df-8f19-d9281a790a65")]
+		public global::System.Int16 anchura
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return anchuraPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				anchuraPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Ventana.anchura domain property.
+		/// </summary>
+		internal sealed partial class anchuraPropertyHandler : DslModeling::DomainPropertyValueHandler<Ventana, global::System.Int16>
+		{
+			private anchuraPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Ventana.anchura domain property value handler.
+			/// </summary>
+			public static readonly anchuraPropertyHandler Instance = new anchuraPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Ventana.anchura domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return anchuraDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Int16 GetValue(Ventana element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.anchuraPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Ventana element, global::System.Int16 newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Int16 oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.anchuraPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
+{
+	/// <summary>
+	/// DomainClass VentanaPrincipal
+	/// Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("41659137-4dfe-4c2f-a147-f3ec415763d1")]
+	public partial class VentanaPrincipal : Ventana
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// VentanaPrincipal domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x41659137, 0x4dfe, 0x4c2f, 0xa1, 0x47, 0xf3, 0xec, 0x41, 0x57, 0x63, 0xd1);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public VentanaPrincipal(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public VentanaPrincipal(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region TapizVentanas opposite domain role accessor
+		/// <summary>
+		/// Gets or sets TapizVentanas.
+		/// Description for
+		/// UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.VentanaPrincipal
+		/// </summary>
+		public virtual TapizVentanas TapizVentanas
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.VentanaPrincipalDomainRoleId) as TapizVentanas;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.VentanaPrincipalDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
+{
+	/// <summary>
+	/// DomainClass VentanaSecundaria
+	/// Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("d07c69e8-a07c-43f3-9b8c-f0cb12311488")]
+	public partial class VentanaSecundaria : Ventana
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// VentanaSecundaria domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xd07c69e8, 0xa07c, 0x43f3, 0x9b, 0x8c, 0xf0, 0xcb, 0x12, 0x31, 0x14, 0x88);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public VentanaSecundaria(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public VentanaSecundaria(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region modal domain property code
+		
+		/// <summary>
+		/// modal domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid modalDomainPropertyId = new global::System.Guid(0xef12f37d, 0xbaae, 0x4d83, 0xb5, 0x37, 0x74, 0xca, 0x49, 0x4e, 0x73, 0xc3);
+		
+		/// <summary>
+		/// Storage for modal
+		/// </summary>
+		private global::System.Boolean modalPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of modal domain property.
+		/// Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria.Modal
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria/modal.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria/modal.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("ef12f37d-baae-4d83-b537-74ca494e73c3")]
+		public global::System.Boolean modal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return modalPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				modalPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the VentanaSecundaria.modal domain property.
+		/// </summary>
+		internal sealed partial class modalPropertyHandler : DslModeling::DomainPropertyValueHandler<VentanaSecundaria, global::System.Boolean>
+		{
+			private modalPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the VentanaSecundaria.modal domain property value handler.
+			/// </summary>
+			public static readonly modalPropertyHandler Instance = new modalPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the VentanaSecundaria.modal domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return modalDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(VentanaSecundaria element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.modalPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(VentanaSecundaria element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.modalPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region TapizVentanas opposite domain role accessor
+		/// <summary>
+		/// Gets or sets TapizVentanas.
+		/// Description for
+		/// UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria.VentanaSecundaria
+		/// </summary>
+		public virtual TapizVentanas TapizVentanas
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria.VentanaSecundariaDomainRoleId) as TapizVentanas;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria.VentanaSecundariaDomainRoleId, value);
+			}
 		}
 		#endregion
 	}

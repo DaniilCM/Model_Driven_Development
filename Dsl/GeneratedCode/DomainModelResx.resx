@@ -125,13 +125,165 @@
     <value>JDCCCAJDOMDCMProyectoIPS</value>
     <comment>DisplayName for DslLibrary &apos;JDCCCAJDOMDCMProyectoIPS&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ExampleModel.Description" xml:space="preserve">
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas.Description" xml:space="preserve">
     <value>The root in which all other elements are embedded. Appears as a diagram.</value>
-    <comment>Description for DomainClass &apos;ExampleModel&apos;</comment>
+    <comment>Description for DomainClass &apos;TapizVentanas&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ExampleModel.DisplayName" xml:space="preserve">
-    <value>Example Model</value>
-    <comment>DisplayName for DomainClass &apos;ExampleModel&apos;</comment>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas.DisplayName" xml:space="preserve">
+    <value>Tapiz Ventanas</value>
+    <comment>DisplayName for DomainClass &apos;TapizVentanas&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas/solucionTapiz.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas.Solucion Tapiz</value>
+    <comment>Description for DomainProperty &apos;solucionTapiz&apos; on DomainClass &apos;TapizVentanas&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas/solucionTapiz.DisplayName" xml:space="preserve">
+    <value>Solucion Tapiz</value>
+    <comment>DisplayName for DomainProperty &apos;solucionTapiz&apos; on DomainClass &apos;TapizVentanas&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana</value>
+    <comment>Description for DomainClass &apos;Ventana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana.DisplayName" xml:space="preserve">
+    <value>Ventana</value>
+    <comment>DisplayName for DomainClass &apos;Ventana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana/nombre.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana.Nombre</value>
+    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;Ventana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana/nombre.DisplayName" xml:space="preserve">
+    <value>Nombre</value>
+    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;Ventana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana/altura.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana.Altura</value>
+    <comment>Description for DomainProperty &apos;altura&apos; on DomainClass &apos;Ventana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana/altura.DisplayName" xml:space="preserve">
+    <value>Altura</value>
+    <comment>DisplayName for DomainProperty &apos;altura&apos; on DomainClass &apos;Ventana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana/anchura.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana.Anchura</value>
+    <comment>Description for DomainProperty &apos;anchura&apos; on DomainClass &apos;Ventana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana/anchura.DisplayName" xml:space="preserve">
+    <value>Anchura</value>
+    <comment>DisplayName for DomainProperty &apos;anchura&apos; on DomainClass &apos;Ventana&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal</value>
+    <comment>Description for DomainClass &apos;VentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal.DisplayName" xml:space="preserve">
+    <value>Ventana Principal</value>
+    <comment>DisplayName for DomainClass &apos;VentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria</value>
+    <comment>Description for DomainClass &apos;VentanaSecundaria&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria.DisplayName" xml:space="preserve">
+    <value>Ventana Secundaria</value>
+    <comment>DisplayName for DomainClass &apos;VentanaSecundaria&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria/modal.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria.Modal</value>
+    <comment>Description for DomainProperty &apos;modal&apos; on DomainClass &apos;VentanaSecundaria&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria/modal.DisplayName" xml:space="preserve">
+    <value>Modal</value>
+    <comment>DisplayName for DomainProperty &apos;modal&apos; on DomainClass &apos;VentanaSecundaria&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal</value>
+    <comment>Description for DomainClass &apos;TapizVentanasHasVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.DisplayName" xml:space="preserve">
+    <value>Tapiz Ventanas Has Ventana Principal</value>
+    <comment>DisplayName for DomainClass &apos;TapizVentanasHasVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal/TapizVentanas.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.TapizVentanas</value>
+    <comment>Description for DomainRole &apos;TapizVentanas&apos; on DomainRelationship &apos;TapizVentanasHasVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal/TapizVentanas.DisplayName" xml:space="preserve">
+    <value>Tapiz Ventanas</value>
+    <comment>DisplayName for DomainRole &apos;TapizVentanas&apos; on DomainRelationship &apos;TapizVentanasHasVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal/TapizVentanas.PropertyDisplayName" xml:space="preserve">
+    <value>Ventana Principal</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TapizVentanas&apos; on DomainRelationship &apos;TapizVentanasHasVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal/VentanaPrincipal.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.VentanaPrincipal</value>
+    <comment>Description for DomainRole &apos;VentanaPrincipal&apos; on DomainRelationship &apos;TapizVentanasHasVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal/VentanaPrincipal.DisplayName" xml:space="preserve">
+    <value>Ventana Principal</value>
+    <comment>DisplayName for DomainRole &apos;VentanaPrincipal&apos; on DomainRelationship &apos;TapizVentanasHasVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal/VentanaPrincipal.PropertyDisplayName" xml:space="preserve">
+    <value>Tapiz Ventanas</value>
+    <comment>PropertyDisplayName for DomainRole &apos;VentanaPrincipal&apos; on DomainRelationship &apos;TapizVentanasHasVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria</value>
+    <comment>Description for DomainClass &apos;TapizVentanasHasVentanaSecundaria&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria.DisplayName" xml:space="preserve">
+    <value>Tapiz Ventanas Has Ventana Secundaria</value>
+    <comment>DisplayName for DomainClass &apos;TapizVentanasHasVentanaSecundaria&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria/TapizVentanas.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria.TapizVentanas</value>
+    <comment>Description for DomainRole &apos;TapizVentanas&apos; on DomainRelationship &apos;TapizVentanasHasVentanaSecundaria&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria/TapizVentanas.DisplayName" xml:space="preserve">
+    <value>Tapiz Ventanas</value>
+    <comment>DisplayName for DomainRole &apos;TapizVentanas&apos; on DomainRelationship &apos;TapizVentanasHasVentanaSecundaria&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria/TapizVentanas.PropertyDisplayName" xml:space="preserve">
+    <value>Ventana Secundaria</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TapizVentanas&apos; on DomainRelationship &apos;TapizVentanasHasVentanaSecundaria&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria/VentanaSecundaria.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria.VentanaSecundaria</value>
+    <comment>Description for DomainRole &apos;VentanaSecundaria&apos; on DomainRelationship &apos;TapizVentanasHasVentanaSecundaria&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria/VentanaSecundaria.DisplayName" xml:space="preserve">
+    <value>Ventana Secundaria</value>
+    <comment>DisplayName for DomainRole &apos;VentanaSecundaria&apos; on DomainRelationship &apos;TapizVentanasHasVentanaSecundaria&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria/VentanaSecundaria.PropertyDisplayName" xml:space="preserve">
+    <value>Tapiz Ventanas</value>
+    <comment>PropertyDisplayName for DomainRole &apos;VentanaSecundaria&apos; on DomainRelationship &apos;TapizVentanasHasVentanaSecundaria&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaPrincipal.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaPrincipal</value>
+    <comment>Description for DomainClass &apos;MetaforaVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaPrincipal.DisplayName" xml:space="preserve">
+    <value>Metafora Ventana Principal</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaVentanaPrincipal&apos;</comment>
+  </data>
+  <data name="MetaforaVentanaPrincipalnombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaSecundaria.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaSecundaria</value>
+    <comment>Description for DomainClass &apos;MetaforaVentanaSecundaria&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaSecundaria.DisplayName" xml:space="preserve">
+    <value>Metafora Ventana Secundaria</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaVentanaSecundaria&apos;</comment>
+  </data>
+  <data name="MetaforaVentanaSecundarianombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>JDCCCAJDOMDCMProyectoIPS (*.JDCCCAJDOMDCM_DSLProyectoIPS)|*.JDCCCAJDOMDCM_DSLProyectoIPS</value>
@@ -149,9 +301,29 @@
     <value>Minimal Language Diagram</value>
     <comment>DisplayName for DomainClass &apos;JDCCCAJDOMDCMProyectoIPSDiagram&apos;</comment>
   </data>
-  <data name="JDCCCAJDOMDCMProyectoIPSToolboxTab" xml:space="preserve">
-    <value>JDCCCAJDOMDCMProyectoIPS</value>
+  <data name="enlacesToolboxTab" xml:space="preserve">
+    <value>enlaces</value>
     <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="VentanasToolboxTab" xml:space="preserve">
+    <value>Ventanas</value>
+    <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="VentanaPrincipalToolToolboxItem" xml:space="preserve">
+    <value>VentanaPrincipalTool</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="VentanaPrincipalToolToolboxTooltip" xml:space="preserve">
+    <value>Crea una Ventana Principal </value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="VentanaSecundariaToolToolboxItem" xml:space="preserve">
+    <value>VentanaSecundariaTool</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="VentanaSecundariaToolToolboxTooltip" xml:space="preserve">
+    <value>Crea una Ventana Secundaria</value>
+    <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
     <value>ToolboxItem {0} was not found</value>
@@ -276,6 +448,23 @@ A DomainClass can be serialized as a moniker only if
   <data name="UnloadableSaveValidationFailed" xml:space="preserve">
     <value>There were validation errors. Continuing to save may cause the file to become unloadable, do you want to continue?</value>
     <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MetaforaVentanaPrincipaliconoVPDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\iconVP.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="MetaforaVentanaSecundariaiconVSDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\iconVS.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="VentanaPrincipalToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\VP.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="VentanaSecundariaToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\VS.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
   </data>
 </root>
 

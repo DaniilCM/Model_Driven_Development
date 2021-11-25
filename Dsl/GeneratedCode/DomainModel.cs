@@ -67,8 +67,16 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		{
 			return new global::System.Type[]
 			{
-				typeof(ExampleModel),
+				typeof(TapizVentanas),
+				typeof(Ventana),
+				typeof(VentanaPrincipal),
+				typeof(VentanaSecundaria),
+				typeof(TapizVentanasHasVentanaPrincipal),
+				typeof(TapizVentanasHasVentanaSecundaria),
 				typeof(JDCCCAJDOMDCMProyectoIPSDiagram),
+				typeof(MetaforaVentanaPrincipal),
+				typeof(MetaforaVentanaSecundaria),
+				typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FixUpDiagram),
 			};
 		}
 		/// <summary>
@@ -80,6 +88,25 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		{
 			return new DomainMemberInfo[]
 			{
+				new DomainMemberInfo(typeof(TapizVentanas), "solucionTapiz", TapizVentanas.solucionTapizDomainPropertyId, typeof(TapizVentanas.solucionTapizPropertyHandler)),
+				new DomainMemberInfo(typeof(Ventana), "nombre", Ventana.nombreDomainPropertyId, typeof(Ventana.nombrePropertyHandler)),
+				new DomainMemberInfo(typeof(Ventana), "altura", Ventana.alturaDomainPropertyId, typeof(Ventana.alturaPropertyHandler)),
+				new DomainMemberInfo(typeof(Ventana), "anchura", Ventana.anchuraDomainPropertyId, typeof(Ventana.anchuraPropertyHandler)),
+				new DomainMemberInfo(typeof(VentanaSecundaria), "modal", VentanaSecundaria.modalDomainPropertyId, typeof(VentanaSecundaria.modalPropertyHandler)),
+			};
+		}
+		/// <summary>
+		/// Gets the list of generated domain roles.
+		/// </summary>
+		/// <returns>List of role data.</returns>
+		protected sealed override DomainRolePlayerInfo[] GetGeneratedDomainRoles()
+		{
+			return new DomainRolePlayerInfo[]
+			{
+				new DomainRolePlayerInfo(typeof(TapizVentanasHasVentanaPrincipal), "TapizVentanas", TapizVentanasHasVentanaPrincipal.TapizVentanasDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizVentanasHasVentanaPrincipal), "VentanaPrincipal", TapizVentanasHasVentanaPrincipal.VentanaPrincipalDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizVentanasHasVentanaSecundaria), "TapizVentanas", TapizVentanasHasVentanaSecundaria.TapizVentanasDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizVentanasHasVentanaSecundaria), "VentanaSecundaria", TapizVentanasHasVentanaSecundaria.VentanaSecundariaDomainRoleId),
 			};
 		}
 		#endregion
@@ -101,9 +128,13 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(2);
-				createElementMap.Add(typeof(ExampleModel), 0);
-				createElementMap.Add(typeof(JDCCCAJDOMDCMProyectoIPSDiagram), 1);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(7);
+				createElementMap.Add(typeof(TapizVentanas), 0);
+				createElementMap.Add(typeof(VentanaPrincipal), 1);
+				createElementMap.Add(typeof(VentanaSecundaria), 2);
+				createElementMap.Add(typeof(JDCCCAJDOMDCMProyectoIPSDiagram), 3);
+				createElementMap.Add(typeof(MetaforaVentanaPrincipal), 4);
+				createElementMap.Add(typeof(MetaforaVentanaSecundaria), 5);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -117,8 +148,12 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			}
 			switch (index)
 			{
-				case 0: return new ExampleModel(partition, propertyAssignments);
-				case 1: return new JDCCCAJDOMDCMProyectoIPSDiagram(partition, propertyAssignments);
+				case 0: return new TapizVentanas(partition, propertyAssignments);
+				case 1: return new VentanaPrincipal(partition, propertyAssignments);
+				case 2: return new VentanaSecundaria(partition, propertyAssignments);
+				case 3: return new JDCCCAJDOMDCMProyectoIPSDiagram(partition, propertyAssignments);
+				case 4: return new MetaforaVentanaPrincipal(partition, propertyAssignments);
+				case 5: return new MetaforaVentanaSecundaria(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -141,7 +176,9 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(0);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(2);
+				createElementLinkMap.Add(typeof(TapizVentanasHasVentanaPrincipal), 0);
+				createElementLinkMap.Add(typeof(TapizVentanasHasVentanaSecundaria), 1);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -156,6 +193,8 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			}
 			switch (index)
 			{
+				case 0: return new TapizVentanasHasVentanaPrincipal(partition, roleAssignments, propertyAssignments);
+				case 1: return new TapizVentanasHasVentanaSecundaria(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -236,6 +275,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					DslModeling::ChainingElementVisitorFilter copyFilter = new DslModeling::ChainingElementVisitorFilter();
 					copyFilter.AddFilter(new JDCCCAJDOMDCMProyectoIPSCopyClosure());
 					copyFilter.AddFilter(new DslModeling::CoreCopyClosure());
+					copyFilter.AddFilter(new DslDiagrams::CoreDesignSurfaceCopyClosure());
 					
 					JDCCCAJDOMDCMProyectoIPSDomainModel.copyClosure = copyFilter;
 				}
@@ -255,6 +295,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					DslModeling::ChainingElementVisitorFilter removeFilter = new DslModeling::ChainingElementVisitorFilter();
 					removeFilter.AddFilter(new JDCCCAJDOMDCMProyectoIPSDeleteClosure());
 					removeFilter.AddFilter(new DslModeling::CoreDeleteClosure());
+					removeFilter.AddFilter(new DslDiagrams::CoreDesignSurfaceDeleteClosure());
 		
 					JDCCCAJDOMDCMProyectoIPSDomainModel.removeClosure = removeFilter;
 				}
@@ -273,6 +314,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			if(store == null) throw new global::System.ArgumentNullException("store");
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
+			ruleManager.EnableRule(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FixUpDiagram));
 		}
 		
 		/// <summary>
@@ -283,6 +325,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			if(store == null) throw new global::System.ArgumentNullException("store");
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
+			ruleManager.DisableRule(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FixUpDiagram));
 		}
 		#endregion
 	}
@@ -318,6 +361,8 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		public JDCCCAJDOMDCMProyectoIPSDeleteClosureBase()
 		{
 			#region Initialize DomainData Table
+			DomainRoles.Add(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.VentanaPrincipalDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria.VentanaSecundariaDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

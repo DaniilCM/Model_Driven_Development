@@ -28,7 +28,24 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
 	[VSShell::ProvideToolWindow(typeof(JDCCCAJDOMDCMProyectoIPSExplorerToolWindow), MultiInstances = false, Style = VSShell::VsDockStyle.Tabbed, Orientation = VSShell::ToolWindowOrientation.Right, Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
 	[VSShell::ProvideToolWindowVisibility(typeof(JDCCCAJDOMDCMProyectoIPSExplorerToolWindow), Constants.JDCCCAJDOMDCMProyectoIPSEditorFactoryId)]
-	[VSShell::ProvideStaticToolboxGroup("@JDCCCAJDOMDCMProyectoIPSToolboxTab;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSToolboxTab")]
+	[VSShell::ProvideStaticToolboxGroup("@enlacesToolboxTab;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.enlacesToolboxTab")]
+	[VSShell::ProvideStaticToolboxGroup("@VentanasToolboxTab;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanasToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanasToolboxTab",
+					"@VentanaPrincipalToolToolboxItem;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipalToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"VentanaPrincipalTool", 
+					"@VentanaPrincipalToolToolboxBitmap;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 0)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanasToolboxTab",
+					"@VentanaSecundariaToolToolboxItem;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundariaToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"VentanaSecundariaTool", 
+					"@VentanaSecundariaToolToolboxBitmap;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 1)]
 	[VSShell::ProvideEditorFactory(typeof(JDCCCAJDOMDCMProyectoIPSEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(JDCCCAJDOMDCMProyectoIPSEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(JDCCCAJDOMDCMProyectoIPSEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

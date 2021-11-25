@@ -159,6 +159,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\iconVP.jpg" />
+    <Content Include="Resources\iconVS.png" />
+    <Content Include="Resources\VP.bmp" />
+    <Content Include="Resources\VS.bmp" />
     <None Include="DslDefinition.dsl.diagram">
       <DependentUpon>DslDefinition.dsl</DependentUpon>
     </None>

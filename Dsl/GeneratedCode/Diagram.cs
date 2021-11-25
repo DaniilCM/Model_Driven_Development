@@ -74,6 +74,22 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			}
 		}
 		#endregion
+		#region Diagram styles
+		/// <summary>
+		/// Initializes style set resources for this shape type
+		/// </summary>
+		/// <param name="classStyleSet">The style set for this shape class</param>
+		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
+		{
+			base.InitializeResources(classStyleSet);
+			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Silver);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.DiagramBackground, backgroundBrush);
+		
+		}
+		#endregion
 		#region Auto-placement
 		/// <summary>
 		/// Indicate that child shapes should added through view fixup should be placed automatically.
@@ -85,6 +101,93 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				return true;
 			}
 		}
+		#endregion
+		#region Shape mapping
+		/// <summary>
+		/// Called during view fixup to ask the parent whether a shape should be created for the given child element.
+		/// </summary>
+		/// <remarks>
+		/// Always return true, since we assume there is only one diagram per model file for DSL scenarios.
+		/// </remarks>
+		protected override bool ShouldAddShapeForElement(DslModeling::ModelElement element)
+		{
+			return true;
+		}
+		
+		
+		/// <summary>
+		/// Creates a new shape for the given model element as part of view fixup
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily", Justification = "Generated code.")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
+		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
+		{
+			if(element is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal)
+			{
+				global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaPrincipal newShape = new global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaPrincipal(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria)
+			{
+				global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaSecundaria newShape = new global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaSecundaria(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			return base.CreateChildShape(element);
+		}
+		#endregion
+		#region Decorator mapping
+		/// <summary>
+		/// Initialize shape decorator mappings.  This is done here rather than in individual shapes because decorator maps
+		/// are defined per diagram type rather than per shape type.
+		/// </summary>
+		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		{
+			base.InitializeShapeFields(shapeFields);
+			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaPrincipal.DecoratorsInitialized += MetaforaVentanaPrincipalDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaSecundaria.DecoratorsInitialized += MetaforaVentanaSecundariaDecoratorMap.OnDecoratorsInitialized;
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for MetaforaVentanaPrincipal.
+		/// </summary>
+		internal static partial class MetaforaVentanaPrincipalDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MetaforaVentanaPrincipal.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana.nombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana.nombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for MetaforaVentanaSecundaria.
+		/// </summary>
+		internal static partial class MetaforaVentanaSecundariaDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MetaforaVentanaSecundaria.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana.nombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
 		#endregion
 		#region Constructors, domain class Id
 	
@@ -116,5 +219,67 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 }
 namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 {
+	
+		/// <summary>
+		/// Double derived implementation for the rule that initiates view fixup when an element that has an associated shape is added to the model.
+		/// This now enables the DSL author to everride the SkipFixUp() method 
+		/// </summary>
+		internal partial class FixUpDiagramBase : DslModeling::AddRule
+		{
+			protected virtual bool SkipFixup(DslModeling::ModelElement childElement)
+			{
+				return childElement.IsDeleted;
+			}
+		}
+	
+		/// <summary>
+		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		internal sealed partial class FixUpDiagram : FixUpDiagramBase
+		{
+			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+			public override void ElementAdded(DslModeling::ElementAddedEventArgs e)
+			{
+				if(e == null) throw new global::System.ArgumentNullException("e");
+			
+				DslModeling::ModelElement childElement = e.ModelElement;
+				if (this.SkipFixup(childElement))
+					return;
+				DslModeling::ModelElement parentElement;
+				if(childElement is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal)
+				{
+					parentElement = GetParentForVentanaPrincipal((global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria)
+				{
+					parentElement = GetParentForVentanaSecundaria((global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria)childElement);
+				} else
+				{
+					parentElement = null;
+				}
+				
+				if(parentElement != null)
+				{
+					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
+				}
+			}
+			public static global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas GetParentForVentanaPrincipal( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas result = root.TapizVentanas;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas GetParentForVentanaSecundaria( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas result = root.TapizVentanas;
+				if ( result == null ) return null;
+				return result;
+			}
+		}
+		
 	
 	}

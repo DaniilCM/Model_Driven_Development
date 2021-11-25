@@ -67,7 +67,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		///</summary>
 		protected override global::System.Guid RootElementDomainClassId
 		{
-			get { return global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ExampleModel.DomainClassId; }
+			get { return global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas.DomainClassId; }
 		}
 		
 		/// <summary>

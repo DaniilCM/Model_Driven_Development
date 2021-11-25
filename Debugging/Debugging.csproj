@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.10318</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8987249e-5613-4894-8193-77356a42ebcd}</ProjectGuid>
+    <ProjectGuid>{8987249E-5613-4894-8193-77356A42EBCD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Debugging</RootNamespace>
@@ -51,6 +51,10 @@
     <None Include="JDCCCAJDOMDCMProyectoIPSReportVB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>JDCCCAJDOMDCMProyectoIPSReportVB.txt</LastGenOutput>
+    </None>
+    <None Include="Protool.JDCCCAJDOMDCM_DSLProyectoIPS" />
+    <None Include="Protool.JDCCCAJDOMDCM_DSLProyectoIPS.diagram">
+      <DependentUpon>Protool.JDCCCAJDOMDCM_DSLProyectoIPS</DependentUpon>
     </None>
     <None Include="Sample.JDCCCAJDOMDCM_DSLProyectoIPS" />
     <None Include="Sample.JDCCCAJDOMDCM_DSLProyectoIPS.diagram">
