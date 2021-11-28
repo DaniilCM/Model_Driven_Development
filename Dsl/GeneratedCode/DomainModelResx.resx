@@ -197,6 +197,22 @@
     <value>Modal</value>
     <comment>DisplayName for DomainProperty &apos;modal&apos; on DomainClass &apos;VentanaSecundaria&apos;</comment>
   </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu</value>
+    <comment>Description for DomainClass &apos;Menu&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu.DisplayName" xml:space="preserve">
+    <value>Menu</value>
+    <comment>DisplayName for DomainClass &apos;Menu&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu/titulo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu.Titulo</value>
+    <comment>Description for DomainProperty &apos;titulo&apos; on DomainClass &apos;Menu&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu/titulo.DisplayName" xml:space="preserve">
+    <value>Titulo</value>
+    <comment>DisplayName for DomainProperty &apos;titulo&apos; on DomainClass &apos;Menu&apos;</comment>
+  </data>
   <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal</value>
     <comment>Description for DomainClass &apos;TapizVentanasHasVentanaPrincipal&apos;</comment>
@@ -261,6 +277,38 @@
     <value>Tapiz Ventanas</value>
     <comment>PropertyDisplayName for DomainRole &apos;VentanaSecundaria&apos; on DomainRelationship &apos;TapizVentanasHasVentanaSecundaria&apos;</comment>
   </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu</value>
+    <comment>Description for DomainClass &apos;VentanaHasMenu&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.DisplayName" xml:space="preserve">
+    <value>Ventana Has Menu</value>
+    <comment>DisplayName for DomainClass &apos;VentanaHasMenu&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Ventana.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.Ventana</value>
+    <comment>Description for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;VentanaHasMenu&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Ventana.DisplayName" xml:space="preserve">
+    <value>Ventana</value>
+    <comment>DisplayName for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;VentanaHasMenu&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Ventana.PropertyDisplayName" xml:space="preserve">
+    <value>Menu</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;VentanaHasMenu&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Menu.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.Menu</value>
+    <comment>Description for DomainRole &apos;Menu&apos; on DomainRelationship &apos;VentanaHasMenu&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Menu.DisplayName" xml:space="preserve">
+    <value>Menu</value>
+    <comment>DisplayName for DomainRole &apos;Menu&apos; on DomainRelationship &apos;VentanaHasMenu&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Menu.PropertyDisplayName" xml:space="preserve">
+    <value>Ventana</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Menu&apos; on DomainRelationship &apos;VentanaHasMenu&apos;</comment>
+  </data>
   <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaPrincipal.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaPrincipal</value>
     <comment>Description for DomainClass &apos;MetaforaVentanaPrincipal&apos;</comment>
@@ -282,6 +330,18 @@
     <comment>DisplayName for DomainClass &apos;MetaforaVentanaSecundaria&apos;</comment>
   </data>
   <data name="MetaforaVentanaSecundarianombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaMenu.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaMenu</value>
+    <comment>Description for DomainClass &apos;MetaforaMenu&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaMenu.DisplayName" xml:space="preserve">
+    <value>Metafora Menu</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaMenu&apos;</comment>
+  </data>
+  <data name="MetaforaMenunombreDecDefaultText" xml:space="preserve">
     <value>nombreDec</value>
     <comment>Text decorator default text</comment>
   </data>
@@ -323,6 +383,18 @@
   </data>
   <data name="VentanaSecundariaToolToolboxTooltip" xml:space="preserve">
     <value>Crea una Ventana Secundaria</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="MenusToolboxTab" xml:space="preserve">
+    <value>Menus</value>
+    <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="MenuToolToolboxItem" xml:space="preserve">
+    <value>MenuTool</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="MenuToolToolboxTooltip" xml:space="preserve">
+    <value>Menu Tool</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -464,6 +536,10 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="VentanaSecundariaToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\VS.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="MenuToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Mtool.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

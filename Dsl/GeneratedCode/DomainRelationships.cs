@@ -512,3 +512,242 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		#endregion
 	}
 }
+namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship VentanaHasMenu
+	/// Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("d3a2c103-f818-4bf0-80b0-3d9aaeb0ca98")]
+	public partial class VentanaHasMenu : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// VentanaHasMenu domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xd3a2c103, 0xf818, 0x4bf0, 0x80, 0xb0, 0x3d, 0x9a, 0xae, 0xb0, 0xca, 0x98);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a VentanaHasMenu link in the same Partition as the given Ventana
+		/// </summary>
+		/// <param name="source">Ventana to use as the source of the relationship.</param>
+		/// <param name="target">Menu to use as the target of the relationship.</param>
+		public VentanaHasMenu(Ventana source, Menu target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(VentanaHasMenu.VentanaDomainRoleId, source), new DslModeling::RoleAssignment(VentanaHasMenu.MenuDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public VentanaHasMenu(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public VentanaHasMenu(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public VentanaHasMenu(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public VentanaHasMenu(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Ventana domain role code
+		
+		/// <summary>
+		/// Ventana domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid VentanaDomainRoleId = new global::System.Guid(0xa10ed874, 0xee96, 0x4e7b, 0xbc, 0x94, 0x4b, 0x17, 0x6f, 0x15, 0x27, 0xd0);
+		
+		/// <summary>
+		/// DomainRole Ventana
+		/// Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.Ventana
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Ventana.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Ventana.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Menu", PropertyDisplayNameKey="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Ventana.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("a10ed874-ee96-4e7b-bc94-4b176f1527d0")]
+		public virtual Ventana Ventana
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Ventana)DslModeling::DomainRoleInfo.GetRolePlayer(this, VentanaDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, VentanaDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Ventana of a Menu
+		/// <summary>
+		/// Gets Ventana.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Ventana GetVentana(Menu element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, MenuDomainRoleId) as Ventana;
+		}
+		
+		/// <summary>
+		/// Sets Ventana.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetVentana(Menu element, Ventana newVentana)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, MenuDomainRoleId, newVentana);
+		}
+		#endregion
+		#region Menu domain role code
+		
+		/// <summary>
+		/// Menu domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid MenuDomainRoleId = new global::System.Guid(0x583a7a75, 0xcc5f, 0x48c6, 0xa8, 0x12, 0x68, 0x8c, 0x20, 0x88, 0xec, 0xfc);
+		
+		/// <summary>
+		/// DomainRole Menu
+		/// Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.Menu
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Menu.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Menu.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Ventana", PropertyDisplayNameKey="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Menu.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("583a7a75-cc5f-48c6-a812-688c2088ecfc")]
+		public virtual Menu Menu
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Menu)DslModeling::DomainRoleInfo.GetRolePlayer(this, MenuDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, MenuDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Menu of a Ventana
+		/// <summary>
+		/// Gets a list of Menu.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Menu> GetMenu(Ventana element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Menu>, Menu>(element, VentanaDomainRoleId);
+		}
+		#endregion
+		#region Ventana link accessor
+		/// <summary>
+		/// Get the list of VentanaHasMenu links to a Ventana.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu> GetLinksToMenu ( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana ventanaInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu>(ventanaInstance, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.VentanaDomainRoleId);
+		}
+		#endregion
+		#region Menu link accessor
+		/// <summary>
+		/// Get the VentanaHasMenu link to a Menu.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu GetLinkToVentana (global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu menuInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu>(menuInstance, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.MenuDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Menu not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region VentanaHasMenu instance accessors
+		
+		/// <summary>
+		/// Get any VentanaHasMenu links between a given Ventana and a Menu.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu> GetLinks( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana source, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu>(source, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.VentanaDomainRoleId);
+			foreach ( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu link in links )
+			{
+				if ( target.Equals(link.Menu) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one VentanaHasMenu link between a given Ventanaand a Menu.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu GetLink( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana source, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu>(source, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.VentanaDomainRoleId);
+			foreach ( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu link in links )
+			{
+				if ( target.Equals(link.Menu) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}

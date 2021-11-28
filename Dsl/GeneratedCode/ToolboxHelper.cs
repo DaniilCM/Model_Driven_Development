@@ -175,6 +175,22 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
+				case "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MenuToolToolboxItem":
+					// Add MenuTool shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MenuToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						1, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("MenuToolToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("MenuToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MenusToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("MenusToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"MenuTool", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("MenuToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
 				default:
 					break;
 			} // end switch

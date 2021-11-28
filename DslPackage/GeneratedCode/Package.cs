@@ -46,6 +46,15 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					"@VentanaSecundariaToolToolboxBitmap;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
 					0xff00ff,
 					Index = 1)]
+	[VSShell::ProvideStaticToolboxGroup("@MenusToolboxTab;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MenusToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MenusToolboxTab",
+					"@MenuToolToolboxItem;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MenuToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"MenuTool", 
+					"@MenuToolToolboxBitmap;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 2)]
 	[VSShell::ProvideEditorFactory(typeof(JDCCCAJDOMDCMProyectoIPSEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(JDCCCAJDOMDCMProyectoIPSEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(JDCCCAJDOMDCMProyectoIPSEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

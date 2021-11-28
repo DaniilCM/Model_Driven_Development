@@ -593,6 +593,118 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 		
 		#endregion
+		#region Menu opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Menu.
+		/// Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.Ventana
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Menu> Menu
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Menu>, Menu>(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.VentanaDomainRoleId);
+			}
+		}
+		#endregion
+		#region ElementGroupPrototype Merge methods
+		/// <summary>
+		/// Returns a value indicating whether the source element represented by the
+		/// specified root ProtoElement can be added to this element.
+		/// </summary>
+		/// <param name="rootElement">
+		/// The root ProtoElement representing a source element.  This can be null, 
+		/// in which case the ElementGroupPrototype does not contain an ProtoElements
+		/// and the code should inspect the ElementGroupPrototype context information.
+		/// </param>
+		/// <param name="elementGroupPrototype">The ElementGroupPrototype that contains the root ProtoElement.</param>
+		/// <returns>true if the source element represented by the ProtoElement can be added to this target element.</returns>
+		protected override bool CanMerge(DslModeling::ProtoElementBase rootElement, DslModeling::ElementGroupPrototype elementGroupPrototype)
+		{
+			if ( elementGroupPrototype == null ) throw new global::System.ArgumentNullException("elementGroupPrototype");
+			
+			if (rootElement != null)
+			{
+				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu.DomainClassId)) 
+				{
+					return true;
+				}
+			}
+			return base.CanMerge(rootElement, elementGroupPrototype);
+		}
+		
+		/// <summary>
+		/// Called by the Merge process to create a relationship between 
+		/// this target element and the specified source element. 
+		/// Typically, a parent-child relationship is established
+		/// between the target element (the parent) and the source element 
+		/// (the child), but any relationship can be established.
+		/// </summary>
+		/// <param name="sourceElement">The element that is to be related to this model element.</param>
+		/// <param name="elementGroup">The group of source ModelElements that have been rehydrated into the target store.</param>
+		/// <remarks>
+		/// This method is overriden to create the relationship between the target element and the specified source element.
+		/// The base method does nothing.
+		/// </remarks>
+		protected override void MergeRelate(DslModeling::ModelElement sourceElement, DslModeling::ElementGroup elementGroup)
+		{
+			// In general, sourceElement is allowed to be null, meaning that the elementGroup must be parsed for special cases.
+			// However this is not supported in generated code.  Use double-deriving on this class and then override MergeRelate completely if you 
+			// need to support this case.
+			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
+		
+				
+			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu sourceMenu1 = sourceElement as global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu;
+			if (sourceMenu1 != null)
+			{
+				// Create link for path VentanaHasMenu.Menu
+				this.Menu.Add(sourceMenu1);
+
+				return;
+			}
+		
+			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
+			// during a "Paste".
+			if (sourceElement is DslModeling::ExtensionElement
+				&& sourceElement.Store.TransactionManager.CurrentTransaction.TopLevelTransaction.Context.ContextInfo.ContainsKey("{9DAFD42A-DC0E-4d78-8C3F-8266B2CF8B33}"))
+			{
+				return;
+			}
+		
+			// Fall through to base class if this class hasn't handled the merge.
+			base.MergeRelate(sourceElement, elementGroup);
+		}
+		
+		/// <summary>
+		/// Performs operation opposite to MergeRelate - i.e. disconnects a given
+		/// element from the current one (removes links created by MergeRelate).
+		/// </summary>
+		/// <param name="sourceElement">Element to be unmerged/disconnected.</param>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		protected override void MergeDisconnect(DslModeling::ModelElement sourceElement)
+		{
+			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
+				
+			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu sourceMenu1 = sourceElement as global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu;
+			if (sourceMenu1 != null)
+			{
+				// Delete link for path VentanaHasMenu.Menu
+				
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.GetLinks((global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana)this, sourceMenu1))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.VentanaDomainRoleId, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.MenuDomainRoleId);
+				}
+
+				return;
+			}
+			// Fall through to base class if this class hasn't handled the unmerge.
+			base.MergeDisconnect(sourceElement);
+		}
+		#endregion
 	}
 }
 namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
@@ -799,6 +911,153 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			set
 			{
 				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaSecundaria.VentanaSecundariaDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
+{
+	/// <summary>
+	/// DomainClass Menu
+	/// Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("c4b92909-e6b2-4231-aeae-bbc180e07e16")]
+	public partial class Menu : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// Menu domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc4b92909, 0xe6b2, 0x4231, 0xae, 0xae, 0xbb, 0xc1, 0x80, 0xe0, 0x7e, 0x16);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Menu(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Menu(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region titulo domain property code
+		
+		/// <summary>
+		/// titulo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid tituloDomainPropertyId = new global::System.Guid(0x95fe9653, 0x8d0b, 0x44aa, 0x97, 0x52, 0x1c, 0xe0, 0x42, 0xbe, 0x9c, 0xe5);
+		
+		/// <summary>
+		/// Storage for titulo
+		/// </summary>
+		private global::System.String tituloPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of titulo domain property.
+		/// Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu.Titulo
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu/titulo.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu/titulo.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("95fe9653-8d0b-44aa-9752-1ce042be9ce5")]
+		public global::System.String titulo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tituloPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				tituloPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Menu.titulo domain property.
+		/// </summary>
+		internal sealed partial class tituloPropertyHandler : DslModeling::DomainPropertyValueHandler<Menu, global::System.String>
+		{
+			private tituloPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Menu.titulo domain property value handler.
+			/// </summary>
+			public static readonly tituloPropertyHandler Instance = new tituloPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Menu.titulo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return tituloDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Menu element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tituloPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Menu element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tituloPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Ventana opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Ventana.
+		/// Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.Menu
+		/// </summary>
+		public virtual Ventana Ventana
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.MenuDomainRoleId) as Ventana;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.MenuDomainRoleId, value);
 			}
 		}
 		#endregion

@@ -134,6 +134,12 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
+			if(element is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu)
+			{
+				global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaMenu newShape = new global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaMenu(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
 			return base.CreateChildShape(element);
 		}
 		#endregion
@@ -147,6 +153,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			base.InitializeShapeFields(shapeFields);
 			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaPrincipal.DecoratorsInitialized += MetaforaVentanaPrincipalDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaSecundaria.DecoratorsInitialized += MetaforaVentanaSecundariaDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaMenu.DecoratorsInitialized += MetaforaMenuDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
@@ -184,6 +191,24 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana.nombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for MetaforaMenu.
+		/// </summary>
+		internal static partial class MetaforaMenuDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MetaforaMenu.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu.tituloDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
@@ -237,6 +262,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -255,6 +281,17 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				if(childElement is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria)
 				{
 					parentElement = GetParentForVentanaSecundaria((global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForMenu(Menu childElement)
+					// {
+					// }
+					// must be implemented in a partial class of UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForMenu((global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu)childElement);
 				} else
 				{
 					parentElement = null;
