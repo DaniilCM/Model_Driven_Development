@@ -261,6 +261,14 @@
     <value>Fin Aplicacion</value>
     <comment>DisplayName for DomainClass &apos;FinAplicacion&apos;</comment>
   </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion/nombre.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion.Nombre</value>
+    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;FinAplicacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion/nombre.DisplayName" xml:space="preserve">
+    <value>Nombre</value>
+    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;FinAplicacion&apos;</comment>
+  </data>
   <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal</value>
     <comment>Description for DomainClass &apos;TapizVentanasHasVentanaPrincipal&apos;</comment>
@@ -529,6 +537,14 @@
     <value>nombreDec</value>
     <comment>Text decorator default text</comment>
   </data>
+  <data name="MetaforaVentanaPrincipalalturaDefaultText" xml:space="preserve">
+    <value>altura</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="MetaforaVentanaPrincipalanchuraDefaultText" xml:space="preserve">
+    <value>anchura</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaSecundaria.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaSecundaria</value>
     <comment>Description for DomainClass &apos;MetaforaVentanaSecundaria&apos;</comment>
@@ -539,6 +555,18 @@
   </data>
   <data name="MetaforaVentanaSecundarianombreDecDefaultText" xml:space="preserve">
     <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="MetaforaVentanaSecundariamodalDefaultText" xml:space="preserve">
+    <value>modal</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="MetaforaVentanaSecundariaalturaDefaultText" xml:space="preserve">
+    <value>altura</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="MetaforaVentanaSecundariaanchuraDefaultText" xml:space="preserve">
+    <value>anchura</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaMenu.Description" xml:space="preserve">
@@ -577,6 +605,26 @@
     <value>nombreDec</value>
     <comment>Text decorator default text</comment>
   </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaFinAplicacion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaFinAplicacion</value>
+    <comment>Description for DomainClass &apos;MetaforaFinAplicacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaFinAplicacion.DisplayName" xml:space="preserve">
+    <value>Metafora Fin Aplicacion</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaFinAplicacion&apos;</comment>
+  </data>
+  <data name="MetaforaFinAplicacionnombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaN_V.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaN_V</value>
+    <comment>Description for DomainClass &apos;MetaforaN_V&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaN_V.DisplayName" xml:space="preserve">
+    <value>Metafora N_ V</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaN_V&apos;</comment>
+  </data>
   <data name="FormatList" xml:space="preserve">
     <value>JDCCCAJDOMDCMProyectoIPS (*.JDCCCAJDOMDCM_DSLProyectoIPS)|*.JDCCCAJDOMDCM_DSLProyectoIPS</value>
     <comment>A list of file format specifiers for the Save dialog box</comment>
@@ -596,6 +644,14 @@
   <data name="enlacesToolboxTab" xml:space="preserve">
     <value>enlaces</value>
     <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="N_VToolToolboxItem" xml:space="preserve">
+    <value>N_VTool</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="N_VToolToolboxTooltip" xml:space="preserve">
+    <value>N_ VTool</value>
+    <comment>Toolbox tooltip text</comment>
   </data>
   <data name="VentanasToolboxTab" xml:space="preserve">
     <value>Ventanas</value>
@@ -627,6 +683,30 @@
   </data>
   <data name="MenuToolToolboxTooltip" xml:space="preserve">
     <value>Menu Tool</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="BotonToolboxTab" xml:space="preserve">
+    <value>Boton</value>
+    <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="BotonToolToolboxItem" xml:space="preserve">
+    <value>BotonTool</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="BotonToolToolboxTooltip" xml:space="preserve">
+    <value>Boton Tool</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="Item MenuToolboxTab" xml:space="preserve">
+    <value>Item Menu</value>
+    <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="ItemMenuToolToolboxItem" xml:space="preserve">
+    <value>ItemMenuTool</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ItemMenuToolToolboxTooltip" xml:space="preserve">
+    <value>Item Menu Tool</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -762,6 +842,22 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\iconVS.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Icon decorator default image</comment>
   </data>
+  <data name="MetaforaMenuIconMenuDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\IconM.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="MetaforaItemMenuIconItemMenuDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\IconIm.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="MetaforaBotonIconBDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\iconB.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="N_VToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\N_V.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
   <data name="VentanaPrincipalToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\VP.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
@@ -772,6 +868,14 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="MenuToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\Mtool.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="BotonToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\B.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ItemMenuToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Im.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

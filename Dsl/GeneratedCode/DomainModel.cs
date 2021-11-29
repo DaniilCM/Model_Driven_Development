@@ -85,12 +85,15 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				typeof(TapizVentanasHasFinAplicacioned),
 				typeof(NavegadorReferencesFinAplicacioned),
 				typeof(JDCCCAJDOMDCMProyectoIPSDiagram),
+				typeof(MetaforaN_V),
 				typeof(MetaforaVentanaPrincipal),
 				typeof(MetaforaVentanaSecundaria),
 				typeof(MetaforaMenu),
 				typeof(MetaforaItemMenu),
 				typeof(MetaforaBoton),
+				typeof(MetaforaFinAplicacion),
 				typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FixUpDiagram),
+				typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ConnectorRolePlayerChanged),
 			};
 		}
 		/// <summary>
@@ -110,6 +113,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				new DomainMemberInfo(typeof(VentanaSecundaria), "descripcion", VentanaSecundaria.descripcionDomainPropertyId, typeof(VentanaSecundaria.descripcionPropertyHandler)),
 				new DomainMemberInfo(typeof(Menu), "titulo", Menu.tituloDomainPropertyId, typeof(Menu.tituloPropertyHandler)),
 				new DomainMemberInfo(typeof(Navegador), "titulo", Navegador.tituloDomainPropertyId, typeof(Navegador.tituloPropertyHandler)),
+				new DomainMemberInfo(typeof(FinAplicacion), "nombre", FinAplicacion.nombreDomainPropertyId, typeof(FinAplicacion.nombrePropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -157,7 +161,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(15);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(17);
 				createElementMap.Add(typeof(TapizVentanas), 0);
 				createElementMap.Add(typeof(VentanaPrincipal), 1);
 				createElementMap.Add(typeof(VentanaSecundaria), 2);
@@ -166,11 +170,13 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				createElementMap.Add(typeof(ItemMenu), 5);
 				createElementMap.Add(typeof(FinAplicacion), 6);
 				createElementMap.Add(typeof(JDCCCAJDOMDCMProyectoIPSDiagram), 7);
-				createElementMap.Add(typeof(MetaforaVentanaPrincipal), 8);
-				createElementMap.Add(typeof(MetaforaVentanaSecundaria), 9);
-				createElementMap.Add(typeof(MetaforaMenu), 10);
-				createElementMap.Add(typeof(MetaforaItemMenu), 11);
-				createElementMap.Add(typeof(MetaforaBoton), 12);
+				createElementMap.Add(typeof(MetaforaN_V), 8);
+				createElementMap.Add(typeof(MetaforaVentanaPrincipal), 9);
+				createElementMap.Add(typeof(MetaforaVentanaSecundaria), 10);
+				createElementMap.Add(typeof(MetaforaMenu), 11);
+				createElementMap.Add(typeof(MetaforaItemMenu), 12);
+				createElementMap.Add(typeof(MetaforaBoton), 13);
+				createElementMap.Add(typeof(MetaforaFinAplicacion), 14);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -192,11 +198,13 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				case 5: return new ItemMenu(partition, propertyAssignments);
 				case 6: return new FinAplicacion(partition, propertyAssignments);
 				case 7: return new JDCCCAJDOMDCMProyectoIPSDiagram(partition, propertyAssignments);
-				case 8: return new MetaforaVentanaPrincipal(partition, propertyAssignments);
-				case 9: return new MetaforaVentanaSecundaria(partition, propertyAssignments);
-				case 10: return new MetaforaMenu(partition, propertyAssignments);
-				case 11: return new MetaforaItemMenu(partition, propertyAssignments);
-				case 12: return new MetaforaBoton(partition, propertyAssignments);
+				case 8: return new MetaforaN_V(partition, propertyAssignments);
+				case 9: return new MetaforaVentanaPrincipal(partition, propertyAssignments);
+				case 10: return new MetaforaVentanaSecundaria(partition, propertyAssignments);
+				case 11: return new MetaforaMenu(partition, propertyAssignments);
+				case 12: return new MetaforaItemMenu(partition, propertyAssignments);
+				case 13: return new MetaforaBoton(partition, propertyAssignments);
+				case 14: return new MetaforaFinAplicacion(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -370,6 +378,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.EnableRule(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FixUpDiagram));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ConnectorRolePlayerChanged));
 		}
 		
 		/// <summary>
@@ -381,6 +390,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.DisableRule(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FixUpDiagram));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ConnectorRolePlayerChanged));
 		}
 		#endregion
 	}

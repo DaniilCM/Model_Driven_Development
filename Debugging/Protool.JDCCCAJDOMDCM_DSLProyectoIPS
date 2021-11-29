@@ -7,19 +7,25 @@
   </ventanaPrincipal>
   <ventanaSecundaria>
     <tapizVentanasHasVentanaSecundaria Id="141d2a27-c580-4e18-87a9-22c49b1e621c">
-      <ventanaSecundaria Id="ac087a2a-2764-4d70-b0e0-60d26ea5d621" nombre="World Peace" altura="10" anchura="60" modal="false" fecha="" />
+      <ventanaSecundaria Id="ac087a2a-2764-4d70-b0e0-60d26ea5d621" nombre="World Peace" altura="10" anchura="60" modal="false" />
     </tapizVentanasHasVentanaSecundaria>
     <tapizVentanasHasVentanaSecundaria Id="09a0da55-1c48-4c36-a554-ddb5711b22ce">
-      <ventanaSecundaria Id="8fe54ee2-81bb-44ba-b9ae-d5eb798cb240" nombre="No Hunger" altura="10" anchura="60" modal="false" fecha="" />
+      <ventanaSecundaria Id="8fe54ee2-81bb-44ba-b9ae-d5eb798cb240" nombre="No Hunger" altura="10" anchura="60" modal="false" />
     </tapizVentanasHasVentanaSecundaria>
     <tapizVentanasHasVentanaSecundaria Id="bb2930f0-5fe5-488c-b2d7-f2921b8088ba">
-      <ventanaSecundaria Id="f1d0bce2-c2ef-44bb-b306-904ed4ae26ed" nombre="Space Travel" altura="10" anchura="60" modal="false" fecha="" />
+      <ventanaSecundaria Id="f1d0bce2-c2ef-44bb-b306-904ed4ae26ed" nombre="Space Travel" altura="10" anchura="60" modal="false" descripcion="Quiero viajar a Marte con Elon Musk y DogeCoin" />
     </tapizVentanasHasVentanaSecundaria>
     <tapizVentanasHasVentanaSecundaria Id="46473f1b-a2d3-4245-b906-fbeb840da691">
-      <ventanaSecundaria Id="5a584eab-3a42-48ba-aec7-db456b2f0ecc" nombre="Cancer Cured" altura="10" anchura="60" modal="false" fecha="" />
+      <ventanaSecundaria Id="5a584eab-3a42-48ba-aec7-db456b2f0ecc" nombre="Cancer Cured" altura="10" anchura="60" modal="false" />
     </tapizVentanasHasVentanaSecundaria>
     <tapizVentanasHasVentanaSecundaria Id="113325d2-4cea-47fe-9f99-1218cda7e220">
-      <ventanaSecundaria Id="66a63b3d-4231-4a73-bcb4-437fd17f78b0" nombre="Healthy Mental Health" altura="10" anchura="60" modal="false" fecha="" />
+      <ventanaSecundaria Id="66a63b3d-4231-4a73-bcb4-437fd17f78b0" nombre="Healthy Mental Health" altura="10" anchura="60" modal="false" />
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="0bf7c0a4-024b-4584-a2f6-b75abcd31c5f">
+      <ventanaSecundaria Id="d57ea5cc-6ec3-4e48-be5d-450f7bc124e1" altura="0" anchura="0" modal="false" />
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="22a29db0-0896-4a9f-b55f-72c50aed5c0e">
+      <ventanaSecundaria Id="d970b279-62b0-4e84-84f9-272126df57c3" altura="0" anchura="0" modal="true" />
     </tapizVentanasHasVentanaSecundaria>
   </ventanaSecundaria>
 </tapizVentanas>

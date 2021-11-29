@@ -133,7 +133,15 @@
         <DomainClassMoniker Name="Navegador" />
       </BaseClass>
     </DomainClass>
-    <DomainClass Id="31d0ee6f-1540-4f1a-86c8-b68120db6d04" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion" Name="FinAplicacion" DisplayName="Fin Aplicacion" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" />
+    <DomainClass Id="31d0ee6f-1540-4f1a-86c8-b68120db6d04" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion" Name="FinAplicacion" DisplayName="Fin Aplicacion" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS">
+      <Properties>
+        <DomainProperty Id="32726e42-4444-4fe0-b5b2-acba28f03ad7" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion.Nombre" Name="nombre" DisplayName="Nombre">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
   </Classes>
   <Relationships>
     <DomainRelationship Id="776754ac-7a4e-4bb6-879d-097ab1922a6f" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal" Name="TapizVentanasHasVentanaPrincipal" DisplayName="Tapiz Ventanas Has Ventana Principal" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" IsEmbedding="true">
@@ -290,6 +298,12 @@
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <IconDecorator Name="iconoVP" DisplayName="Icono VP" DefaultIcon="Resources\iconVP.jpg" />
       </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopRight" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="altura" DisplayName="Altura" DefaultText="altura" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerMiddleRight" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="anchura" DisplayName="Anchura" DefaultText="anchura" />
+      </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="33eec7c8-1773-4a27-8f25-069755455bf7" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaSecundaria" Name="MetaforaVentanaSecundaria" DisplayName="Metafora Ventana Secundaria" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Ventana Secundaria" InitialHeight="1" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
@@ -298,23 +312,49 @@
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <IconDecorator Name="iconVS" DisplayName="Icon VS" DefaultIcon="Resources\iconVS.png" />
       </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerMiddleLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="modal" DisplayName="Modal" DefaultText="modal" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopRight" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="altura" DisplayName="Altura" DefaultText="altura" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerMiddleRight" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="anchura" DisplayName="Anchura" DefaultText="anchura" />
+      </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="e259938b-0366-4199-8005-39a73ea16218" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaMenu" Name="MetaforaMenu" DisplayName="Metafora Menu" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Menu" FillColor="LightSalmon" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <IconDecorator Name="IconMenu" DisplayName="Icon Menu" DefaultIcon="Resources\IconM.png" />
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="7741abeb-f09e-45b1-ad2b-e1b18be0e9ab" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaItemMenu" Name="MetaforaItemMenu" DisplayName="Metafora Item Menu" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Item Menu" InitialHeight="1" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <IconDecorator Name="IconItemMenu" DisplayName="Icon Item Menu" DefaultIcon="Resources\IconIm.png" />
+      </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="3cb225c4-93d5-4855-9725-b0ffff294c45" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaBoton" Name="MetaforaBoton" DisplayName="Metafora Boton" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Boton" InitialHeight="1" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <IconDecorator Name="IconB" DisplayName="Icon B" DefaultIcon="Resources\iconB.png" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="9ac141d9-5f1b-49fe-9458-2086c2aff16f" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaFinAplicacion" Name="MetaforaFinAplicacion" DisplayName="Metafora Fin Aplicacion" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Fin Aplicacion" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+      </ShapeHasDecorators>
     </GeometryShape>
   </Shapes>
+  <Connectors>
+    <Connector Id="f614a299-7a88-4839-9368-09cf088330fa" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaN_V" Name="MetaforaN_V" DisplayName="Metafora N_ V" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora N_ V" />
+  </Connectors>
   <XmlSerializationBehavior Name="JDCCCAJDOMDCMProyectoIPSSerializationBehavior" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS">
     <ClassData>
       <XmlClassData TypeName="TapizVentanas" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizVentanasMoniker" ElementName="tapizVentanas" MonikerTypeName="TapizVentanasMoniker">
@@ -437,12 +477,23 @@
       </XmlClassData>
       <XmlClassData TypeName="FinAplicacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="finAplicacionMoniker" ElementName="finAplicacion" MonikerTypeName="FinAplicacionMoniker">
         <DomainClassMoniker Name="FinAplicacion" />
+        <ElementData>
+          <XmlPropertyData XmlName="nombre">
+            <DomainPropertyMoniker Name="FinAplicacion/nombre" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="TapizVentanasHasFinAplicacioned" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizVentanasHasFinAplicacionedMoniker" ElementName="tapizVentanasHasFinAplicacioned" MonikerTypeName="TapizVentanasHasFinAplicacionedMoniker">
         <DomainRelationshipMoniker Name="TapizVentanasHasFinAplicacioned" />
       </XmlClassData>
       <XmlClassData TypeName="NavegadorReferencesFinAplicacioned" MonikerAttributeName="" SerializeId="true" MonikerElementName="navegadorReferencesFinAplicacionedMoniker" ElementName="navegadorReferencesFinAplicacioned" MonikerTypeName="NavegadorReferencesFinAplicacionedMoniker">
         <DomainRelationshipMoniker Name="NavegadorReferencesFinAplicacioned" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforaFinAplicacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaFinAplicacionMoniker" ElementName="metaforaFinAplicacion" MonikerTypeName="MetaforaFinAplicacionMoniker">
+        <GeometryShapeMoniker Name="MetaforaFinAplicacion" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforaN_V" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaN_VMoniker" ElementName="metaforaN_V" MonikerTypeName="MetaforaN_VMoniker">
+        <ConnectorMoniker Name="MetaforaN_V" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -513,6 +564,22 @@
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaVentanaPrincipal/altura" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Ventana/altura" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaVentanaPrincipal/anchura" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Ventana/anchura" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="MetaforaVentanaPrincipal" />
       </ShapeMap>
       <ShapeMap>
@@ -525,6 +592,30 @@
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="Ventana/nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaVentanaSecundaria/modal" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="VentanaSecundaria/modal" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaVentanaSecundaria/altura" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Ventana/altura" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaVentanaSecundaria/anchura" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Ventana/anchura" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -566,7 +657,28 @@
         </DecoratorMap>
         <GeometryShapeMoniker Name="MetaforaBoton" />
       </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="FinAplicacion" />
+        <ParentElementPath>
+          <DomainPath>TapizVentanasHasFinAplicacioned.TapizVentanas/!TapizVentanas</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaFinAplicacion/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="FinAplicacion/nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="MetaforaFinAplicacion" />
+      </ShapeMap>
     </ShapeMaps>
+    <ConnectorMaps>
+      <ConnectorMap>
+        <ConnectorMoniker Name="MetaforaN_V" />
+        <DomainRelationshipMoniker Name="navega" />
+      </ConnectorMap>
+    </ConnectorMaps>
   </Diagram>
   <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="JDCCCAJDOMDCM_DSLProyectoIPS" EditorGuid="0cae6051-815c-4693-9fb8-e2d973ea5c4c">
     <RootClass>
@@ -575,7 +687,11 @@
     <XmlSerializationDefinition CustomPostLoad="false">
       <XmlSerializationBehaviorMoniker Name="JDCCCAJDOMDCMProyectoIPSSerializationBehavior" />
     </XmlSerializationDefinition>
-    <ToolboxTab TabText="enlaces" />
+    <ToolboxTab TabText="enlaces">
+      <ConnectionTool Name="N_VTool" ToolboxIcon="Resources\N_V.bmp" Caption="N_VTool" Tooltip="N_ VTool" HelpKeyword="N_VTool">
+        <ConnectionBuilderMoniker Name="JDCCCAJDOMDCMProyectoIPS/navegaBuilder" />
+      </ConnectionTool>
+    </ToolboxTab>
     <ToolboxTab TabText="Ventanas">
       <ElementTool Name="VentanaPrincipalTool" ToolboxIcon="Resources\VP.bmp" Caption="VentanaPrincipalTool" Tooltip="Crea una Ventana Principal " HelpKeyword="VentanaPrincipalTool">
         <DomainClassMoniker Name="VentanaPrincipal" />
@@ -587,6 +703,16 @@
     <ToolboxTab TabText="Menus">
       <ElementTool Name="MenuTool" ToolboxIcon="Resources\Mtool.bmp" Caption="MenuTool" Tooltip="Menu Tool" HelpKeyword="MenuTool">
         <DomainClassMoniker Name="Menu" />
+      </ElementTool>
+    </ToolboxTab>
+    <ToolboxTab TabText="Boton">
+      <ElementTool Name="BotonTool" ToolboxIcon="Resources\B.bmp" Caption="BotonTool" Tooltip="Boton Tool" HelpKeyword="BotonTool">
+        <DomainClassMoniker Name="Boton" />
+      </ElementTool>
+    </ToolboxTab>
+    <ToolboxTab TabText="Item Menu">
+      <ElementTool Name="ItemMenuTool" ToolboxIcon="Resources\Im.bmp" Caption="ItemMenuTool" Tooltip="Item Menu Tool" HelpKeyword="ItemMenuTool">
+        <DomainClassMoniker Name="ItemMenu" />
       </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
