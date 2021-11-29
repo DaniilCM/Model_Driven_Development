@@ -213,6 +213,38 @@
     <value>Titulo</value>
     <comment>DisplayName for DomainProperty &apos;titulo&apos; on DomainClass &apos;Menu&apos;</comment>
   </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador</value>
+    <comment>Description for DomainClass &apos;Navegador&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador.DisplayName" xml:space="preserve">
+    <value>Navegador</value>
+    <comment>DisplayName for DomainClass &apos;Navegador&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador/titulo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador.Titulo</value>
+    <comment>Description for DomainProperty &apos;titulo&apos; on DomainClass &apos;Navegador&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador/titulo.DisplayName" xml:space="preserve">
+    <value>Titulo</value>
+    <comment>DisplayName for DomainProperty &apos;titulo&apos; on DomainClass &apos;Navegador&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Boton.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Boton</value>
+    <comment>Description for DomainClass &apos;Boton&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Boton.DisplayName" xml:space="preserve">
+    <value>Boton</value>
+    <comment>DisplayName for DomainClass &apos;Boton&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ItemMenu.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ItemMenu</value>
+    <comment>Description for DomainClass &apos;ItemMenu&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ItemMenu.DisplayName" xml:space="preserve">
+    <value>Item Menu</value>
+    <comment>DisplayName for DomainClass &apos;ItemMenu&apos;</comment>
+  </data>
   <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal</value>
     <comment>Description for DomainClass &apos;TapizVentanasHasVentanaPrincipal&apos;</comment>
@@ -277,37 +309,133 @@
     <value>Tapiz Ventanas</value>
     <comment>PropertyDisplayName for DomainRole &apos;VentanaSecundaria&apos; on DomainRelationship &apos;TapizVentanasHasVentanaSecundaria&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu</value>
-    <comment>Description for DomainClass &apos;VentanaHasMenu&apos;</comment>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.contiene.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.contiene</value>
+    <comment>Description for DomainClass &apos;contiene&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.DisplayName" xml:space="preserve">
-    <value>Ventana Has Menu</value>
-    <comment>DisplayName for DomainClass &apos;VentanaHasMenu&apos;</comment>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.contiene.DisplayName" xml:space="preserve">
+    <value>Contiene</value>
+    <comment>DisplayName for DomainClass &apos;contiene&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Ventana.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.Ventana</value>
-    <comment>Description for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;VentanaHasMenu&apos;</comment>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.contiene/Ventana.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.contiene.Ventana</value>
+    <comment>Description for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;contiene&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Ventana.DisplayName" xml:space="preserve">
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.contiene/Ventana.DisplayName" xml:space="preserve">
     <value>Ventana</value>
-    <comment>DisplayName for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;VentanaHasMenu&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;contiene&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Ventana.PropertyDisplayName" xml:space="preserve">
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.contiene/Ventana.PropertyDisplayName" xml:space="preserve">
     <value>Menu</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;VentanaHasMenu&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;contiene&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Menu.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.Menu</value>
-    <comment>Description for DomainRole &apos;Menu&apos; on DomainRelationship &apos;VentanaHasMenu&apos;</comment>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.contiene/Menu.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.contiene.Menu</value>
+    <comment>Description for DomainRole &apos;Menu&apos; on DomainRelationship &apos;contiene&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Menu.DisplayName" xml:space="preserve">
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.contiene/Menu.DisplayName" xml:space="preserve">
     <value>Menu</value>
-    <comment>DisplayName for DomainRole &apos;Menu&apos; on DomainRelationship &apos;VentanaHasMenu&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Menu&apos; on DomainRelationship &apos;contiene&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu/Menu.PropertyDisplayName" xml:space="preserve">
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.contiene/Menu.PropertyDisplayName" xml:space="preserve">
     <value>Ventana</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Menu&apos; on DomainRelationship &apos;VentanaHasMenu&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;Menu&apos; on DomainRelationship &apos;contiene&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega</value>
+    <comment>Description for DomainClass &apos;navega&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega.DisplayName" xml:space="preserve">
+    <value>Navega</value>
+    <comment>DisplayName for DomainClass &apos;navega&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega/Navegador.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega.Navegador</value>
+    <comment>Description for DomainRole &apos;Navegador&apos; on DomainRelationship &apos;navega&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega/Navegador.DisplayName" xml:space="preserve">
+    <value>Navegador</value>
+    <comment>DisplayName for DomainRole &apos;Navegador&apos; on DomainRelationship &apos;navega&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega/Navegador.PropertyDisplayName" xml:space="preserve">
+    <value>Ventanas</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Navegador&apos; on DomainRelationship &apos;navega&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega/Ventana.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega.Ventana</value>
+    <comment>Description for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;navega&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega/Ventana.DisplayName" xml:space="preserve">
+    <value>Ventana</value>
+    <comment>DisplayName for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;navega&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega/Ventana.PropertyDisplayName" xml:space="preserve">
+    <value>Navegador</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;navega&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.despliega.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.despliega</value>
+    <comment>Description for DomainClass &apos;despliega&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.despliega.DisplayName" xml:space="preserve">
+    <value>Despliega</value>
+    <comment>DisplayName for DomainClass &apos;despliega&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.despliega/Menu.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.despliega.Menu</value>
+    <comment>Description for DomainRole &apos;Menu&apos; on DomainRelationship &apos;despliega&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.despliega/Menu.DisplayName" xml:space="preserve">
+    <value>Menu</value>
+    <comment>DisplayName for DomainRole &apos;Menu&apos; on DomainRelationship &apos;despliega&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.despliega/Menu.PropertyDisplayName" xml:space="preserve">
+    <value>Item Menus</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Menu&apos; on DomainRelationship &apos;despliega&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.despliega/ItemMenu.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.despliega.ItemMenu</value>
+    <comment>Description for DomainRole &apos;ItemMenu&apos; on DomainRelationship &apos;despliega&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.despliega/ItemMenu.DisplayName" xml:space="preserve">
+    <value>Item Menu</value>
+    <comment>DisplayName for DomainRole &apos;ItemMenu&apos; on DomainRelationship &apos;despliega&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.despliega/ItemMenu.PropertyDisplayName" xml:space="preserve">
+    <value>Menu</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ItemMenu&apos; on DomainRelationship &apos;despliega&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.tiene.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.tiene</value>
+    <comment>Description for DomainClass &apos;tiene&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.tiene.DisplayName" xml:space="preserve">
+    <value>Tiene</value>
+    <comment>DisplayName for DomainClass &apos;tiene&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.tiene/Ventana.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.tiene.Ventana</value>
+    <comment>Description for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;tiene&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.tiene/Ventana.DisplayName" xml:space="preserve">
+    <value>Ventana</value>
+    <comment>DisplayName for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;tiene&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.tiene/Ventana.PropertyDisplayName" xml:space="preserve">
+    <value>Botons</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Ventana&apos; on DomainRelationship &apos;tiene&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.tiene/Boton.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.tiene.Boton</value>
+    <comment>Description for DomainRole &apos;Boton&apos; on DomainRelationship &apos;tiene&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.tiene/Boton.DisplayName" xml:space="preserve">
+    <value>Boton</value>
+    <comment>DisplayName for DomainRole &apos;Boton&apos; on DomainRelationship &apos;tiene&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.tiene/Boton.PropertyDisplayName" xml:space="preserve">
+    <value>Ventana</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Boton&apos; on DomainRelationship &apos;tiene&apos;</comment>
   </data>
   <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaPrincipal.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaPrincipal</value>
@@ -342,6 +470,30 @@
     <comment>DisplayName for DomainClass &apos;MetaforaMenu&apos;</comment>
   </data>
   <data name="MetaforaMenunombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaItemMenu.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaItemMenu</value>
+    <comment>Description for DomainClass &apos;MetaforaItemMenu&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaItemMenu.DisplayName" xml:space="preserve">
+    <value>Metafora Item Menu</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaItemMenu&apos;</comment>
+  </data>
+  <data name="MetaforaItemMenunombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaBoton.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaBoton</value>
+    <comment>Description for DomainClass &apos;MetaforaBoton&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaBoton.DisplayName" xml:space="preserve">
+    <value>Metafora Boton</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaBoton&apos;</comment>
+  </data>
+  <data name="MetaforaBotonnombreDecDefaultText" xml:space="preserve">
     <value>nombreDec</value>
     <comment>Text decorator default text</comment>
   </data>

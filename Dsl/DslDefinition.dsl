@@ -52,7 +52,15 @@
             <DomainClassMoniker Name="Menu" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>VentanaHasMenu.Menu</DomainPath>
+            <DomainPath>contiene.Menu</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Boton" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>tiene.Botons</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
@@ -82,6 +90,35 @@
           </Type>
         </DomainProperty>
       </Properties>
+      <ElementMergeDirectives>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="ItemMenu" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>despliega.ItemMenus</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+      </ElementMergeDirectives>
+    </DomainClass>
+    <DomainClass Id="289af38c-fa5b-49fb-9b55-f5d2977d4a70" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador" Name="Navegador" DisplayName="Navegador" InheritanceModifier="Abstract" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS">
+      <Properties>
+        <DomainProperty Id="ab83d7dc-1e54-4079-acf1-36de737b35a8" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador.Titulo" Name="titulo" DisplayName="Titulo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="48bf2632-ac58-4c85-bbad-71200e3e99d9" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Boton" Name="Boton" DisplayName="Boton" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS">
+      <BaseClass>
+        <DomainClassMoniker Name="Navegador" />
+      </BaseClass>
+    </DomainClass>
+    <DomainClass Id="4e016bf4-230e-48bd-bd7d-315174b5f904" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ItemMenu" Name="ItemMenu" DisplayName="Item Menu" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS">
+      <BaseClass>
+        <DomainClassMoniker Name="Navegador" />
+      </BaseClass>
     </DomainClass>
   </Classes>
   <Relationships>
@@ -117,18 +154,66 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="d3a2c103-f818-4bf0-80b0-3d9aaeb0ca98" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu" Name="VentanaHasMenu" DisplayName="Ventana Has Menu" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" IsEmbedding="true">
+    <DomainRelationship Id="d3a2c103-f818-4bf0-80b0-3d9aaeb0ca98" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.contiene" Name="contiene" DisplayName="Contiene" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" IsEmbedding="true">
       <Source>
-        <DomainRole Id="a10ed874-ee96-4e7b-bc94-4b176f1527d0" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.Ventana" Name="Ventana" DisplayName="Ventana" PropertyName="Menu" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Menu">
+        <DomainRole Id="a10ed874-ee96-4e7b-bc94-4b176f1527d0" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.contiene.Ventana" Name="Ventana" DisplayName="Ventana" PropertyName="Menu" Multiplicity="OneMany" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Menu">
           <RolePlayer>
             <DomainClassMoniker Name="Ventana" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="583a7a75-cc5f-48c6-a812-688c2088ecfc" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaHasMenu.Menu" Name="Menu" DisplayName="Menu" PropertyName="Ventana" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Ventana">
+        <DomainRole Id="583a7a75-cc5f-48c6-a812-688c2088ecfc" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.contiene.Menu" Name="Menu" DisplayName="Menu" PropertyName="Ventana" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Ventana">
           <RolePlayer>
             <DomainClassMoniker Name="Menu" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="13aadadf-0481-47ed-be24-2575406f0064" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega" Name="navega" DisplayName="Navega" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS">
+      <Source>
+        <DomainRole Id="92f208c0-0069-4783-825e-14d69302afd9" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega.Navegador" Name="Navegador" DisplayName="Navegador" PropertyName="Ventanas" PropertyDisplayName="Ventanas">
+          <RolePlayer>
+            <DomainClassMoniker Name="Navegador" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="c04f1399-3172-4c06-b03d-3bedd6ac23a4" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega.Ventana" Name="Ventana" DisplayName="Ventana" PropertyName="Navegador" PropertyDisplayName="Navegador">
+          <RolePlayer>
+            <DomainClassMoniker Name="Ventana" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="0be832db-a39c-4232-8c8f-0695a9b8e7cf" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.despliega" Name="despliega" DisplayName="Despliega" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="fa859497-b558-4b65-8a73-fc687b2ec204" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.despliega.Menu" Name="Menu" DisplayName="Menu" PropertyName="ItemMenus" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Item Menus">
+          <RolePlayer>
+            <DomainClassMoniker Name="Menu" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="97faff8f-51b5-40f1-8fe5-d3c12f045600" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.despliega.ItemMenu" Name="ItemMenu" DisplayName="Item Menu" PropertyName="Menu" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Menu">
+          <RolePlayer>
+            <DomainClassMoniker Name="ItemMenu" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="84e7bfda-d838-40e8-9eff-619cfb16f28d" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.tiene" Name="tiene" DisplayName="Tiene" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="c1b5a3b7-394d-4510-8dc0-0bb42d057f71" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.tiene.Ventana" Name="Ventana" DisplayName="Ventana" PropertyName="Botons" Multiplicity="OneMany" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Botons">
+          <RolePlayer>
+            <DomainClassMoniker Name="Ventana" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="16204b5b-b7e4-4add-abd9-a53e044edfab" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.tiene.Boton" Name="Boton" DisplayName="Boton" PropertyName="Ventana" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Ventana">
+          <RolePlayer>
+            <DomainClassMoniker Name="Boton" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -173,6 +258,16 @@
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
     </GeometryShape>
+    <GeometryShape Id="7741abeb-f09e-45b1-ad2b-e1b18be0e9ab" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaItemMenu" Name="MetaforaItemMenu" DisplayName="Metafora Item Menu" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Item Menu" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="3cb225c4-93d5-4855-9725-b0ffff294c45" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaBoton" Name="MetaforaBoton" DisplayName="Metafora Boton" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Boton" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+      </ShapeHasDecorators>
+    </GeometryShape>
   </Shapes>
   <XmlSerializationBehavior Name="JDCCCAJDOMDCMProyectoIPSSerializationBehavior" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS">
     <ClassData>
@@ -206,7 +301,10 @@
             <DomainPropertyMoniker Name="Ventana/anchura" />
           </XmlPropertyData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="menu">
-            <DomainRelationshipMoniker Name="VentanaHasMenu" />
+            <DomainRelationshipMoniker Name="contiene" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="botons">
+            <DomainRelationshipMoniker Name="tiene" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -239,17 +337,73 @@
           <XmlPropertyData XmlName="titulo">
             <DomainPropertyMoniker Name="Menu/titulo" />
           </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="itemMenus">
+            <DomainRelationshipMoniker Name="despliega" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="VentanaHasMenu" MonikerAttributeName="" SerializeId="true" MonikerElementName="ventanaHasMenuMoniker" ElementName="ventanaHasMenu" MonikerTypeName="VentanaHasMenuMoniker">
-        <DomainRelationshipMoniker Name="VentanaHasMenu" />
+      <XmlClassData TypeName="Contiene" MonikerAttributeName="" SerializeId="true" MonikerElementName="contieneMoniker" ElementName="contiene" MonikerTypeName="ContieneMoniker">
+        <DomainRelationshipMoniker Name="contiene" />
       </XmlClassData>
       <XmlClassData TypeName="MetaforaMenu" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaMenuMoniker" ElementName="metaforaMenu" MonikerTypeName="MetaforaMenuMoniker">
         <GeometryShapeMoniker Name="MetaforaMenu" />
       </XmlClassData>
+      <XmlClassData TypeName="Navegador" MonikerAttributeName="" SerializeId="true" MonikerElementName="navegadorMoniker" ElementName="navegador" MonikerTypeName="NavegadorMoniker">
+        <DomainClassMoniker Name="Navegador" />
+        <ElementData>
+          <XmlPropertyData XmlName="titulo">
+            <DomainPropertyMoniker Name="Navegador/titulo" />
+          </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="ventanas">
+            <DomainRelationshipMoniker Name="navega" />
+          </XmlRelationshipData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="Boton" MonikerAttributeName="" SerializeId="true" MonikerElementName="botonMoniker" ElementName="boton" MonikerTypeName="BotonMoniker">
+        <DomainClassMoniker Name="Boton" />
+      </XmlClassData>
+      <XmlClassData TypeName="ItemMenu" MonikerAttributeName="" SerializeId="true" MonikerElementName="itemMenuMoniker" ElementName="itemMenu" MonikerTypeName="ItemMenuMoniker">
+        <DomainClassMoniker Name="ItemMenu" />
+      </XmlClassData>
+      <XmlClassData TypeName="Navega" MonikerAttributeName="" SerializeId="true" MonikerElementName="navegaMoniker" ElementName="navega" MonikerTypeName="NavegaMoniker">
+        <DomainRelationshipMoniker Name="navega" />
+      </XmlClassData>
+      <XmlClassData TypeName="Despliega" MonikerAttributeName="" SerializeId="true" MonikerElementName="despliegaMoniker" ElementName="despliega" MonikerTypeName="DespliegaMoniker">
+        <DomainRelationshipMoniker Name="despliega" />
+      </XmlClassData>
+      <XmlClassData TypeName="Tiene" MonikerAttributeName="" SerializeId="true" MonikerElementName="tieneMoniker" ElementName="tiene" MonikerTypeName="TieneMoniker">
+        <DomainRelationshipMoniker Name="tiene" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforaItemMenu" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaItemMenuMoniker" ElementName="metaforaItemMenu" MonikerTypeName="MetaforaItemMenuMoniker">
+        <GeometryShapeMoniker Name="MetaforaItemMenu" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforaBoton" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaBotonMoniker" ElementName="metaforaBoton" MonikerTypeName="MetaforaBotonMoniker">
+        <GeometryShapeMoniker Name="MetaforaBoton" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="JDCCCAJDOMDCMProyectoIPSExplorer" />
+  <ConnectionBuilders>
+    <ConnectionBuilder Name="navegaBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="navega" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Navegador" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Ventana" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+  </ConnectionBuilders>
   <Diagram Id="47eff19f-2cc1-4052-9983-2a6c53339f82" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDiagram" Name="JDCCCAJDOMDCMProyectoIPSDiagram" DisplayName="Minimal Language Diagram" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FillColor="Silver">
     <Class>
       <DomainClassMoniker Name="TapizVentanas" />
@@ -304,6 +458,30 @@
           </PropertyDisplayed>
         </DecoratorMap>
         <GeometryShapeMoniker Name="MetaforaMenu" />
+      </ShapeMap>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="ItemMenu" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaItemMenu/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Navegador/titulo" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="MetaforaItemMenu" />
+      </ShapeMap>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="Boton" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaBoton/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Navegador/titulo" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="MetaforaBoton" />
       </ShapeMap>
     </ShapeMaps>
   </Diagram>

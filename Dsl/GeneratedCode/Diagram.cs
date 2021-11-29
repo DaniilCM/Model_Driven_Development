@@ -134,6 +134,18 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
+			if(element is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ItemMenu)
+			{
+				global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaItemMenu newShape = new global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaItemMenu(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Boton)
+			{
+				global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaBoton newShape = new global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaBoton(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
 			if(element is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu)
 			{
 				global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaMenu newShape = new global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaMenu(this.Partition);
@@ -154,6 +166,8 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaPrincipal.DecoratorsInitialized += MetaforaVentanaPrincipalDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaSecundaria.DecoratorsInitialized += MetaforaVentanaSecundariaDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaMenu.DecoratorsInitialized += MetaforaMenuDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaItemMenu.DecoratorsInitialized += MetaforaItemMenuDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaBoton.DecoratorsInitialized += MetaforaBotonDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
@@ -213,6 +227,42 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			}
 		}
 		
+		/// <summary>
+		/// Class containing decorator path traversal methods for MetaforaItemMenu.
+		/// </summary>
+		internal static partial class MetaforaItemMenuDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MetaforaItemMenu.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador.tituloDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for MetaforaBoton.
+		/// </summary>
+		internal static partial class MetaforaBotonDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MetaforaBoton.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador.tituloDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
 		#endregion
 		#region Constructors, domain class Id
 	
@@ -262,6 +312,8 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaPrincipal), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ItemMenu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Boton), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
@@ -281,6 +333,28 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				if(childElement is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria)
 				{
 					parentElement = GetParentForVentanaSecundaria((global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ItemMenu)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForItemMenu(ItemMenu childElement)
+					// {
+					// }
+					// must be implemented in a partial class of UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForItemMenu((global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ItemMenu)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Boton)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForBoton(Boton childElement)
+					// {
+					// }
+					// must be implemented in a partial class of UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForBoton((global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Boton)childElement);
 				} else
 				if(childElement is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu)
 				{
