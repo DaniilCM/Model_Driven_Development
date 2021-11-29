@@ -28,15 +28,6 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
 	[VSShell::ProvideToolWindow(typeof(JDCCCAJDOMDCMProyectoIPSExplorerToolWindow), MultiInstances = false, Style = VSShell::VsDockStyle.Tabbed, Orientation = VSShell::ToolWindowOrientation.Right, Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
 	[VSShell::ProvideToolWindowVisibility(typeof(JDCCCAJDOMDCMProyectoIPSExplorerToolWindow), Constants.JDCCCAJDOMDCMProyectoIPSEditorFactoryId)]
-	[VSShell::ProvideStaticToolboxGroup("@enlacesToolboxTab;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.enlacesToolboxTab")]
-	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.enlacesToolboxTab",
-					"@N_VToolToolboxItem;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
-					"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.N_VToolToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"N_VTool", 
-					"@N_VToolToolboxBitmap;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
-					0xff00ff,
-					Index = 0)]
 	[VSShell::ProvideStaticToolboxGroup("@VentanasToolboxTab;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanasToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanasToolboxTab",
 					"@VentanaPrincipalToolToolboxItem;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
@@ -45,7 +36,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					"VentanaPrincipalTool", 
 					"@VentanaPrincipalToolToolboxBitmap;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
 					0xff00ff,
-					Index = 1)]
+					Index = 0)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanasToolboxTab",
 					"@VentanaSecundariaToolToolboxItem;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
 					"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundariaToolToolboxItem", 
@@ -53,7 +44,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					"VentanaSecundariaTool", 
 					"@VentanaSecundariaToolToolboxBitmap;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
 					0xff00ff,
-					Index = 2)]
+					Index = 1)]
 	[VSShell::ProvideStaticToolboxGroup("@MenusToolboxTab;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MenusToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MenusToolboxTab",
 					"@MenuToolToolboxItem;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
@@ -62,7 +53,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					"MenuTool", 
 					"@MenuToolToolboxBitmap;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
 					0xff00ff,
-					Index = 3)]
+					Index = 2)]
 	[VSShell::ProvideStaticToolboxGroup("@BotonToolboxTab;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.BotonToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.BotonToolboxTab",
 					"@BotonToolToolboxItem;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
@@ -71,7 +62,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					"BotonTool", 
 					"@BotonToolToolboxBitmap;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
 					0xff00ff,
-					Index = 4)]
+					Index = 3)]
 	[VSShell::ProvideStaticToolboxGroup("@Item MenuToolboxTab;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Item MenuToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Item MenuToolboxTab",
 					"@ItemMenuToolToolboxItem;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
@@ -79,6 +70,15 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"ItemMenuTool", 
 					"@ItemMenuToolToolboxBitmap;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 4)]
+	[VSShell::ProvideStaticToolboxGroup("@EnlacesToolboxTab;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.EnlacesToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.EnlacesToolboxTab",
+					"@NavegadorVentanaToolToolboxItem;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorVentanaToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"NavegadorVentanaTool", 
+					"@NavegadorVentanaToolToolboxBitmap;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
 					0xff00ff,
 					Index = 5)]
 	[VSShell::ProvideEditorFactory(typeof(JDCCCAJDOMDCMProyectoIPSEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]

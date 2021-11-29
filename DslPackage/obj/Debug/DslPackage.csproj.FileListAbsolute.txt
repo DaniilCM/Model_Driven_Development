@@ -193,7 +193,6 @@ F:\Universidad\5º Cuatrimestre\IPS\Model_Driven_Development\DslPackage\obj\Debu
 F:\Universidad\5º Cuatrimestre\IPS\Model_Driven_Development\DslPackage\obj\Debug\VSPackage.resources.original
 F:\Universidad\5º Cuatrimestre\IPS\Model_Driven_Development\DslPackage\obj\Debug\mergeCto.cache
 F:\Universidad\5º Cuatrimestre\IPS\Model_Driven_Development\DslPackage\obj\Debug\DslPackage.csproj.CoreCompileInputs.cache
-F:\Universidad\5º Cuatrimestre\IPS\Model_Driven_Development\DslPackage\obj\Debug\DslPackage.csproj.CopyComplete
 F:\Universidad\5º Cuatrimestre\IPS\Model_Driven_Development\DslPackage\obj\Debug\UPM_IPS.JDCCCAJDOMDCMProyectoIPS.DslPackage.dll
 F:\Universidad\5º Cuatrimestre\IPS\Model_Driven_Development\DslPackage\obj\Debug\UPM_IPS.JDCCCAJDOMDCMProyectoIPS.DslPackage.pdb
 F:\Universidad\5º Cuatrimestre\IPS\Model_Driven_Development\DslPackage\obj\Debug\UPM_IPS.JDCCCAJDOMDCMProyectoIPS.DslPackage.pkgdef
@@ -313,3 +312,4 @@ C:\Users\AinzOoalGown\IPS\JDCCCAJDOMDCMProyectoIPS\Model_Driven_Development\DslP
 C:\Users\AinzOoalGown\IPS\JDCCCAJDOMDCMProyectoIPS\Model_Driven_Development\DslPackage\obj\Debug\ItemTemplates\VisualBasic\1033\JDCCCAJDOMDCMProyectoIPS\JDCCCAJDOMDCM_DSLProyectoIPS.JDCCCAJDOMDCM_DSLProyectoIPS
 C:\Users\AinzOoalGown\IPS\JDCCCAJDOMDCMProyectoIPS\Model_Driven_Development\DslPackage\obj\Debug\ItemTemplates\VisualBasic\1033\JDCCCAJDOMDCMProyectoIPS\JDCCCAJDOMDCM_DSLProyectoIPS.diagram
 C:\Users\AinzOoalGown\IPS\JDCCCAJDOMDCMProyectoIPS\Model_Driven_Development\DslPackage\obj\Debug\templateFiles.json
+F:\Universidad\5º Cuatrimestre\IPS\Model_Driven_Development\DslPackage\obj\Debug\DslPackage.csproj.CopyComplete

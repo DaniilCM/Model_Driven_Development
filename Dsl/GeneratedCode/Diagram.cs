@@ -397,7 +397,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		
 		#region Connect actions
 		private bool changingMouseAction;
-		private global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.N_VToolConnectAction n_VToolConnectAction;
+		private global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorVentanaToolConnectAction navegadorVentanaToolConnectAction;
 		/// <summary>
 		/// Virtual method to provide a filter when to select the mouse action
 		/// </summary>
@@ -420,14 +420,14 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			if(activeView != null)
 			{
 				DslDiagrams::MouseAction action = null;
-				if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSToolboxHelper.N_VToolFilterString))
+				if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSToolboxHelper.NavegadorVentanaToolFilterString))
 				{
-					if (this.n_VToolConnectAction == null)
+					if (this.navegadorVentanaToolConnectAction == null)
 					{
-						this.n_VToolConnectAction = new global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.N_VToolConnectAction(this);
-						this.n_VToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.navegadorVentanaToolConnectAction = new global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorVentanaToolConnectAction(this);
+						this.navegadorVentanaToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.n_VToolConnectAction;
+					action = this.navegadorVentanaToolConnectAction;
 				} 
 				else
 				{
@@ -486,10 +486,10 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			{
 				if(disposing)
 				{
-					if(this.n_VToolConnectAction != null)
+					if(this.navegadorVentanaToolConnectAction != null)
 					{
-						this.n_VToolConnectAction.Dispose();
-						this.n_VToolConnectAction = null;
+						this.navegadorVentanaToolConnectAction.Dispose();
+						this.navegadorVentanaToolConnectAction = null;
 					}
 				}
 			}

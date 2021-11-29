@@ -233,3 +233,7 @@ C:\Users\AinzOoalGown\IPS\JDCCCAJDOMDCMProyectoIPS\Model_Driven_Development\Dsl\
 C:\Users\AinzOoalGown\IPS\JDCCCAJDOMDCMProyectoIPS\Model_Driven_Development\Dsl\obj\Debug\Dsl.csproj.CopyComplete
 C:\Users\AinzOoalGown\IPS\JDCCCAJDOMDCMProyectoIPS\Model_Driven_Development\Dsl\obj\Debug\UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll
 C:\Users\AinzOoalGown\IPS\JDCCCAJDOMDCMProyectoIPS\Model_Driven_Development\Dsl\obj\Debug\UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.pdb
+F:\Universidad\5º Cuatrimestre\IPS\Model_Driven_Development\Dsl\bin\Debug\Microsoft.VisualStudio.Telemetry.dll
+F:\Universidad\5º Cuatrimestre\IPS\Model_Driven_Development\Dsl\bin\Debug\Microsoft.VisualStudio.RemoteControl.dll
+F:\Universidad\5º Cuatrimestre\IPS\Model_Driven_Development\Dsl\bin\Debug\Microsoft.VisualStudio.Utilities.Internal.dll
+F:\Universidad\5º Cuatrimestre\IPS\Model_Driven_Development\Dsl\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll

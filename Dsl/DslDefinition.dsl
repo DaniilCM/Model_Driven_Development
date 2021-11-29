@@ -687,11 +687,6 @@
     <XmlSerializationDefinition CustomPostLoad="false">
       <XmlSerializationBehaviorMoniker Name="JDCCCAJDOMDCMProyectoIPSSerializationBehavior" />
     </XmlSerializationDefinition>
-    <ToolboxTab TabText="enlaces">
-      <ConnectionTool Name="N_VTool" ToolboxIcon="Resources\N_V.bmp" Caption="N_VTool" Tooltip="N_ VTool" HelpKeyword="N_VTool">
-        <ConnectionBuilderMoniker Name="JDCCCAJDOMDCMProyectoIPS/navegaBuilder" />
-      </ConnectionTool>
-    </ToolboxTab>
     <ToolboxTab TabText="Ventanas">
       <ElementTool Name="VentanaPrincipalTool" ToolboxIcon="Resources\VP.bmp" Caption="VentanaPrincipalTool" Tooltip="Crea una Ventana Principal " HelpKeyword="VentanaPrincipalTool">
         <DomainClassMoniker Name="VentanaPrincipal" />
@@ -714,6 +709,11 @@
       <ElementTool Name="ItemMenuTool" ToolboxIcon="Resources\Im.bmp" Caption="ItemMenuTool" Tooltip="Item Menu Tool" HelpKeyword="ItemMenuTool">
         <DomainClassMoniker Name="ItemMenu" />
       </ElementTool>
+    </ToolboxTab>
+    <ToolboxTab TabText="Enlaces">
+      <ConnectionTool Name="NavegadorVentanaTool" ToolboxIcon="Resources\N_V.bmp" Caption="NavegadorVentanaTool" Tooltip="Navegador Ventana Tool" HelpKeyword="NavegadorVentanaTool">
+        <ConnectionBuilderMoniker Name="JDCCCAJDOMDCMProyectoIPS/navegaBuilder" />
+      </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="JDCCCAJDOMDCMProyectoIPSDiagram" />

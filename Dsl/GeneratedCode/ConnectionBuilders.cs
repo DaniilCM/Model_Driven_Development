@@ -277,14 +277,14 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
  	/// <summary>
 	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
 	/// </summary>
-	internal partial class N_VToolConnectAction : DslDiagrams::ConnectAction
+	internal partial class NavegadorVentanaToolConnectAction : DslDiagrams::ConnectAction
 	{
 		private DslDiagrams::ConnectionType[] connectionTypes;
 		
 		/// <summary>
-		/// Constructs a new N_VToolConnectAction for the given Diagram.
+		/// Constructs a new NavegadorVentanaToolConnectAction for the given Diagram.
 		/// </summary>
-		public N_VToolConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		public NavegadorVentanaToolConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
 		{
 		}
 		
@@ -314,24 +314,24 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		
 		
 		/// <summary>
-		/// Returns the N_VToolConnectionType associated with this action.
+		/// Returns the NavegadorVentanaToolConnectionType associated with this action.
 		/// </summary>
 		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
 		{
 			if(this.connectionTypes == null)
 			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new N_VToolConnectionType() };
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new NavegadorVentanaToolConnectionType() };
 			}
 			
 			return this.connectionTypes;
 		}
 		
-		private partial class N_VToolConnectionTypeBase : DslDiagrams::ConnectionType
+		private partial class NavegadorVentanaToolConnectionTypeBase : DslDiagrams::ConnectionType
 		{
 			/// <summary>
-			/// Constructs a new the N_VToolConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the NavegadorVentanaToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			protected N_VToolConnectionTypeBase() : base() {}
+			protected NavegadorVentanaToolConnectionTypeBase() : base() {}
 			
 			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
 			{
@@ -424,12 +424,12 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			}
 		}
 		
-		private partial class N_VToolConnectionType : N_VToolConnectionTypeBase
+		private partial class NavegadorVentanaToolConnectionType : NavegadorVentanaToolConnectionTypeBase
 		{
 			/// <summary>
-			/// Constructs a new the N_VToolConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the NavegadorVentanaToolConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			public N_VToolConnectionType() : base() {}
+			public NavegadorVentanaToolConnectionType() : base() {}
 		}
 	}
 }
