@@ -1,2 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<tapizVentanas xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="b8af08ed-88a8-45d9-b7bf-97892defebed" xmlns="http://schemas.microsoft.com/dsltools/JDCCCAJDOMDCMProyectoIPS" />
+<tapizVentanas xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="b8af08ed-88a8-45d9-b7bf-97892defebed" xmlns="http://schemas.microsoft.com/dsltools/JDCCCAJDOMDCMProyectoIPS">
+  <ventanaPrincipal>
+    <tapizVentanasHasVentanaPrincipal Id="551b6de8-8c18-4bd2-8839-3948999c4878">
+      <ventanaPrincipal Id="8bb646aa-e64f-42d9-bd71-c2932e769d1a" nombre="I wish" altura="140" anchura="70" />
+    </tapizVentanasHasVentanaPrincipal>
+  </ventanaPrincipal>
+  <ventanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="141d2a27-c580-4e18-87a9-22c49b1e621c">
+      <ventanaSecundaria Id="ac087a2a-2764-4d70-b0e0-60d26ea5d621" nombre="World Peace" altura="10" anchura="60" modal="false" fecha="" />
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="09a0da55-1c48-4c36-a554-ddb5711b22ce">
+      <ventanaSecundaria Id="8fe54ee2-81bb-44ba-b9ae-d5eb798cb240" nombre="No Hunger" altura="10" anchura="60" modal="false" fecha="" />
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="bb2930f0-5fe5-488c-b2d7-f2921b8088ba">
+      <ventanaSecundaria Id="f1d0bce2-c2ef-44bb-b306-904ed4ae26ed" nombre="Space Travel" altura="10" anchura="60" modal="false" fecha="" />
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="46473f1b-a2d3-4245-b906-fbeb840da691">
+      <ventanaSecundaria Id="5a584eab-3a42-48ba-aec7-db456b2f0ecc" nombre="Cancer Cured" altura="10" anchura="60" modal="false" fecha="" />
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="113325d2-4cea-47fe-9f99-1218cda7e220">
+      <ventanaSecundaria Id="66a63b3d-4231-4a73-bcb4-437fd17f78b0" nombre="Healthy Mental Health" altura="10" anchura="60" modal="false" fecha="" />
+    </tapizVentanasHasVentanaSecundaria>
+  </ventanaSecundaria>
+</tapizVentanas>

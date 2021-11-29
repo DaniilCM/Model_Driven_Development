@@ -75,12 +75,15 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				typeof(Navegador),
 				typeof(Boton),
 				typeof(ItemMenu),
+				typeof(FinAplicacion),
 				typeof(TapizVentanasHasVentanaPrincipal),
 				typeof(TapizVentanasHasVentanaSecundaria),
 				typeof(contiene),
 				typeof(navega),
 				typeof(despliega),
 				typeof(tiene),
+				typeof(TapizVentanasHasFinAplicacioned),
+				typeof(NavegadorReferencesFinAplicacioned),
 				typeof(JDCCCAJDOMDCMProyectoIPSDiagram),
 				typeof(MetaforaVentanaPrincipal),
 				typeof(MetaforaVentanaSecundaria),
@@ -104,6 +107,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				new DomainMemberInfo(typeof(Ventana), "altura", Ventana.alturaDomainPropertyId, typeof(Ventana.alturaPropertyHandler)),
 				new DomainMemberInfo(typeof(Ventana), "anchura", Ventana.anchuraDomainPropertyId, typeof(Ventana.anchuraPropertyHandler)),
 				new DomainMemberInfo(typeof(VentanaSecundaria), "modal", VentanaSecundaria.modalDomainPropertyId, typeof(VentanaSecundaria.modalPropertyHandler)),
+				new DomainMemberInfo(typeof(VentanaSecundaria), "descripcion", VentanaSecundaria.descripcionDomainPropertyId, typeof(VentanaSecundaria.descripcionPropertyHandler)),
 				new DomainMemberInfo(typeof(Menu), "titulo", Menu.tituloDomainPropertyId, typeof(Menu.tituloPropertyHandler)),
 				new DomainMemberInfo(typeof(Navegador), "titulo", Navegador.tituloDomainPropertyId, typeof(Navegador.tituloPropertyHandler)),
 			};
@@ -128,6 +132,10 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				new DomainRolePlayerInfo(typeof(despliega), "ItemMenu", despliega.ItemMenuDomainRoleId),
 				new DomainRolePlayerInfo(typeof(tiene), "Ventana", tiene.VentanaDomainRoleId),
 				new DomainRolePlayerInfo(typeof(tiene), "Boton", tiene.BotonDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizVentanasHasFinAplicacioned), "TapizVentanas", TapizVentanasHasFinAplicacioned.TapizVentanasDomainRoleId),
+				new DomainRolePlayerInfo(typeof(TapizVentanasHasFinAplicacioned), "FinAplicacion", TapizVentanasHasFinAplicacioned.FinAplicacionDomainRoleId),
+				new DomainRolePlayerInfo(typeof(NavegadorReferencesFinAplicacioned), "Navegador", NavegadorReferencesFinAplicacioned.NavegadorDomainRoleId),
+				new DomainRolePlayerInfo(typeof(NavegadorReferencesFinAplicacioned), "FinAplicacion", NavegadorReferencesFinAplicacioned.FinAplicacionDomainRoleId),
 			};
 		}
 		#endregion
@@ -149,19 +157,20 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(14);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(15);
 				createElementMap.Add(typeof(TapizVentanas), 0);
 				createElementMap.Add(typeof(VentanaPrincipal), 1);
 				createElementMap.Add(typeof(VentanaSecundaria), 2);
 				createElementMap.Add(typeof(Menu), 3);
 				createElementMap.Add(typeof(Boton), 4);
 				createElementMap.Add(typeof(ItemMenu), 5);
-				createElementMap.Add(typeof(JDCCCAJDOMDCMProyectoIPSDiagram), 6);
-				createElementMap.Add(typeof(MetaforaVentanaPrincipal), 7);
-				createElementMap.Add(typeof(MetaforaVentanaSecundaria), 8);
-				createElementMap.Add(typeof(MetaforaMenu), 9);
-				createElementMap.Add(typeof(MetaforaItemMenu), 10);
-				createElementMap.Add(typeof(MetaforaBoton), 11);
+				createElementMap.Add(typeof(FinAplicacion), 6);
+				createElementMap.Add(typeof(JDCCCAJDOMDCMProyectoIPSDiagram), 7);
+				createElementMap.Add(typeof(MetaforaVentanaPrincipal), 8);
+				createElementMap.Add(typeof(MetaforaVentanaSecundaria), 9);
+				createElementMap.Add(typeof(MetaforaMenu), 10);
+				createElementMap.Add(typeof(MetaforaItemMenu), 11);
+				createElementMap.Add(typeof(MetaforaBoton), 12);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -181,12 +190,13 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				case 3: return new Menu(partition, propertyAssignments);
 				case 4: return new Boton(partition, propertyAssignments);
 				case 5: return new ItemMenu(partition, propertyAssignments);
-				case 6: return new JDCCCAJDOMDCMProyectoIPSDiagram(partition, propertyAssignments);
-				case 7: return new MetaforaVentanaPrincipal(partition, propertyAssignments);
-				case 8: return new MetaforaVentanaSecundaria(partition, propertyAssignments);
-				case 9: return new MetaforaMenu(partition, propertyAssignments);
-				case 10: return new MetaforaItemMenu(partition, propertyAssignments);
-				case 11: return new MetaforaBoton(partition, propertyAssignments);
+				case 6: return new FinAplicacion(partition, propertyAssignments);
+				case 7: return new JDCCCAJDOMDCMProyectoIPSDiagram(partition, propertyAssignments);
+				case 8: return new MetaforaVentanaPrincipal(partition, propertyAssignments);
+				case 9: return new MetaforaVentanaSecundaria(partition, propertyAssignments);
+				case 10: return new MetaforaMenu(partition, propertyAssignments);
+				case 11: return new MetaforaItemMenu(partition, propertyAssignments);
+				case 12: return new MetaforaBoton(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -209,13 +219,15 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(6);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(8);
 				createElementLinkMap.Add(typeof(TapizVentanasHasVentanaPrincipal), 0);
 				createElementLinkMap.Add(typeof(TapizVentanasHasVentanaSecundaria), 1);
 				createElementLinkMap.Add(typeof(contiene), 2);
 				createElementLinkMap.Add(typeof(navega), 3);
 				createElementLinkMap.Add(typeof(despliega), 4);
 				createElementLinkMap.Add(typeof(tiene), 5);
+				createElementLinkMap.Add(typeof(TapizVentanasHasFinAplicacioned), 6);
+				createElementLinkMap.Add(typeof(NavegadorReferencesFinAplicacioned), 7);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -236,6 +248,8 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				case 3: return new navega(partition, roleAssignments, propertyAssignments);
 				case 4: return new despliega(partition, roleAssignments, propertyAssignments);
 				case 5: return new tiene(partition, roleAssignments, propertyAssignments);
+				case 6: return new TapizVentanasHasFinAplicacioned(partition, roleAssignments, propertyAssignments);
+				case 7: return new NavegadorReferencesFinAplicacioned(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -407,6 +421,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			DomainRoles.Add(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.contiene.MenuDomainRoleId, true);
 			DomainRoles.Add(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.despliega.ItemMenuDomainRoleId, true);
 			DomainRoles.Add(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.tiene.BotonDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned.FinAplicacionDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

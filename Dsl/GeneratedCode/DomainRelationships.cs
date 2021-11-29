@@ -1449,3 +1449,486 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		#endregion
 	}
 }
+namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship TapizVentanasHasFinAplicacioned
+	/// Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("aa9d7aa4-8a0a-45b7-bfa7-6925ce8a22e6")]
+	public partial class TapizVentanasHasFinAplicacioned : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// TapizVentanasHasFinAplicacioned domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xaa9d7aa4, 0x8a0a, 0x45b7, 0xbf, 0xa7, 0x69, 0x25, 0xce, 0x8a, 0x22, 0xe6);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a TapizVentanasHasFinAplicacioned link in the same Partition as the given TapizVentanas
+		/// </summary>
+		/// <param name="source">TapizVentanas to use as the source of the relationship.</param>
+		/// <param name="target">FinAplicacion to use as the target of the relationship.</param>
+		public TapizVentanasHasFinAplicacioned(TapizVentanas source, FinAplicacion target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(TapizVentanasHasFinAplicacioned.TapizVentanasDomainRoleId, source), new DslModeling::RoleAssignment(TapizVentanasHasFinAplicacioned.FinAplicacionDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizVentanasHasFinAplicacioned(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizVentanasHasFinAplicacioned(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizVentanasHasFinAplicacioned(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizVentanasHasFinAplicacioned(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region TapizVentanas domain role code
+		
+		/// <summary>
+		/// TapizVentanas domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TapizVentanasDomainRoleId = new global::System.Guid(0x3d363116, 0x5578, 0x4ebd, 0xb3, 0x74, 0x8e, 0x65, 0x99, 0x63, 0x59, 0xb9);
+		
+		/// <summary>
+		/// DomainRole TapizVentanas
+		/// Description for
+		/// UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned.TapizVentanas
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned/TapizVentanas.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned/TapizVentanas.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "FinAplicacioned", PropertyDisplayNameKey="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned/TapizVentanas.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("3d363116-5578-4ebd-b374-8e65996359b9")]
+		public virtual TapizVentanas TapizVentanas
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (TapizVentanas)DslModeling::DomainRoleInfo.GetRolePlayer(this, TapizVentanasDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TapizVentanasDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access TapizVentanas of a FinAplicacion
+		/// <summary>
+		/// Gets TapizVentanas.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static TapizVentanas GetTapizVentanas(FinAplicacion element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, FinAplicacionDomainRoleId) as TapizVentanas;
+		}
+		
+		/// <summary>
+		/// Sets TapizVentanas.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetTapizVentanas(FinAplicacion element, TapizVentanas newTapizVentanas)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, FinAplicacionDomainRoleId, newTapizVentanas);
+		}
+		#endregion
+		#region FinAplicacion domain role code
+		
+		/// <summary>
+		/// FinAplicacion domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid FinAplicacionDomainRoleId = new global::System.Guid(0x89454940, 0xe27a, 0x4ba2, 0xbd, 0x07, 0xdb, 0x9e, 0xdb, 0xc7, 0x1f, 0x5b);
+		
+		/// <summary>
+		/// DomainRole FinAplicacion
+		/// Description for
+		/// UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned.FinAplicacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned/FinAplicacion.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned/FinAplicacion.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "TapizVentanas", PropertyDisplayNameKey="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned/FinAplicacion.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("89454940-e27a-4ba2-bd07-db9edbc71f5b")]
+		public virtual FinAplicacion FinAplicacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (FinAplicacion)DslModeling::DomainRoleInfo.GetRolePlayer(this, FinAplicacionDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, FinAplicacionDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access FinAplicacioned of a TapizVentanas
+		/// <summary>
+		/// Gets a list of FinAplicacioned.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<FinAplicacion> GetFinAplicacioned(TapizVentanas element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<FinAplicacion>, FinAplicacion>(element, TapizVentanasDomainRoleId);
+		}
+		#endregion
+		#region TapizVentanas link accessor
+		/// <summary>
+		/// Get the list of TapizVentanasHasFinAplicacioned links to a TapizVentanas.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned> GetLinksToFinAplicacioned ( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas tapizVentanasInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned>(tapizVentanasInstance, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned.TapizVentanasDomainRoleId);
+		}
+		#endregion
+		#region FinAplicacion link accessor
+		/// <summary>
+		/// Get the TapizVentanasHasFinAplicacioned link to a FinAplicacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned GetLinkToTapizVentanas (global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion finAplicacionInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned>(finAplicacionInstance, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned.FinAplicacionDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of FinAplicacion not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region TapizVentanasHasFinAplicacioned instance accessors
+		
+		/// <summary>
+		/// Get any TapizVentanasHasFinAplicacioned links between a given TapizVentanas and a FinAplicacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned> GetLinks( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas source, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned>(source, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned.TapizVentanasDomainRoleId);
+			foreach ( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned link in links )
+			{
+				if ( target.Equals(link.FinAplicacion) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one TapizVentanasHasFinAplicacioned link between a given TapizVentanasand a FinAplicacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned GetLink( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas source, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned>(source, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned.TapizVentanasDomainRoleId);
+			foreach ( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned link in links )
+			{
+				if ( target.Equals(link.FinAplicacion) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship NavegadorReferencesFinAplicacioned
+	/// Description for
+	/// UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("73ab13d1-6c53-4be0-bc32-e745bf11961b")]
+	public partial class NavegadorReferencesFinAplicacioned : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// NavegadorReferencesFinAplicacioned domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x73ab13d1, 0x6c53, 0x4be0, 0xbc, 0x32, 0xe7, 0x45, 0xbf, 0x11, 0x96, 0x1b);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a NavegadorReferencesFinAplicacioned link in the same Partition as the given Navegador
+		/// </summary>
+		/// <param name="source">Navegador to use as the source of the relationship.</param>
+		/// <param name="target">FinAplicacion to use as the target of the relationship.</param>
+		public NavegadorReferencesFinAplicacioned(Navegador source, FinAplicacion target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(NavegadorReferencesFinAplicacioned.NavegadorDomainRoleId, source), new DslModeling::RoleAssignment(NavegadorReferencesFinAplicacioned.FinAplicacionDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public NavegadorReferencesFinAplicacioned(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public NavegadorReferencesFinAplicacioned(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public NavegadorReferencesFinAplicacioned(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public NavegadorReferencesFinAplicacioned(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Navegador domain role code
+		
+		/// <summary>
+		/// Navegador domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid NavegadorDomainRoleId = new global::System.Guid(0xc2aa5235, 0xca77, 0x4293, 0x9b, 0x5f, 0xf2, 0xb4, 0xc0, 0xd1, 0xbe, 0xb1);
+		
+		/// <summary>
+		/// DomainRole Navegador
+		/// Description for
+		/// UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.Navegador
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned/Navegador.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned/Navegador.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "FinAplicacioned", PropertyDisplayNameKey="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned/Navegador.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.OneMany)]
+		[DslModeling::DomainObjectId("c2aa5235-ca77-4293-9b5f-f2b4c0d1beb1")]
+		public virtual Navegador Navegador
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Navegador)DslModeling::DomainRoleInfo.GetRolePlayer(this, NavegadorDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, NavegadorDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Navegador of a FinAplicacion
+		/// <summary>
+		/// Gets Navegador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static Navegador GetNavegador(FinAplicacion element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, FinAplicacionDomainRoleId) as Navegador;
+		}
+		
+		/// <summary>
+		/// Sets Navegador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetNavegador(FinAplicacion element, Navegador newNavegador)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, FinAplicacionDomainRoleId, newNavegador);
+		}
+		#endregion
+		#region FinAplicacion domain role code
+		
+		/// <summary>
+		/// FinAplicacion domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid FinAplicacionDomainRoleId = new global::System.Guid(0x71e68193, 0xdc26, 0x4276, 0xb2, 0x95, 0xe4, 0xa5, 0xcc, 0x25, 0xf3, 0x8d);
+		
+		/// <summary>
+		/// DomainRole FinAplicacion
+		/// Description for
+		/// UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.FinAplicacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned/FinAplicacion.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned/FinAplicacion.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Navegador", PropertyDisplayNameKey="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned/FinAplicacion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslModeling::DomainObjectId("71e68193-dc26-4276-b295-e4a5cc25f38d")]
+		public virtual FinAplicacion FinAplicacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (FinAplicacion)DslModeling::DomainRoleInfo.GetRolePlayer(this, FinAplicacionDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, FinAplicacionDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access FinAplicacioned of a Navegador
+		/// <summary>
+		/// Gets a list of FinAplicacioned.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<FinAplicacion> GetFinAplicacioned(Navegador element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<FinAplicacion>, FinAplicacion>(element, NavegadorDomainRoleId);
+		}
+		#endregion
+		#region Navegador link accessor
+		/// <summary>
+		/// Get the list of NavegadorReferencesFinAplicacioned links to a Navegador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned> GetLinksToFinAplicacioned ( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador navegadorInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned>(navegadorInstance, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.NavegadorDomainRoleId);
+		}
+		#endregion
+		#region FinAplicacion link accessor
+		/// <summary>
+		/// Get the NavegadorReferencesFinAplicacioned link to a FinAplicacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned GetLinkToNavegador (global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion finAplicacionInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned>(finAplicacionInstance, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.FinAplicacionDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of FinAplicacion not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region NavegadorReferencesFinAplicacioned instance accessors
+		
+		/// <summary>
+		/// Get any NavegadorReferencesFinAplicacioned links between a given Navegador and a FinAplicacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned> GetLinks( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador source, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned>(source, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.NavegadorDomainRoleId);
+			foreach ( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned link in links )
+			{
+				if ( target.Equals(link.FinAplicacion) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one NavegadorReferencesFinAplicacioned link between a given Navegadorand a FinAplicacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned GetLink( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador source, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned>(source, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.NavegadorDomainRoleId);
+			foreach ( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned link in links )
+			{
+				if ( target.Equals(link.FinAplicacion) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}

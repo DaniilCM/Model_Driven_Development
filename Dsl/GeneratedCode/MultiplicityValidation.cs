@@ -42,5 +42,29 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	} // class Ventana
 } // UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 
+namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
+{
+	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
+	public abstract partial class Navegador
+	{
+		/// <summary>
+		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
+		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
+		private void ValidateNavegadorMultiplicity (DslValidation::ValidationContext context)
+		{
+			if (this.FinAplicacioned.Count == 0)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"Navegador", "", "FinAplicacioned"),
+						"DSL0001", this);
+			}
+		} // ValidateNavegadorMultiplicity
+	} // class Navegador
+} // UPM_IPS.JDCCCAJDOMDCMProyectoIPS
+
 	
  

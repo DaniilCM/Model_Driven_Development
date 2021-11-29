@@ -26,6 +26,14 @@
             <DomainPath>TapizVentanasHasVentanaSecundaria.VentanaSecundaria</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="FinAplicacion" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>TapizVentanasHasFinAplicacioned.FinAplicacioned</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="0753d527-b320-4229-8abb-ad0c333b812a" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana" Name="Ventana" DisplayName="Ventana" InheritanceModifier="Abstract" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS">
@@ -80,6 +88,11 @@
             <ExternalTypeMoniker Name="/System/Boolean" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="ef2d7c27-ef55-4370-ac91-fb9c6d6aab37" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.VentanaSecundaria.Descripcion" Name="descripcion" DisplayName="Descripcion">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
     </DomainClass>
     <DomainClass Id="c4b92909-e6b2-4231-aeae-bbc180e07e16" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu" Name="Menu" DisplayName="Menu" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS">
@@ -120,6 +133,7 @@
         <DomainClassMoniker Name="Navegador" />
       </BaseClass>
     </DomainClass>
+    <DomainClass Id="31d0ee6f-1540-4f1a-86c8-b68120db6d04" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion" Name="FinAplicacion" DisplayName="Fin Aplicacion" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" />
   </Classes>
   <Relationships>
     <DomainRelationship Id="776754ac-7a4e-4bb6-879d-097ab1922a6f" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal" Name="TapizVentanasHasVentanaPrincipal" DisplayName="Tapiz Ventanas Has Ventana Principal" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" IsEmbedding="true">
@@ -218,6 +232,38 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="aa9d7aa4-8a0a-45b7-bfa7-6925ce8a22e6" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned" Name="TapizVentanasHasFinAplicacioned" DisplayName="Tapiz Ventanas Has Fin Aplicacioned" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="3d363116-5578-4ebd-b374-8e65996359b9" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned.TapizVentanas" Name="TapizVentanas" DisplayName="Tapiz Ventanas" PropertyName="FinAplicacioned" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Fin Aplicacioned">
+          <RolePlayer>
+            <DomainClassMoniker Name="TapizVentanas" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="89454940-e27a-4ba2-bd07-db9edbc71f5b" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned.FinAplicacion" Name="FinAplicacion" DisplayName="Fin Aplicacion" PropertyName="TapizVentanas" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Tapiz Ventanas">
+          <RolePlayer>
+            <DomainClassMoniker Name="FinAplicacion" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="73ab13d1-6c53-4be0-bc32-e745bf11961b" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned" Name="NavegadorReferencesFinAplicacioned" DisplayName="Navegador References Fin Aplicacioned" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS">
+      <Source>
+        <DomainRole Id="c2aa5235-ca77-4293-9b5f-f2b4c0d1beb1" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.Navegador" Name="Navegador" DisplayName="Navegador" PropertyName="FinAplicacioned" Multiplicity="OneMany" PropertyDisplayName="Fin Aplicacioned">
+          <RolePlayer>
+            <DomainClassMoniker Name="Navegador" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="71e68193-dc26-4276-b295-e4a5cc25f38d" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.FinAplicacion" Name="FinAplicacion" DisplayName="Fin Aplicacion" PropertyName="Navegador" Multiplicity="ZeroOne" PropertyDisplayName="Navegador">
+          <RolePlayer>
+            <DomainClassMoniker Name="FinAplicacion" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -283,6 +329,9 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="ventanaSecundaria">
             <DomainRelationshipMoniker Name="TapizVentanasHasVentanaSecundaria" />
           </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="finAplicacioned">
+            <DomainRelationshipMoniker Name="TapizVentanasHasFinAplicacioned" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="JDCCCAJDOMDCMProyectoIPSDiagram" MonikerAttributeName="" SerializeId="true" MonikerElementName="jDCCCAJDOMDCMProyectoIPSDiagramMoniker" ElementName="jDCCCAJDOMDCMProyectoIPSDiagram" MonikerTypeName="JDCCCAJDOMDCMProyectoIPSDiagramMoniker">
@@ -319,6 +368,9 @@
         <ElementData>
           <XmlPropertyData XmlName="modal">
             <DomainPropertyMoniker Name="VentanaSecundaria/modal" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="descripcion">
+            <DomainPropertyMoniker Name="VentanaSecundaria/descripcion" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -357,6 +409,9 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="ventanas">
             <DomainRelationshipMoniker Name="navega" />
           </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="finAplicacioned">
+            <DomainRelationshipMoniker Name="NavegadorReferencesFinAplicacioned" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="Boton" MonikerAttributeName="" SerializeId="true" MonikerElementName="botonMoniker" ElementName="boton" MonikerTypeName="BotonMoniker">
@@ -380,6 +435,15 @@
       <XmlClassData TypeName="MetaforaBoton" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaBotonMoniker" ElementName="metaforaBoton" MonikerTypeName="MetaforaBotonMoniker">
         <GeometryShapeMoniker Name="MetaforaBoton" />
       </XmlClassData>
+      <XmlClassData TypeName="FinAplicacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="finAplicacionMoniker" ElementName="finAplicacion" MonikerTypeName="FinAplicacionMoniker">
+        <DomainClassMoniker Name="FinAplicacion" />
+      </XmlClassData>
+      <XmlClassData TypeName="TapizVentanasHasFinAplicacioned" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizVentanasHasFinAplicacionedMoniker" ElementName="tapizVentanasHasFinAplicacioned" MonikerTypeName="TapizVentanasHasFinAplicacionedMoniker">
+        <DomainRelationshipMoniker Name="TapizVentanasHasFinAplicacioned" />
+      </XmlClassData>
+      <XmlClassData TypeName="NavegadorReferencesFinAplicacioned" MonikerAttributeName="" SerializeId="true" MonikerElementName="navegadorReferencesFinAplicacionedMoniker" ElementName="navegadorReferencesFinAplicacioned" MonikerTypeName="NavegadorReferencesFinAplicacionedMoniker">
+        <DomainRelationshipMoniker Name="NavegadorReferencesFinAplicacioned" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="JDCCCAJDOMDCMProyectoIPSExplorer" />
@@ -398,6 +462,25 @@
           <RolePlayerConnectDirective>
             <AcceptingClass>
               <DomainClassMoniker Name="Ventana" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="NavegadorReferencesFinAplicacionedBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="NavegadorReferencesFinAplicacioned" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Navegador" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="FinAplicacion" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>

@@ -1,4 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<jDCCCAJDOMDCMProyectoIPSDiagram dslVersion="1.0.0.0" Id="075c5ca1-3445-467a-9745-fa919c10d447" absoluteBounds="0, 0, 11, 8.5" name="Protool">
+<jDCCCAJDOMDCMProyectoIPSDiagram dslVersion="1.0.0.0" Id="075c5ca1-3445-467a-9745-fa919c10d447" absoluteBounds="0, 0, 11.25, 8.5" name="Protool">
   <tapizVentanasMoniker Id="b8af08ed-88a8-45d9-b7bf-97892defebed" />
+  <nestedChildShapes>
+    <metaforaVentanaPrincipal Id="85a451cf-c85f-4d24-8b85-01ae7b2b86d1" absoluteBounds="4.375, 0.5, 3, 1">
+      <ventanaPrincipalMoniker Id="8bb646aa-e64f-42d9-bd71-c2932e769d1a" />
+    </metaforaVentanaPrincipal>
+    <metaforaVentanaSecundaria Id="f3b46443-d487-40ff-a2a0-667584472f00" absoluteBounds="0.75, 1.875, 1.5, 1">
+      <ventanaSecundariaMoniker Id="ac087a2a-2764-4d70-b0e0-60d26ea5d621" />
+    </metaforaVentanaSecundaria>
+    <metaforaVentanaSecundaria Id="8ba67b08-6204-4e54-916a-a708411b4935" absoluteBounds="2.875, 1.875, 1.5, 1">
+      <ventanaSecundariaMoniker Id="8fe54ee2-81bb-44ba-b9ae-d5eb798cb240" />
+    </metaforaVentanaSecundaria>
+    <metaforaVentanaSecundaria Id="302c4469-5e00-4d02-9ce5-d2e8942dfc64" absoluteBounds="5.125, 1.875, 1.5, 1">
+      <ventanaSecundariaMoniker Id="f1d0bce2-c2ef-44bb-b306-904ed4ae26ed" />
+    </metaforaVentanaSecundaria>
+    <metaforaVentanaSecundaria Id="fad9955a-2dcf-4596-9a4a-05a3834d2e3b" absoluteBounds="7.375, 1.875, 1.5, 1">
+      <ventanaSecundariaMoniker Id="5a584eab-3a42-48ba-aec7-db456b2f0ecc" />
+    </metaforaVentanaSecundaria>
+    <metaforaVentanaSecundaria Id="bbd6f0c3-a795-49b1-8e9d-5736c8aa0847" absoluteBounds="9.5, 1.875, 1.5, 1">
+      <ventanaSecundariaMoniker Id="66a63b3d-4231-4a73-bcb4-437fd17f78b0" />
+    </metaforaVentanaSecundaria>
+  </nestedChildShapes>
 </jDCCCAJDOMDCMProyectoIPSDiagram>

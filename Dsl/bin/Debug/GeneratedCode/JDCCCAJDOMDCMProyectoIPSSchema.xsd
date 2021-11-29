@@ -40,6 +40,21 @@
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
+          <!-- Relationship: TapizVentanasHasFinAplicacioned -->
+          <xsd:element name="finAplicacioned" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of TapizVentanasHasFinAplicacioned</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="tapizVentanasHasFinAplicacioned" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of TapizVentanasHasFinAplicacioned needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
         </xsd:sequence>
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
@@ -186,6 +201,8 @@
         </xsd:attribute>
         <!-- Property: modal -->
         <xsd:attribute name="modal" type="xsd:boolean" />
+        <!-- Property: descripcion -->
+        <xsd:attribute name="descripcion" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -274,6 +291,21 @@
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
+          <!-- Relationship: NavegadorReferencesFinAplicacioned -->
+          <xsd:element name="finAplicacioned" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of NavegadorReferencesFinAplicacioned</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="navegadorReferencesFinAplicacioned" minOccurs="1" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of NavegadorReferencesFinAplicacioned needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
         </xsd:sequence>
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
@@ -354,6 +386,38 @@
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="NavegadorMoniker">
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FinAplicacion -->
+  <xsd:element name="finAplicacion" type="FinAplicacion" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="FinAplicacion">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- FinAplicacion Moniker -->
+  <xsd:element name="finAplicacionMoniker" type="FinAplicacionMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="FinAplicacionMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for FinAplicacion instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -586,6 +650,86 @@
   <xsd:complexType name="TieneMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for tiene instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TapizVentanasHasFinAplicacioned -->
+  <xsd:element name="tapizVentanasHasFinAplicacioned" type="TapizVentanasHasFinAplicacioned" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="TapizVentanasHasFinAplicacioned">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end FinAplicacion -->
+          <xsd:element ref="finAplicacion" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TapizVentanasHasFinAplicacioned Moniker -->
+  <xsd:element name="tapizVentanasHasFinAplicacionedMoniker" type="TapizVentanasHasFinAplicacionedMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="TapizVentanasHasFinAplicacionedMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for TapizVentanasHasFinAplicacioned instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- NavegadorReferencesFinAplicacioned -->
+  <xsd:element name="navegadorReferencesFinAplicacioned" type="NavegadorReferencesFinAplicacioned" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="NavegadorReferencesFinAplicacioned">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end FinAplicacion -->
+          <xsd:element ref="finAplicacionMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- NavegadorReferencesFinAplicacioned Moniker -->
+  <xsd:element name="navegadorReferencesFinAplicacionedMoniker" type="NavegadorReferencesFinAplicacionedMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="NavegadorReferencesFinAplicacionedMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for NavegadorReferencesFinAplicacioned instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
