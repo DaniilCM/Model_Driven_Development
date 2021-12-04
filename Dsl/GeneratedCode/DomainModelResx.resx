@@ -253,21 +253,13 @@
     <value>Item Menu</value>
     <comment>DisplayName for DomainClass &apos;ItemMenu&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion</value>
-    <comment>Description for DomainClass &apos;FinAplicacion&apos;</comment>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación</value>
+    <comment>Description for DomainClass &apos;FinAplicación&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion.DisplayName" xml:space="preserve">
-    <value>Fin Aplicacion</value>
-    <comment>DisplayName for DomainClass &apos;FinAplicacion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion/nombre.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion.Nombre</value>
-    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;FinAplicacion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion/nombre.DisplayName" xml:space="preserve">
-    <value>Nombre</value>
-    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;FinAplicacion&apos;</comment>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación.DisplayName" xml:space="preserve">
+    <value>Fin Aplicación</value>
+    <comment>DisplayName for DomainClass &apos;FinAplicación&apos;</comment>
   </data>
   <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal</value>
@@ -461,69 +453,69 @@
     <value>Ventana</value>
     <comment>PropertyDisplayName for DomainRole &apos;Boton&apos; on DomainRelationship &apos;tiene&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned</value>
-    <comment>Description for DomainClass &apos;TapizVentanasHasFinAplicacioned&apos;</comment>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación</value>
+    <comment>Description for DomainClass &apos;NavegadorReferencesFinAplicación&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned.DisplayName" xml:space="preserve">
-    <value>Tapiz Ventanas Has Fin Aplicacioned</value>
-    <comment>DisplayName for DomainClass &apos;TapizVentanasHasFinAplicacioned&apos;</comment>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación.DisplayName" xml:space="preserve">
+    <value>Navegador References Fin Aplicación</value>
+    <comment>DisplayName for DomainClass &apos;NavegadorReferencesFinAplicación&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned/TapizVentanas.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned.TapizVentanas</value>
-    <comment>Description for DomainRole &apos;TapizVentanas&apos; on DomainRelationship &apos;TapizVentanasHasFinAplicacioned&apos;</comment>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación/Navegador.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación.Navegador</value>
+    <comment>Description for DomainRole &apos;Navegador&apos; on DomainRelationship &apos;NavegadorReferencesFinAplicación&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned/TapizVentanas.DisplayName" xml:space="preserve">
-    <value>Tapiz Ventanas</value>
-    <comment>DisplayName for DomainRole &apos;TapizVentanas&apos; on DomainRelationship &apos;TapizVentanasHasFinAplicacioned&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned/TapizVentanas.PropertyDisplayName" xml:space="preserve">
-    <value>Fin Aplicacioned</value>
-    <comment>PropertyDisplayName for DomainRole &apos;TapizVentanas&apos; on DomainRelationship &apos;TapizVentanasHasFinAplicacioned&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned/FinAplicacion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned.FinAplicacion</value>
-    <comment>Description for DomainRole &apos;FinAplicacion&apos; on DomainRelationship &apos;TapizVentanasHasFinAplicacioned&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned/FinAplicacion.DisplayName" xml:space="preserve">
-    <value>Fin Aplicacion</value>
-    <comment>DisplayName for DomainRole &apos;FinAplicacion&apos; on DomainRelationship &apos;TapizVentanasHasFinAplicacioned&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned/FinAplicacion.PropertyDisplayName" xml:space="preserve">
-    <value>Tapiz Ventanas</value>
-    <comment>PropertyDisplayName for DomainRole &apos;FinAplicacion&apos; on DomainRelationship &apos;TapizVentanasHasFinAplicacioned&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned</value>
-    <comment>Description for DomainClass &apos;NavegadorReferencesFinAplicacioned&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.DisplayName" xml:space="preserve">
-    <value>Navegador References Fin Aplicacioned</value>
-    <comment>DisplayName for DomainClass &apos;NavegadorReferencesFinAplicacioned&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned/Navegador.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.Navegador</value>
-    <comment>Description for DomainRole &apos;Navegador&apos; on DomainRelationship &apos;NavegadorReferencesFinAplicacioned&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned/Navegador.DisplayName" xml:space="preserve">
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación/Navegador.DisplayName" xml:space="preserve">
     <value>Navegador</value>
-    <comment>DisplayName for DomainRole &apos;Navegador&apos; on DomainRelationship &apos;NavegadorReferencesFinAplicacioned&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Navegador&apos; on DomainRelationship &apos;NavegadorReferencesFinAplicación&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned/Navegador.PropertyDisplayName" xml:space="preserve">
-    <value>Fin Aplicacioned</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Navegador&apos; on DomainRelationship &apos;NavegadorReferencesFinAplicacioned&apos;</comment>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación/Navegador.PropertyDisplayName" xml:space="preserve">
+    <value>Fin Aplicación</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Navegador&apos; on DomainRelationship &apos;NavegadorReferencesFinAplicación&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned/FinAplicacion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.FinAplicacion</value>
-    <comment>Description for DomainRole &apos;FinAplicacion&apos; on DomainRelationship &apos;NavegadorReferencesFinAplicacioned&apos;</comment>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación/FinAplicación.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación.FinAplicación</value>
+    <comment>Description for DomainRole &apos;FinAplicación&apos; on DomainRelationship &apos;NavegadorReferencesFinAplicación&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned/FinAplicacion.DisplayName" xml:space="preserve">
-    <value>Fin Aplicacion</value>
-    <comment>DisplayName for DomainRole &apos;FinAplicacion&apos; on DomainRelationship &apos;NavegadorReferencesFinAplicacioned&apos;</comment>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación/FinAplicación.DisplayName" xml:space="preserve">
+    <value>Fin Aplicación</value>
+    <comment>DisplayName for DomainRole &apos;FinAplicación&apos; on DomainRelationship &apos;NavegadorReferencesFinAplicación&apos;</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned/FinAplicacion.PropertyDisplayName" xml:space="preserve">
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación/FinAplicación.PropertyDisplayName" xml:space="preserve">
     <value>Navegador</value>
-    <comment>PropertyDisplayName for DomainRole &apos;FinAplicacion&apos; on DomainRelationship &apos;NavegadorReferencesFinAplicacioned&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;FinAplicación&apos; on DomainRelationship &apos;NavegadorReferencesFinAplicación&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación</value>
+    <comment>Description for DomainClass &apos;TapizVentanasHasFinAplicación&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación.DisplayName" xml:space="preserve">
+    <value>Tapiz Ventanas Has Fin Aplicación</value>
+    <comment>DisplayName for DomainClass &apos;TapizVentanasHasFinAplicación&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación/TapizVentanas.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación.TapizVentanas</value>
+    <comment>Description for DomainRole &apos;TapizVentanas&apos; on DomainRelationship &apos;TapizVentanasHasFinAplicación&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación/TapizVentanas.DisplayName" xml:space="preserve">
+    <value>Tapiz Ventanas</value>
+    <comment>DisplayName for DomainRole &apos;TapizVentanas&apos; on DomainRelationship &apos;TapizVentanasHasFinAplicación&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación/TapizVentanas.PropertyDisplayName" xml:space="preserve">
+    <value>Fin Aplicación</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TapizVentanas&apos; on DomainRelationship &apos;TapizVentanasHasFinAplicación&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación/FinAplicación.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación.FinAplicación</value>
+    <comment>Description for DomainRole &apos;FinAplicación&apos; on DomainRelationship &apos;TapizVentanasHasFinAplicación&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación/FinAplicación.DisplayName" xml:space="preserve">
+    <value>Fin Aplicación</value>
+    <comment>DisplayName for DomainRole &apos;FinAplicación&apos; on DomainRelationship &apos;TapizVentanasHasFinAplicación&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación/FinAplicación.PropertyDisplayName" xml:space="preserve">
+    <value>Tapiz Ventanas</value>
+    <comment>PropertyDisplayName for DomainRole &apos;FinAplicación&apos; on DomainRelationship &apos;TapizVentanasHasFinAplicación&apos;</comment>
   </data>
   <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaPrincipal.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaPrincipal</value>
@@ -615,6 +607,18 @@
   </data>
   <data name="MetaforaFinAplicacionnombreDecDefaultText" xml:space="preserve">
     <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaFinAplicación.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaFinAplicación</value>
+    <comment>Description for DomainClass &apos;MetáforaFinAplicación&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaFinAplicación.DisplayName" xml:space="preserve">
+    <value>Metáfora Fin Aplicación</value>
+    <comment>DisplayName for DomainClass &apos;MetáforaFinAplicación&apos;</comment>
+  </data>
+  <data name="MetáforaFinAplicaciónNombreDefaultText" xml:space="preserve">
+    <value>Nombre</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaN_V.Description" xml:space="preserve">

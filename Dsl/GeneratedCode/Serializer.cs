@@ -247,16 +247,16 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </ventanaSecundaria>
 						}
 						break;
-					case "finAplicacioned":	// Relationship "TapizVentanasHasFinAplicacioned"
+					case "finAplicación":	// Relationship "TapizVentanasHasFinAplicación"
 						if (reader.IsEmptyElement)
 						{	// No instance of this relationship, just skip
 							DslModeling::SerializationUtilities.Skip(reader);
 						}
 						else
 						{
-							DslModeling::SerializationUtilities.SkipToFirstChild(reader);  // Skip the open tag of <finAplicacioned>
-							ReadTapizVentanasHasFinAplicacionedInstances(serializationContext, element, reader);
-							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </finAplicacioned>
+							DslModeling::SerializationUtilities.SkipToFirstChild(reader);  // Skip the open tag of <finAplicación>
+							ReadTapizVentanasHasFinAplicaciónInstances(serializationContext, element, reader);
+							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </finAplicación>
 						}
 						break;
 					default:
@@ -367,7 +367,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 	
 		/// <summary>
-		/// Reads all instances of relationship TapizVentanasHasFinAplicacioned.
+		/// Reads all instances of relationship TapizVentanasHasFinAplicación.
 		/// </summary>
 		/// <remarks>
 		/// The caller will position the reader at the open tag of the first XML element inside the relationship tag, so it can be
@@ -377,32 +377,32 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="element">In-memory TapizVentanas instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		private static void ReadTapizVentanasHasFinAplicacionedInstances(DslModeling::SerializationContext serializationContext, TapizVentanas element, global::System.Xml.XmlReader reader)
+		private static void ReadTapizVentanasHasFinAplicaciónInstances(DslModeling::SerializationContext serializationContext, TapizVentanas element, global::System.Xml.XmlReader reader)
 		{
 			while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 			{
-				DslModeling::DomainClassXmlSerializer newTapizVentanasHasFinAplicacionedSerializer = serializationContext.Directory.GetSerializer(TapizVentanasHasFinAplicacioned.DomainClassId);
-				global::System.Diagnostics.Debug.Assert(newTapizVentanasHasFinAplicacionedSerializer != null, "Cannot find serializer for TapizVentanasHasFinAplicacioned!");
-				TapizVentanasHasFinAplicacioned newTapizVentanasHasFinAplicacioned = newTapizVentanasHasFinAplicacionedSerializer.TryCreateInstance (serializationContext, reader, element.Partition) as TapizVentanasHasFinAplicacioned;
-				if (newTapizVentanasHasFinAplicacioned != null)
+				DslModeling::DomainClassXmlSerializer newTapizVentanasHasFinAplicaciónSerializer = serializationContext.Directory.GetSerializer(TapizVentanasHasFinAplicación.DomainClassId);
+				global::System.Diagnostics.Debug.Assert(newTapizVentanasHasFinAplicaciónSerializer != null, "Cannot find serializer for TapizVentanasHasFinAplicación!");
+				TapizVentanasHasFinAplicación newTapizVentanasHasFinAplicación = newTapizVentanasHasFinAplicaciónSerializer.TryCreateInstance (serializationContext, reader, element.Partition) as TapizVentanasHasFinAplicación;
+				if (newTapizVentanasHasFinAplicación != null)
 				{
-					DslModeling::DomainRoleInfo.SetRolePlayer (newTapizVentanasHasFinAplicacioned, TapizVentanasHasFinAplicacioned.TapizVentanasDomainRoleId, element);
-					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newTapizVentanasHasFinAplicacioned.GetDomainClass().Id);	
-					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newTapizVentanasHasFinAplicacioned.GetDomainClass().Name + "!");
-					targetSerializer.Read(serializationContext, newTapizVentanasHasFinAplicacioned, reader);
+					DslModeling::DomainRoleInfo.SetRolePlayer (newTapizVentanasHasFinAplicación, TapizVentanasHasFinAplicación.TapizVentanasDomainRoleId, element);
+					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newTapizVentanasHasFinAplicación.GetDomainClass().Id);	
+					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newTapizVentanasHasFinAplicación.GetDomainClass().Name + "!");
+					targetSerializer.Read(serializationContext, newTapizVentanasHasFinAplicación, reader);
 				}
 				else
 				{	// Maybe the relationship is serialized in short-form by mistake.
-					DslModeling::DomainClassXmlSerializer newFinAplicacionOfTapizVentanasHasFinAplicacionedSerializer = serializationContext.Directory.GetSerializer(FinAplicacion.DomainClassId);
-					global::System.Diagnostics.Debug.Assert(newFinAplicacionOfTapizVentanasHasFinAplicacionedSerializer != null, "Cannot find serializer for FinAplicacion!");
-					FinAplicacion newFinAplicacionOfTapizVentanasHasFinAplicacioned = newFinAplicacionOfTapizVentanasHasFinAplicacionedSerializer.TryCreateInstance(serializationContext, reader, element.Partition) as FinAplicacion;
-					if (newFinAplicacionOfTapizVentanasHasFinAplicacioned != null)
+					DslModeling::DomainClassXmlSerializer newFinAplicaciónOfTapizVentanasHasFinAplicaciónSerializer = serializationContext.Directory.GetSerializer(FinAplicación.DomainClassId);
+					global::System.Diagnostics.Debug.Assert(newFinAplicaciónOfTapizVentanasHasFinAplicaciónSerializer != null, "Cannot find serializer for FinAplicación!");
+					FinAplicación newFinAplicaciónOfTapizVentanasHasFinAplicación = newFinAplicaciónOfTapizVentanasHasFinAplicaciónSerializer.TryCreateInstance(serializationContext, reader, element.Partition) as FinAplicación;
+					if (newFinAplicaciónOfTapizVentanasHasFinAplicación != null)
 					{
-						JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.ExpectingFullFormRelationship(serializationContext, reader, typeof(TapizVentanasHasFinAplicacioned));
-						element.FinAplicacioned.Add(newFinAplicacionOfTapizVentanasHasFinAplicacioned);
-						DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newFinAplicacionOfTapizVentanasHasFinAplicacioned.GetDomainClass().Id);	
-						global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newFinAplicacionOfTapizVentanasHasFinAplicacioned.GetDomainClass().Name + "!");
-						targetSerializer.Read(serializationContext, newFinAplicacionOfTapizVentanasHasFinAplicacioned, reader);
+						JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.ExpectingFullFormRelationship(serializationContext, reader, typeof(TapizVentanasHasFinAplicación));
+						element.FinAplicación.Add(newFinAplicaciónOfTapizVentanasHasFinAplicación);
+						DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newFinAplicaciónOfTapizVentanasHasFinAplicación.GetDomainClass().Id);	
+						global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newFinAplicaciónOfTapizVentanasHasFinAplicación.GetDomainClass().Name + "!");
+						targetSerializer.Read(serializationContext, newFinAplicaciónOfTapizVentanasHasFinAplicación, reader);
 					}
 					else
 					{	// Unknown element, skip.
@@ -883,19 +883,19 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				writer.WriteEndElement();
 			}
 	
-			// TapizVentanasHasFinAplicacioned
-			global::System.Collections.ObjectModel.ReadOnlyCollection<TapizVentanasHasFinAplicacioned> allTapizVentanasHasFinAplicacionedInstances = TapizVentanasHasFinAplicacioned.GetLinksToFinAplicacioned(element);
-			if (!serializationContext.Result.Failed && allTapizVentanasHasFinAplicacionedInstances.Count > 0)
+			// TapizVentanasHasFinAplicación
+			global::System.Collections.ObjectModel.ReadOnlyCollection<TapizVentanasHasFinAplicación> allTapizVentanasHasFinAplicaciónInstances = TapizVentanasHasFinAplicación.GetLinksToFinAplicación(element);
+			if (!serializationContext.Result.Failed && allTapizVentanasHasFinAplicaciónInstances.Count > 0)
 			{
-				writer.WriteStartElement("finAplicacioned");
-				foreach (TapizVentanasHasFinAplicacioned eachTapizVentanasHasFinAplicacionedInstance in allTapizVentanasHasFinAplicacionedInstances)
+				writer.WriteStartElement("finAplicación");
+				foreach (TapizVentanasHasFinAplicación eachTapizVentanasHasFinAplicaciónInstance in allTapizVentanasHasFinAplicaciónInstances)
 				{
 					if (serializationContext.Result.Failed)
 						break;
 	
-					DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(eachTapizVentanasHasFinAplicacionedInstance.GetDomainClass().Id);
-					global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + eachTapizVentanasHasFinAplicacionedInstance.GetDomainClass().Name + "!");
-					relSerializer.Write(serializationContext, eachTapizVentanasHasFinAplicacionedInstance, writer);
+					DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(eachTapizVentanasHasFinAplicaciónInstance.GetDomainClass().Id);
+					global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + eachTapizVentanasHasFinAplicaciónInstance.GetDomainClass().Name + "!");
+					relSerializer.Write(serializationContext, eachTapizVentanasHasFinAplicaciónInstance, writer);
 				}
 				writer.WriteEndElement();
 			}
@@ -3919,16 +3919,16 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </ventanas>
 						}
 						break;
-					case "finAplicacioned":	// Relationship "NavegadorReferencesFinAplicacioned"
+					case "finAplicación":	// Relationship "NavegadorReferencesFinAplicación"
 						if (reader.IsEmptyElement)
 						{	// No instance of this relationship, just skip
 							DslModeling::SerializationUtilities.Skip(reader);
 						}
 						else
 						{
-							DslModeling::SerializationUtilities.SkipToFirstChild(reader);  // Skip the open tag of <finAplicacioned>
-							ReadNavegadorReferencesFinAplicacionedInstances(serializationContext, element, reader);
-							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </finAplicacioned>
+							DslModeling::SerializationUtilities.SkipToFirstChild(reader);  // Skip the open tag of <finAplicación>
+							ReadNavegadorReferencesFinAplicaciónInstance(serializationContext, element, reader);
+							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </finAplicación>
 						}
 						break;
 					default:
@@ -3983,41 +3983,50 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 	
 		/// <summary>
-		/// Reads all instances of relationship NavegadorReferencesFinAplicacioned.
+		/// Reads instance of relationship NavegadorReferencesFinAplicación.
 		/// </summary>
 		/// <remarks>
 		/// The caller will position the reader at the open tag of the first XML element inside the relationship tag, so it can be
-		/// either the first instance, or a bogus tag. This method will deserialize all instances and ignore all bogus tags. When the
-		/// method returns, the reader will be positioned at the end tag of the relationship (or EOF if somehow that happens).
+		/// either the first instance, or a bogus tag. This method will deserialize only the first valid instance and ignore all the
+		/// rest tags (because the multiplicity allows only one instance). When the method returns, the reader will be positioned at 
+		/// the end tag of the relationship (or EOF if somehow that happens).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="element">In-memory Navegador instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1806")]
-		private static void ReadNavegadorReferencesFinAplicacionedInstances(DslModeling::SerializationContext serializationContext, Navegador element, global::System.Xml.XmlReader reader)
+		private static void ReadNavegadorReferencesFinAplicaciónInstance(DslModeling::SerializationContext serializationContext, Navegador element, global::System.Xml.XmlReader reader)
 		{
+			if (DslModeling::DomainRoleInfo.GetElementLinks<NavegadorReferencesFinAplicación> (element, NavegadorReferencesFinAplicación.NavegadorDomainRoleId).Count > 0)
+			{	// Only allow one instance, which already exists, so skip everything
+				DslModeling::SerializationUtilities.Skip(reader);	// Moniker contains no child XML elements, so just skip.
+				return;
+			}
+	
 			while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 			{
-				DslModeling::DomainClassXmlSerializer newNavegadorReferencesFinAplicacionedSerializer = serializationContext.Directory.GetSerializer(NavegadorReferencesFinAplicacioned.DomainClassId);
-				global::System.Diagnostics.Debug.Assert(newNavegadorReferencesFinAplicacionedSerializer != null, "Cannot find serializer for NavegadorReferencesFinAplicacioned!");
-				NavegadorReferencesFinAplicacioned newNavegadorReferencesFinAplicacioned = newNavegadorReferencesFinAplicacionedSerializer.TryCreateInstance (serializationContext, reader, element.Partition) as NavegadorReferencesFinAplicacioned;
-				if (newNavegadorReferencesFinAplicacioned != null)
+				DslModeling::DomainClassXmlSerializer newNavegadorReferencesFinAplicaciónSerializer = serializationContext.Directory.GetSerializer(NavegadorReferencesFinAplicación.DomainClassId);
+				global::System.Diagnostics.Debug.Assert(newNavegadorReferencesFinAplicaciónSerializer != null, "Cannot find serializer for NavegadorReferencesFinAplicación!");
+				NavegadorReferencesFinAplicación newNavegadorReferencesFinAplicación = newNavegadorReferencesFinAplicaciónSerializer.TryCreateInstance (serializationContext, reader, element.Partition) as NavegadorReferencesFinAplicación;
+				if (newNavegadorReferencesFinAplicación != null)
 				{
-					DslModeling::DomainRoleInfo.SetRolePlayer (newNavegadorReferencesFinAplicacioned, NavegadorReferencesFinAplicacioned.NavegadorDomainRoleId, element);
-					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newNavegadorReferencesFinAplicacioned.GetDomainClass().Id);	
-					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newNavegadorReferencesFinAplicacioned.GetDomainClass().Name + "!");
-					targetSerializer.Read(serializationContext, newNavegadorReferencesFinAplicacioned, reader);
+					DslModeling::DomainRoleInfo.SetRolePlayer (newNavegadorReferencesFinAplicación, NavegadorReferencesFinAplicación.NavegadorDomainRoleId, element);
+					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newNavegadorReferencesFinAplicación.GetDomainClass().Id);	
+					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newNavegadorReferencesFinAplicación.GetDomainClass().Name + "!");
+					targetSerializer.Read(serializationContext, newNavegadorReferencesFinAplicación, reader);
+					break;	// Only allow one instance.
 				}
 				else
 				{	// Maybe the relationship is serialized in short-form by mistake.
-					DslModeling::DomainClassXmlSerializer newFinAplicacionMonikerOfNavegadorReferencesFinAplicacionedSerializer = serializationContext.Directory.GetSerializer(FinAplicacion.DomainClassId);
-					global::System.Diagnostics.Debug.Assert(newFinAplicacionMonikerOfNavegadorReferencesFinAplicacionedSerializer != null, "Cannot find serializer for FinAplicacion!");
-					DslModeling::Moniker newFinAplicacionMonikerOfNavegadorReferencesFinAplicacioned = newFinAplicacionMonikerOfNavegadorReferencesFinAplicacionedSerializer.TryCreateMonikerInstance(serializationContext, reader, element, NavegadorReferencesFinAplicacioned.DomainClassId, element.Partition);
-					if (newFinAplicacionMonikerOfNavegadorReferencesFinAplicacioned != null)
+					DslModeling::DomainClassXmlSerializer newFinAplicaciónMonikerOfNavegadorReferencesFinAplicaciónSerializer = serializationContext.Directory.GetSerializer(FinAplicación.DomainClassId);
+					global::System.Diagnostics.Debug.Assert(newFinAplicaciónMonikerOfNavegadorReferencesFinAplicaciónSerializer != null, "Cannot find serializer for FinAplicación!");
+					DslModeling::Moniker newFinAplicaciónMonikerOfNavegadorReferencesFinAplicación = newFinAplicaciónMonikerOfNavegadorReferencesFinAplicaciónSerializer.TryCreateMonikerInstance(serializationContext, reader, element, NavegadorReferencesFinAplicación.DomainClassId, element.Partition);
+					if (newFinAplicaciónMonikerOfNavegadorReferencesFinAplicación != null)
 					{
-						JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.ExpectingFullFormRelationship(serializationContext, reader, typeof(NavegadorReferencesFinAplicacioned));
-						new NavegadorReferencesFinAplicacioned(element.Partition, new DslModeling::RoleAssignment(NavegadorReferencesFinAplicacioned.NavegadorDomainRoleId, element), new DslModeling::RoleAssignment(NavegadorReferencesFinAplicacioned.FinAplicacionDomainRoleId, newFinAplicacionMonikerOfNavegadorReferencesFinAplicacioned));
+						JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.ExpectingFullFormRelationship(serializationContext, reader, typeof(NavegadorReferencesFinAplicación));
+						new NavegadorReferencesFinAplicación(element.Partition, new DslModeling::RoleAssignment(NavegadorReferencesFinAplicación.NavegadorDomainRoleId, element), new DslModeling::RoleAssignment(NavegadorReferencesFinAplicación.FinAplicaciónDomainRoleId, newFinAplicaciónMonikerOfNavegadorReferencesFinAplicación));
 						DslModeling::SerializationUtilities.Skip(reader);	// Moniker contains no child XML elements, so just skip.
+						break;	// Only allow one instance.
 					}
 					else
 					{	// Unknown element, skip.
@@ -4384,20 +4393,14 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				writer.WriteEndElement();
 			}
 	
-			// NavegadorReferencesFinAplicacioned
-			global::System.Collections.ObjectModel.ReadOnlyCollection<NavegadorReferencesFinAplicacioned> allNavegadorReferencesFinAplicacionedInstances = NavegadorReferencesFinAplicacioned.GetLinksToFinAplicacioned(element);
-			if (!serializationContext.Result.Failed && allNavegadorReferencesFinAplicacionedInstances.Count > 0)
+			// NavegadorReferencesFinAplicación
+			NavegadorReferencesFinAplicación theNavegadorReferencesFinAplicaciónInstance = NavegadorReferencesFinAplicación.GetLinkToFinAplicación(element);
+			if (!serializationContext.Result.Failed && theNavegadorReferencesFinAplicaciónInstance != null)
 			{
-				writer.WriteStartElement("finAplicacioned");
-				foreach (NavegadorReferencesFinAplicacioned eachNavegadorReferencesFinAplicacionedInstance in allNavegadorReferencesFinAplicacionedInstances)
-				{
-					if (serializationContext.Result.Failed)
-						break;
-	
-					DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(eachNavegadorReferencesFinAplicacionedInstance.GetDomainClass().Id);
-					global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + eachNavegadorReferencesFinAplicacionedInstance.GetDomainClass().Name + "!");
-					relSerializer.Write(serializationContext, eachNavegadorReferencesFinAplicacionedInstance, writer);
-				}
+				writer.WriteStartElement("finAplicación");
+				DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(theNavegadorReferencesFinAplicaciónInstance.GetDomainClass().Id);
+				global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + theNavegadorReferencesFinAplicaciónInstance.GetDomainClass().Name + "!");
+				relSerializer.Write(serializationContext, theNavegadorReferencesFinAplicaciónInstance, writer);
 				writer.WriteEndElement();
 			}
 	
@@ -5585,15 +5588,15 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 {
 	/// <summary>
-	/// Serializer FinAplicacionSerializer for DomainClass FinAplicacion.
+	/// Serializer FinAplicaciónSerializer for DomainClass FinAplicación.
 	/// </summary>
-	public partial class FinAplicacionSerializer : DslModeling::DomainClassXmlSerializer
+	public partial class FinAplicaciónSerializer : DslModeling::DomainClassXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
-		/// FinAplicacionSerializer Constructor
+		/// FinAplicaciónSerializer Constructor
 		/// </summary>
-		public FinAplicacionSerializer ()
+		public FinAplicaciónSerializer ()
 			: base ()
 		{
 		}
@@ -5619,25 +5622,25 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region Public Properties
 		/// <summary>
-		/// This is the XML tag name used to serialize an instance of FinAplicacion.
+		/// This is the XML tag name used to serialize an instance of FinAplicación.
 		/// </summary>
 		public override string XmlTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"finAplicacion"; }
+			get { return @"finAplicación"; }
 		}
 	
 		/// <summary>
-		/// This is the XML tag name used to serialize a monikerized instance of FinAplicacion.
+		/// This is the XML tag name used to serialize a monikerized instance of FinAplicación.
 		/// </summary>
 		public override string MonikerTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"finAplicacionMoniker"; }
+			get { return @"finAplicaciónMoniker"; }
 		}
 		
 		/// <summary>
-		/// This is the name of the XML attribute that stores the moniker of FinAplicacion in a serialized monikerized instance.
+		/// This is the name of the XML attribute that stores the moniker of FinAplicación in a serialized monikerized instance.
 		/// </summary>
 		public override string MonikerAttributeName
 		{
@@ -5648,16 +5651,16 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region Read Methods
 		/// <summary>
-		/// Public Read() method that deserializes one FinAplicacion instance from XML.
+		/// Public Read() method that deserializes one FinAplicación instance from XML.
 		/// </summary>
 		/// <remarks>
 		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
-		/// of the FinAplicacion element that is about to be deserialized. 
+		/// of the FinAplicación element that is about to be deserialized. 
 		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
 		/// or the close tag of the parent element (or EOF).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory FinAplicacion instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory FinAplicación instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -5675,7 +5678,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			
 			// Read properties serialized as XML attributes.
 			ReadPropertiesFromAttributes(serializationContext, element, reader);
-	
+				
 			// Read nested XML elements.
 			if (!serializationContext.Result.Failed)
 			{
@@ -5715,7 +5718,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// The caller will guarantee that the reader is positioned on the open XML tag of the current element being deserialized.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory FinAplicacion instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory FinAplicación instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
 		protected override void ReadPropertiesFromAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
@@ -5723,26 +5726,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			// Always call the base class so any extensions are deserialized
 			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
 	
-			FinAplicacion instanceOfFinAplicacion = element as FinAplicacion;
-			global::System.Diagnostics.Debug.Assert(instanceOfFinAplicacion != null, "Expecting an instance of FinAplicacion");
-	
-			// nombre
-			if (!serializationContext.Result.Failed)
-			{
-				string attribnombre = JDCCCAJDOMDCMProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "nombre");
-				if (attribnombre != null)
-				{
-					global::System.String valueOfnombre;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribnombre, out valueOfnombre))
-					{
-						instanceOfFinAplicacion.nombre = valueOfnombre;
-					}
-					else
-					{	// Invalid property value, ignored.
-						JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "nombre", typeof(global::System.String), attribnombre);
-					}
-				}
-			}
+			// There is no property to read; do nothing
 		}
 	
 		/// <summary>
@@ -5759,7 +5743,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// 3) EOF.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory FinAplicacion instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory FinAplicación instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		protected override void ReadElements(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -5770,8 +5754,8 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region TryCreateInstance
 		/// <summary>
-		/// This method creates a correct instance of FinAplicacion based on the tag currently pointed by the reader. If the reader
-		/// is positioned at a serialized FinAplicacion, a new FinAplicacion instance will be created in the given partition, otherwise 
+		/// This method creates a correct instance of FinAplicación based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized FinAplicación, a new FinAplicación instance will be created in the given partition, otherwise 
 		/// null is returned.
 		/// </summary>
 		/// <remarks>
@@ -5781,7 +5765,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>	
-		/// <returns>Created FinAplicacion instance, or null if the reader is not pointing to a serialized FinAplicacion instance.</returns>
+		/// <returns>Created FinAplicación instance, or null if the reader is not pointing to a serialized FinAplicación instance.</returns>
 		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -5801,18 +5785,18 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.XmlTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "FinAplicacion" instance.
+				{	// New "FinAplicación" instance.
 					result = this.CreateInstance(serializationContext, reader, partition);
 				}
 				else
-				{	// Check for derived classes of "FinAplicacion".
+				{	// Check for derived classes of "FinAplicación".
 					if (this.derivedClasses == null)
 						this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class instance.
-						FinAplicacionSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as FinAplicacionSerializer;
+						FinAplicaciónSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as FinAplicaciónSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
 					}
@@ -5823,8 +5807,8 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 	
 		/// <summary>
-		/// This method creates an instance of FinAplicacion based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
-		/// to be pointed at a serialized instance of FinAplicacion.
+		/// This method creates an instance of FinAplicación based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of FinAplicación.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
@@ -5832,8 +5816,8 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		/// <param name="partition">Partition in which new FinAplicacion instance should be created.</param>	
-		/// <returns>Created FinAplicacion instance.</returns>
+		/// <param name="partition">Partition in which new FinAplicación instance should be created.</param>	
+		/// <returns>Created FinAplicación instance.</returns>
 		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			string idStr = reader.GetAttribute ("Id");
@@ -5849,7 +5833,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				{
 					id = new global::System.Guid (idStr);
 				}
-				return new FinAplicacion(partition, new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id));
+				return new FinAplicación(partition, new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id));
 			}
 			catch (global::System.ArgumentNullException /* anEx */)
 			{	
@@ -5867,12 +5851,12 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 	
 		/// <summary>
-		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from FinAplicacion, created on demand.
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from FinAplicación, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
 	
 		/// <summary>
-		/// Construct the apping from XmlTagName to DomainClassInfo that derives from FinAplicacion.
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from FinAplicación.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -5881,7 +5865,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
 			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(FinAplicacion.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(FinAplicación.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -5913,7 +5897,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region TryCreateMonikerInstance
 		/// <summary>
-		/// This method creates a Moniker of the correct derived (including FinAplicacion itself) instance of FinAplicacion based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of the correct derived (including FinAplicación itself) instance of FinAplicación based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -5947,18 +5931,18 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.MonikerTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "FinAplicacion" moniker instance.
+				{	// New "FinAplicación" moniker instance.
 					result = this.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 				}
 				else
-				{	// Check for derived classes of "FinAplicacion".
+				{	// Check for derived classes of "FinAplicación".
 					if (this.derivedClassMonikers == null)
 						this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class moniker instance.
-						FinAplicacionSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as FinAplicacionSerializer;
+						FinAplicaciónSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as FinAplicaciónSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 					}
@@ -5969,7 +5953,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 		
 		/// <summary>
-		/// This method creates a Moniker of FinAplicacion based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of FinAplicación based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -5994,7 +5978,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			{	// Normalize the Id.
 				global::System.Guid id = new global::System.Guid(monikerString);
 				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
-				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, FinAplicacion.DomainClassId, partition.Store), partition.Store);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, FinAplicación.DomainClassId, partition.Store), partition.Store);
 				// Set location info if possible.
 				result.Location = serializationContext.Location;
 				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
@@ -6018,12 +6002,12 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 	
 		/// <summary>
-		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from FinAplicacion, created on demand.
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from FinAplicación, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
 	
 		/// <summary>
-		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from FinAplicacion.
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from FinAplicación.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -6032,7 +6016,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
 			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(FinAplicacion.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(FinAplicación.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -6058,13 +6042,13 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region Write Methods
 		/// <summary>
-		/// Public WriteMoniker() method that writes a monikerized FinAplicacion instance into XML.
+		/// Public WriteMoniker() method that writes a monikerized FinAplicación instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">FinAplicacion instance to be monikerized.</param>
+		/// <param name="element">FinAplicación instance to be monikerized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
-		/// <param name="sourceRolePlayer">Source element that references the FinAplicacion instance being monikerized.</param>
-		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the FinAplicacion instance being monikerized.</param>
+		/// <param name="sourceRolePlayer">Source element that references the FinAplicación instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the FinAplicación instance being monikerized.</param>
 		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
 		{
 			#region Check Parameters
@@ -6093,10 +6077,10 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 		
 		/// <summary>
-		/// Public Write() method that serializes one FinAplicacion instance into XML.
+		/// Public Write() method that serializes one FinAplicación instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">FinAplicacion instance to be serialized.</param>
+		/// <param name="element">FinAplicación instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
 		/// <param name="rootElementSettings">
 		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
@@ -6157,7 +6141,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// Write all properties that need to be serialized as XML attributes.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">FinAplicacion instance to be serialized.</param>
+		/// <param name="element">FinAplicación instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param> 
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
 		protected override void WritePropertiesAsAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
@@ -6165,27 +6149,14 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			// Always call the base class so any extensions are serialized
 			base.WritePropertiesAsAttributes(serializationContext, element, writer);
 	
-			FinAplicacion instanceOfFinAplicacion = element as FinAplicacion;
-			global::System.Diagnostics.Debug.Assert(instanceOfFinAplicacion != null, "Expecting an instance of FinAplicacion");
-	
-			// nombre
-			if (!serializationContext.Result.Failed)
-			{
-				global::System.String propValue = instanceOfFinAplicacion.nombre;
-				if (!serializationContext.Result.Failed)
-				{
-					if (!string.IsNullOrEmpty(propValue))
-						JDCCCAJDOMDCMProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "nombre", propValue);
-	
-				}
-			}
+			// There are no properties; do nothing
 		}
 	
 		/// <summary>
 		/// This methods serializes 1) properties serialized as nested XML elements and 2) child model elements into XML. 
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">FinAplicacion instance to be serialized.</param>
+		/// <param name="element">FinAplicación instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>        
 		protected override void WriteElements(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
 		{
@@ -6198,11 +6169,11 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region Moniker Support
 		/// <summary>
-		/// This method calculates a moniker to a given FinAplicacion instance.
+		/// This method calculates a moniker to a given FinAplicación instance.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">FinAplicacion instance to calculate qualified name for.</param>
-		/// <returns>A fully qualified string moniker to the FinAplicacion instance.</returns>
+		/// <param name="element">FinAplicación instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the FinAplicación instance.</returns>
 		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
 		{
 			#region Check Parameters
@@ -6214,8 +6185,8 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				throw new global::System.ArgumentNullException("element");
 			#endregion	
 			
-			FinAplicacion instance = element as FinAplicacion;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of FinAplicacion!");
+			FinAplicación instance = element as FinAplicación;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of FinAplicación!");
 	
 			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
 		}
@@ -6226,7 +6197,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// returns empty string.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">FinAplicacion instance to get moniker qualifier from.</param>
+		/// <param name="element">FinAplicación instance to get moniker qualifier from.</param>
 		/// <returns>
 		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
 		/// element is not monikerized using standard /qualifier/key mechanism.
@@ -11050,15 +11021,15 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 {
 	/// <summary>
-	/// Serializer TapizVentanasHasFinAplicacionedSerializer for DomainClass TapizVentanasHasFinAplicacioned.
+	/// Serializer NavegadorReferencesFinAplicaciónSerializer for DomainClass NavegadorReferencesFinAplicación.
 	/// </summary>
-	public partial class TapizVentanasHasFinAplicacionedSerializer : DslModeling::DomainRelationshipXmlSerializer
+	public partial class NavegadorReferencesFinAplicaciónSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
-		/// TapizVentanasHasFinAplicacionedSerializer Constructor
+		/// NavegadorReferencesFinAplicaciónSerializer Constructor
 		/// </summary>
-		public TapizVentanasHasFinAplicacionedSerializer ()
+		public NavegadorReferencesFinAplicaciónSerializer ()
 			: base ()
 		{
 		}
@@ -11084,25 +11055,25 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region Public Properties
 		/// <summary>
-		/// This is the XML tag name used to serialize an instance of TapizVentanasHasFinAplicacioned.
+		/// This is the XML tag name used to serialize an instance of NavegadorReferencesFinAplicación.
 		/// </summary>
 		public override string XmlTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"tapizVentanasHasFinAplicacioned"; }
+			get { return @"navegadorReferencesFinAplicación"; }
 		}
 	
 		/// <summary>
-		/// This is the XML tag name used to serialize a monikerized instance of TapizVentanasHasFinAplicacioned.
+		/// This is the XML tag name used to serialize a monikerized instance of NavegadorReferencesFinAplicación.
 		/// </summary>
 		public override string MonikerTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"tapizVentanasHasFinAplicacionedMoniker"; }
+			get { return @"navegadorReferencesFinAplicaciónMoniker"; }
 		}
 		
 		/// <summary>
-		/// This is the name of the XML attribute that stores the moniker of TapizVentanasHasFinAplicacioned in a serialized monikerized instance.
+		/// This is the name of the XML attribute that stores the moniker of NavegadorReferencesFinAplicación in a serialized monikerized instance.
 		/// </summary>
 		public override string MonikerAttributeName
 		{
@@ -11113,16 +11084,16 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region Read Methods
 		/// <summary>
-		/// Public Read() method that deserializes one TapizVentanasHasFinAplicacioned instance from XML.
+		/// Public Read() method that deserializes one NavegadorReferencesFinAplicación instance from XML.
 		/// </summary>
 		/// <remarks>
 		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
-		/// of the TapizVentanasHasFinAplicacioned element that is about to be deserialized. 
+		/// of the NavegadorReferencesFinAplicación element that is about to be deserialized. 
 		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
 		/// or the close tag of the parent element (or EOF).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory TapizVentanasHasFinAplicacioned instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory NavegadorReferencesFinAplicación instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -11141,7 +11112,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			// Read properties serialized as XML attributes.
 			ReadPropertiesFromAttributes(serializationContext, element, reader);
 				
-			// Read nested XML elements, which include at least the instance of target role-player FinAplicacion
+			// Read nested XML elements, which include at least the monikerized instance of target role-player FinAplicación
 			if (!serializationContext.Result.Failed)
 			{
 				if (!reader.IsEmptyElement)
@@ -11152,7 +11123,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					// Read any extension element data under this XML element
 					JDCCCAJDOMDCMProyectoIPSSerializationHelper.Instance.ReadExtensions(serializationContext, element, reader);
 					
-					// Read target role-player FinAplicacion.
+					// Read target role-player FinAplicación.
 					ReadTargetRolePlayer(serializationContext, element, reader);
 	
 					// Read nested XML elements, they can be either properties serialized as XML elements, or child 
@@ -11170,7 +11141,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				}
 				else
 				{
-					JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "TapizVentanasHasFinAplicacioned");
+					JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "NavegadorReferencesFinAplicación");
 				}
 			}
 	
@@ -11180,7 +11151,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		
 	
 		/// <summary>
-		/// This method reads the target role player FinAplicacion.
+		/// This method reads the target role player FinAplicación.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at the open tag of the first child XML element.
@@ -11194,7 +11165,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// 3) EOF.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory TapizVentanasHasFinAplicacioned instance that will link to the target FinAplicacion instance.</param>
+		/// <param name="element">In-memory NavegadorReferencesFinAplicación instance that will link to the target FinAplicación instance.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		protected virtual void ReadTargetRolePlayer(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -11210,31 +11181,29 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				throw new global::System.ArgumentNullException ("reader");
 			#endregion
 	
-			// Read the instance of target role-player FinAplicacion
-			DslModeling::ModelElement targetRolePlayer = null;
-			DslModeling::DomainClassXmlSerializer targetRoleSerializer = serializationContext.Directory.GetSerializer(FinAplicacion.DomainClassId);
-			global::System.Diagnostics.Debug.Assert(targetRoleSerializer != null, "Cannot find serializer for FinAplicacion!");
+			// Read the monikerized instance of target role-player FinAplicación
+			DslModeling::Moniker targetRoleMoniker = null;
+			DslModeling::DomainClassXmlSerializer targetRoleSerializer = serializationContext.Directory.GetSerializer(FinAplicación.DomainClassId);
+			global::System.Diagnostics.Debug.Assert(targetRoleSerializer != null, "Cannot find serializer for FinAplicación!");
 	
 			while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 			{
-				targetRolePlayer = targetRoleSerializer.TryCreateInstance(serializationContext, reader, element.Partition);
-				if (targetRolePlayer != null)
+				targetRoleMoniker = targetRoleSerializer.TryCreateMonikerInstance(serializationContext, reader, ((NavegadorReferencesFinAplicación)element).Navegador, NavegadorReferencesFinAplicación.DomainClassId, element.Partition);
+				if (targetRoleMoniker != null)
 				{
-					// Attach the target role-player.
-					DslModeling::DomainRoleInfo.SetRolePlayer(element as DslModeling::ElementLink, TapizVentanasHasFinAplicacioned.FinAplicacionDomainRoleId, targetRolePlayer);
-					// Read target role-player.
-					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (targetRolePlayer.GetDomainClass().Id);	
-					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + targetRolePlayer.GetDomainClass().Name + "!");
-					targetSerializer.Read(serializationContext, targetRolePlayer, reader);
+					// Attach the target role-player moniker.
+					DslModeling::DomainRoleInfo.SetRolePlayerMoniker (element as DslModeling::ElementLink, NavegadorReferencesFinAplicación.FinAplicaciónDomainRoleId, targetRoleMoniker);
+					// Moniker tag has no child XML elements in it, so just skip to the next element.
+					DslModeling::SerializationUtilities.Skip(reader);
 					break;
 				}
 				// Encountered one unknown XML element, skip it and keep reading.
 				JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.UnexpectedXmlElement(serializationContext, reader);
 				DslModeling::SerializationUtilities.Skip(reader);
 			}
-			if (targetRolePlayer == null)
+			if (targetRoleMoniker == null)
 			{
-				JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "TapizVentanasHasFinAplicacioned");
+				JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "NavegadorReferencesFinAplicación");
 			}
 		}
 	
@@ -11246,7 +11215,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// The caller will guarantee that the reader is positioned on the open XML tag of the current element being deserialized.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory TapizVentanasHasFinAplicacioned instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory NavegadorReferencesFinAplicación instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
 		protected override void ReadPropertiesFromAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
@@ -11271,7 +11240,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// 3) EOF.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory TapizVentanasHasFinAplicacioned instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory NavegadorReferencesFinAplicación instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		protected override void ReadElements(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -11282,8 +11251,8 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region TryCreateInstance & TryCreateDerivedInstance
 		/// <summary>
-		/// This method creates a correct instance of TapizVentanasHasFinAplicacioned based on the tag currently pointed by the reader. If the reader
-		/// is positioned at a serialized TapizVentanasHasFinAplicacioned, a new TapizVentanasHasFinAplicacioned instance will be created in the given partition, otherwise 
+		/// This method creates a correct instance of NavegadorReferencesFinAplicación based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized NavegadorReferencesFinAplicación, a new NavegadorReferencesFinAplicación instance will be created in the given partition, otherwise 
 		/// null is returned.
 		/// </summary>
 		/// <remarks>
@@ -11293,7 +11262,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>	
-		/// <returns>Created TapizVentanasHasFinAplicacioned instance, or null if the reader is not pointing to a serialized TapizVentanasHasFinAplicacioned instance.</returns>
+		/// <returns>Created NavegadorReferencesFinAplicación instance, or null if the reader is not pointing to a serialized NavegadorReferencesFinAplicación instance.</returns>
 		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -11312,9 +11281,9 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 	
 		/// <summary>
-		/// This method creates a correct derived instance of TapizVentanasHasFinAplicacioned based on the tag currently pointed by the reader.
+		/// This method creates a correct derived instance of NavegadorReferencesFinAplicación based on the tag currently pointed by the reader.
 		/// Note that the difference between this method and the above one is that this method will never create an instance of the
-		/// TapizVentanasHasFinAplicacioned type itself, only derived types are checked.
+		/// NavegadorReferencesFinAplicación type itself, only derived types are checked.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -11323,7 +11292,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>
-		/// <returns>Created instance that derives from TapizVentanasHasFinAplicacioned, or null if the reader is not pointing to such a serialized instance.</returns>
+		/// <returns>Created instance that derives from NavegadorReferencesFinAplicación, or null if the reader is not pointing to such a serialized instance.</returns>
 		public override DslModeling::ElementLink TryCreateDerivedInstance (DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -11355,18 +11324,18 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			{
 				string localName = reader.LocalName;
 				if (!derivedTypesOnly && string.Compare (localName, this.XmlTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "TapizVentanasHasFinAplicacioned" instance.
+				{	// New "NavegadorReferencesFinAplicación" instance.
 					result = this.CreateInstance(serializationContext, reader, partition);
 				}
 				else
-				{	// Check for derived classes of "TapizVentanasHasFinAplicacioned".
+				{	// Check for derived classes of "NavegadorReferencesFinAplicación".
 					if (this.derivedClasses == null)
 						this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived relationship instance.
-						TapizVentanasHasFinAplicacionedSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as TapizVentanasHasFinAplicacionedSerializer;
+						NavegadorReferencesFinAplicaciónSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as NavegadorReferencesFinAplicaciónSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
 					}
@@ -11377,8 +11346,8 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 	
 		/// <summary>
-		/// This method creates an instance of TapizVentanasHasFinAplicacioned based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
-		/// to be pointed at a serialized instance of TapizVentanasHasFinAplicacioned.
+		/// This method creates an instance of NavegadorReferencesFinAplicación based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of NavegadorReferencesFinAplicación.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
@@ -11386,8 +11355,8 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		/// <param name="partition">Partition in which new TapizVentanasHasFinAplicacioned instance should be created.</param>	
-		/// <returns>Created TapizVentanasHasFinAplicacioned instance.</returns>
+		/// <param name="partition">Partition in which new NavegadorReferencesFinAplicación instance should be created.</param>	
+		/// <returns>Created NavegadorReferencesFinAplicación instance.</returns>
 		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			string idStr = reader.GetAttribute ("Id");
@@ -11404,11 +11373,11 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					id = new global::System.Guid (idStr);
 				}
 				// Create the link with place-holder role-players.
-				return new TapizVentanasHasFinAplicacioned(
+				return new NavegadorReferencesFinAplicación(
 					partition,
 					new DslModeling::RoleAssignment[] {
-						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (TapizVentanasHasFinAplicacioned.TapizVentanasDomainRoleId), 
-						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (TapizVentanasHasFinAplicacioned.FinAplicacionDomainRoleId)
+						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (NavegadorReferencesFinAplicación.NavegadorDomainRoleId), 
+						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (NavegadorReferencesFinAplicación.FinAplicaciónDomainRoleId)
 					},
 					new DslModeling::PropertyAssignment[] {
 						new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id)
@@ -11431,12 +11400,12 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 	
 		/// <summary>
-		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from TapizVentanasHasFinAplicacioned, created on demand.
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from NavegadorReferencesFinAplicación, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
 	
 		/// <summary>
-		/// Construct the apping from XmlTagName to DomainClassInfo that derives from TapizVentanasHasFinAplicacioned.
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from NavegadorReferencesFinAplicación.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -11445,7 +11414,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
 			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(TapizVentanasHasFinAplicacioned.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(NavegadorReferencesFinAplicación.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -11477,7 +11446,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region TryCreateMonikerInstance
 		/// <summary>
-		/// This method creates a Moniker of the correct derived (including TapizVentanasHasFinAplicacioned itself) instance of TapizVentanasHasFinAplicacioned based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of the correct derived (including NavegadorReferencesFinAplicación itself) instance of NavegadorReferencesFinAplicación based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -11511,18 +11480,18 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.MonikerTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "TapizVentanasHasFinAplicacioned" moniker instance.
+				{	// New "NavegadorReferencesFinAplicación" moniker instance.
 					result = this.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 				}
 				else
-				{	// Check for derived classes of "TapizVentanasHasFinAplicacioned".
+				{	// Check for derived classes of "NavegadorReferencesFinAplicación".
 					if (this.derivedClassMonikers == null)
 						this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class moniker instance.
-						TapizVentanasHasFinAplicacionedSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as TapizVentanasHasFinAplicacionedSerializer;
+						NavegadorReferencesFinAplicaciónSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as NavegadorReferencesFinAplicaciónSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 					}
@@ -11533,7 +11502,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 		
 		/// <summary>
-		/// This method creates a Moniker of TapizVentanasHasFinAplicacioned based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of NavegadorReferencesFinAplicación based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -11558,7 +11527,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			{	// Normalize the Id.
 				global::System.Guid id = new global::System.Guid(monikerString);
 				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
-				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, TapizVentanasHasFinAplicacioned.DomainClassId, partition.Store), partition.Store);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, NavegadorReferencesFinAplicación.DomainClassId, partition.Store), partition.Store);
 				// Set location info if possible.
 				result.Location = serializationContext.Location;
 				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
@@ -11582,12 +11551,12 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 	
 		/// <summary>
-		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from TapizVentanasHasFinAplicacioned, created on demand.
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from NavegadorReferencesFinAplicación, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
 	
 		/// <summary>
-		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from TapizVentanasHasFinAplicacioned.
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from NavegadorReferencesFinAplicación.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -11596,7 +11565,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
 			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(TapizVentanasHasFinAplicacioned.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(NavegadorReferencesFinAplicación.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -11622,13 +11591,13 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region Write Methods
 		/// <summary>
-		/// Public WriteMoniker() method that writes a monikerized TapizVentanasHasFinAplicacioned instance into XML.
+		/// Public WriteMoniker() method that writes a monikerized NavegadorReferencesFinAplicación instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">TapizVentanasHasFinAplicacioned instance to be monikerized.</param>
+		/// <param name="element">NavegadorReferencesFinAplicación instance to be monikerized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
-		/// <param name="sourceRolePlayer">Source element that references the TapizVentanasHasFinAplicacioned instance being monikerized.</param>
-		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the TapizVentanasHasFinAplicacioned instance being monikerized.</param>
+		/// <param name="sourceRolePlayer">Source element that references the NavegadorReferencesFinAplicación instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the NavegadorReferencesFinAplicación instance being monikerized.</param>
 		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
 		{
 			#region Check Parameters
@@ -11657,10 +11626,10 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 		
 		/// <summary>
-		/// Public Write() method that serializes one TapizVentanasHasFinAplicacioned instance into XML.
+		/// Public Write() method that serializes one NavegadorReferencesFinAplicación instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">TapizVentanasHasFinAplicacioned instance to be serialized.</param>
+		/// <param name="element">NavegadorReferencesFinAplicación instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
 		/// <param name="rootElementSettings">
 		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
@@ -11709,13 +11678,13 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			}
 	
 			// Write the target role-player instance.
-			TapizVentanasHasFinAplicacioned instance = element as TapizVentanasHasFinAplicacioned;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of TapizVentanasHasFinAplicacioned!");
+			NavegadorReferencesFinAplicación instance = element as NavegadorReferencesFinAplicación;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of NavegadorReferencesFinAplicación!");
 	
-			DslModeling::ModelElement targetElement = instance.FinAplicacion;
+			DslModeling::ModelElement targetElement = instance.FinAplicación;
 			DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer(targetElement.GetDomainClass().Id);
 			global::System.Diagnostics.Debug.Assert(targetSerializer != null, "Cannot find serializer for " + targetElement.GetDomainClass().Name + "!");
-			targetSerializer.Write(serializationContext, targetElement, writer);
+			targetSerializer.WriteMoniker(serializationContext, targetElement, writer, instance.Navegador, this);
 	
 			if (!serializationContext.Result.Failed)
 			{
@@ -11730,7 +11699,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// Write all properties that need to be serialized as XML attributes.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">TapizVentanasHasFinAplicacioned instance to be serialized.</param>
+		/// <param name="element">NavegadorReferencesFinAplicación instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param> 
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
 		protected override void WritePropertiesAsAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
@@ -11745,7 +11714,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// This methods serializes 1) properties serialized as nested XML elements and 2) child model elements into XML. 
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">TapizVentanasHasFinAplicacioned instance to be serialized.</param>
+		/// <param name="element">NavegadorReferencesFinAplicación instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>        
 		protected override void WriteElements(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
 		{
@@ -11758,11 +11727,11 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region Moniker Support
 		/// <summary>
-		/// This method calculates a moniker to a given TapizVentanasHasFinAplicacioned instance.
+		/// This method calculates a moniker to a given NavegadorReferencesFinAplicación instance.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">TapizVentanasHasFinAplicacioned instance to calculate qualified name for.</param>
-		/// <returns>A fully qualified string moniker to the TapizVentanasHasFinAplicacioned instance.</returns>
+		/// <param name="element">NavegadorReferencesFinAplicación instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the NavegadorReferencesFinAplicación instance.</returns>
 		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
 		{
 			#region Check Parameters
@@ -11774,8 +11743,8 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				throw new global::System.ArgumentNullException("element");
 			#endregion	
 			
-			TapizVentanasHasFinAplicacioned instance = element as TapizVentanasHasFinAplicacioned;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of TapizVentanasHasFinAplicacioned!");
+			NavegadorReferencesFinAplicación instance = element as NavegadorReferencesFinAplicación;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of NavegadorReferencesFinAplicación!");
 	
 			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
 		}
@@ -11786,7 +11755,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// returns empty string.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">TapizVentanasHasFinAplicacioned instance to get moniker qualifier from.</param>
+		/// <param name="element">NavegadorReferencesFinAplicación instance to get moniker qualifier from.</param>
 		/// <returns>
 		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
 		/// element is not monikerized using standard /qualifier/key mechanism.
@@ -11803,6 +11772,97 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			#endregion	
 			
 			return string.Empty;
+		}
+		#endregion
+	
+		#region Monikerization Support
+		/// <summary>
+		/// Calculates a Moniker, given a reference to a FinAplicación
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="sourceElement">Instance of Navegador that contains the given serialized reference</param>
+		/// <param name="domainClassId">DomainClassId of the model element that the given moniker string will be resolved to.</param>
+		/// <param name="monikerString">Serialized string reference to an instance of FinAplicación</param>
+		/// <param name="store">Store where the Moniker will be created</param>
+		/// <returns>A Moniker encapsulating the serialized string reference of FinAplicación instance</returns>
+		public override DslModeling::Moniker MonikerizeReference(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement sourceElement, global::System.Guid domainClassId, string monikerString, DslModeling::Store store)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert(serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException("serializationContext");
+			global::System.Diagnostics.Debug.Assert(sourceElement != null);
+			if (sourceElement == null)
+				throw new global::System.ArgumentNullException ("sourceElement");
+			global::System.Diagnostics.Debug.Assert (sourceElement is Navegador, "Expecting an instance of Navegador!");
+			global::System.Diagnostics.Debug.Assert (!string.IsNullOrEmpty (monikerString));
+			if (string.IsNullOrEmpty (monikerString))
+				throw new global::System.ArgumentNullException ("monikerString");
+			global::System.Diagnostics.Debug.Assert(store != null);
+			if (store == null)
+				throw new global::System.ArgumentNullException ("store");
+			#endregion
+			
+			DslModeling::MonikerKey key = null;
+			if (DslModeling::SimpleMonikerResolver.IsFullyQualified(monikerString))
+			{
+				key = new DslModeling::MonikerKey(monikerString, NavegadorReferencesFinAplicación.DomainClassId, domainClassId, store);
+			}
+			else
+			{
+				DslModeling::DomainClassXmlSerializer sourceSerializer = serializationContext.Directory.GetSerializer(sourceElement.GetDomainClass().Id);
+				global::System.Diagnostics.Debug.Assert(sourceSerializer != null, "Cannot find serializer for " + sourceElement.GetDomainClass().Name + "!");
+				string sourceQualifier = sourceSerializer.GetMonikerQualifier(serializationContext.Directory, sourceElement);
+				key = new DslModeling::MonikerKey(string.Format(global::System.Globalization.CultureInfo.CurrentCulture, "{0}/{1}", sourceQualifier, monikerString), NavegadorReferencesFinAplicación.DomainClassId, domainClassId, store);
+			}
+			return new DslModeling::Moniker(key, store);
+		}
+	
+		/// <summary>
+		/// Calculates a monikerized string reference to a FinAplicación.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="sourceElement">Source side of reference relationship. The referenced target element will be serialized.</param>
+		/// <param name="targetElement">Target side of relationship that will be serialized.</param>
+		/// <returns>A monikerized string reference to target element.</returns>		
+		public override string SerializeReference(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement sourceElement, DslModeling::ModelElement targetElement)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert(serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException("serializationContext");
+			global::System.Diagnostics.Debug.Assert(sourceElement != null);
+			if (sourceElement == null)
+				throw new global::System.ArgumentNullException ("sourceElement");
+			global::System.Diagnostics.Debug.Assert (sourceElement is Navegador, "Expecting an instance of Navegador!");
+			global::System.Diagnostics.Debug.Assert(targetElement != null);
+			if (targetElement == null)
+				throw new global::System.ArgumentNullException ("targetElement");
+			global::System.Diagnostics.Debug.Assert (targetElement is FinAplicación, "Expecting an instance of FinAplicación!");
+			#endregion
+			
+			// full form reference
+			DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer(targetElement.GetDomainClass().Id);
+			global::System.Diagnostics.Debug.Assert(targetSerializer != null, "Cannot find serializer for " + targetElement.GetDomainClass().Name + "!");
+			string targetMoniker = targetSerializer.CalculateQualifiedName(serializationContext.Directory, targetElement);
+			string targetQualifier = targetSerializer.GetMonikerQualifier(serializationContext.Directory, targetElement);
+			
+			if (!string.IsNullOrEmpty(targetQualifier))
+			{
+				DslModeling::DomainClassXmlSerializer sourceSerializer = serializationContext.Directory.GetSerializer(sourceElement.GetDomainClass().Id);
+				global::System.Diagnostics.Debug.Assert(sourceSerializer != null, "Cannot find serializer for " + sourceElement.GetDomainClass().Name + "!");
+				string sourceQualifier = sourceSerializer.GetMonikerQualifier(serializationContext.Directory, sourceElement);
+				if (string.Compare(targetQualifier, sourceQualifier, global::System.StringComparison.CurrentCulture) == 0)
+				{
+					// See if we can create a short form reference by omitting the qualifier
+					global::System.Diagnostics.Debug.Assert(targetMoniker.StartsWith(targetQualifier + "/", global::System.StringComparison.CurrentCulture));
+					string shortFormTargetMoniker = targetMoniker.Substring(targetQualifier.Length + 1);
+					if (!DslModeling::SimpleMonikerResolver.IsFullyQualified(shortFormTargetMoniker))
+						targetMoniker = shortFormTargetMoniker;
+				}
+			}
+	
+			return targetMoniker;
 		}
 		#endregion
 		
@@ -11835,15 +11895,15 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 {
 	/// <summary>
-	/// Serializer NavegadorReferencesFinAplicacionedSerializer for DomainClass NavegadorReferencesFinAplicacioned.
+	/// Serializer TapizVentanasHasFinAplicaciónSerializer for DomainClass TapizVentanasHasFinAplicación.
 	/// </summary>
-	public partial class NavegadorReferencesFinAplicacionedSerializer : DslModeling::DomainRelationshipXmlSerializer
+	public partial class TapizVentanasHasFinAplicaciónSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
-		/// NavegadorReferencesFinAplicacionedSerializer Constructor
+		/// TapizVentanasHasFinAplicaciónSerializer Constructor
 		/// </summary>
-		public NavegadorReferencesFinAplicacionedSerializer ()
+		public TapizVentanasHasFinAplicaciónSerializer ()
 			: base ()
 		{
 		}
@@ -11869,25 +11929,25 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region Public Properties
 		/// <summary>
-		/// This is the XML tag name used to serialize an instance of NavegadorReferencesFinAplicacioned.
+		/// This is the XML tag name used to serialize an instance of TapizVentanasHasFinAplicación.
 		/// </summary>
 		public override string XmlTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"navegadorReferencesFinAplicacioned"; }
+			get { return @"tapizVentanasHasFinAplicación"; }
 		}
 	
 		/// <summary>
-		/// This is the XML tag name used to serialize a monikerized instance of NavegadorReferencesFinAplicacioned.
+		/// This is the XML tag name used to serialize a monikerized instance of TapizVentanasHasFinAplicación.
 		/// </summary>
 		public override string MonikerTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"navegadorReferencesFinAplicacionedMoniker"; }
+			get { return @"tapizVentanasHasFinAplicaciónMoniker"; }
 		}
 		
 		/// <summary>
-		/// This is the name of the XML attribute that stores the moniker of NavegadorReferencesFinAplicacioned in a serialized monikerized instance.
+		/// This is the name of the XML attribute that stores the moniker of TapizVentanasHasFinAplicación in a serialized monikerized instance.
 		/// </summary>
 		public override string MonikerAttributeName
 		{
@@ -11898,16 +11958,16 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region Read Methods
 		/// <summary>
-		/// Public Read() method that deserializes one NavegadorReferencesFinAplicacioned instance from XML.
+		/// Public Read() method that deserializes one TapizVentanasHasFinAplicación instance from XML.
 		/// </summary>
 		/// <remarks>
 		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
-		/// of the NavegadorReferencesFinAplicacioned element that is about to be deserialized. 
+		/// of the TapizVentanasHasFinAplicación element that is about to be deserialized. 
 		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
 		/// or the close tag of the parent element (or EOF).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory NavegadorReferencesFinAplicacioned instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory TapizVentanasHasFinAplicación instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -11926,7 +11986,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			// Read properties serialized as XML attributes.
 			ReadPropertiesFromAttributes(serializationContext, element, reader);
 				
-			// Read nested XML elements, which include at least the monikerized instance of target role-player FinAplicacion
+			// Read nested XML elements, which include at least the instance of target role-player FinAplicación
 			if (!serializationContext.Result.Failed)
 			{
 				if (!reader.IsEmptyElement)
@@ -11937,7 +11997,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					// Read any extension element data under this XML element
 					JDCCCAJDOMDCMProyectoIPSSerializationHelper.Instance.ReadExtensions(serializationContext, element, reader);
 					
-					// Read target role-player FinAplicacion.
+					// Read target role-player FinAplicación.
 					ReadTargetRolePlayer(serializationContext, element, reader);
 	
 					// Read nested XML elements, they can be either properties serialized as XML elements, or child 
@@ -11955,7 +12015,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				}
 				else
 				{
-					JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "NavegadorReferencesFinAplicacioned");
+					JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "TapizVentanasHasFinAplicación");
 				}
 			}
 	
@@ -11965,7 +12025,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		
 	
 		/// <summary>
-		/// This method reads the target role player FinAplicacion.
+		/// This method reads the target role player FinAplicación.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at the open tag of the first child XML element.
@@ -11979,7 +12039,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// 3) EOF.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory NavegadorReferencesFinAplicacioned instance that will link to the target FinAplicacion instance.</param>
+		/// <param name="element">In-memory TapizVentanasHasFinAplicación instance that will link to the target FinAplicación instance.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		protected virtual void ReadTargetRolePlayer(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -11995,29 +12055,31 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				throw new global::System.ArgumentNullException ("reader");
 			#endregion
 	
-			// Read the monikerized instance of target role-player FinAplicacion
-			DslModeling::Moniker targetRoleMoniker = null;
-			DslModeling::DomainClassXmlSerializer targetRoleSerializer = serializationContext.Directory.GetSerializer(FinAplicacion.DomainClassId);
-			global::System.Diagnostics.Debug.Assert(targetRoleSerializer != null, "Cannot find serializer for FinAplicacion!");
+			// Read the instance of target role-player FinAplicación
+			DslModeling::ModelElement targetRolePlayer = null;
+			DslModeling::DomainClassXmlSerializer targetRoleSerializer = serializationContext.Directory.GetSerializer(FinAplicación.DomainClassId);
+			global::System.Diagnostics.Debug.Assert(targetRoleSerializer != null, "Cannot find serializer for FinAplicación!");
 	
 			while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 			{
-				targetRoleMoniker = targetRoleSerializer.TryCreateMonikerInstance(serializationContext, reader, ((NavegadorReferencesFinAplicacioned)element).Navegador, NavegadorReferencesFinAplicacioned.DomainClassId, element.Partition);
-				if (targetRoleMoniker != null)
+				targetRolePlayer = targetRoleSerializer.TryCreateInstance(serializationContext, reader, element.Partition);
+				if (targetRolePlayer != null)
 				{
-					// Attach the target role-player moniker.
-					DslModeling::DomainRoleInfo.SetRolePlayerMoniker (element as DslModeling::ElementLink, NavegadorReferencesFinAplicacioned.FinAplicacionDomainRoleId, targetRoleMoniker);
-					// Moniker tag has no child XML elements in it, so just skip to the next element.
-					DslModeling::SerializationUtilities.Skip(reader);
+					// Attach the target role-player.
+					DslModeling::DomainRoleInfo.SetRolePlayer(element as DslModeling::ElementLink, TapizVentanasHasFinAplicación.FinAplicaciónDomainRoleId, targetRolePlayer);
+					// Read target role-player.
+					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (targetRolePlayer.GetDomainClass().Id);	
+					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + targetRolePlayer.GetDomainClass().Name + "!");
+					targetSerializer.Read(serializationContext, targetRolePlayer, reader);
 					break;
 				}
 				// Encountered one unknown XML element, skip it and keep reading.
 				JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.UnexpectedXmlElement(serializationContext, reader);
 				DslModeling::SerializationUtilities.Skip(reader);
 			}
-			if (targetRoleMoniker == null)
+			if (targetRolePlayer == null)
 			{
-				JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "NavegadorReferencesFinAplicacioned");
+				JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.DanglingRelationship(serializationContext, reader, "TapizVentanasHasFinAplicación");
 			}
 		}
 	
@@ -12029,7 +12091,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// The caller will guarantee that the reader is positioned on the open XML tag of the current element being deserialized.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory NavegadorReferencesFinAplicacioned instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory TapizVentanasHasFinAplicación instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
 		protected override void ReadPropertiesFromAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
@@ -12054,7 +12116,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// 3) EOF.
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory NavegadorReferencesFinAplicacioned instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory TapizVentanasHasFinAplicación instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		protected override void ReadElements(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -12065,8 +12127,8 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region TryCreateInstance & TryCreateDerivedInstance
 		/// <summary>
-		/// This method creates a correct instance of NavegadorReferencesFinAplicacioned based on the tag currently pointed by the reader. If the reader
-		/// is positioned at a serialized NavegadorReferencesFinAplicacioned, a new NavegadorReferencesFinAplicacioned instance will be created in the given partition, otherwise 
+		/// This method creates a correct instance of TapizVentanasHasFinAplicación based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized TapizVentanasHasFinAplicación, a new TapizVentanasHasFinAplicación instance will be created in the given partition, otherwise 
 		/// null is returned.
 		/// </summary>
 		/// <remarks>
@@ -12076,7 +12138,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>	
-		/// <returns>Created NavegadorReferencesFinAplicacioned instance, or null if the reader is not pointing to a serialized NavegadorReferencesFinAplicacioned instance.</returns>
+		/// <returns>Created TapizVentanasHasFinAplicación instance, or null if the reader is not pointing to a serialized TapizVentanasHasFinAplicación instance.</returns>
 		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -12095,9 +12157,9 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 	
 		/// <summary>
-		/// This method creates a correct derived instance of NavegadorReferencesFinAplicacioned based on the tag currently pointed by the reader.
+		/// This method creates a correct derived instance of TapizVentanasHasFinAplicación based on the tag currently pointed by the reader.
 		/// Note that the difference between this method and the above one is that this method will never create an instance of the
-		/// NavegadorReferencesFinAplicacioned type itself, only derived types are checked.
+		/// TapizVentanasHasFinAplicación type itself, only derived types are checked.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -12106,7 +12168,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>
-		/// <returns>Created instance that derives from NavegadorReferencesFinAplicacioned, or null if the reader is not pointing to such a serialized instance.</returns>
+		/// <returns>Created instance that derives from TapizVentanasHasFinAplicación, or null if the reader is not pointing to such a serialized instance.</returns>
 		public override DslModeling::ElementLink TryCreateDerivedInstance (DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -12138,18 +12200,18 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			{
 				string localName = reader.LocalName;
 				if (!derivedTypesOnly && string.Compare (localName, this.XmlTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "NavegadorReferencesFinAplicacioned" instance.
+				{	// New "TapizVentanasHasFinAplicación" instance.
 					result = this.CreateInstance(serializationContext, reader, partition);
 				}
 				else
-				{	// Check for derived classes of "NavegadorReferencesFinAplicacioned".
+				{	// Check for derived classes of "TapizVentanasHasFinAplicación".
 					if (this.derivedClasses == null)
 						this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived relationship instance.
-						NavegadorReferencesFinAplicacionedSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as NavegadorReferencesFinAplicacionedSerializer;
+						TapizVentanasHasFinAplicaciónSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as TapizVentanasHasFinAplicaciónSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
 					}
@@ -12160,8 +12222,8 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 	
 		/// <summary>
-		/// This method creates an instance of NavegadorReferencesFinAplicacioned based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
-		/// to be pointed at a serialized instance of NavegadorReferencesFinAplicacioned.
+		/// This method creates an instance of TapizVentanasHasFinAplicación based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of TapizVentanasHasFinAplicación.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
@@ -12169,8 +12231,8 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		/// <param name="partition">Partition in which new NavegadorReferencesFinAplicacioned instance should be created.</param>	
-		/// <returns>Created NavegadorReferencesFinAplicacioned instance.</returns>
+		/// <param name="partition">Partition in which new TapizVentanasHasFinAplicación instance should be created.</param>	
+		/// <returns>Created TapizVentanasHasFinAplicación instance.</returns>
 		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			string idStr = reader.GetAttribute ("Id");
@@ -12187,11 +12249,11 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					id = new global::System.Guid (idStr);
 				}
 				// Create the link with place-holder role-players.
-				return new NavegadorReferencesFinAplicacioned(
+				return new TapizVentanasHasFinAplicación(
 					partition,
 					new DslModeling::RoleAssignment[] {
-						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (NavegadorReferencesFinAplicacioned.NavegadorDomainRoleId), 
-						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (NavegadorReferencesFinAplicacioned.FinAplicacionDomainRoleId)
+						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (TapizVentanasHasFinAplicación.TapizVentanasDomainRoleId), 
+						DslModeling::RoleAssignment.CreatePlaceholderRoleAssignment (TapizVentanasHasFinAplicación.FinAplicaciónDomainRoleId)
 					},
 					new DslModeling::PropertyAssignment[] {
 						new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id)
@@ -12214,12 +12276,12 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 	
 		/// <summary>
-		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from NavegadorReferencesFinAplicacioned, created on demand.
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from TapizVentanasHasFinAplicación, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
 	
 		/// <summary>
-		/// Construct the apping from XmlTagName to DomainClassInfo that derives from NavegadorReferencesFinAplicacioned.
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from TapizVentanasHasFinAplicación.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -12228,7 +12290,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
 			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(NavegadorReferencesFinAplicacioned.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(TapizVentanasHasFinAplicación.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -12260,7 +12322,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region TryCreateMonikerInstance
 		/// <summary>
-		/// This method creates a Moniker of the correct derived (including NavegadorReferencesFinAplicacioned itself) instance of NavegadorReferencesFinAplicacioned based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of the correct derived (including TapizVentanasHasFinAplicación itself) instance of TapizVentanasHasFinAplicación based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -12294,18 +12356,18 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.MonikerTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "NavegadorReferencesFinAplicacioned" moniker instance.
+				{	// New "TapizVentanasHasFinAplicación" moniker instance.
 					result = this.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 				}
 				else
-				{	// Check for derived classes of "NavegadorReferencesFinAplicacioned".
+				{	// Check for derived classes of "TapizVentanasHasFinAplicación".
 					if (this.derivedClassMonikers == null)
 						this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class moniker instance.
-						NavegadorReferencesFinAplicacionedSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as NavegadorReferencesFinAplicacionedSerializer;
+						TapizVentanasHasFinAplicaciónSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as TapizVentanasHasFinAplicaciónSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 					}
@@ -12316,7 +12378,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 		
 		/// <summary>
-		/// This method creates a Moniker of NavegadorReferencesFinAplicacioned based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of TapizVentanasHasFinAplicación based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -12341,7 +12403,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			{	// Normalize the Id.
 				global::System.Guid id = new global::System.Guid(monikerString);
 				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
-				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, NavegadorReferencesFinAplicacioned.DomainClassId, partition.Store), partition.Store);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, TapizVentanasHasFinAplicación.DomainClassId, partition.Store), partition.Store);
 				// Set location info if possible.
 				result.Location = serializationContext.Location;
 				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
@@ -12365,12 +12427,12 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 	
 		/// <summary>
-		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from NavegadorReferencesFinAplicacioned, created on demand.
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from TapizVentanasHasFinAplicación, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
 	
 		/// <summary>
-		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from NavegadorReferencesFinAplicacioned.
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from TapizVentanasHasFinAplicación.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -12379,7 +12441,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
 			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(NavegadorReferencesFinAplicacioned.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(TapizVentanasHasFinAplicación.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -12405,13 +12467,13 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region Write Methods
 		/// <summary>
-		/// Public WriteMoniker() method that writes a monikerized NavegadorReferencesFinAplicacioned instance into XML.
+		/// Public WriteMoniker() method that writes a monikerized TapizVentanasHasFinAplicación instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">NavegadorReferencesFinAplicacioned instance to be monikerized.</param>
+		/// <param name="element">TapizVentanasHasFinAplicación instance to be monikerized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
-		/// <param name="sourceRolePlayer">Source element that references the NavegadorReferencesFinAplicacioned instance being monikerized.</param>
-		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the NavegadorReferencesFinAplicacioned instance being monikerized.</param>
+		/// <param name="sourceRolePlayer">Source element that references the TapizVentanasHasFinAplicación instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the TapizVentanasHasFinAplicación instance being monikerized.</param>
 		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
 		{
 			#region Check Parameters
@@ -12440,10 +12502,10 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 		
 		/// <summary>
-		/// Public Write() method that serializes one NavegadorReferencesFinAplicacioned instance into XML.
+		/// Public Write() method that serializes one TapizVentanasHasFinAplicación instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">NavegadorReferencesFinAplicacioned instance to be serialized.</param>
+		/// <param name="element">TapizVentanasHasFinAplicación instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
 		/// <param name="rootElementSettings">
 		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
@@ -12492,13 +12554,13 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			}
 	
 			// Write the target role-player instance.
-			NavegadorReferencesFinAplicacioned instance = element as NavegadorReferencesFinAplicacioned;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of NavegadorReferencesFinAplicacioned!");
+			TapizVentanasHasFinAplicación instance = element as TapizVentanasHasFinAplicación;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of TapizVentanasHasFinAplicación!");
 	
-			DslModeling::ModelElement targetElement = instance.FinAplicacion;
+			DslModeling::ModelElement targetElement = instance.FinAplicación;
 			DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer(targetElement.GetDomainClass().Id);
 			global::System.Diagnostics.Debug.Assert(targetSerializer != null, "Cannot find serializer for " + targetElement.GetDomainClass().Name + "!");
-			targetSerializer.WriteMoniker(serializationContext, targetElement, writer, instance.Navegador, this);
+			targetSerializer.Write(serializationContext, targetElement, writer);
 	
 			if (!serializationContext.Result.Failed)
 			{
@@ -12513,7 +12575,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// Write all properties that need to be serialized as XML attributes.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">NavegadorReferencesFinAplicacioned instance to be serialized.</param>
+		/// <param name="element">TapizVentanasHasFinAplicación instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param> 
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
 		protected override void WritePropertiesAsAttributes(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
@@ -12528,7 +12590,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// This methods serializes 1) properties serialized as nested XML elements and 2) child model elements into XML. 
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">NavegadorReferencesFinAplicacioned instance to be serialized.</param>
+		/// <param name="element">TapizVentanasHasFinAplicación instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>        
 		protected override void WriteElements(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer)
 		{
@@ -12541,11 +12603,11 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 		#region Moniker Support
 		/// <summary>
-		/// This method calculates a moniker to a given NavegadorReferencesFinAplicacioned instance.
+		/// This method calculates a moniker to a given TapizVentanasHasFinAplicación instance.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">NavegadorReferencesFinAplicacioned instance to calculate qualified name for.</param>
-		/// <returns>A fully qualified string moniker to the NavegadorReferencesFinAplicacioned instance.</returns>
+		/// <param name="element">TapizVentanasHasFinAplicación instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the TapizVentanasHasFinAplicación instance.</returns>
 		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
 		{
 			#region Check Parameters
@@ -12557,8 +12619,8 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				throw new global::System.ArgumentNullException("element");
 			#endregion	
 			
-			NavegadorReferencesFinAplicacioned instance = element as NavegadorReferencesFinAplicacioned;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of NavegadorReferencesFinAplicacioned!");
+			TapizVentanasHasFinAplicación instance = element as TapizVentanasHasFinAplicación;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of TapizVentanasHasFinAplicación!");
 	
 			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
 		}
@@ -12569,7 +12631,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// returns empty string.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">NavegadorReferencesFinAplicacioned instance to get moniker qualifier from.</param>
+		/// <param name="element">TapizVentanasHasFinAplicación instance to get moniker qualifier from.</param>
 		/// <returns>
 		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
 		/// element is not monikerized using standard /qualifier/key mechanism.
@@ -12586,97 +12648,6 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			#endregion	
 			
 			return string.Empty;
-		}
-		#endregion
-	
-		#region Monikerization Support
-		/// <summary>
-		/// Calculates a Moniker, given a reference to a FinAplicacion
-		/// </summary>
-		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="sourceElement">Instance of Navegador that contains the given serialized reference</param>
-		/// <param name="domainClassId">DomainClassId of the model element that the given moniker string will be resolved to.</param>
-		/// <param name="monikerString">Serialized string reference to an instance of FinAplicacion</param>
-		/// <param name="store">Store where the Moniker will be created</param>
-		/// <returns>A Moniker encapsulating the serialized string reference of FinAplicacion instance</returns>
-		public override DslModeling::Moniker MonikerizeReference(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement sourceElement, global::System.Guid domainClassId, string monikerString, DslModeling::Store store)
-		{
-			#region Check Parameters
-			global::System.Diagnostics.Debug.Assert(serializationContext != null);
-			if (serializationContext == null)
-				throw new global::System.ArgumentNullException("serializationContext");
-			global::System.Diagnostics.Debug.Assert(sourceElement != null);
-			if (sourceElement == null)
-				throw new global::System.ArgumentNullException ("sourceElement");
-			global::System.Diagnostics.Debug.Assert (sourceElement is Navegador, "Expecting an instance of Navegador!");
-			global::System.Diagnostics.Debug.Assert (!string.IsNullOrEmpty (monikerString));
-			if (string.IsNullOrEmpty (monikerString))
-				throw new global::System.ArgumentNullException ("monikerString");
-			global::System.Diagnostics.Debug.Assert(store != null);
-			if (store == null)
-				throw new global::System.ArgumentNullException ("store");
-			#endregion
-			
-			DslModeling::MonikerKey key = null;
-			if (DslModeling::SimpleMonikerResolver.IsFullyQualified(monikerString))
-			{
-				key = new DslModeling::MonikerKey(monikerString, NavegadorReferencesFinAplicacioned.DomainClassId, domainClassId, store);
-			}
-			else
-			{
-				DslModeling::DomainClassXmlSerializer sourceSerializer = serializationContext.Directory.GetSerializer(sourceElement.GetDomainClass().Id);
-				global::System.Diagnostics.Debug.Assert(sourceSerializer != null, "Cannot find serializer for " + sourceElement.GetDomainClass().Name + "!");
-				string sourceQualifier = sourceSerializer.GetMonikerQualifier(serializationContext.Directory, sourceElement);
-				key = new DslModeling::MonikerKey(string.Format(global::System.Globalization.CultureInfo.CurrentCulture, "{0}/{1}", sourceQualifier, monikerString), NavegadorReferencesFinAplicacioned.DomainClassId, domainClassId, store);
-			}
-			return new DslModeling::Moniker(key, store);
-		}
-	
-		/// <summary>
-		/// Calculates a monikerized string reference to a FinAplicacion.
-		/// </summary>
-		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="sourceElement">Source side of reference relationship. The referenced target element will be serialized.</param>
-		/// <param name="targetElement">Target side of relationship that will be serialized.</param>
-		/// <returns>A monikerized string reference to target element.</returns>		
-		public override string SerializeReference(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement sourceElement, DslModeling::ModelElement targetElement)
-		{
-			#region Check Parameters
-			global::System.Diagnostics.Debug.Assert(serializationContext != null);
-			if (serializationContext == null)
-				throw new global::System.ArgumentNullException("serializationContext");
-			global::System.Diagnostics.Debug.Assert(sourceElement != null);
-			if (sourceElement == null)
-				throw new global::System.ArgumentNullException ("sourceElement");
-			global::System.Diagnostics.Debug.Assert (sourceElement is Navegador, "Expecting an instance of Navegador!");
-			global::System.Diagnostics.Debug.Assert(targetElement != null);
-			if (targetElement == null)
-				throw new global::System.ArgumentNullException ("targetElement");
-			global::System.Diagnostics.Debug.Assert (targetElement is FinAplicacion, "Expecting an instance of FinAplicacion!");
-			#endregion
-			
-			// full form reference
-			DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer(targetElement.GetDomainClass().Id);
-			global::System.Diagnostics.Debug.Assert(targetSerializer != null, "Cannot find serializer for " + targetElement.GetDomainClass().Name + "!");
-			string targetMoniker = targetSerializer.CalculateQualifiedName(serializationContext.Directory, targetElement);
-			string targetQualifier = targetSerializer.GetMonikerQualifier(serializationContext.Directory, targetElement);
-			
-			if (!string.IsNullOrEmpty(targetQualifier))
-			{
-				DslModeling::DomainClassXmlSerializer sourceSerializer = serializationContext.Directory.GetSerializer(sourceElement.GetDomainClass().Id);
-				global::System.Diagnostics.Debug.Assert(sourceSerializer != null, "Cannot find serializer for " + sourceElement.GetDomainClass().Name + "!");
-				string sourceQualifier = sourceSerializer.GetMonikerQualifier(serializationContext.Directory, sourceElement);
-				if (string.Compare(targetQualifier, sourceQualifier, global::System.StringComparison.CurrentCulture) == 0)
-				{
-					// See if we can create a short form reference by omitting the qualifier
-					global::System.Diagnostics.Debug.Assert(targetMoniker.StartsWith(targetQualifier + "/", global::System.StringComparison.CurrentCulture));
-					string shortFormTargetMoniker = targetMoniker.Substring(targetQualifier.Length + 1);
-					if (!DslModeling::SimpleMonikerResolver.IsFullyQualified(shortFormTargetMoniker))
-						targetMoniker = shortFormTargetMoniker;
-				}
-			}
-	
-			return targetMoniker;
 		}
 		#endregion
 		
@@ -16087,6 +16058,569 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 {
 	/// <summary>
+	/// Serializer MetáforaFinAplicaciónSerializer for DomainClass MetáforaFinAplicación.
+	/// </summary>
+	public partial class MetáforaFinAplicaciónSerializer : DslDiagrams::NodeShapeSerializer
+	{
+		#region Constructor
+		/// <summary>
+		/// MetáforaFinAplicaciónSerializer Constructor
+		/// </summary>
+		public MetáforaFinAplicaciónSerializer ()
+			: base ()
+		{
+		}
+		#endregion
+	
+		
+		#region Miscellaneous methods
+	
+		/// <summary>
+		/// Reset the serializer
+		/// </summary>
+		/// <remarks>
+		/// Clear the cached information about any derived classes so that it is recalculated.
+		/// </remarks>
+		public override void Reset()
+		{
+			base.Reset();
+			this.derivedClasses = null;
+			this.derivedClassMonikers = null;
+		}
+	
+		#endregion
+	
+		#region Public Properties
+		/// <summary>
+		/// This is the XML tag name used to serialize an instance of MetáforaFinAplicación.
+		/// </summary>
+		public override string XmlTagName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get { return @"metáforaFinAplicación"; }
+		}
+	
+		/// <summary>
+		/// This is the XML tag name used to serialize a monikerized instance of MetáforaFinAplicación.
+		/// </summary>
+		public override string MonikerTagName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get { return @"metáforaFinAplicaciónMoniker"; }
+		}
+		
+		/// <summary>
+		/// This is the name of the XML attribute that stores the moniker of MetáforaFinAplicación in a serialized monikerized instance.
+		/// </summary>
+		public override string MonikerAttributeName
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get { return @"Id"; }
+		}
+		#endregion
+	
+		#region Read Methods
+		/// <summary>
+		/// Public Read() method that deserializes one MetáforaFinAplicación instance from XML.
+		/// </summary>
+		/// <remarks>
+		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
+		/// of the MetáforaFinAplicación element that is about to be deserialized. 
+		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
+		/// or the close tag of the parent element (or EOF).
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">In-memory MetáforaFinAplicación instance that will get the deserialized data.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException ("serializationContext");
+			global::System.Diagnostics.Debug.Assert (element != null);
+			if (element == null)
+				throw new global::System.ArgumentNullException ("element");
+			global::System.Diagnostics.Debug.Assert (reader != null);
+			if (reader == null)
+				throw new global::System.ArgumentNullException ("reader");
+			#endregion
+			
+			// Read properties serialized as XML attributes.
+			base.ReadPropertiesFromAttributes(serializationContext, element, reader);
+	
+			// Read nested XML elements.
+			if (!serializationContext.Result.Failed)
+			{
+				if (!reader.IsEmptyElement)
+				{
+					// Read to the start of the first child element.
+					DslModeling::SerializationUtilities.SkipToFirstChild(reader);
+					
+					// Read any extension element data under this XML element
+					JDCCCAJDOMDCMProyectoIPSSerializationHelper.Instance.ReadExtensions(serializationContext, element, reader);
+					
+					// Read nested XML elements, they can be either properties serialized as XML elements, or child 
+					// model elements.
+					while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
+					{
+						base.ReadElements(serializationContext, element, reader);
+						if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
+						{
+							// Encountered one unknown XML element, skip it and keep reading.
+							JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.UnexpectedXmlElement(serializationContext, reader);
+							DslModeling::SerializationUtilities.Skip(reader);
+						}
+					}
+				}
+			}
+	
+			// Advance the reader to the next element (open tag of the next sibling, end tag of the parent, or EOF)
+			DslModeling::SerializationUtilities.Skip(reader);
+		}
+		
+	
+		#region TryCreateInstance
+		/// <summary>
+		/// This method creates a correct instance of MetáforaFinAplicación based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized MetáforaFinAplicación, a new MetáforaFinAplicación instance will be created in the given partition, otherwise 
+		/// null is returned.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="partition">Partition in which new elements should be created.</param>	
+		/// <returns>Created MetáforaFinAplicación instance, or null if the reader is not pointing to a serialized MetáforaFinAplicación instance.</returns>
+		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException ("serializationContext");
+			global::System.Diagnostics.Debug.Assert (reader != null);
+			if (reader == null)
+				throw new global::System.ArgumentNullException ("reader");
+			global::System.Diagnostics.Debug.Assert (partition != null);
+			if (partition == null)
+				throw new global::System.ArgumentNullException ("partition");
+			#endregion
+	
+			DslModeling::ModelElement result = null;
+			if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
+			{
+				string localName = reader.LocalName;
+				if (string.Compare (localName, this.XmlTagName, global::System.StringComparison.CurrentCulture) == 0)
+				{	// New "MetáforaFinAplicación" instance.
+					result = this.CreateInstance(serializationContext, reader, partition);
+				}
+				else
+				{	// Check for derived classes of "MetáforaFinAplicación".
+					if (this.derivedClasses == null)
+						this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
+					global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
+					DslModeling::DomainClassInfo derivedClass = null;
+					if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
+					{	// New derived class instance.
+						MetáforaFinAplicaciónSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as MetáforaFinAplicaciónSerializer;
+						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
+						result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
+					}
+				}
+			}
+	
+			return result;
+		}
+	
+		/// <summary>
+		/// This method creates an instance of MetáforaFinAplicación based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of MetáforaFinAplicación.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="partition">Partition in which new MetáforaFinAplicación instance should be created.</param>	
+		/// <returns>Created MetáforaFinAplicación instance.</returns>
+		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
+		{
+			string idStr = reader.GetAttribute ("Id");
+			try
+			{
+				global::System.Guid id;
+				if (string.IsNullOrEmpty(idStr))
+				{	// Create a default Id.
+					id = global::System.Guid.NewGuid();
+					JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.MissingId(serializationContext, reader, id);
+				}
+				else
+				{
+					id = new global::System.Guid (idStr);
+				}
+				return new MetáforaFinAplicación(partition, new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id));
+			}
+			catch (global::System.ArgumentNullException /* anEx */)
+			{	
+				JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, "Id", typeof(global::System.Guid), idStr);
+			}
+			catch (global::System.FormatException /* fEx */)
+			{
+				JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, "Id", typeof(global::System.Guid), idStr);
+			}
+			catch (global::System.OverflowException /* ofEx */)
+			{
+				JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, "Id", typeof(global::System.Guid), idStr);
+			}
+			return null;
+		}
+	
+		/// <summary>
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from MetáforaFinAplicación, created on demand.
+		/// </summary>
+		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
+	
+		/// <summary>
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from MetáforaFinAplicación.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
+		private void ConstructDerivedClassesLookupTable(DslModeling::SerializationContext serializationContext, DslModeling::DomainDataDirectory domainDataDirectory)
+		{
+			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
+			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
+	
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(MetáforaFinAplicación.DomainClassId);
+			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
+	
+			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
+			if (descendents != null)
+			{
+				foreach (DslModeling::DomainClassInfo descendent in descendents)
+				{
+					global::System.Type descendentType = descendent.ImplementationClass;
+					if (!descendentType.IsAbstract)
+					{
+						DslModeling::DomainClassXmlSerializer descendentSerializer = serializationContext.Directory.GetSerializer(descendent.Id);
+						if (descendentSerializer != null)
+						{
+							string descendentXmlTagName = descendentSerializer.XmlTagName;
+							if (!string.IsNullOrEmpty (descendentXmlTagName))
+							{
+								global::System.Diagnostics.Debug.Assert(!this.derivedClasses.ContainsKey (descendentXmlTagName));
+								this.derivedClasses.Add (descendentXmlTagName, descendent);
+							}
+						}
+					}
+					else
+					{   // Ignore abstract derived classes because they cannot be instantiated directly.
+					}
+				}
+			}
+		}
+		#endregion
+	
+		#region TryCreateMonikerInstance
+		/// <summary>
+		/// This method creates a Moniker of the correct derived (including MetáforaFinAplicación itself) instance of MetáforaFinAplicación based on the tag currently pointed by the reader.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>		
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="sourceRolePlayer">The source role-player instance from which the moniker being created is referenced.</param>
+		/// <param name="relDomainClassId">The DomainClass Id of the relationship that connects the sourceRolePlayer to the moniker being created.</param>
+		/// <param name="partition">The new Moniker should be created in the Store associated with this partition.</param>			
+		/// <returns>Created ModelRoot instance, or null if the reader is not pointing to a correct monikerized instance.</returns>
+		public override DslModeling::Moniker TryCreateMonikerInstance (DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::ModelElement sourceRolePlayer, global::System.Guid relDomainClassId, DslModeling::Partition partition)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException ("serializationContext");
+			global::System.Diagnostics.Debug.Assert (reader != null);
+			if (reader == null)
+				throw new global::System.ArgumentNullException ("reader");
+			global::System.Diagnostics.Debug.Assert (sourceRolePlayer != null);
+			if (sourceRolePlayer == null)
+				throw new global::System.ArgumentNullException ("sourceRolePlayer");
+			global::System.Diagnostics.Debug.Assert (partition != null);
+			if (partition == null)
+				throw new global::System.ArgumentNullException ("partition");
+			#endregion
+	
+			DslModeling::Moniker result = null;
+			if (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
+			{
+				string localName = reader.LocalName;
+				if (string.Compare (localName, this.MonikerTagName, global::System.StringComparison.CurrentCulture) == 0)
+				{	// New "MetáforaFinAplicación" moniker instance.
+					result = this.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
+				}
+				else
+				{	// Check for derived classes of "MetáforaFinAplicación".
+					if (this.derivedClassMonikers == null)
+						this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
+					global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
+					DslModeling::DomainClassInfo derivedClass = null;
+					if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
+					{	// New derived class moniker instance.
+						MetáforaFinAplicaciónSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as MetáforaFinAplicaciónSerializer;
+						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
+						result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
+					}
+				}
+			}
+	
+			return result;
+		}
+		
+		/// <summary>
+		/// This method creates a Moniker of MetáforaFinAplicación based on the tag currently pointed by the reader.
+		/// </summary>
+		/// <remarks>
+		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
+		/// not move the reader; the reader should remain at the same position when this method returns.
+		/// </remarks>		
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="reader">XmlReader to read serialized data from.</param>
+		/// <param name="sourceRolePlayer">The source role-player instance from which the moniker being created is referenced.</param>
+		/// <param name="relDomainClassId">The DomainClass Id of the relationship that connects the sourceRolePlayer to the moniker being created.</param>
+		/// <param name="partition">The new Moniker should be created in the Store associated with this partition.</param>			
+		/// <returns>Created ModelRoot instance, or null if the reader is not pointing to a correct monikerized instance.</returns>
+		protected override DslModeling::Moniker CreateMonikerInstance (DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::ModelElement sourceRolePlayer, global::System.Guid relDomainClassId, DslModeling::Partition partition)
+		{
+			string monikerString = JDCCCAJDOMDCMProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, sourceRolePlayer, reader, this.MonikerAttributeName);
+	
+			if (string.IsNullOrEmpty(monikerString))
+			{	
+				JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.MissingMoniker(serializationContext, reader, this.MonikerAttributeName);
+				return null;
+			}
+			try
+			{	// Normalize the Id.
+				global::System.Guid id = new global::System.Guid(monikerString);
+				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, MetáforaFinAplicación.DomainClassId, partition.Store), partition.Store);
+				// Set location info if possible.
+				result.Location = serializationContext.Location;
+				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
+				if (xmlLineInfo != null)
+				{
+					result.Line = xmlLineInfo.LineNumber;
+					result.Column = xmlLineInfo.LinePosition;
+				}
+				return result;
+			}
+			catch (global::System.FormatException /* fEx */)
+			{
+				JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, this.MonikerAttributeName, typeof(global::System.Guid), monikerString);
+				return null;
+			}
+			catch (global::System.OverflowException /* oEx */)
+			{	
+				JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.InvalidPropertyValue(serializationContext, reader, this.MonikerAttributeName, typeof(global::System.Guid), monikerString);
+				return null;
+			}
+		}
+	
+		/// <summary>
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from MetáforaFinAplicación, created on demand.
+		/// </summary>
+		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
+	
+		/// <summary>
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from MetáforaFinAplicación.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
+		private void ConstructDerivedClassMonikersLookupTable(DslModeling::SerializationContext serializationContext, DslModeling::DomainDataDirectory domainDataDirectory)
+		{
+			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
+			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
+	
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(MetáforaFinAplicación.DomainClassId);
+			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
+	
+			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
+			if (descendents != null)
+			{
+				foreach (DslModeling::DomainClassInfo descendent in descendents)
+				{
+					DslModeling::DomainClassXmlSerializer descendentSerializer = serializationContext.Directory.GetSerializer(descendent.Id);
+					if (descendentSerializer != null)
+					{
+						string descendentMonikerTagName = descendentSerializer.MonikerTagName;
+						if (!string.IsNullOrEmpty (descendentMonikerTagName))
+						{
+							global::System.Diagnostics.Debug.Assert(!this.derivedClassMonikers.ContainsKey (descendentMonikerTagName));
+							this.derivedClassMonikers.Add (descendentMonikerTagName, descendent);
+						}
+					}
+				}
+			}
+		}
+		#endregion
+		#endregion
+	
+		#region Write Methods
+		/// <summary>
+		/// Public WriteMoniker() method that writes a monikerized MetáforaFinAplicación instance into XML.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">MetáforaFinAplicación instance to be monikerized.</param>
+		/// <param name="writer">XmlWriter to write serialized data to.</param>
+		/// <param name="sourceRolePlayer">Source element that references the MetáforaFinAplicación instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the MetáforaFinAplicación instance being monikerized.</param>
+		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException ("serializationContext");
+			global::System.Diagnostics.Debug.Assert (element != null);
+			if (element == null)
+				throw new global::System.ArgumentNullException ("element");
+			global::System.Diagnostics.Debug.Assert (writer != null);
+			if (writer == null)
+				throw new global::System.ArgumentNullException ("writer");
+			global::System.Diagnostics.Debug.Assert (sourceRolePlayer != null);
+			if (sourceRolePlayer == null)
+				throw new global::System.ArgumentNullException ("sourceRolePlayer");
+			global::System.Diagnostics.Debug.Assert (relSerializer != null);
+			if (relSerializer == null)
+				throw new global::System.ArgumentNullException ("relSerializer");
+			#endregion
+			
+			string monikerString = this.CalculateQualifiedName(serializationContext.Directory, element);
+			global::System.Diagnostics.Debug.Assert(!string.IsNullOrEmpty(monikerString));
+			writer.WriteStartElement(this.MonikerTagName);
+			JDCCCAJDOMDCMProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, this.MonikerAttributeName, monikerString);
+			writer.WriteEndElement();
+		}
+		
+		/// <summary>
+		/// Public Write() method that serializes one MetáforaFinAplicación instance into XML.
+		/// </summary>
+		/// <param name="serializationContext">Serialization context.</param>
+		/// <param name="element">MetáforaFinAplicación instance to be serialized.</param>
+		/// <param name="writer">XmlWriter to write serialized data to.</param>
+		/// <param name="rootElementSettings">
+		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
+		/// information like schema target namespace, version, etc.
+		/// This should only be passed for root-level elements. Null should be passed for rest elements (and ideally call the Write() method 
+		/// without this parameter).
+		/// </param>
+		public override void Write(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::RootElementSettings rootElementSettings)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (serializationContext != null);
+			if (serializationContext == null)
+				throw new global::System.ArgumentNullException ("serializationContext");
+			global::System.Diagnostics.Debug.Assert (element != null);
+			if (element == null)
+				throw new global::System.ArgumentNullException ("element");
+			global::System.Diagnostics.Debug.Assert (writer != null);
+			if (writer == null)
+				throw new global::System.ArgumentNullException ("writer");
+			#endregion
+	
+			// Write start of element, including schema target namespace if specified.
+			if (rootElementSettings != null && !string.IsNullOrEmpty(rootElementSettings.SchemaTargetNamespace))
+			{
+				writer.WriteStartElement(this.XmlTagName, rootElementSettings.SchemaTargetNamespace);
+				DslModeling::SerializationUtilities.WriteDomainModelNamespaces(serializationContext.Directory, writer, rootElementSettings.SchemaTargetNamespace);
+			}
+			else
+			{
+				writer.WriteStartElement(this.XmlTagName);
+			}
+				
+			// Write version info (in the format 1.2.3.4), if necessary
+			if (rootElementSettings != null && rootElementSettings.Version != null)
+				writer.WriteAttributeString("dslVersion", rootElementSettings.Version.ToString(4));
+	
+			// Write out element Id.
+			writer.WriteAttributeString("Id", element.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture));
+	
+			base.WritePropertiesAsAttributes(serializationContext, element, writer);
+	
+			// Write out any extension data if this is the root element
+			if (rootElementSettings != null && !serializationContext.Result.Failed)
+			{
+				JDCCCAJDOMDCMProyectoIPSSerializationHelper.Instance.WriteExtensions(serializationContext, element, writer);
+			}
+	
+			if (!serializationContext.Result.Failed)
+			{
+				// Write 1) properties serialized as nested XML elements and 2) child model elements into XML.
+				base.WriteElements(serializationContext, element, writer);
+			}
+	
+			writer.WriteEndElement();
+		}
+		#endregion
+	
+		#region Moniker Support
+		/// <summary>
+		/// This method calculates a moniker to a given MetáforaFinAplicación instance.
+		/// </summary>
+		/// <param name="directory">Directory to look up serializer based on model element type.</param>
+		/// <param name="element">MetáforaFinAplicación instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the MetáforaFinAplicación instance.</returns>
+		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (directory != null);
+			if (directory == null)
+				throw new global::System.ArgumentNullException ("directory");
+			global::System.Diagnostics.Debug.Assert(element != null);
+			if (element == null)
+				throw new global::System.ArgumentNullException("element");
+			#endregion	
+			
+			MetáforaFinAplicación instance = element as MetáforaFinAplicación;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of MetáforaFinAplicación!");
+	
+			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
+		}
+	
+		/// <summary>
+		/// A domain class can be monikerized in different ways: standard /qualifier/key mechanism, custom moniker, or element ID. If the domain class is serialized
+		/// using standard /qualifier/key mechanism, this method returns the qualifier of the moniker; if the domain class uses other ways for monikerization, this method
+		/// returns empty string.
+		/// </summary>
+		/// <param name="directory">Directory to look up serializer based on model element type.</param>
+		/// <param name="element">MetáforaFinAplicación instance to get moniker qualifier from.</param>
+		/// <returns>
+		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
+		/// element is not monikerized using standard /qualifier/key mechanism.
+		/// </returns>
+		public override string GetMonikerQualifier(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert (directory != null);
+			if (directory == null)
+				throw new global::System.ArgumentNullException ("directory");
+			global::System.Diagnostics.Debug.Assert(element != null);
+			if (element == null)
+				throw new global::System.ArgumentNullException("element");
+			#endregion	
+			
+			return string.Empty;
+		}
+		#endregion
+	}
+}
+
+namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
+{
+	/// <summary>
 	/// Serializer MetaforaN_VSerializer for DomainClass MetaforaN_V.
 	/// </summary>
 	public partial class MetaforaN_VSerializer : DslDiagrams::BinaryLinkShapeSerializer
@@ -17272,7 +17806,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				{
 					global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainXmlSerializerDirectoryEntry> customSerializerTypes = this.CustomSerializerTypes;
 					int customSerializerCount = (customSerializerTypes == null ? 0 : customSerializerTypes.Count);
-					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes = new global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerDirectoryEntry>(25 + customSerializerCount);
+					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes = new global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerDirectoryEntry>(26 + customSerializerCount);
 	
 					#region Serializers defined in this model
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(TapizVentanas.DomainClassId, typeof(TapizVentanasSerializer)));
@@ -17283,21 +17817,22 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(Navegador.DomainClassId, typeof(NavegadorSerializer)));
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(Boton.DomainClassId, typeof(BotonSerializer)));
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ItemMenu.DomainClassId, typeof(ItemMenuSerializer)));
-					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(FinAplicacion.DomainClassId, typeof(FinAplicacionSerializer)));
+					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(FinAplicación.DomainClassId, typeof(FinAplicaciónSerializer)));
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(TapizVentanasHasVentanaPrincipal.DomainClassId, typeof(TapizVentanasHasVentanaPrincipalSerializer)));
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(TapizVentanasHasVentanaSecundaria.DomainClassId, typeof(TapizVentanasHasVentanaSecundariaSerializer)));
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(contiene.DomainClassId, typeof(contieneSerializer)));
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(navega.DomainClassId, typeof(navegaSerializer)));
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(despliega.DomainClassId, typeof(despliegaSerializer)));
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(tiene.DomainClassId, typeof(tieneSerializer)));
-					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(TapizVentanasHasFinAplicacioned.DomainClassId, typeof(TapizVentanasHasFinAplicacionedSerializer)));
-					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(NavegadorReferencesFinAplicacioned.DomainClassId, typeof(NavegadorReferencesFinAplicacionedSerializer)));
+					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(NavegadorReferencesFinAplicación.DomainClassId, typeof(NavegadorReferencesFinAplicaciónSerializer)));
+					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(TapizVentanasHasFinAplicación.DomainClassId, typeof(TapizVentanasHasFinAplicaciónSerializer)));
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MetaforaVentanaPrincipal.DomainClassId, typeof(MetaforaVentanaPrincipalSerializer)));
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MetaforaVentanaSecundaria.DomainClassId, typeof(MetaforaVentanaSecundariaSerializer)));
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MetaforaMenu.DomainClassId, typeof(MetaforaMenuSerializer)));
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MetaforaItemMenu.DomainClassId, typeof(MetaforaItemMenuSerializer)));
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MetaforaBoton.DomainClassId, typeof(MetaforaBotonSerializer)));
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MetaforaFinAplicacion.DomainClassId, typeof(MetaforaFinAplicacionSerializer)));
+					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MetáforaFinAplicación.DomainClassId, typeof(MetáforaFinAplicaciónSerializer)));
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MetaforaN_V.DomainClassId, typeof(MetaforaN_VSerializer)));
 					JDCCCAJDOMDCMProyectoIPSSerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(JDCCCAJDOMDCMProyectoIPSDiagram.DomainClassId, typeof(JDCCCAJDOMDCMProyectoIPSDiagramSerializer)));
 					#endregion

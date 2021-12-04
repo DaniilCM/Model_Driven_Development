@@ -27,28 +27,28 @@
         </metaforaBoton>
       </nestedChildShapes>
     </metaforaVentanaSecundaria>
-    <metaforaN_V Id="d1043c95-342e-4c67-a6ed-99dd737279c8" edgePoints="[(3.6874995 : 2.25); (3.6874995 : 1); (4.375 : 1)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <metaforaN_V Id="d1043c95-342e-4c67-a6ed-99dd737279c8" edgePoints="[(3.6874995 : 2.25); (3.6874995 : 1); (4.375 : 1)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <navegaMoniker Id="0f3a579d-e0e7-4f2c-b821-1424f2115ccf" />
       <nodes>
         <metaforaBotonMoniker Id="daf066e3-7ad5-4aa1-80f3-d6e0ec1deecb" />
         <metaforaVentanaPrincipalMoniker Id="85a451cf-c85f-4d24-8b85-01ae7b2b86d1" />
       </nodes>
     </metaforaN_V>
-    <metaforaN_V Id="395d0816-a382-4687-aeb8-48628320b22a" edgePoints="[(3 : 2.625); (1.25 : 2.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <metaforaN_V Id="395d0816-a382-4687-aeb8-48628320b22a" edgePoints="[(3 : 2.625); (1.25 : 2.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <navegaMoniker Id="ec40fc23-06b7-4ab0-98a8-1b4613515b6e" />
       <nodes>
         <metaforaBotonMoniker Id="daf066e3-7ad5-4aa1-80f3-d6e0ec1deecb" />
         <metaforaVentanaSecundariaMoniker Id="bbd6f0c3-a795-49b1-8e9d-5736c8aa0847" />
       </nodes>
     </metaforaN_V>
-    <metaforaN_V Id="540aeefe-f105-4455-834f-a81dd60d8074" edgePoints="[(8.15625 : 6.75); (8.15625 : 1); (7.375 : 1)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <metaforaN_V Id="540aeefe-f105-4455-834f-a81dd60d8074" edgePoints="[(8.15625 : 6.75); (8.15625 : 1); (7.375 : 1)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <navegaMoniker Id="f1e2f132-a89b-406a-acd2-2751e0270514" />
       <nodes>
         <metaforaItemMenuMoniker Id="cf7c6903-e571-467c-af44-1f0605542de2" />
         <metaforaVentanaPrincipalMoniker Id="85a451cf-c85f-4d24-8b85-01ae7b2b86d1" />
       </nodes>
     </metaforaN_V>
-    <metaforaN_V Id="b8207759-8950-4b1a-ba8c-29e232939840" edgePoints="[(8.515625 : 6.75); (8.515625 : 3.625); (11.75 : 3.625)]" manuallyRouted="true" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <metaforaN_V Id="b8207759-8950-4b1a-ba8c-29e232939840" edgePoints="[(8.515625 : 6.75); (8.515625 : 3.625); (11.75 : 3.625)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
       <navegaMoniker Id="fb8eb596-7899-42ab-a7d7-93b4d220e735" />
       <nodes>
         <metaforaItemMenuMoniker Id="cf7c6903-e571-467c-af44-1f0605542de2" />

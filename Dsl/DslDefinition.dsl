@@ -28,10 +28,10 @@
         </ElementMergeDirective>
         <ElementMergeDirective>
           <Index>
-            <DomainClassMoniker Name="FinAplicacion" />
+            <DomainClassMoniker Name="FinAplicación" />
           </Index>
           <LinkCreationPaths>
-            <DomainPath>TapizVentanasHasFinAplicacioned.FinAplicacioned</DomainPath>
+            <DomainPath>TapizVentanasHasFinAplicación.FinAplicación</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
@@ -133,15 +133,7 @@
         <DomainClassMoniker Name="Navegador" />
       </BaseClass>
     </DomainClass>
-    <DomainClass Id="31d0ee6f-1540-4f1a-86c8-b68120db6d04" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion" Name="FinAplicacion" DisplayName="Fin Aplicacion" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS">
-      <Properties>
-        <DomainProperty Id="32726e42-4444-4fe0-b5b2-acba28f03ad7" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion.Nombre" Name="nombre" DisplayName="Nombre">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-    </DomainClass>
+    <DomainClass Id="178be611-b876-488a-a4e8-0aad61290c6c" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación" Name="FinAplicación" DisplayName="Fin Aplicación" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" />
   </Classes>
   <Relationships>
     <DomainRelationship Id="776754ac-7a4e-4bb6-879d-097ab1922a6f" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasVentanaPrincipal" Name="TapizVentanasHasVentanaPrincipal" DisplayName="Tapiz Ventanas Has Ventana Principal" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" IsEmbedding="true">
@@ -240,34 +232,34 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="aa9d7aa4-8a0a-45b7-bfa7-6925ce8a22e6" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned" Name="TapizVentanasHasFinAplicacioned" DisplayName="Tapiz Ventanas Has Fin Aplicacioned" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" IsEmbedding="true">
+    <DomainRelationship Id="651e9bd0-0641-4d01-99b1-8532091c9b34" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación" Name="NavegadorReferencesFinAplicación" DisplayName="Navegador References Fin Aplicación" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS">
       <Source>
-        <DomainRole Id="3d363116-5578-4ebd-b374-8e65996359b9" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned.TapizVentanas" Name="TapizVentanas" DisplayName="Tapiz Ventanas" PropertyName="FinAplicacioned" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Fin Aplicacioned">
-          <RolePlayer>
-            <DomainClassMoniker Name="TapizVentanas" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="89454940-e27a-4ba2-bd07-db9edbc71f5b" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicacioned.FinAplicacion" Name="FinAplicacion" DisplayName="Fin Aplicacion" PropertyName="TapizVentanas" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Tapiz Ventanas">
-          <RolePlayer>
-            <DomainClassMoniker Name="FinAplicacion" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="73ab13d1-6c53-4be0-bc32-e745bf11961b" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned" Name="NavegadorReferencesFinAplicacioned" DisplayName="Navegador References Fin Aplicacioned" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS">
-      <Source>
-        <DomainRole Id="c2aa5235-ca77-4293-9b5f-f2b4c0d1beb1" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.Navegador" Name="Navegador" DisplayName="Navegador" PropertyName="FinAplicacioned" Multiplicity="OneMany" PropertyDisplayName="Fin Aplicacioned">
+        <DomainRole Id="6f127f72-e988-4327-991c-1bf431c5dfe0" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación.Navegador" Name="Navegador" DisplayName="Navegador" PropertyName="FinAplicación" Multiplicity="ZeroOne" PropertyDisplayName="Fin Aplicación">
           <RolePlayer>
             <DomainClassMoniker Name="Navegador" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="71e68193-dc26-4276-b295-e4a5cc25f38d" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.FinAplicacion" Name="FinAplicacion" DisplayName="Fin Aplicacion" PropertyName="Navegador" Multiplicity="ZeroOne" PropertyDisplayName="Navegador">
+        <DomainRole Id="cf7a94cf-c3ab-4cb4-a8cc-7a35183be9a5" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación.FinAplicación" Name="FinAplicación" DisplayName="Fin Aplicación" PropertyName="Navegador" Multiplicity="OneMany" PropertyDisplayName="Navegador">
           <RolePlayer>
-            <DomainClassMoniker Name="FinAplicacion" />
+            <DomainClassMoniker Name="FinAplicación" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="eb80ad9d-fa2f-4e3e-b0e1-f364c4cd3d04" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación" Name="TapizVentanasHasFinAplicación" DisplayName="Tapiz Ventanas Has Fin Aplicación" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="45edfea3-543a-45b3-aee5-84af098899d9" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación.TapizVentanas" Name="TapizVentanas" DisplayName="Tapiz Ventanas" PropertyName="FinAplicación" Multiplicity="OneMany" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Fin Aplicación">
+          <RolePlayer>
+            <DomainClassMoniker Name="TapizVentanas" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="1afc5f4f-2fbe-4013-aa9c-9b976689b00a" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación.FinAplicación" Name="FinAplicación" DisplayName="Fin Aplicación" PropertyName="TapizVentanas" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Tapiz Ventanas">
+          <RolePlayer>
+            <DomainClassMoniker Name="FinAplicación" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -351,6 +343,11 @@
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
     </GeometryShape>
+    <GeometryShape Id="caf7aa1f-7898-4389-aeba-81f0efed9131" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaFinAplicación" Name="MetáforaFinAplicación" DisplayName="Metáfora Fin Aplicación" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metáfora Fin Aplicación" FillColor="Red" InitialHeight="1" Geometry="Circle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="Nombre" DisplayName="Nombre" DefaultText="Nombre" />
+      </ShapeHasDecorators>
+    </GeometryShape>
   </Shapes>
   <Connectors>
     <Connector Id="f614a299-7a88-4839-9368-09cf088330fa" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaN_V" Name="MetaforaN_V" DisplayName="Metafora N_ V" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora N_ V" />
@@ -369,8 +366,8 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="ventanaSecundaria">
             <DomainRelationshipMoniker Name="TapizVentanasHasVentanaSecundaria" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="finAplicacioned">
-            <DomainRelationshipMoniker Name="TapizVentanasHasFinAplicacioned" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="finAplicación">
+            <DomainRelationshipMoniker Name="TapizVentanasHasFinAplicación" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -449,8 +446,8 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="ventanas">
             <DomainRelationshipMoniker Name="navega" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="finAplicacioned">
-            <DomainRelationshipMoniker Name="NavegadorReferencesFinAplicacioned" />
+          <XmlRelationshipData UseFullForm="true" RoleElementName="finAplicación">
+            <DomainRelationshipMoniker Name="NavegadorReferencesFinAplicación" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -475,25 +472,23 @@
       <XmlClassData TypeName="MetaforaBoton" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaBotonMoniker" ElementName="metaforaBoton" MonikerTypeName="MetaforaBotonMoniker">
         <GeometryShapeMoniker Name="MetaforaBoton" />
       </XmlClassData>
-      <XmlClassData TypeName="FinAplicacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="finAplicacionMoniker" ElementName="finAplicacion" MonikerTypeName="FinAplicacionMoniker">
-        <DomainClassMoniker Name="FinAplicacion" />
-        <ElementData>
-          <XmlPropertyData XmlName="nombre">
-            <DomainPropertyMoniker Name="FinAplicacion/nombre" />
-          </XmlPropertyData>
-        </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="TapizVentanasHasFinAplicacioned" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizVentanasHasFinAplicacionedMoniker" ElementName="tapizVentanasHasFinAplicacioned" MonikerTypeName="TapizVentanasHasFinAplicacionedMoniker">
-        <DomainRelationshipMoniker Name="TapizVentanasHasFinAplicacioned" />
-      </XmlClassData>
-      <XmlClassData TypeName="NavegadorReferencesFinAplicacioned" MonikerAttributeName="" SerializeId="true" MonikerElementName="navegadorReferencesFinAplicacionedMoniker" ElementName="navegadorReferencesFinAplicacioned" MonikerTypeName="NavegadorReferencesFinAplicacionedMoniker">
-        <DomainRelationshipMoniker Name="NavegadorReferencesFinAplicacioned" />
-      </XmlClassData>
       <XmlClassData TypeName="MetaforaFinAplicacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaFinAplicacionMoniker" ElementName="metaforaFinAplicacion" MonikerTypeName="MetaforaFinAplicacionMoniker">
         <GeometryShapeMoniker Name="MetaforaFinAplicacion" />
       </XmlClassData>
       <XmlClassData TypeName="MetaforaN_V" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaN_VMoniker" ElementName="metaforaN_V" MonikerTypeName="MetaforaN_VMoniker">
         <ConnectorMoniker Name="MetaforaN_V" />
+      </XmlClassData>
+      <XmlClassData TypeName="FinAplicación" MonikerAttributeName="" SerializeId="true" MonikerElementName="finAplicaciónMoniker" ElementName="finAplicación" MonikerTypeName="FinAplicaciónMoniker">
+        <DomainClassMoniker Name="FinAplicación" />
+      </XmlClassData>
+      <XmlClassData TypeName="NavegadorReferencesFinAplicación" MonikerAttributeName="" SerializeId="true" MonikerElementName="navegadorReferencesFinAplicaciónMoniker" ElementName="navegadorReferencesFinAplicación" MonikerTypeName="NavegadorReferencesFinAplicaciónMoniker">
+        <DomainRelationshipMoniker Name="NavegadorReferencesFinAplicación" />
+      </XmlClassData>
+      <XmlClassData TypeName="TapizVentanasHasFinAplicación" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizVentanasHasFinAplicaciónMoniker" ElementName="tapizVentanasHasFinAplicación" MonikerTypeName="TapizVentanasHasFinAplicaciónMoniker">
+        <DomainRelationshipMoniker Name="TapizVentanasHasFinAplicación" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetáforaFinAplicación" MonikerAttributeName="" SerializeId="true" MonikerElementName="metáforaFinAplicaciónMoniker" ElementName="metáforaFinAplicación" MonikerTypeName="MetáforaFinAplicaciónMoniker">
+        <GeometryShapeMoniker Name="MetáforaFinAplicación" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -518,9 +513,9 @@
         </TargetDirectives>
       </LinkConnectDirective>
     </ConnectionBuilder>
-    <ConnectionBuilder Name="NavegadorReferencesFinAplicacionedBuilder">
+    <ConnectionBuilder Name="NavegadorReferencesFinAplicaciónBuilder">
       <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="NavegadorReferencesFinAplicacioned" />
+        <DomainRelationshipMoniker Name="NavegadorReferencesFinAplicación" />
         <SourceDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
@@ -531,7 +526,7 @@
         <TargetDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
-              <DomainClassMoniker Name="FinAplicacion" />
+              <DomainClassMoniker Name="FinAplicación" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
@@ -658,19 +653,11 @@
         <GeometryShapeMoniker Name="MetaforaBoton" />
       </ShapeMap>
       <ShapeMap>
-        <DomainClassMoniker Name="FinAplicacion" />
+        <DomainClassMoniker Name="FinAplicación" />
         <ParentElementPath>
-          <DomainPath>TapizVentanasHasFinAplicacioned.TapizVentanas/!TapizVentanas</DomainPath>
+          <DomainPath>TapizVentanasHasFinAplicación.TapizVentanas/!TapizVentanas</DomainPath>
         </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaFinAplicacion/nombreDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="FinAplicacion/nombre" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="MetaforaFinAplicacion" />
+        <GeometryShapeMoniker Name="MetáforaFinAplicación" />
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>

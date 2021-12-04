@@ -237,9 +237,9 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion)
+			if(element is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación)
 			{
-				global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaFinAplicacion newShape = new global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaFinAplicacion(this.Partition);
+				global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaFinAplicación newShape = new global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaFinAplicación(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -264,7 +264,6 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaMenu.DecoratorsInitialized += MetaforaMenuDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaItemMenu.DecoratorsInitialized += MetaforaItemMenuDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaBoton.DecoratorsInitialized += MetaforaBotonDecoratorMap.OnDecoratorsInitialized;
-			global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaFinAplicacion.DecoratorsInitialized += MetaforaFinAplicacionDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
@@ -371,24 +370,6 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador.tituloDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
-			}
-		}
-		
-		/// <summary>
-		/// Class containing decorator path traversal methods for MetaforaFinAplicacion.
-		/// </summary>
-		internal static partial class MetaforaFinAplicacionDecoratorMap
-		{
-			/// <summary>
-			/// Event handler called when decorator initialization is complete for MetaforaFinAplicacion.  Adds decorator mappings for this shape or connector.
-			/// </summary>
-			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
-			{
-				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
-				DslDiagrams::AssociatedPropertyInfo propertyInfo;
-				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion.nombreDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
@@ -549,7 +530,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ItemMenu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Boton), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
@@ -607,9 +588,9 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					// of the shape created for this child.  If no shape should be created, the method should return null.
 					parentElement = GetParentForMenu((global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu)childElement);
 				} else
-				if(childElement is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion)
+				if(childElement is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación)
 				{
-					parentElement = GetParentForFinAplicacion((global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion)childElement);
+					parentElement = GetParentForFinAplicación((global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación)childElement);
 				} else
 				{
 					parentElement = null;
@@ -634,7 +615,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas GetParentForFinAplicacion( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion root )
+			public static global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas GetParentForFinAplicación( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación root )
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas result = root.TapizVentanas;

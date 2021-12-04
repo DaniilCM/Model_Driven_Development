@@ -145,7 +145,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	/// <summary>
 	/// ConnectionBuilder class to provide logic for constructing connections between elements.
 	/// </summary>
-	public static partial class NavegadorReferencesFinAplicacionedBuilder
+	public static partial class NavegadorReferencesFinAplicaciónBuilder
 	{
 		#region Accept Connection Methods
 		/// <summary>
@@ -174,7 +174,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
 		{
 			if (candidate == null) return false;
-			else if (candidate is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion)
+			else if (candidate is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación)
 			{ 
 				return true;
 			}
@@ -215,12 +215,12 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			{
 				if (candidateSource is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador)
 				{
-					if (candidateTarget is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion)
+					if (candidateTarget is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación)
 					{
 						global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador sourceNavegador = (global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador)candidateSource;
-						global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion targetFinAplicacion = (global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion)candidateTarget;
-						if(targetFinAplicacion == null || global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.GetLinkToNavegador(targetFinAplicacion) != null) return false;
-						if(targetFinAplicacion == null || sourceNavegador == null || global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned.GetLinks(sourceNavegador, targetFinAplicacion).Count > 0) return false;
+						global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación targetFinAplicación = (global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación)candidateTarget;
+						if(sourceNavegador == null || global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación.GetLinkToFinAplicación(sourceNavegador) != null) return false;
+						if(targetFinAplicación == null || sourceNavegador == null || global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación.GetLinks(sourceNavegador, targetFinAplicación).Count > 0) return false;
 						return true;
 					}
 				}
@@ -254,11 +254,11 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			{
 				if (source is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador)
 				{
-					if (target is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion)
+					if (target is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación)
 					{
 						global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador sourceAccepted = (global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador)source;
-						global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion targetAccepted = (global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacion)target;
-						DslModeling::ElementLink result = new global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicacioned(sourceAccepted, targetAccepted);
+						global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación targetAccepted = (global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación)target;
+						DslModeling::ElementLink result = new global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación(sourceAccepted, targetAccepted);
 						if (DslModeling::DomainClassInfo.HasNameProperty(result))
 						{
 							DslModeling::DomainClassInfo.SetUniqueName(result);
