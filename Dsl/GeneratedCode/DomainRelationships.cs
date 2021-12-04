@@ -1780,7 +1780,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación/TapizVentanas.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación/TapizVentanas.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "FinAplicación", PropertyDisplayNameKey="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación/TapizVentanas.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.OneMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "FinAplicación", PropertyDisplayNameKey="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación/TapizVentanas.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("45edfea3-543a-45b3-aee5-84af098899d9")]
 		public virtual TapizVentanas TapizVentanas
 		{
@@ -1851,24 +1851,43 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		#endregion
 		#region Static methods to access FinAplicación of a TapizVentanas
 		/// <summary>
-		/// Gets a list of FinAplicación.
+		/// Gets FinAplicación.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<FinAplicación> GetFinAplicación(TapizVentanas element)
+		public static FinAplicación GetFinAplicación(TapizVentanas element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<FinAplicación>, FinAplicación>(element, TapizVentanasDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, TapizVentanasDomainRoleId) as FinAplicación;
+		}
+		
+		/// <summary>
+		/// Sets FinAplicación.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetFinAplicación(TapizVentanas element, FinAplicación newFinAplicación)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, TapizVentanasDomainRoleId, newFinAplicación);
 		}
 		#endregion
 		#region TapizVentanas link accessor
 		/// <summary>
-		/// Get the list of TapizVentanasHasFinAplicación links to a TapizVentanas.
+		/// Get the TapizVentanasHasFinAplicación link to a TapizVentanas.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación> GetLinksToFinAplicación ( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas tapizVentanasInstance )
+		public static global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación GetLinkToFinAplicación (global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanas tapizVentanasInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación>(tapizVentanasInstance, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación.TapizVentanasDomainRoleId);
+			global::System.Collections.Generic.IList<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación>(tapizVentanasInstance, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación.TapizVentanasDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of TapizVentanas not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
 		#region FinAplicación link accessor

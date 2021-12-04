@@ -163,6 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\B.bmp" />
+    <Content Include="Resources\endTool.bmp" />
     <Content Include="Resources\iconB.png" />
     <Content Include="Resources\IconIm.png" />
     <Content Include="Resources\IconM.png" />
@@ -170,6 +171,7 @@
     <Content Include="Resources\iconVS.png" />
     <Content Include="Resources\Im.bmp" />
     <Content Include="Resources\Mtool.bmp" />
+    <Content Include="Resources\N_FTool.bmp" />
     <Content Include="Resources\N_V.bmp" />
     <Content Include="Resources\VP.bmp" />
     <Content Include="Resources\VS.bmp" />

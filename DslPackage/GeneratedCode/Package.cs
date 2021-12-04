@@ -81,6 +81,23 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					"@NavegadorVentanaToolToolboxBitmap;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
 					0xff00ff,
 					Index = 5)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.EnlacesToolboxTab",
+					"@NavegacionaFinToolToolboxItem;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegacionaFinToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"NavegacionaFinTool", 
+					"@NavegacionaFinToolToolboxBitmap;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 6)]
+	[VSShell::ProvideStaticToolboxGroup("@FinAplicacionToolboxTab;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacionToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacionToolboxTab",
+					"@FindeAplicacionToolToolboxItem;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FindeAplicacionToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"FindeAplicacionTool", 
+					"@FindeAplicacionToolToolboxBitmap;UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 7)]
 	[VSShell::ProvideEditorFactory(typeof(JDCCCAJDOMDCMProyectoIPSEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(JDCCCAJDOMDCMProyectoIPSEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(JDCCCAJDOMDCMProyectoIPSEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

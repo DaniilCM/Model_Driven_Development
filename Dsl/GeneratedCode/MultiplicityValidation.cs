@@ -22,7 +22,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
 		private void ValidateTapizVentanasMultiplicity (DslValidation::ValidationContext context)
 		{
-			if (this.FinAplicación.Count == 0)
+			if (this.FinAplicación == null)
 			{
 				context.LogViolation(DslValidation::ViolationType.Error,
 					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 

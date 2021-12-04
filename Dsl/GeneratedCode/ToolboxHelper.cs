@@ -51,6 +51,10 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// Toolbox item filter string used to identify NavegadorVentanaTool connector tool.
 		/// </summary>
 		public const string NavegadorVentanaToolFilterString = "NavegadorVentanaTool.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify NavegacionaFinTool connector tool.
+		/// </summary>
+		public const string NavegacionaFinToolFilterString = "NavegacionaFinTool.1.0";
 
 	
 		private global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem> toolboxItemCache = new global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem>();
@@ -243,6 +247,40 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(NavegadorVentanaToolFilterString)
+						});
+					break;
+				case "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegacionaFinToolToolboxItem":
+
+					// Add NavegacionaFinTool connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegacionaFinToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						2, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("NavegacionaFinToolToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("NavegacionaFinToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.EnlacesToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("EnlacesToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"NavegacionaFinTool", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("NavegacionaFinToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(NavegacionaFinToolFilterString)
+						});
+					break;
+				case "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FindeAplicacionToolToolboxItem":
+					// Add FindeAplicacionTool shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FindeAplicacionToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						1, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("FindeAplicacionToolToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("FindeAplicacionToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicacionToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("FinAplicacionToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"FindeAplicacionTool", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("FindeAplicacionToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
 				default:

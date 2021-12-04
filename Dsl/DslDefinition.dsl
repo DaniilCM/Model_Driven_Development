@@ -250,7 +250,7 @@
     </DomainRelationship>
     <DomainRelationship Id="eb80ad9d-fa2f-4e3e-b0e1-f364c4cd3d04" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación" Name="TapizVentanasHasFinAplicación" DisplayName="Tapiz Ventanas Has Fin Aplicación" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" IsEmbedding="true">
       <Source>
-        <DomainRole Id="45edfea3-543a-45b3-aee5-84af098899d9" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación.TapizVentanas" Name="TapizVentanas" DisplayName="Tapiz Ventanas" PropertyName="FinAplicación" Multiplicity="OneMany" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Fin Aplicación">
+        <DomainRole Id="45edfea3-543a-45b3-aee5-84af098899d9" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación.TapizVentanas" Name="TapizVentanas" DisplayName="Tapiz Ventanas" PropertyName="FinAplicación" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Fin Aplicación">
           <RolePlayer>
             <DomainClassMoniker Name="TapizVentanas" />
           </RolePlayer>
@@ -343,14 +343,11 @@
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="caf7aa1f-7898-4389-aeba-81f0efed9131" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaFinAplicación" Name="MetáforaFinAplicación" DisplayName="Metáfora Fin Aplicación" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metáfora Fin Aplicación" FillColor="Red" InitialHeight="1" Geometry="Circle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="Nombre" DisplayName="Nombre" DefaultText="Nombre" />
-      </ShapeHasDecorators>
-    </GeometryShape>
+    <GeometryShape Id="caf7aa1f-7898-4389-aeba-81f0efed9131" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaFinAplicación" Name="MetáforaFinAplicación" DisplayName="Metáfora Fin Aplicación" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metáfora Fin Aplicación" FillColor="Red" InitialHeight="1" Geometry="Circle" />
   </Shapes>
   <Connectors>
     <Connector Id="f614a299-7a88-4839-9368-09cf088330fa" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaN_V" Name="MetaforaN_V" DisplayName="Metafora N_ V" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora N_ V" />
+    <Connector Id="0c2829bf-1e4e-43a7-8d6f-abab084a869e" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaNavegadorFinAplicacion" Name="MetáforaNavegadorFinAplicacion" DisplayName="Metáfora Navegador Fin Aplicacion" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metáfora Navegador Fin Aplicacion" />
   </Connectors>
   <XmlSerializationBehavior Name="JDCCCAJDOMDCMProyectoIPSSerializationBehavior" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS">
     <ClassData>
@@ -489,6 +486,9 @@
       </XmlClassData>
       <XmlClassData TypeName="MetáforaFinAplicación" MonikerAttributeName="" SerializeId="true" MonikerElementName="metáforaFinAplicaciónMoniker" ElementName="metáforaFinAplicación" MonikerTypeName="MetáforaFinAplicaciónMoniker">
         <GeometryShapeMoniker Name="MetáforaFinAplicación" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetáforaNavegadorFinAplicacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="metáforaNavegadorFinAplicacionMoniker" ElementName="metáforaNavegadorFinAplicacion" MonikerTypeName="MetáforaNavegadorFinAplicacionMoniker">
+        <ConnectorMoniker Name="MetáforaNavegadorFinAplicacion" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -665,6 +665,10 @@
         <ConnectorMoniker Name="MetaforaN_V" />
         <DomainRelationshipMoniker Name="navega" />
       </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="MetáforaNavegadorFinAplicacion" />
+        <DomainRelationshipMoniker Name="NavegadorReferencesFinAplicación" />
+      </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
   <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="JDCCCAJDOMDCM_DSLProyectoIPS" EditorGuid="0cae6051-815c-4693-9fb8-e2d973ea5c4c">
@@ -701,6 +705,14 @@
       <ConnectionTool Name="NavegadorVentanaTool" ToolboxIcon="Resources\N_V.bmp" Caption="NavegadorVentanaTool" Tooltip="Navegador Ventana Tool" HelpKeyword="NavegadorVentanaTool">
         <ConnectionBuilderMoniker Name="JDCCCAJDOMDCMProyectoIPS/navegaBuilder" />
       </ConnectionTool>
+      <ConnectionTool Name="NavegacionaFinTool" ToolboxIcon="Resources\N_FTool.bmp" Caption="NavegacionaFinTool" Tooltip="Navegaciona Fin Tool" HelpKeyword="NavegacionaFinTool">
+        <ConnectionBuilderMoniker Name="JDCCCAJDOMDCMProyectoIPS/NavegadorReferencesFinAplicaciónBuilder" />
+      </ConnectionTool>
+    </ToolboxTab>
+    <ToolboxTab TabText="FinAplicacion">
+      <ElementTool Name="FindeAplicacionTool" ToolboxIcon="Resources\endTool.bmp" Caption="FindeAplicacionTool" Tooltip="Finde Aplicacion Tool" HelpKeyword="FindeAplicacionTool">
+        <DomainClassMoniker Name="FinAplicación" />
+      </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="JDCCCAJDOMDCMProyectoIPSDiagram" />

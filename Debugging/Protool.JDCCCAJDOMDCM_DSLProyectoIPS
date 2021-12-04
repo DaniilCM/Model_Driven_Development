@@ -1,54 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <tapizVentanas xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="b8af08ed-88a8-45d9-b7bf-97892defebed" xmlns="http://schemas.microsoft.com/dsltools/JDCCCAJDOMDCMProyectoIPS">
   <ventanaPrincipal>
-    <tapizVentanasHasVentanaPrincipal Id="551b6de8-8c18-4bd2-8839-3948999c4878">
-      <ventanaPrincipal Id="8bb646aa-e64f-42d9-bd71-c2932e769d1a" nombre="I wish" altura="140" anchura="70" />
-    </tapizVentanasHasVentanaPrincipal>
-  </ventanaPrincipal>
-  <ventanaSecundaria>
-    <tapizVentanasHasVentanaSecundaria Id="bb2930f0-5fe5-488c-b2d7-f2921b8088ba">
-      <ventanaSecundaria Id="f1d0bce2-c2ef-44bb-b306-904ed4ae26ed" nombre="Space Travel" altura="10" anchura="60" modal="false" descripcion="Quiero viajar a Marte con Elon Musk y DogeCoin" />
-    </tapizVentanasHasVentanaSecundaria>
-    <tapizVentanasHasVentanaSecundaria Id="46473f1b-a2d3-4245-b906-fbeb840da691">
-      <ventanaSecundaria Id="5a584eab-3a42-48ba-aec7-db456b2f0ecc" nombre="Cancer Cured" altura="10" anchura="60" modal="false" />
-    </tapizVentanasHasVentanaSecundaria>
-    <tapizVentanasHasVentanaSecundaria Id="113325d2-4cea-47fe-9f99-1218cda7e220">
-      <ventanaSecundaria Id="66a63b3d-4231-4a73-bcb4-437fd17f78b0" nombre="Healthy Mental Health" altura="10" anchura="60" modal="false">
+    <tapizVentanasHasVentanaPrincipal Id="8cb6d07a-42a8-40a1-90a5-35a757d6c940">
+      <ventanaPrincipal Id="de6cbb01-ae38-4eab-8a2b-0950c499cafd" nombre="Protool" altura="200" anchura="350">
         <menu>
-          <contiene Id="6d0a1bd9-9905-4be1-b5c4-b109be11110f">
-            <menu Id="62d80f72-629d-40dd-8591-30a37d0a5bd4">
+          <contiene Id="db9003e6-8f90-4e50-96f5-6777b06640f4">
+            <menu Id="0c81dbea-3c13-42f6-95b1-0e2acf99fb22">
               <itemMenus>
-                <despliega Id="f975ac37-0400-40d5-86ce-9e338edb67ce">
-                  <itemMenu Id="294d80bb-a4dc-4323-b32d-f59426a3f00f">
-                    <ventanas>
-                      <navega Id="f1e2f132-a89b-406a-acd2-2751e0270514">
-                        <ventanaPrincipalMoniker Id="8bb646aa-e64f-42d9-bd71-c2932e769d1a" />
-                      </navega>
-                      <navega Id="fb8eb596-7899-42ab-a7d7-93b4d220e735">
-                        <ventanaSecundariaMoniker Id="5a584eab-3a42-48ba-aec7-db456b2f0ecc" />
-                      </navega>
-                    </ventanas>
+                <despliega Id="1355a7f4-c439-4382-8736-b9c96dfec8d5">
+                  <itemMenu Id="e9e487e0-d6d7-408d-bde8-f1c0dbf4e71c">
+                    <finAplicación>
+                      <navegadorReferencesFinAplicación Id="1704c450-7e66-44a6-bc75-dcd83ba22098">
+                        <finAplicaciónMoniker Id="989b71a2-25f0-4cc8-80bf-94b70259523a" />
+                      </navegadorReferencesFinAplicación>
+                    </finAplicación>
                   </itemMenu>
+                </despliega>
+                <despliega Id="4f897d83-daa1-4494-8db0-44dcc22e3ea8">
+                  <itemMenu Id="74cdbe98-1a10-4f87-bc14-0b00c6775e2e" />
                 </despliega>
               </itemMenus>
             </menu>
           </contiene>
         </menu>
+      </ventanaPrincipal>
+    </tapizVentanasHasVentanaPrincipal>
+  </ventanaPrincipal>
+  <ventanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="e0189f7b-277d-4c5c-87ce-d580fdd8188d">
+      <ventanaSecundaria Id="bdbc76d4-5eec-422e-a596-dcd813a1f3d8" altura="0" anchura="0" modal="false">
         <botons>
-          <tiene Id="9988f80d-ff57-4a78-a56e-88b0e50693e5">
-            <boton Id="e8ee35ea-3488-40ff-b52a-6fd79cf815a8">
+          <tiene Id="8ed6cc43-2427-478c-a0e5-01eef63ea041">
+            <boton Id="e21e5dff-3b75-44e1-92f5-38115ac974eb">
               <ventanas>
-                <navega Id="0f3a579d-e0e7-4f2c-b821-1424f2115ccf">
-                  <ventanaPrincipalMoniker Id="8bb646aa-e64f-42d9-bd71-c2932e769d1a" />
-                </navega>
-                <navega Id="ec40fc23-06b7-4ab0-98a8-1b4613515b6e">
-                  <ventanaSecundariaMoniker Id="66a63b3d-4231-4a73-bcb4-437fd17f78b0" />
+                <navega Id="58b52c9f-0aa7-42f9-9dd6-e2c96a13ef95">
+                  <ventanaPrincipalMoniker Id="de6cbb01-ae38-4eab-8a2b-0950c499cafd" />
                 </navega>
               </ventanas>
+              <finAplicación>
+                <navegadorReferencesFinAplicación Id="cf935a1c-ccbe-44d3-b59d-07760a4653c0">
+                  <finAplicaciónMoniker Id="989b71a2-25f0-4cc8-80bf-94b70259523a" />
+                </navegadorReferencesFinAplicación>
+              </finAplicación>
             </boton>
           </tiene>
         </botons>
       </ventanaSecundaria>
     </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="4299a66e-3b36-44b6-80c6-9f9023c9f6c3">
+      <ventanaSecundaria Id="01943298-f557-4969-a857-249d5f6e80ca" nombre="DOS" altura="0" anchura="0" modal="false">
+        <menu>
+          <contiene Id="62813daa-c462-4933-8559-5aab06b22368">
+            <menu Id="6dc64c5f-b503-43ca-9253-ee1d8ff4792b" />
+          </contiene>
+        </menu>
+        <botons>
+          <tiene Id="7d708f5b-3825-46ac-aa71-5b01576deccb">
+            <boton Id="ee77ceb5-bd4f-4ccb-8d84-2851b70904db">
+              <finAplicación>
+                <navegadorReferencesFinAplicación Id="4f8faa27-fa3c-46f1-b8a3-f382d83cae7c">
+                  <finAplicaciónMoniker Id="989b71a2-25f0-4cc8-80bf-94b70259523a" />
+                </navegadorReferencesFinAplicación>
+              </finAplicación>
+            </boton>
+          </tiene>
+        </botons>
+      </ventanaSecundaria>
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="5137eb5b-239f-440b-bd10-f6fb8136470d">
+      <ventanaSecundaria Id="482b4f4a-4ac5-44b2-adc1-dcdf131c16c1" altura="0" anchura="0" modal="false" />
+    </tapizVentanasHasVentanaSecundaria>
   </ventanaSecundaria>
+  <finAplicación>
+    <tapizVentanasHasFinAplicación Id="f5935af7-34a0-418f-8523-16557002a1a3">
+      <finAplicación Id="989b71a2-25f0-4cc8-80bf-94b70259523a" />
+    </tapizVentanasHasFinAplicación>
+  </finAplicación>
 </tapizVentanas>

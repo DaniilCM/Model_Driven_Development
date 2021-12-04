@@ -248,6 +248,11 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaN_V newShape = new global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaN_V(this.Partition);
 				return newShape;
 			}
+			if(element is global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación)
+			{
+				global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaNavegadorFinAplicacion newShape = new global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaNavegadorFinAplicacion(this.Partition);
+				return newShape;
+			}
 			return base.CreateChildShape(element);
 		}
 		#endregion
@@ -379,6 +384,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		#region Connect actions
 		private bool changingMouseAction;
 		private global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorVentanaToolConnectAction navegadorVentanaToolConnectAction;
+		private global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegacionaFinToolConnectAction navegacionaFinToolConnectAction;
 		/// <summary>
 		/// Virtual method to provide a filter when to select the mouse action
 		/// </summary>
@@ -409,6 +415,15 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 						this.navegadorVentanaToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
 					action = this.navegadorVentanaToolConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSToolboxHelper.NavegacionaFinToolFilterString))
+				{
+					if (this.navegacionaFinToolConnectAction == null)
+					{
+						this.navegacionaFinToolConnectAction = new global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegacionaFinToolConnectAction(this);
+						this.navegacionaFinToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.navegacionaFinToolConnectAction;
 				} 
 				else
 				{
@@ -472,6 +487,11 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 						this.navegadorVentanaToolConnectAction.Dispose();
 						this.navegadorVentanaToolConnectAction = null;
 					}
+					if(this.navegacionaFinToolConnectAction != null)
+					{
+						this.navegacionaFinToolConnectAction.Dispose();
+						this.navegacionaFinToolConnectAction = null;
+					}
 				}
 			}
 			finally
@@ -532,6 +552,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Menu), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -712,6 +733,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// Reroute a connector when the role players of its underlying relationship change
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.NavegadorReferencesFinAplicación), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>

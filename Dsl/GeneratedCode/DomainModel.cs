@@ -86,6 +86,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				typeof(TapizVentanasHasFinAplicación),
 				typeof(JDCCCAJDOMDCMProyectoIPSDiagram),
 				typeof(MetaforaN_V),
+				typeof(MetáforaNavegadorFinAplicacion),
 				typeof(MetaforaVentanaPrincipal),
 				typeof(MetaforaVentanaSecundaria),
 				typeof(MetaforaMenu),
@@ -161,7 +162,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(18);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(19);
 				createElementMap.Add(typeof(TapizVentanas), 0);
 				createElementMap.Add(typeof(VentanaPrincipal), 1);
 				createElementMap.Add(typeof(VentanaSecundaria), 2);
@@ -171,13 +172,14 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				createElementMap.Add(typeof(FinAplicación), 6);
 				createElementMap.Add(typeof(JDCCCAJDOMDCMProyectoIPSDiagram), 7);
 				createElementMap.Add(typeof(MetaforaN_V), 8);
-				createElementMap.Add(typeof(MetaforaVentanaPrincipal), 9);
-				createElementMap.Add(typeof(MetaforaVentanaSecundaria), 10);
-				createElementMap.Add(typeof(MetaforaMenu), 11);
-				createElementMap.Add(typeof(MetaforaItemMenu), 12);
-				createElementMap.Add(typeof(MetaforaBoton), 13);
-				createElementMap.Add(typeof(MetaforaFinAplicacion), 14);
-				createElementMap.Add(typeof(MetáforaFinAplicación), 15);
+				createElementMap.Add(typeof(MetáforaNavegadorFinAplicacion), 9);
+				createElementMap.Add(typeof(MetaforaVentanaPrincipal), 10);
+				createElementMap.Add(typeof(MetaforaVentanaSecundaria), 11);
+				createElementMap.Add(typeof(MetaforaMenu), 12);
+				createElementMap.Add(typeof(MetaforaItemMenu), 13);
+				createElementMap.Add(typeof(MetaforaBoton), 14);
+				createElementMap.Add(typeof(MetaforaFinAplicacion), 15);
+				createElementMap.Add(typeof(MetáforaFinAplicación), 16);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -200,13 +202,14 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				case 6: return new FinAplicación(partition, propertyAssignments);
 				case 7: return new JDCCCAJDOMDCMProyectoIPSDiagram(partition, propertyAssignments);
 				case 8: return new MetaforaN_V(partition, propertyAssignments);
-				case 9: return new MetaforaVentanaPrincipal(partition, propertyAssignments);
-				case 10: return new MetaforaVentanaSecundaria(partition, propertyAssignments);
-				case 11: return new MetaforaMenu(partition, propertyAssignments);
-				case 12: return new MetaforaItemMenu(partition, propertyAssignments);
-				case 13: return new MetaforaBoton(partition, propertyAssignments);
-				case 14: return new MetaforaFinAplicacion(partition, propertyAssignments);
-				case 15: return new MetáforaFinAplicación(partition, propertyAssignments);
+				case 9: return new MetáforaNavegadorFinAplicacion(partition, propertyAssignments);
+				case 10: return new MetaforaVentanaPrincipal(partition, propertyAssignments);
+				case 11: return new MetaforaVentanaSecundaria(partition, propertyAssignments);
+				case 12: return new MetaforaMenu(partition, propertyAssignments);
+				case 13: return new MetaforaItemMenu(partition, propertyAssignments);
+				case 14: return new MetaforaBoton(partition, propertyAssignments);
+				case 15: return new MetaforaFinAplicacion(partition, propertyAssignments);
+				case 16: return new MetáforaFinAplicación(partition, propertyAssignments);
 				default: return null;
 			}
 		}

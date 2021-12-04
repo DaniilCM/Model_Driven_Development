@@ -172,18 +172,22 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 		#endregion
 		#region FinAplicación opposite domain role accessor
-		
 		/// <summary>
-		/// Gets a list of FinAplicación.
+		/// Gets or sets FinAplicación.
 		/// Description for
 		/// UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación.TapizVentanas
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<FinAplicación> FinAplicación
+		public virtual FinAplicación FinAplicación
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<FinAplicación>, FinAplicación>(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación.TapizVentanasDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación.TapizVentanasDomainRoleId) as FinAplicación;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.TapizVentanasHasFinAplicación.TapizVentanasDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -224,6 +228,11 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FinAplicación.DomainClassId)) 
 				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: TapizVentanasHasFinAplicación.FinAplicación
+					if (this.FinAplicación != null)
+					{
+						return false;
+					}
 					return true;
 				}
 			}
@@ -273,7 +282,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			if (sourceFinAplicación3 != null)
 			{
 				// Create link for path TapizVentanasHasFinAplicación.FinAplicación
-				this.FinAplicación.Add(sourceFinAplicación3);
+				this.FinAplicación = sourceFinAplicación3;
 
 				return;
 			}

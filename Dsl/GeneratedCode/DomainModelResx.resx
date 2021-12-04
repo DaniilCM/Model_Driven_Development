@@ -617,10 +617,6 @@
     <value>Metáfora Fin Aplicación</value>
     <comment>DisplayName for DomainClass &apos;MetáforaFinAplicación&apos;</comment>
   </data>
-  <data name="MetáforaFinAplicaciónNombreDefaultText" xml:space="preserve">
-    <value>Nombre</value>
-    <comment>Text decorator default text</comment>
-  </data>
   <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaN_V.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaN_V</value>
     <comment>Description for DomainClass &apos;MetaforaN_V&apos;</comment>
@@ -628,6 +624,14 @@
   <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaN_V.DisplayName" xml:space="preserve">
     <value>Metafora N_ V</value>
     <comment>DisplayName for DomainClass &apos;MetaforaN_V&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaNavegadorFinAplicacion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaNavegadorFinAplicacion</value>
+    <comment>Description for DomainClass &apos;MetáforaNavegadorFinAplicacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaNavegadorFinAplicacion.DisplayName" xml:space="preserve">
+    <value>Metáfora Navegador Fin Aplicacion</value>
+    <comment>DisplayName for DomainClass &apos;MetáforaNavegadorFinAplicacion&apos;</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>JDCCCAJDOMDCMProyectoIPS (*.JDCCCAJDOMDCM_DSLProyectoIPS)|*.JDCCCAJDOMDCM_DSLProyectoIPS</value>
@@ -711,6 +715,26 @@
   </data>
   <data name="NavegadorVentanaToolToolboxTooltip" xml:space="preserve">
     <value>Navegador Ventana Tool</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="NavegacionaFinToolToolboxItem" xml:space="preserve">
+    <value>NavegacionaFinTool</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="NavegacionaFinToolToolboxTooltip" xml:space="preserve">
+    <value>Navegaciona Fin Tool</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="FinAplicacionToolboxTab" xml:space="preserve">
+    <value>FinAplicacion</value>
+    <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="FindeAplicacionToolToolboxItem" xml:space="preserve">
+    <value>FindeAplicacionTool</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="FindeAplicacionToolToolboxTooltip" xml:space="preserve">
+    <value>Finde Aplicacion Tool</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -880,6 +904,14 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="NavegadorVentanaToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\N_V.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="NavegacionaFinToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\N_FTool.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="FindeAplicacionToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\endTool.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>
