@@ -283,67 +283,66 @@
     <ExternalType Name="Char" Namespace="System" />
   </Types>
   <Shapes>
-    <GeometryShape Id="0d8786eb-4771-4a12-8e89-12ec02f84bb0" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaPrincipal" Name="MetaforaVentanaPrincipal" DisplayName="Metafora Ventana Principal" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Ventana Principal" TextColor="White" FillColor="ForestGreen" OutlineColor="WhiteSmoke" InitialWidth="2" InitialHeight="1" OutlineThickness="0.05" FillGradientMode="None" Geometry="RoundedRectangle">
-      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontStyle="Bold" FontSize="10" />
+    <GeometryShape Id="0d8786eb-4771-4a12-8e89-12ec02f84bb0" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaPrincipal" Name="MetaforaVentanaPrincipal" DisplayName="Metafora Ventana Principal" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Ventana Principal" TextColor="White" FillColor="OrangeRed" OutlineColor="WhiteSmoke" InitialWidth="10" InitialHeight="5" OutlineThickness="0.05" FillGradientMode="BackwardDiagonal" Geometry="RoundedRectangle">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontStyle="Bold" FontSize="35" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <IconDecorator Name="iconoVP" DisplayName="Icono VP" DefaultIcon="Resources\iconVP.jpg" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopRight" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="altura" DisplayName="Altura" DefaultText="altura" />
+        <TextDecorator Name="altura" DisplayName="Altura" DefaultText="altura" FontSize="20" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerMiddleRight" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="anchura" DisplayName="Anchura" DefaultText="anchura" />
+      <ShapeHasDecorators Position="InnerBottomRight" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="anchura" DisplayName="Anchura" DefaultText="anchura" FontSize="20" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="33eec7c8-1773-4a27-8f25-069755455bf7" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaSecundaria" Name="MetaforaVentanaSecundaria" DisplayName="Metafora Ventana Secundaria" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Ventana Secundaria" InitialHeight="1" Geometry="Rectangle">
-      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontStyle="Bold" />
+    <GeometryShape Id="33eec7c8-1773-4a27-8f25-069755455bf7" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaVentanaSecundaria" Name="MetaforaVentanaSecundaria" DisplayName="Metafora Ventana Secundaria" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Ventana Secundaria" FillColor="Coral" InitialWidth="10" InitialHeight="5" Geometry="RoundedRectangle">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontStyle="Bold" FontSize="35" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <IconDecorator Name="iconVS" DisplayName="Icon VS" DefaultIcon="Resources\iconVS.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerMiddleLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="modal" DisplayName="Modal" DefaultText="modal" />
+        <TextDecorator Name="modal" DisplayName="Modal" DefaultText="modal" FontSize="20" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopRight" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="altura" DisplayName="Altura" DefaultText="altura" />
+        <TextDecorator Name="altura" DisplayName="Altura" DefaultText="altura" FontSize="20" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerMiddleRight" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="anchura" DisplayName="Anchura" DefaultText="anchura" />
+      <ShapeHasDecorators Position="InnerBottomRight" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="anchura" DisplayName="Anchura" DefaultText="anchura" FontSize="20" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="e259938b-0366-4199-8005-39a73ea16218" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaMenu" Name="MetaforaMenu" DisplayName="Metafora Menu" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Menu" FillColor="LightSalmon" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
+    <GeometryShape Id="e259938b-0366-4199-8005-39a73ea16218" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaMenu" Name="MetaforaMenu" DisplayName="Metafora Menu" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Menu" FillColor="Chocolate" InitialWidth="6" InitialHeight="4" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontSize="20" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <IconDecorator Name="IconMenu" DisplayName="Icon Menu" DefaultIcon="Resources\IconM.png" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="7741abeb-f09e-45b1-ad2b-e1b18be0e9ab" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaItemMenu" Name="MetaforaItemMenu" DisplayName="Metafora Item Menu" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Item Menu" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="7741abeb-f09e-45b1-ad2b-e1b18be0e9ab" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaItemMenu" Name="MetaforaItemMenu" DisplayName="Metafora Item Menu" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Item Menu" FillColor="SandyBrown" InitialHeight="1" Geometry="Ellipse">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontSize="14" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <IconDecorator Name="IconItemMenu" DisplayName="Icon Item Menu" DefaultIcon="Resources\IconIm.png" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="3cb225c4-93d5-4855-9725-b0ffff294c45" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaBoton" Name="MetaforaBoton" DisplayName="Metafora Boton" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Boton" InitialHeight="1" Geometry="Rectangle">
-      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+    <GeometryShape Id="3cb225c4-93d5-4855-9725-b0ffff294c45" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaBoton" Name="MetaforaBoton" DisplayName="Metafora Boton" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Boton" FillColor="Peru" InitialWidth="1.125" InitialHeight="0.75" Geometry="Circle">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" FontSize="16" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <IconDecorator Name="IconB" DisplayName="Icon B" DefaultIcon="Resources\iconB.png" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="9ac141d9-5f1b-49fe-9458-2086c2aff16f" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaFinAplicacion" Name="MetaforaFinAplicacion" DisplayName="Metafora Fin Aplicacion" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora Fin Aplicacion" InitialHeight="1" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+    <GeometryShape Id="caf7aa1f-7898-4389-aeba-81f0efed9131" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaFinAplicación" Name="MetáforaFinAplicación" DisplayName="Metáfora Fin Aplicación" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metáfora Fin Aplicación" FillColor="Red" InitialHeight="1" Geometry="Circle">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="FinAplicación" DisplayName="Fin Aplicación" DefaultText="FinAplicación" FontSize="14" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="caf7aa1f-7898-4389-aeba-81f0efed9131" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaFinAplicación" Name="MetáforaFinAplicación" DisplayName="Metáfora Fin Aplicación" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metáfora Fin Aplicación" FillColor="Red" InitialHeight="1" Geometry="Circle" />
   </Shapes>
   <Connectors>
     <Connector Id="f614a299-7a88-4839-9368-09cf088330fa" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaN_V" Name="MetaforaN_V" DisplayName="Metafora N_ V" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS" FixedTooltipText="Metafora N_ V" />
@@ -468,9 +467,6 @@
       </XmlClassData>
       <XmlClassData TypeName="MetaforaBoton" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaBotonMoniker" ElementName="metaforaBoton" MonikerTypeName="MetaforaBotonMoniker">
         <GeometryShapeMoniker Name="MetaforaBoton" />
-      </XmlClassData>
-      <XmlClassData TypeName="MetaforaFinAplicacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaFinAplicacionMoniker" ElementName="metaforaFinAplicacion" MonikerTypeName="MetaforaFinAplicacionMoniker">
-        <GeometryShapeMoniker Name="MetaforaFinAplicacion" />
       </XmlClassData>
       <XmlClassData TypeName="MetaforaN_V" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaN_VMoniker" ElementName="metaforaN_V" MonikerTypeName="MetaforaN_VMoniker">
         <ConnectorMoniker Name="MetaforaN_V" />

@@ -597,18 +597,6 @@
     <value>nombreDec</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaFinAplicacion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaFinAplicacion</value>
-    <comment>Description for DomainClass &apos;MetaforaFinAplicacion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaFinAplicacion.DisplayName" xml:space="preserve">
-    <value>Metafora Fin Aplicacion</value>
-    <comment>DisplayName for DomainClass &apos;MetaforaFinAplicacion&apos;</comment>
-  </data>
-  <data name="MetaforaFinAplicacionnombreDecDefaultText" xml:space="preserve">
-    <value>nombreDec</value>
-    <comment>Text decorator default text</comment>
-  </data>
   <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaFinAplicación.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaFinAplicación</value>
     <comment>Description for DomainClass &apos;MetáforaFinAplicación&apos;</comment>
@@ -616,6 +604,10 @@
   <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaFinAplicación.DisplayName" xml:space="preserve">
     <value>Metáfora Fin Aplicación</value>
     <comment>DisplayName for DomainClass &apos;MetáforaFinAplicación&apos;</comment>
+  </data>
+  <data name="MetáforaFinAplicaciónFinAplicaciónDefaultText" xml:space="preserve">
+    <value>FinAplicación</value>
+    <comment>Text decorator default text</comment>
   </data>
   <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaN_V.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetaforaN_V</value>

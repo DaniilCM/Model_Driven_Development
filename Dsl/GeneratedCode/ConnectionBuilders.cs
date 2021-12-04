@@ -368,24 +368,20 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
 					targetElement = targetShapeElement.ModelElement;
 					if(targetElement == null) targetElement = targetShapeElement;
-					
-					// The NavegadorVentanaTool connection tool specifies that source and target should be reversed.
-					// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.
-					canConnect = base.CanCreateConnection(targetShapeElement, sourceShapeElement, ref connectionWarning);
 			
 				}
 
+				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
+				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
 				if (canConnect)
 				{				
 					if(targetShapeElement == null)
 					{
-						// The NavegadorVentanaTool connection tool specifies that source and target should be reversed. 
-						return navegaBuilder.CanAcceptTarget(sourceElement);
+						return navegaBuilder.CanAcceptSource(sourceElement);
 					}
 					else
 					{				
-						// The NavegadorVentanaTool connection tool specifies that source and target should be reversed. 
-						return navegaBuilder.CanAcceptSourceAndTarget(targetElement, sourceElement);
+						return navegaBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
 					}
 				}
 				else
@@ -424,8 +420,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				if(sourceElement == null) sourceElement = sourceShapeElement;
 				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
 				if(targetElement == null) targetElement = targetShapeElement;
-				// The NavegadorVentanaTool connection tool specifies that source and target should be reversed. 
-				navegaBuilder.Connect(targetElement, sourceElement);
+				navegaBuilder.Connect(sourceElement, targetElement);
 			}
 		}
 		

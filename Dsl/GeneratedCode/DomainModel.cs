@@ -92,7 +92,6 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				typeof(MetaforaMenu),
 				typeof(MetaforaItemMenu),
 				typeof(MetaforaBoton),
-				typeof(MetaforaFinAplicacion),
 				typeof(MetáforaFinAplicación),
 				typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.FixUpDiagram),
 				typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.ConnectorRolePlayerChanged),
@@ -162,7 +161,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(19);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(18);
 				createElementMap.Add(typeof(TapizVentanas), 0);
 				createElementMap.Add(typeof(VentanaPrincipal), 1);
 				createElementMap.Add(typeof(VentanaSecundaria), 2);
@@ -178,8 +177,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				createElementMap.Add(typeof(MetaforaMenu), 12);
 				createElementMap.Add(typeof(MetaforaItemMenu), 13);
 				createElementMap.Add(typeof(MetaforaBoton), 14);
-				createElementMap.Add(typeof(MetaforaFinAplicacion), 15);
-				createElementMap.Add(typeof(MetáforaFinAplicación), 16);
+				createElementMap.Add(typeof(MetáforaFinAplicación), 15);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -208,8 +206,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 				case 12: return new MetaforaMenu(partition, propertyAssignments);
 				case 13: return new MetaforaItemMenu(partition, propertyAssignments);
 				case 14: return new MetaforaBoton(partition, propertyAssignments);
-				case 15: return new MetaforaFinAplicacion(partition, propertyAssignments);
-				case 16: return new MetáforaFinAplicación(partition, propertyAssignments);
+				case 15: return new MetáforaFinAplicación(partition, propertyAssignments);
 				default: return null;
 			}
 		}

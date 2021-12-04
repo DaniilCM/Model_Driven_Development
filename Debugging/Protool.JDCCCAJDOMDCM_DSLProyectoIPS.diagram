@@ -1,75 +1,80 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<jDCCCAJDOMDCMProyectoIPSDiagram dslVersion="1.0.0.0" Id="075c5ca1-3445-467a-9745-fa919c10d447" absoluteBounds="0, 0, 16.5, 15.5" name="Protool">
+<jDCCCAJDOMDCMProyectoIPSDiagram dslVersion="1.0.0.0" Id="075c5ca1-3445-467a-9745-fa919c10d447" absoluteBounds="0, 0, 25.875, 20" name="Protool">
   <tapizVentanasMoniker Id="b8af08ed-88a8-45d9-b7bf-97892defebed" />
   <nestedChildShapes>
-    <metaforaVentanaPrincipal Id="f8b06398-6866-4f1b-aa21-bd63cdf1680a" absoluteBounds="4.75, 1.25, 5.25, 3.375">
-      <ventanaPrincipalMoniker Id="de6cbb01-ae38-4eab-8a2b-0950c499cafd" />
+    <metaforaVentanaPrincipal Id="f37b5e53-2058-4c79-a529-0cfbd01ee1a6" absoluteBounds="6.5, 1, 10, 5">
+      <ventanaPrincipalMoniker Id="1cadac02-9fac-4dc3-849c-d3949e478253" />
+    </metaforaVentanaPrincipal>
+    <metaforaVentanaSecundaria Id="e306bce5-d09c-40c3-9517-6fa8349b7a17" absoluteBounds="13.875, 7.5, 10, 5">
+      <ventanaSecundariaMoniker Id="6450e87a-61eb-4d6a-aebf-1e1f22a9cdb0" />
       <nestedChildShapes>
-        <metaforaMenu Id="cd07f64b-b455-41ab-a2e2-a7c25c66e7a4" absoluteBounds="5.625, 2, 3.5, 2.5">
-          <menuMoniker Id="0c81dbea-3c13-42f6-95b1-0e2acf99fb22" />
+        <metaforaMenu Id="f05fac1a-e7c5-4783-9cbc-917ce43a3b92" absoluteBounds="16.375, 8.75, 4.875, 3.375">
+          <menuMoniker Id="bcb5da11-3800-4522-b6de-84a115cf2c74" />
+        </metaforaMenu>
+      </nestedChildShapes>
+    </metaforaVentanaSecundaria>
+    <metaforaVentanaSecundaria Id="9c3674c1-ffed-493e-b27b-dd4cf1504797" absoluteBounds="3, 7.5, 10, 5">
+      <ventanaSecundariaMoniker Id="004ad9fd-624a-4c04-aa92-17964d9b1f4c" />
+      <nestedChildShapes>
+        <metaforaBoton Id="ea9e701d-d619-4c09-9c82-6782b25d0c02" absoluteBounds="10, 9.5, 1.5, 1.5">
+          <botonMoniker Id="2ad88679-5204-4927-998d-8b3323150c09" />
+        </metaforaBoton>
+        <metaforaMenu Id="c3063603-f7ef-417b-b914-f0603a0d08d7" absoluteBounds="4.125, 9.5, 6, 4">
+          <menuMoniker Id="fd38e8c6-3f34-46af-8342-7f8bc206f468" />
           <nestedChildShapes>
-            <metaforaItemMenu Id="510e8058-c60a-483a-81ea-c09b0f275d55" absoluteBounds="7.25, 3, 1.5, 1.125">
-              <itemMenuMoniker Id="e9e487e0-d6d7-408d-bde8-f1c0dbf4e71c" />
-            </metaforaItemMenu>
-            <metaforaItemMenu Id="d7168240-8867-40b3-b14c-831a5db7fd79" absoluteBounds="5.75, 3.25, 1.5, 1">
-              <itemMenuMoniker Id="74cdbe98-1a10-4f87-bc14-0b00c6775e2e" />
+            <metaforaItemMenu Id="d887b083-f6e2-47ff-afbd-56ae05579f85" absoluteBounds="4.875, 12.125, 1.5, 1">
+              <itemMenuMoniker Id="c8b9a942-6c04-45a3-8c96-e07b08a92829" />
             </metaforaItemMenu>
           </nestedChildShapes>
         </metaforaMenu>
       </nestedChildShapes>
-    </metaforaVentanaPrincipal>
-    <metaforaVentanaSecundaria Id="0db422d4-f5b9-496c-bd24-38998a33042f" absoluteBounds="2.25, 6.375, 5.25, 4">
-      <ventanaSecundariaMoniker Id="bdbc76d4-5eec-422e-a596-dcd813a1f3d8" />
-      <nestedChildShapes>
-        <metaforaBoton Id="cbe736c1-a5cd-4337-8f8e-5145b93aa5e0" absoluteBounds="3.375, 6.75, 1.5, 1">
-          <botonMoniker Id="e21e5dff-3b75-44e1-92f5-38115ac974eb" />
-        </metaforaBoton>
-      </nestedChildShapes>
     </metaforaVentanaSecundaria>
-    <metaforaVentanaSecundaria Id="afed5e3d-e035-4b20-8e84-9c3375a47d69" absoluteBounds="10.875, 5.25, 5.375, 3.75">
-      <ventanaSecundariaMoniker Id="01943298-f557-4969-a857-249d5f6e80ca" />
-      <nestedChildShapes>
-        <metaforaMenu Id="b10e838e-54f0-48b8-a392-e3fd2c44daaf" absoluteBounds="13.125, 6.125, 3.75, 3">
-          <menuMoniker Id="6dc64c5f-b503-43ca-9253-ee1d8ff4792b" />
-        </metaforaMenu>
-        <metaforaBoton Id="8c0791a7-ba0b-492e-a024-0fbed9c02135" absoluteBounds="10.875, 7.625, 1.75, 1.75">
-          <botonMoniker Id="ee77ceb5-bd4f-4ccb-8d84-2851b70904db" />
-        </metaforaBoton>
-      </nestedChildShapes>
-    </metaforaVentanaSecundaria>
-    <metaforaN_V Id="81458517-e397-4c88-9c0c-a8080bb534c7" edgePoints="[(4.0624995 : 6.75); (4.0624995 : 2.9375); (4.75 : 2.9375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <navegaMoniker Id="58b52c9f-0aa7-42f9-9dd6-e2c96a13ef95" />
+    <metaforaN_V Id="2853a9cf-02de-42a1-bb60-b83b6a635e83" edgePoints="[(10.75 : 9.5); (10.75 : 6)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <navegaMoniker Id="5a317b51-d5e9-4eaa-a512-3d4d1650f10d" />
       <nodes>
-        <metaforaBotonMoniker Id="cbe736c1-a5cd-4337-8f8e-5145b93aa5e0" />
-        <metaforaVentanaPrincipalMoniker Id="f8b06398-6866-4f1b-aa21-bd63cdf1680a" />
+        <metaforaBotonMoniker Id="ea9e701d-d619-4c09-9c82-6782b25d0c02" />
+        <metaforaVentanaPrincipalMoniker Id="f37b5e53-2058-4c79-a529-0cfbd01ee1a6" />
       </nodes>
     </metaforaN_V>
-    <metáforaFinAplicación Id="6b20188e-6c7f-4b49-8a56-7fe665d80d13" absoluteBounds="9.875, 11.125, 1.5, 1.5">
-      <finAplicaciónMoniker Id="989b71a2-25f0-4cc8-80bf-94b70259523a" />
+    <metaforaN_V Id="5278e105-b9d8-4c28-a5d3-acbd16e4735b" edgePoints="[(6.32026830477481 : 12.8125005); (10.7604166666667 : 12.8125005 : JumpStart); (10.9270833333333 : 12.8125005 : JumpEnd); (18.875 : 12.8125005); (18.875 : 12.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <navegaMoniker Id="cdb24d8a-04e6-42df-8fdb-93df61e1986d" />
+      <nodes>
+        <metaforaItemMenuMoniker Id="d887b083-f6e2-47ff-afbd-56ae05579f85" />
+        <metaforaVentanaSecundariaMoniker Id="e306bce5-d09c-40c3-9517-6fa8349b7a17" />
+      </nodes>
+    </metaforaN_V>
+    <metáforaFinAplicación Id="4f65a4ab-1177-48b9-9251-45dbf4d4b566" absoluteBounds="11.75, 16.5, 1.5, 1.5">
+      <finAplicaciónMoniker Id="bd10cb19-bd33-41a1-9dbe-0af54c7e9dad" />
     </metáforaFinAplicación>
-    <metáforaNavegadorFinAplicacion Id="bc59c0e9-e730-4521-8eb8-d37645bc662c" edgePoints="[(4.125 : 7.75); (4.125 : 11.875); (9.875 : 11.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <navegadorReferencesFinAplicaciónMoniker Id="cf935a1c-ccbe-44d3-b59d-07760a4653c0" />
+    <metáforaNavegadorFinAplicacion Id="d0766121-897f-4142-bf94-ff6863a4683d" edgePoints="[(5.625 : 13.125); (5.625 : 17.25); (11.75 : 17.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <navegadorReferencesFinAplicaciónMoniker Id="a25feb92-a437-490d-a935-e7e75e94afa7" />
       <nodes>
-        <metaforaBotonMoniker Id="cbe736c1-a5cd-4337-8f8e-5145b93aa5e0" />
-        <metáforaFinAplicaciónMoniker Id="6b20188e-6c7f-4b49-8a56-7fe665d80d13" />
+        <metaforaItemMenuMoniker Id="d887b083-f6e2-47ff-afbd-56ae05579f85" />
+        <metáforaFinAplicaciónMoniker Id="4f65a4ab-1177-48b9-9251-45dbf4d4b566" />
       </nodes>
     </metáforaNavegadorFinAplicacion>
-    <metáforaNavegadorFinAplicacion Id="10e31954-d378-4009-a785-2b9b703fc795" edgePoints="[(8.15625 : 4.125); (8.15625 : 11.4687475); (9.99455657966496 : 11.4687475)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <navegadorReferencesFinAplicaciónMoniker Id="1704c450-7e66-44a6-bc75-dcd83ba22098" />
+    <metáforaNavegadorFinAplicacion Id="882df378-a884-4acd-ba24-d84a8e2a0352" edgePoints="[(10.84375 : 10.9941175562369); (10.84375 : 16.8437475); (11.869556579665 : 16.8437475)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <navegadorReferencesFinAplicaciónMoniker Id="01e666d8-fabb-4980-97f7-dad8f37ce719" />
       <nodes>
-        <metaforaItemMenuMoniker Id="510e8058-c60a-483a-81ea-c09b0f275d55" />
-        <metáforaFinAplicaciónMoniker Id="6b20188e-6c7f-4b49-8a56-7fe665d80d13" />
+        <metaforaBotonMoniker Id="ea9e701d-d619-4c09-9c82-6782b25d0c02" />
+        <metáforaFinAplicaciónMoniker Id="4f65a4ab-1177-48b9-9251-45dbf4d4b566" />
       </nodes>
     </metáforaNavegadorFinAplicacion>
-    <metáforaNavegadorFinAplicacion Id="6a3ac872-a556-40b0-9558-d46aad2c0670" edgePoints="[(11.125 : 9.375); (11.125 : 11.3159830056251)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <navegadorReferencesFinAplicaciónMoniker Id="4f8faa27-fa3c-46f1-b8a3-f382d83cae7c" />
-      <nodes>
-        <metaforaBotonMoniker Id="8c0791a7-ba0b-492e-a024-0fbed9c02135" />
-        <metáforaFinAplicaciónMoniker Id="6b20188e-6c7f-4b49-8a56-7fe665d80d13" />
-      </nodes>
-    </metáforaNavegadorFinAplicacion>
-    <metaforaVentanaSecundaria Id="4249e98b-0c8e-4acc-8ad7-a5a44d8ad9f0" absoluteBounds="6.25, 14.25, 1.5, 1">
-      <ventanaSecundariaMoniker Id="482b4f4a-4ac5-44b2-adc1-dcdf131c16c1" />
+    <metaforaVentanaSecundaria Id="114a5990-d32a-41af-8650-fdcd710fa6d3" absoluteBounds="15.625, 14.75, 10, 5">
+      <ventanaSecundariaMoniker Id="c8087e21-c2b7-48f2-8379-12d5201be154" />
+      <nestedChildShapes>
+        <metaforaMenu Id="ceb5d7b1-ebba-48f7-ac72-50a7f4252959" absoluteBounds="17, 16, 6, 4">
+          <menuMoniker Id="f39606bf-01da-4c5d-a38a-762564c73bf0" />
+          <nestedChildShapes>
+            <metaforaItemMenu Id="d307f1bc-5552-4871-84ba-7f6521069d95" absoluteBounds="18.625, 18.5, 1.5, 1">
+              <itemMenuMoniker Id="6738d5d3-e5df-406b-831f-2f0c54031766" />
+            </metaforaItemMenu>
+          </nestedChildShapes>
+        </metaforaMenu>
+        <metaforaBoton Id="2916f13d-3c6f-47b5-bebf-81c94bd665cb" absoluteBounds="23, 16, 1.125, 1.125">
+          <botonMoniker Id="26e1c9f3-4c53-4037-9b3d-d2f1a2d951b3" />
+        </metaforaBoton>
+      </nestedChildShapes>
     </metaforaVentanaSecundaria>
   </nestedChildShapes>
 </jDCCCAJDOMDCMProyectoIPSDiagram>
