@@ -688,25 +688,25 @@
       </ElementTool>
     </ToolboxTab>
     <ToolboxTab TabText="Boton">
-      <ElementTool Name="BotonTool" ToolboxIcon="Resources\B.bmp" Caption="BotonTool" Tooltip="Boton Tool" HelpKeyword="BotonTool">
+      <ElementTool Name="BotonTool" ToolboxIcon="Resources\BotonTool.bmp" Caption="BotonTool" Tooltip="Boton Tool" HelpKeyword="BotonTool">
         <DomainClassMoniker Name="Boton" />
       </ElementTool>
     </ToolboxTab>
     <ToolboxTab TabText="Item Menu">
-      <ElementTool Name="ItemMenuTool" ToolboxIcon="Resources\Im.bmp" Caption="ItemMenuTool" Tooltip="Item Menu Tool" HelpKeyword="ItemMenuTool">
+      <ElementTool Name="ItemMenuTool" ToolboxIcon="Resources\ItemTool.bmp" Caption="ItemMenuTool" Tooltip="Item Menu Tool" HelpKeyword="ItemMenuTool">
         <DomainClassMoniker Name="ItemMenu" />
       </ElementTool>
     </ToolboxTab>
     <ToolboxTab TabText="Enlaces">
-      <ConnectionTool Name="NavegadorVentanaTool" ToolboxIcon="Resources\N_V.bmp" Caption="NavegadorVentanaTool" Tooltip="Navegador Ventana Tool" HelpKeyword="NavegadorVentanaTool">
+      <ConnectionTool Name="NavegadorVentanaTool" ToolboxIcon="Resources\ExampleConnectorToolBitmap.bmp" Caption="NavegadorVentanaTool" Tooltip="Navegador Ventana Tool" HelpKeyword="NavegadorVentanaTool">
         <ConnectionBuilderMoniker Name="JDCCCAJDOMDCMProyectoIPS/navegaBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="NavegacionaFinTool" ToolboxIcon="Resources\N_FTool.bmp" Caption="NavegacionaFinTool" Tooltip="Navegaciona Fin Tool" HelpKeyword="NavegacionaFinTool">
+      <ConnectionTool Name="NavegacionaFinTool" ToolboxIcon="Resources\NavegadorFinTool.bmp" Caption="NavegacionaFinTool" Tooltip="Navegaciona Fin Tool" HelpKeyword="NavegacionaFinTool">
         <ConnectionBuilderMoniker Name="JDCCCAJDOMDCMProyectoIPS/NavegadorReferencesFinAplicaciónBuilder" />
       </ConnectionTool>
     </ToolboxTab>
     <ToolboxTab TabText="FinAplicacion">
-      <ElementTool Name="FindeAplicacionTool" ToolboxIcon="Resources\endTool.bmp" Caption="FindeAplicacionTool" Tooltip="Finde Aplicacion Tool" HelpKeyword="FindeAplicacionTool">
+      <ElementTool Name="FindeAplicacionTool" ToolboxIcon="Resources\FinAppTool.bmp" Caption="FindeAplicacionTool" Tooltip="Finde Aplicacion Tool" HelpKeyword="FindeAplicacionTool">
         <DomainClassMoniker Name="FinAplicación" />
       </ElementTool>
     </ToolboxTab>
