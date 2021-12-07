@@ -1,55 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <tapizVentanas xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="b8af08ed-88a8-45d9-b7bf-97892defebed" xmlns="http://schemas.microsoft.com/dsltools/JDCCCAJDOMDCMProyectoIPS">
   <ventanaPrincipal>
-    <tapizVentanasHasVentanaPrincipal Id="3c6d106d-978f-476a-88cc-31dd25a47a2f">
-      <ventanaPrincipal Id="1cadac02-9fac-4dc3-849c-d3949e478253" nombre="HOME" altura="454" anchura="423" />
-    </tapizVentanasHasVentanaPrincipal>
-  </ventanaPrincipal>
-  <ventanaSecundaria>
-    <tapizVentanasHasVentanaSecundaria Id="10554e9e-5ef7-49a6-9ad3-48e0f40d9464">
-      <ventanaSecundaria Id="6450e87a-61eb-4d6a-aebf-1e1f22a9cdb0" nombre="Nombre2" altura="0" anchura="0" modal="false">
+    <tapizVentanasHasVentanaPrincipal Id="bd4e0ba4-998a-4305-a251-aa64cb1ded20">
+      <ventanaPrincipal Id="c1012c1e-acb8-4815-81f1-98d3a518cf89" nombre="HomePage" altura="500" anchura="400">
         <menu>
-          <contiene Id="f7e8b332-9ebe-43e4-b2d4-dd9129f4e86a">
-            <menu Id="bcb5da11-3800-4522-b6de-84a115cf2c74" titulo="Menu2" />
-          </contiene>
-        </menu>
-      </ventanaSecundaria>
-    </tapizVentanasHasVentanaSecundaria>
-    <tapizVentanasHasVentanaSecundaria Id="372e37e6-16d2-4fa3-9367-c1c512314873">
-      <ventanaSecundaria Id="004ad9fd-624a-4c04-aa92-17964d9b1f4c" nombre="Nombre" altura="0" anchura="0" modal="false">
-        <menu>
-          <contiene Id="adca9df8-6bb2-483b-9847-552c442d0fc4">
-            <menu Id="fd38e8c6-3f34-46af-8342-7f8bc206f468" titulo="Menu1">
+          <contiene Id="f51a6994-e256-4c12-b283-c2acc9f129f4">
+            <menu Id="3dab8772-e037-4a34-a57c-deadf2373203" titulo="Principal">
               <itemMenus>
-                <despliega Id="5472c82c-58a1-4398-aa63-254b2a313e2a">
-                  <itemMenu Id="c8b9a942-6c04-45a3-8c96-e07b08a92829" titulo="ItemBoton">
-                    <ventanas>
-                      <navega Id="cdb24d8a-04e6-42df-8fdb-93df61e1986d">
-                        <ventanaSecundariaMoniker Id="6450e87a-61eb-4d6a-aebf-1e1f22a9cdb0" />
-                      </navega>
-                    </ventanas>
-                    <finAplicación>
-                      <navegadorReferencesFinAplicación Id="a25feb92-a437-490d-a935-e7e75e94afa7">
-                        <finAplicaciónMoniker Id="bd10cb19-bd33-41a1-9dbe-0af54c7e9dad" />
-                      </navegadorReferencesFinAplicación>
-                    </finAplicación>
-                  </itemMenu>
+                <despliega Id="45841dd7-1b33-418c-a3db-7f32b4d39c5f">
+                  <itemMenu Id="e99b9cd3-ab8e-4b12-b62b-54b65094df75" titulo="Informatica" />
+                </despliega>
+                <despliega Id="d619bb44-db02-4311-b1a1-96efb537736a">
+                  <itemMenu Id="1af9d62b-7542-4c6f-b687-e63f46bff8ca" titulo="Televisión" />
+                </despliega>
+                <despliega Id="93b8bce1-64c5-46b7-ac95-6124c214ca90">
+                  <itemMenu Id="9a5b20c1-437c-41ea-b5bc-7939c797b3d4" titulo="Consolas" />
+                </despliega>
+                <despliega Id="031543c2-3351-48b0-991a-8cb88671e60a">
+                  <itemMenu Id="7ac2bd6d-7b2d-499b-9ee4-4823418d2d29" titulo="Móviles" />
                 </despliega>
               </itemMenus>
             </menu>
           </contiene>
         </menu>
+      </ventanaPrincipal>
+    </tapizVentanasHasVentanaPrincipal>
+  </ventanaPrincipal>
+  <ventanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="10d7539a-3d51-4843-a258-8cd8d2263c52">
+      <ventanaSecundaria Id="6cf54f4b-7e3e-4308-88c3-df1a29db8f29" nombre="Móviles" altura="500" anchura="100" modal="false" descripcion="Todo los móviles a la venta">
         <botons>
-          <tiene Id="cfb8c201-6e2c-4909-812c-d2ea7a925b4a">
-            <boton Id="2ad88679-5204-4927-998d-8b3323150c09" titulo="Boton1">
+          <tiene Id="47652637-ce48-497a-b467-d11200f416f6">
+            <boton Id="72aa3d86-f247-4496-a07f-89468f8f8aac" titulo="Atrás">
               <ventanas>
-                <navega Id="5a317b51-d5e9-4eaa-a512-3d4d1650f10d">
-                  <ventanaPrincipalMoniker Id="1cadac02-9fac-4dc3-849c-d3949e478253" />
+                <navega Id="2545b873-e01c-4875-b95c-e8e5c96a1292">
+                  <ventanaPrincipalMoniker Id="c1012c1e-acb8-4815-81f1-98d3a518cf89" />
                 </navega>
               </ventanas>
+            </boton>
+          </tiene>
+          <tiene Id="804026d9-d2da-41dc-8e0a-82885f1ba8a4">
+            <boton Id="b50eaa85-160e-437a-946e-a0b8af6bb1fa" titulo="Salir">
               <finAplicación>
-                <navegadorReferencesFinAplicación Id="01e666d8-fabb-4980-97f7-dad8f37ce719">
-                  <finAplicaciónMoniker Id="bd10cb19-bd33-41a1-9dbe-0af54c7e9dad" />
+                <navegadorReferencesFinAplicación Id="8ad00368-eb17-4fd7-b0ec-7da01061f2ca">
+                  <finAplicaciónMoniker Id="798cdb30-d71f-484b-882f-fdf304706061" />
                 </navegadorReferencesFinAplicación>
               </finAplicación>
             </boton>
@@ -57,30 +51,10 @@
         </botons>
       </ventanaSecundaria>
     </tapizVentanasHasVentanaSecundaria>
-    <tapizVentanasHasVentanaSecundaria Id="d563daef-f5ec-488a-bb4a-440abb54ebac">
-      <ventanaSecundaria Id="c8087e21-c2b7-48f2-8379-12d5201be154" nombre="V3ntana3" altura="0" anchura="0" modal="false">
-        <menu>
-          <contiene Id="18395051-8131-4d88-a6ba-cce80a3cc98b">
-            <menu Id="f39606bf-01da-4c5d-a38a-762564c73bf0">
-              <itemMenus>
-                <despliega Id="36bdc3a2-b151-4506-8608-d01d044c2b33">
-                  <itemMenu Id="6738d5d3-e5df-406b-831f-2f0c54031766" titulo="Item" />
-                </despliega>
-              </itemMenus>
-            </menu>
-          </contiene>
-        </menu>
-        <botons>
-          <tiene Id="7bd3f751-3135-4f16-9c1e-656957933a75">
-            <boton Id="26e1c9f3-4c53-4037-9b3d-d2f1a2d951b3" titulo="Boton3" />
-          </tiene>
-        </botons>
-      </ventanaSecundaria>
-    </tapizVentanasHasVentanaSecundaria>
   </ventanaSecundaria>
   <finAplicación>
-    <tapizVentanasHasFinAplicación Id="e144c0e2-6952-43e3-b161-8209fab5a86d">
-      <finAplicación Id="bd10cb19-bd33-41a1-9dbe-0af54c7e9dad" />
+    <tapizVentanasHasFinAplicación Id="bcbdb2d3-8a2e-4510-8735-443e2900a13c">
+      <finAplicación Id="798cdb30-d71f-484b-882f-fdf304706061" />
     </tapizVentanasHasFinAplicación>
   </finAplicación>
 </tapizVentanas>
