@@ -89,6 +89,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					{
 						global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador sourceNavegador = (global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador)candidateSource;
 						global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana targetVentana = (global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Ventana)candidateTarget;
+						if(sourceNavegador == null || global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega.GetLinkToVentanas(sourceNavegador) != null) return false;
 						if(targetVentana == null || sourceNavegador == null || global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega.GetLinks(sourceNavegador, targetVentana).Count > 0) return false;
 						return true;
 					}

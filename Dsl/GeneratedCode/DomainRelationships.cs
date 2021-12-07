@@ -839,7 +839,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega/Navegador.DisplayName", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega/Navegador.Description", typeof(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel), "UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Ventanas", PropertyDisplayNameKey="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega/Navegador.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Ventanas", PropertyDisplayNameKey="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega/Navegador.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
 		[DslModeling::DomainObjectId("92f208c0-0069-4783-825e-14d69302afd9")]
 		public virtual Navegador Navegador
 		{
@@ -899,24 +899,43 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		#endregion
 		#region Static methods to access Ventanas of a Navegador
 		/// <summary>
-		/// Gets a list of Ventanas.
+		/// Gets Ventanas.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Ventana> GetVentanas(Navegador element)
+		public static Ventana GetVentanas(Navegador element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Ventana>, Ventana>(element, NavegadorDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, NavegadorDomainRoleId) as Ventana;
+		}
+		
+		/// <summary>
+		/// Sets Ventanas.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetVentanas(Navegador element, Ventana newVentana)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, NavegadorDomainRoleId, newVentana);
 		}
 		#endregion
 		#region Navegador link accessor
 		/// <summary>
-		/// Get the list of navega links to a Navegador.
+		/// Get the navega link to a Navegador.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega> GetLinksToVentanas ( global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador navegadorInstance )
+		public static global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega GetLinkToVentanas (global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Navegador navegadorInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega>(navegadorInstance, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega.NavegadorDomainRoleId);
+			global::System.Collections.Generic.IList<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega>(navegadorInstance, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega.NavegadorDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Navegador not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
 		#region Ventana link accessor

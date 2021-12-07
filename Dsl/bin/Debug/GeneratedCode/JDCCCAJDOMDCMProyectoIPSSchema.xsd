@@ -279,11 +279,11 @@
           <!-- Relationship: navega -->
           <xsd:element name="ventanas" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of navega</xsd:documentation>
+              <xsd:documentation>Instance of navega</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="navega" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="navega" minOccurs="0" maxOccurs="1">
                   <xsd:annotation>
                     <xsd:documentation>[Instance of navega needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>

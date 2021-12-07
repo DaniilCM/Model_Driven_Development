@@ -3918,7 +3918,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 						else
 						{
 							DslModeling::SerializationUtilities.SkipToFirstChild(reader);  // Skip the open tag of <ventanas>
-							ReadnavegaInstances(serializationContext, element, reader);
+							ReadnavegaInstance(serializationContext, element, reader);
 							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </ventanas>
 						}
 						break;
@@ -3941,19 +3941,26 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		}
 	
 		/// <summary>
-		/// Reads all instances of relationship navega.
+		/// Reads instance of relationship navega.
 		/// </summary>
 		/// <remarks>
 		/// The caller will position the reader at the open tag of the first XML element inside the relationship tag, so it can be
-		/// either the first instance, or a bogus tag. This method will deserialize all instances and ignore all bogus tags. When the
-		/// method returns, the reader will be positioned at the end tag of the relationship (or EOF if somehow that happens).
+		/// either the first instance, or a bogus tag. This method will deserialize only the first valid instance and ignore all the
+		/// rest tags (because the multiplicity allows only one instance). When the method returns, the reader will be positioned at 
+		/// the end tag of the relationship (or EOF if somehow that happens).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="element">In-memory Navegador instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1806")]
-		private static void ReadnavegaInstances(DslModeling::SerializationContext serializationContext, Navegador element, global::System.Xml.XmlReader reader)
+		private static void ReadnavegaInstance(DslModeling::SerializationContext serializationContext, Navegador element, global::System.Xml.XmlReader reader)
 		{
+			if (DslModeling::DomainRoleInfo.GetElementLinks<navega> (element, navega.NavegadorDomainRoleId).Count > 0)
+			{	// Only allow one instance, which already exists, so skip everything
+				DslModeling::SerializationUtilities.Skip(reader);	// Moniker contains no child XML elements, so just skip.
+				return;
+			}
+	
 			while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 			{
 				DslModeling::DomainClassXmlSerializer newnavegaSerializer = serializationContext.Directory.GetSerializer(navega.DomainClassId);
@@ -3965,6 +3972,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newnavega.GetDomainClass().Id);	
 					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newnavega.GetDomainClass().Name + "!");
 					targetSerializer.Read(serializationContext, newnavega, reader);
+					break;	// Only allow one instance.
 				}
 				else
 				{	// Maybe the relationship is serialized in short-form by mistake.
@@ -3976,6 +3984,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 						JDCCCAJDOMDCMProyectoIPSSerializationBehaviorSerializationMessages.ExpectingFullFormRelationship(serializationContext, reader, typeof(navega));
 						new navega(element.Partition, new DslModeling::RoleAssignment(navega.NavegadorDomainRoleId, element), new DslModeling::RoleAssignment(navega.VentanaDomainRoleId, newVentanaMonikerOfnavega));
 						DslModeling::SerializationUtilities.Skip(reader);	// Moniker contains no child XML elements, so just skip.
+						break;	// Only allow one instance.
 					}
 					else
 					{	// Unknown element, skip.
@@ -4380,19 +4389,13 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		private static void WriteChildElements(DslModeling::SerializationContext serializationContext, Navegador element, global::System.Xml.XmlWriter writer)
 		{
 			// navega
-			global::System.Collections.ObjectModel.ReadOnlyCollection<navega> allnavegaInstances = navega.GetLinksToVentanas(element);
-			if (!serializationContext.Result.Failed && allnavegaInstances.Count > 0)
+			navega thenavegaInstance = navega.GetLinkToVentanas(element);
+			if (!serializationContext.Result.Failed && thenavegaInstance != null)
 			{
 				writer.WriteStartElement("ventanas");
-				foreach (navega eachnavegaInstance in allnavegaInstances)
-				{
-					if (serializationContext.Result.Failed)
-						break;
-	
-					DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(eachnavegaInstance.GetDomainClass().Id);
-					global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + eachnavegaInstance.GetDomainClass().Name + "!");
-					relSerializer.Write(serializationContext, eachnavegaInstance, writer);
-				}
+				DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(thenavegaInstance.GetDomainClass().Id);
+				global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + thenavegaInstance.GetDomainClass().Name + "!");
+				relSerializer.Write(serializationContext, thenavegaInstance, writer);
 				writer.WriteEndElement();
 			}
 	

@@ -186,7 +186,7 @@
     </DomainRelationship>
     <DomainRelationship Id="13aadadf-0481-47ed-be24-2575406f0064" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega" Name="navega" DisplayName="Navega" Namespace="UPM_IPS.JDCCCAJDOMDCMProyectoIPS">
       <Source>
-        <DomainRole Id="92f208c0-0069-4783-825e-14d69302afd9" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega.Navegador" Name="Navegador" DisplayName="Navegador" PropertyName="Ventanas" PropertyDisplayName="Ventanas">
+        <DomainRole Id="92f208c0-0069-4783-825e-14d69302afd9" Description="Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega.Navegador" Name="Navegador" DisplayName="Navegador" PropertyName="Ventanas" Multiplicity="ZeroOne" PropertyDisplayName="Ventanas">
           <RolePlayer>
             <DomainClassMoniker Name="Navegador" />
           </RolePlayer>

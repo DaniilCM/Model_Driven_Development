@@ -1490,17 +1490,21 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 		
 		#endregion
 		#region Ventanas opposite domain role accessor
-		
 		/// <summary>
-		/// Gets a list of Ventanas.
+		/// Gets or sets Ventanas.
 		/// Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega.Navegador
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Ventana> Ventanas
+		public virtual Ventana Ventanas
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Ventana>, Ventana>(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega.NavegadorDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega.NavegadorDomainRoleId) as Ventana;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.navega.NavegadorDomainRoleId, value);
 			}
 		}
 		#endregion
