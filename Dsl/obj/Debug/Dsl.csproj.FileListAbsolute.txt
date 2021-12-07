@@ -314,6 +314,5 @@ D:\Universidad\IPS\MNe cago en mi vida\Model_Driven_Development\Dsl\obj\Debug\Ds
 D:\Universidad\IPS\MNe cago en mi vida\Model_Driven_Development\Dsl\obj\Debug\UPM_IPS.JDCCCAJDOMDCMProyectoIPS.GeneratedCode.DomainModelResx.resources
 D:\Universidad\IPS\MNe cago en mi vida\Model_Driven_Development\Dsl\obj\Debug\Dsl.csproj.GenerateResource.cache
 D:\Universidad\IPS\MNe cago en mi vida\Model_Driven_Development\Dsl\obj\Debug\Dsl.csproj.CoreCompileInputs.cache
-D:\Universidad\IPS\MNe cago en mi vida\Model_Driven_Development\Dsl\obj\Debug\Dsl.csproj.CopyComplete
 D:\Universidad\IPS\MNe cago en mi vida\Model_Driven_Development\Dsl\obj\Debug\UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.dll
 D:\Universidad\IPS\MNe cago en mi vida\Model_Driven_Development\Dsl\obj\Debug\UPM_IPS.JDCCCAJDOMDCMProyectoIPS.Dsl.pdb

@@ -8,16 +8,40 @@
             <menu Id="3dab8772-e037-4a34-a57c-deadf2373203" titulo="Principal">
               <itemMenus>
                 <despliega Id="45841dd7-1b33-418c-a3db-7f32b4d39c5f">
-                  <itemMenu Id="e99b9cd3-ab8e-4b12-b62b-54b65094df75" titulo="Informatica" />
+                  <itemMenu Id="e99b9cd3-ab8e-4b12-b62b-54b65094df75" titulo="Informatica">
+                    <ventanas>
+                      <navega Id="e07f021c-be3a-49bf-b17a-fde21295e362">
+                        <ventanaSecundariaMoniker Id="0461035e-c783-44b1-b109-b5d1acc73caa" />
+                      </navega>
+                    </ventanas>
+                  </itemMenu>
                 </despliega>
                 <despliega Id="d619bb44-db02-4311-b1a1-96efb537736a">
-                  <itemMenu Id="1af9d62b-7542-4c6f-b687-e63f46bff8ca" titulo="Televisión" />
+                  <itemMenu Id="1af9d62b-7542-4c6f-b687-e63f46bff8ca" titulo="Televisión">
+                    <ventanas>
+                      <navega Id="907df3fb-5247-4eff-9d67-41e7ca6d0bcf">
+                        <ventanaSecundariaMoniker Id="184793e7-5286-4d10-8744-538360583f9e" />
+                      </navega>
+                    </ventanas>
+                  </itemMenu>
                 </despliega>
                 <despliega Id="93b8bce1-64c5-46b7-ac95-6124c214ca90">
-                  <itemMenu Id="9a5b20c1-437c-41ea-b5bc-7939c797b3d4" titulo="Consolas" />
+                  <itemMenu Id="9a5b20c1-437c-41ea-b5bc-7939c797b3d4" titulo="Consolas">
+                    <ventanas>
+                      <navega Id="be46a3d4-3e23-484c-a238-e3982eaa0f29">
+                        <ventanaSecundariaMoniker Id="275cf76d-1d63-4c4a-829a-b323a4a11692" />
+                      </navega>
+                    </ventanas>
+                  </itemMenu>
                 </despliega>
                 <despliega Id="031543c2-3351-48b0-991a-8cb88671e60a">
-                  <itemMenu Id="7ac2bd6d-7b2d-499b-9ee4-4823418d2d29" titulo="Móviles" />
+                  <itemMenu Id="7ac2bd6d-7b2d-499b-9ee4-4823418d2d29" titulo="Móviles">
+                    <ventanas>
+                      <navega Id="14b0d91f-6e2e-41ef-9387-4ca84be39104">
+                        <ventanaSecundariaMoniker Id="6cf54f4b-7e3e-4308-88c3-df1a29db8f29" />
+                      </navega>
+                    </ventanas>
+                  </itemMenu>
                 </despliega>
               </itemMenus>
             </menu>
@@ -28,7 +52,7 @@
   </ventanaPrincipal>
   <ventanaSecundaria>
     <tapizVentanasHasVentanaSecundaria Id="10d7539a-3d51-4843-a258-8cd8d2263c52">
-      <ventanaSecundaria Id="6cf54f4b-7e3e-4308-88c3-df1a29db8f29" nombre="Móviles" altura="500" anchura="100" modal="false" descripcion="Todo los móviles a la venta">
+      <ventanaSecundaria Id="6cf54f4b-7e3e-4308-88c3-df1a29db8f29" nombre="Móviles" altura="500" anchura="400" modal="false" descripcion="Todo los móviles a la venta">
         <botons>
           <tiene Id="47652637-ce48-497a-b467-d11200f416f6">
             <boton Id="72aa3d86-f247-4496-a07f-89468f8f8aac" titulo="Atrás">
@@ -41,11 +65,107 @@
           </tiene>
           <tiene Id="804026d9-d2da-41dc-8e0a-82885f1ba8a4">
             <boton Id="b50eaa85-160e-437a-946e-a0b8af6bb1fa" titulo="Salir">
+              <ventanas>
+                <navega Id="d14754e5-1449-4218-b964-0e81e4537bc0">
+                  <ventanaSecundariaMoniker Id="a7c8b69e-95da-4b87-86a8-f65fdcda5fc5" />
+                </navega>
+              </ventanas>
+            </boton>
+          </tiene>
+        </botons>
+      </ventanaSecundaria>
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="f119bdb3-f41d-40d1-b3a3-4f22d630cac7">
+      <ventanaSecundaria Id="a7c8b69e-95da-4b87-86a8-f65fdcda5fc5" nombre="Salir" altura="100" anchura="120" modal="true">
+        <botons>
+          <tiene Id="2a71ac15-14e6-4b61-a482-9cedf62078bd">
+            <boton Id="1b60b2c7-3061-4997-bd35-5e5365c23c9e" titulo="Si">
               <finAplicación>
-                <navegadorReferencesFinAplicación Id="8ad00368-eb17-4fd7-b0ec-7da01061f2ca">
+                <navegadorReferencesFinAplicación Id="8acb2198-d717-4a04-a122-1664b8190133">
                   <finAplicaciónMoniker Id="798cdb30-d71f-484b-882f-fdf304706061" />
                 </navegadorReferencesFinAplicación>
               </finAplicación>
+            </boton>
+          </tiene>
+          <tiene Id="810c35f9-b24d-4d20-8588-cfc2053c970b">
+            <boton Id="0dcf3a77-92dc-4c2c-922d-9b5fc58b5bc0" titulo="No">
+              <ventanas>
+                <navega Id="8f504be3-a15a-4ee1-b89b-6f84f925cbd8">
+                  <ventanaPrincipalMoniker Id="c1012c1e-acb8-4815-81f1-98d3a518cf89" />
+                </navega>
+              </ventanas>
+            </boton>
+          </tiene>
+        </botons>
+      </ventanaSecundaria>
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="7edcea44-424c-4f21-91e6-a17a955469d7">
+      <ventanaSecundaria Id="184793e7-5286-4d10-8744-538360583f9e" nombre="Televisión" altura="500" anchura="400" modal="false" descripcion="Todo los móviles a la venta">
+        <botons>
+          <tiene Id="9de9e4ac-8335-49c3-a527-9c7d1e5b719c">
+            <boton Id="d6e71c40-c9a9-43b7-9abb-16e7f340bc26" titulo="Atrás">
+              <ventanas>
+                <navega Id="41ef57b4-b54a-448f-9549-e9b17fad55e0">
+                  <ventanaPrincipalMoniker Id="c1012c1e-acb8-4815-81f1-98d3a518cf89" />
+                </navega>
+              </ventanas>
+            </boton>
+          </tiene>
+          <tiene Id="b2c9299e-0ec1-4d68-a842-f0a94f5fe330">
+            <boton Id="6c0620ee-33b2-4c94-9b04-bd99b021a615" titulo="Salir">
+              <ventanas>
+                <navega Id="c1de6df5-7257-434d-9482-0dcbe1a30c2e">
+                  <ventanaSecundariaMoniker Id="a7c8b69e-95da-4b87-86a8-f65fdcda5fc5" />
+                </navega>
+              </ventanas>
+            </boton>
+          </tiene>
+        </botons>
+      </ventanaSecundaria>
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="679eec58-aa0d-4c76-9f8b-5e3fed792d13">
+      <ventanaSecundaria Id="275cf76d-1d63-4c4a-829a-b323a4a11692" nombre="Consolas" altura="500" anchura="400" modal="false" descripcion="Todo los móviles a la venta">
+        <botons>
+          <tiene Id="bdb5981a-2459-4e9a-83fb-3a878390ac39">
+            <boton Id="091295da-943e-4353-b227-d4dec223f589" titulo="Atrás">
+              <ventanas>
+                <navega Id="5116876a-64b2-46a0-b5ec-d705b34171e6">
+                  <ventanaPrincipalMoniker Id="c1012c1e-acb8-4815-81f1-98d3a518cf89" />
+                </navega>
+              </ventanas>
+            </boton>
+          </tiene>
+          <tiene Id="963f8c48-2179-4112-b230-14263757269a">
+            <boton Id="0382f77c-5d37-42f4-aac9-83d1c4eb9537" titulo="Salir">
+              <ventanas>
+                <navega Id="e9db1a9e-1a24-479a-9c11-e0f17a2654f0">
+                  <ventanaSecundariaMoniker Id="a7c8b69e-95da-4b87-86a8-f65fdcda5fc5" />
+                </navega>
+              </ventanas>
+            </boton>
+          </tiene>
+        </botons>
+      </ventanaSecundaria>
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="0c91ae58-0dd8-470e-a91a-92f30b21f582">
+      <ventanaSecundaria Id="0461035e-c783-44b1-b109-b5d1acc73caa" nombre="Informática" altura="500" anchura="400" modal="false" descripcion="Todo los móviles a la venta">
+        <botons>
+          <tiene Id="83ebf56f-5e8e-400b-bb3f-503928df0493">
+            <boton Id="fe5c3af5-ffd5-4053-bd57-3bdde2c681de" titulo="Atrás">
+              <ventanas>
+                <navega Id="7eb1f958-7a2e-40b2-b609-722d0b2eb574">
+                  <ventanaPrincipalMoniker Id="c1012c1e-acb8-4815-81f1-98d3a518cf89" />
+                </navega>
+              </ventanas>
+            </boton>
+          </tiene>
+          <tiene Id="719eb0a9-aad0-4cf1-9e75-5d3a08705e3e">
+            <boton Id="4fd06a5a-9202-4b1f-8dbc-0baa11fb1a9e" titulo="Salir">
+              <ventanas>
+                <navega Id="dbfb4462-b47b-4daa-a6b3-9e5e9f31579c">
+                  <ventanaSecundariaMoniker Id="a7c8b69e-95da-4b87-86a8-f65fdcda5fc5" />
+                </navega>
+              </ventanas>
             </boton>
           </tiene>
         </botons>
