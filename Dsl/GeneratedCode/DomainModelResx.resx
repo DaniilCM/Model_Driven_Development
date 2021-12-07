@@ -617,6 +617,10 @@
     <value>Metafora N_ V</value>
     <comment>DisplayName for DomainClass &apos;MetaforaN_V&apos;</comment>
   </data>
+  <data name="MetaforaN_VactivarVentanaDefaultText" xml:space="preserve">
+    <value>Activar Ventana</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaNavegadorFinAplicacion.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaNavegadorFinAplicacion</value>
     <comment>Description for DomainClass &apos;MetáforaNavegadorFinAplicacion&apos;</comment>
@@ -624,6 +628,10 @@
   <data name="UPM_IPS.JDCCCAJDOMDCMProyectoIPS.MetáforaNavegadorFinAplicacion.DisplayName" xml:space="preserve">
     <value>Metáfora Navegador Fin Aplicacion</value>
     <comment>DisplayName for DomainClass &apos;MetáforaNavegadorFinAplicacion&apos;</comment>
+  </data>
+  <data name="MetáforaNavegadorFinAplicacionaccionFinDefaultText" xml:space="preserve">
+    <value>accionFin</value>
+    <comment>Text decorator default text</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>JDCCCAJDOMDCMProyectoIPS (*.JDCCCAJDOMDCM_DSLProyectoIPS)|*.JDCCCAJDOMDCM_DSLProyectoIPS</value>
@@ -864,10 +872,6 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="MetaforaMenuIconMenuDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\IconM.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Icon decorator default image</comment>
-  </data>
-  <data name="MetaforaItemMenuIconItemMenuDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\IconIm.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Icon decorator default image</comment>
   </data>
   <data name="MetaforaBotonIconBDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">

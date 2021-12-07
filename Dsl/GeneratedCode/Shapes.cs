@@ -811,7 +811,7 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			base.InitializeDecorators(shapeFields, decorators);
 			
 			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "nombreDec");
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.Center, DslDiagrams::PointD.Empty);
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopCenter, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
 			DslDiagrams::ShapeField field2 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "IconMenu");
@@ -1034,10 +1034,6 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular14");			
 			shapeFields.Add(field1);
 			
-			DslDiagrams::ImageField field2 = new DslDiagrams::ImageField("IconItemMenu");
-			field2.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::UPM_IPS.JDCCCAJDOMDCMProyectoIPS.JDCCCAJDOMDCMProyectoIPSDomainModel.SingletonResourceManager.GetObject("MetaforaItemMenuIconItemMenuDefaultImage"));
-			shapeFields.Add(field2);
-			
 		}
 		
 		/// <summary>
@@ -1052,10 +1048,6 @@ namespace UPM_IPS.JDCCCAJDOMDCMProyectoIPS
 			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "nombreDec");
 			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.Center, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
-				
-			DslDiagrams::ShapeField field2 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "IconItemMenu");
-			DslDiagrams::Decorator decorator2 = new DslDiagrams::ShapeDecorator(field2, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator2);
 				
 		}
 		
