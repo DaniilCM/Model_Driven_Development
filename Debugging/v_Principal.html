@@ -1,11 +1,41 @@
 <html>
-<head>
-<title>v_Principal</title>
-<script type="text/javascript">
-function showmenu(elmnt) { document.getElementById(elmnt).style.visibility="visible"; }
-function hidemenu(elmnt) { document.getElementById(elmnt).style.visibility="hidden"; }
-</script>
-</head>
-<body>
-</body>
+	<head>
+		<title>v_Principal</title>
+		<script type="text/javascript">
+			function showmenu(elmnt) { document.getElementById(elmnt).style.visibility="visible"; }
+			function hidemenu(elmnt) { document.getElementById(elmnt).style.visibility="hidden"; }
+		</script>
+	</head>
+	<body>
+		<h1> Bienvenido a la ventana v_Principal</h1>
+		<table width="100%"> 
+			<tr>
+				<td onmouseover="showMenu('Archivo')" onmouseout="hideMenu('Archivo')">
+				<p>Archivo</p>
+				 <table class="menu" id="Archivo" width="50%">
+					 <tr>
+						 <td class"menu">
+							 <a href="v_Abrir.html">Abrir</a>
+						 </td>
+					 </tr>
+					 <tr>
+						 <td class"menu">
+							 <a href="javascript:alert('Fin de la Aplicacion'); window.close();">Salir</a>
+						 </td>
+					 </tr>
+				</table>
+				</td>
+				<td onmouseover="showMenu('Ayuda')" onmouseout="hideMenu('Ayuda')">
+				<p>Ayuda</p>
+				 <table class="menu" id="Ayuda" width="50%">
+					 <tr>
+						 <td class"menu">
+							 <a href="Acerca_De.html">AcercaDe</a>
+						 </td>
+					 </tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+	</body>
 </html>

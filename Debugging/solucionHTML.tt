@@ -6,28 +6,67 @@
 <#
 	var fileManager=EntityFrameworkTemplateFileManager.Create(this);
     fileManager.StartNewFile(this.TapizVentanas.VentanaPrincipal.nombre+".html");
-    WriteLine("<html>");
-    WriteLine("<head>");
-    WriteLine("<title>" + this.TapizVentanas.VentanaPrincipal.nombre + "</title>");
-    WriteLine("<script type=\"text/javascript\">");
-    
-    WriteLine("function showmenu(elmnt) { document.getElementById(elmnt).style.visibility=\"visible\"; }");
-    WriteLine("function hidemenu(elmnt) { document.getElementById(elmnt).style.visibility=\"hidden\"; }");
+	var ventanaPrincipal = this.TapizVentanas.VentanaPrincipal;
+	inicioVentana(ventanaPrincipal);
+	foreach(Ventana ventana in this.TapizVentanas.VentanaSecundaria) {
+		fileManager.StartNewFile(ventana.nombre+ ".html");
+		inicioVentana(ventana);
+	}
+	fileManager.Process();
 
-    WriteLine("</script>");
-    WriteLine("</head>");
+#>
+<#+
+	private void inicioVentana(Ventana ventana){
+		WriteLine("<html>");
+		WriteLine("\t<head>");
+			WriteLine("\t\t<title>"+ventana.nombre+"</title>");
+	/* aqui vendria el style y el js*/
+			WriteLine("\t\t<script type=\"text/javascript\">");
+				WriteLine("\t\t\tfunction showmenu(elmnt) { document.getElementById(elmnt).style.visibility=\"visible\"; }");
+				WriteLine("\t\t\tfunction hidemenu(elmnt) { document.getElementById(elmnt).style.visibility=\"hidden\"; }");
+			WriteLine("\t\t</script>");
+		WriteLine("\t</head>");
+	/* comienza el body*/
+		WriteLine("\t<body>");
+			WriteLine("\t\t<h1> Bienvenido a la ventana "+ventana.nombre+"</h1>");
+			WriteLine("\t\t<table width=\"100%\"> ");
+				WriteLine("\t\t\t<tr>");
+					tablaMenu(ventana);
+				WriteLine("\t\t\t</tr>");
+			WriteLine("\t\t</table>");
+		WriteLine("\t</body>");
+		WriteLine("</html>");
+	}
+#>
+<#+
+	private void tablaMenu (Ventana ventana){
+		if(ventana.Menu.Count >0){
+			foreach(Menu m in ventana.Menu){
+				WriteLine("\t\t\t\t<td onmouseover=\"showMenu('"+m.titulo+"')\" onmouseout=\"hideMenu('"+m.titulo+"')\">");
+					WriteLine("\t\t\t\t<p>"+m.titulo+"</p>");
+					WriteLine("\t\t\t\t <table class=\"menu\" id=\""+m.titulo+"\" width=\"50%\">");
+						tablaItemMenu(m);
+					WriteLine("\t\t\t\t</table>");
+				WriteLine("\t\t\t\t</td>");
+			}
+		}
 
-    WriteLine("<body>");
-
-
-
-    WriteLine("</body>");
-    WriteLine("</html>");
-    
-    foreach(VentanaSecundaria vs in this.TapizVentanas.VentanaSecundaria){
-        fileManager.StartNewFile(vs.nombre+".html");
-        WriteLine("Fichero por cada ventana");
-    }
-    fileManager.Process();
-
+	}
+#>
+<#+
+	private void tablaItemMenu(Menu m){
+		if(m.ItemMenus.Count >0){
+			foreach (ItemMenu im in m.ItemMenus){
+				WriteLine("\t\t\t\t\t <tr>");
+					WriteLine("\t\t\t\t\t\t <td class\"menu\">");
+						if(im.Ventanas != null){
+							WriteLine("\t\t\t\t\t\t\t <a href=\""+im.Ventanas.nombre+".html\">"+im.titulo+"</a>");
+						}else{
+							WriteLine("\t\t\t\t\t\t\t <a href=\"javascript:alert('Fin de la Aplicacion'); window.close();\">"+im.titulo+"</a>");
+						}
+					WriteLine("\t\t\t\t\t\t </td>");
+				WriteLine("\t\t\t\t\t </tr>");
+			}
+		}
+	}
 #>
