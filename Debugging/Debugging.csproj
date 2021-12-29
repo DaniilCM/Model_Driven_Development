@@ -86,6 +86,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>JDCCCAJDOMDCMProyectoIPSReportVB.tt</DependentUpon>
     </Content>
+    <Content Include="script.js">
+      <DependentUpon>solucionHTML.tt</DependentUpon>
+    </Content>
     <Content Include="solucionHTML.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>solucionHTML1.html</LastGenOutput>
@@ -93,6 +96,9 @@
     <Content Include="solucionHTML1.html">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>solucionHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="style.css">
       <DependentUpon>solucionHTML.tt</DependentUpon>
     </Content>
     <Content Include="v_Abrir.html">

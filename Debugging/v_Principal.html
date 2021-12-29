@@ -1,13 +1,11 @@
 <html>
 	<head>
 		<title>v_Principal</title>
-		<script type="text/javascript">
-			function showmenu(elmnt) { document.getElementById(elmnt).style.visibility="visible"; }
-			function hidemenu(elmnt) { document.getElementById(elmnt).style.visibility="hidden"; }
-		</script>
+		<link rel="stylesheet" href="style.css" >
+		<script type ="text/javascript" src="script.js"></script>
 	</head>
 	<body>
-		<h1> Bienvenido a la ventana v_Principal</h1>
+		<h1> v_Principal </h1>
 		<table width="100%"> 
 			<tr>
 				<td onmouseover="showMenu('Archivo')" onmouseout="hideMenu('Archivo')">
@@ -20,7 +18,7 @@
 					 </tr>
 					 <tr>
 						 <td class"menu">
-							 <a href="javascript:alert('Fin de la Aplicacion'); window.close();">Salir</a>
+							 <a href="#" onclick="fin()">Salir</a>
 						 </td>
 					 </tr>
 				</table>
@@ -37,5 +35,8 @@
 				</td>
 			</tr>
 		</table>
+<br><br><br>
+<button onclick="ir('v_Abrir')">Abrir </button>
+<button onclick="fin()">Salir</button>
 	</body>
 </html>

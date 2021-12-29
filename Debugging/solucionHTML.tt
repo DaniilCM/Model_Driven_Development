@@ -5,6 +5,10 @@
 
 <#
 	var fileManager=EntityFrameworkTemplateFileManager.Create(this);
+	fileManager.StartNewFile("style.css");
+	crearCSS();
+	fileManager.StartNewFile("script.js");
+	crearJS();
     fileManager.StartNewFile(this.TapizVentanas.VentanaPrincipal.nombre+".html");
 	var ventanaPrincipal = this.TapizVentanas.VentanaPrincipal;
 	inicioVentana(ventanaPrincipal);
@@ -20,20 +24,15 @@
 		WriteLine("<html>");
 		WriteLine("\t<head>");
 			WriteLine("\t\t<title>"+ventana.nombre+"</title>");
-	/* aqui vendria el style y el js*/
-			WriteLine("\t\t<script type=\"text/javascript\">");
-				WriteLine("\t\t\tfunction showmenu(elmnt) { document.getElementById(elmnt).style.visibility=\"visible\"; }");
-				WriteLine("\t\t\tfunction hidemenu(elmnt) { document.getElementById(elmnt).style.visibility=\"hidden\"; }");
-			WriteLine("\t\t</script>");
+			WriteLine("\t\t<link rel=\"stylesheet\" href=\"style.css\" >");
+			WriteLine("\t\t<script type =\"text/javascript\" src=\"script.js\"></script>");
 		WriteLine("\t</head>");
 	/* comienza el body*/
 		WriteLine("\t<body>");
-			WriteLine("\t\t<h1> Bienvenido a la ventana "+ventana.nombre+"</h1>");
-			WriteLine("\t\t<table width=\"100%\"> ");
-				WriteLine("\t\t\t<tr>");
-					tablaMenu(ventana);
-				WriteLine("\t\t\t</tr>");
-			WriteLine("\t\t</table>");
+			WriteLine("\t\t<h1> "+ventana.nombre+" </h1>");
+			tablaMenu(ventana);
+			WriteLine("<br><br><br>");
+			creaBotones(ventana);
 		WriteLine("\t</body>");
 		WriteLine("</html>");
 	}
@@ -41,6 +40,8 @@
 <#+
 	private void tablaMenu (Ventana ventana){
 		if(ventana.Menu.Count >0){
+			WriteLine("\t\t<table width=\"100%\"> ");
+			WriteLine("\t\t\t<tr>");
 			foreach(Menu m in ventana.Menu){
 				WriteLine("\t\t\t\t<td onmouseover=\"showMenu('"+m.titulo+"')\" onmouseout=\"hideMenu('"+m.titulo+"')\">");
 					WriteLine("\t\t\t\t<p>"+m.titulo+"</p>");
@@ -49,6 +50,8 @@
 					WriteLine("\t\t\t\t</table>");
 				WriteLine("\t\t\t\t</td>");
 			}
+			WriteLine("\t\t\t</tr>");
+			WriteLine("\t\t</table>");
 		}
 
 	}
@@ -62,11 +65,56 @@
 						if(im.Ventanas != null){
 							WriteLine("\t\t\t\t\t\t\t <a href=\""+im.Ventanas.nombre+".html\">"+im.titulo+"</a>");
 						}else{
-							WriteLine("\t\t\t\t\t\t\t <a href=\"javascript:alert('Fin de la Aplicacion'); window.close();\">"+im.titulo+"</a>");
+							WriteLine("\t\t\t\t\t\t\t <a href=\"#\" onclick=\"fin()\">"+im.titulo+"</a>");
 						}
 					WriteLine("\t\t\t\t\t\t </td>");
 				WriteLine("\t\t\t\t\t </tr>");
 			}
 		}
+	}
+#>
+
+<#+
+	private void creaBotones(Ventana ventana){
+		if( ventana.Botons.Count>0){
+			foreach(Boton b in ventana.Botons){
+				if(b.Ventanas != null){
+					WriteLine("<button onclick=\"ir('"+b.Ventanas.nombre+"')\">"+b.titulo+" </button>");
+				}else{
+					WriteLine("<button onclick=\"fin()\">"+b.titulo+"</button>");
+				}
+			}
+		}
+	}
+#>
+
+<#+
+	private void crearCSS(){
+		string body ="body{font-family:arial;}";
+		string table= "table{font-size:80%;background:rgb(0,110,110)}";
+		string p= "p{color:rgb(0,250,250);font:bold; margin-bottom:0px; padding-bottom:0px;}";
+		string tdMenu="td.menu{background:rgb(0,150,150)}";
+		string tableMenu= "table.menu{font-size:100%;position:absolute; visibility:hidden}";
+		string a = "a{color:rgb(1,16,15)}";
+		string h1 ="h1{text-align:center}";
+		WriteLine(body);
+		WriteLine(table);
+		WriteLine(p);
+		WriteLine(tdMenu);
+		WriteLine(tableMenu);
+		WriteLine(a);
+		WriteLine(h1);
+	}
+#>
+<#+
+	private void crearJS(){
+		string showMenu = "function showMenu(elmnt) { document.getElementById(elmnt).style.visibility=\"visible\"; }";
+		string hideMenu = "function hideMenu(elmnt) { document.getElementById(elmnt).style.visibility=\"hidden\"; }";
+		string fin= "function fin(){alert('Fin de la Aplicacion'); window.close();}";
+		string ir= "function ir(nombre){ document.location=nombre+\".html\" }";
+		WriteLine(showMenu);
+		WriteLine(hideMenu);
+		WriteLine(fin);
+		WriteLine(ir);
 	}
 #>
