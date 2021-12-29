@@ -37,11 +37,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="solucionJAVA.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>solucionJAVA.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Dsl\GeneratedCode\JDCCCAJDOMDCMProyectoIPSSchema.xsd">
@@ -78,6 +73,9 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Acerca_De.html">
+      <DependentUpon>solucionHTML.tt</DependentUpon>
+    </Content>
     <Content Include="JDCCCAJDOMDCMProyectoIPSReport.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,9 +86,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>JDCCCAJDOMDCMProyectoIPSReportVB.tt</DependentUpon>
     </Content>
-    <Content Include="solucionJAVA.tt">
+    <Content Include="solucionHTML.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>solucionJAVA.cs</LastGenOutput>
+      <LastGenOutput>solucionHTML1.html</LastGenOutput>
+    </Content>
+    <Content Include="solucionHTML1.html">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>solucionHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="v_Abrir.html">
+      <DependentUpon>solucionHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="v_Informacion.html">
+      <DependentUpon>solucionHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="v_Principal.html">
+      <DependentUpon>solucionHTML.tt</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

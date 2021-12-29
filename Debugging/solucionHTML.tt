@@ -1,0 +1,33 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="True"#>
+<#@ output extension=".html" #>
+<#@ JDCCCAJDOMDCMProyectoIPS processor="JDCCCAJDOMDCMProyectoIPSDirectiveProcessor" requires="fileName='solucion.JDCCCAJDOMDCM_DSLProyectoIPS'" #>
+<#@ include file="EF.utility.CS.ttinclude" #>
+
+<#
+	var fileManager=EntityFrameworkTemplateFileManager.Create(this);
+    fileManager.StartNewFile(this.TapizVentanas.VentanaPrincipal.nombre+".html");
+    WriteLine("<html>");
+    WriteLine("<head>");
+    WriteLine("<title>" + this.TapizVentanas.VentanaPrincipal.nombre + "</title>");
+    WriteLine("<script type=\"text/javascript\">");
+    
+    WriteLine("function showmenu(elmnt) { document.getElementById(elmnt).style.visibility=\"visible\"; }");
+    WriteLine("function hidemenu(elmnt) { document.getElementById(elmnt).style.visibility=\"hidden\"; }");
+
+    WriteLine("</script>");
+    WriteLine("</head>");
+
+    WriteLine("<body>");
+
+
+
+    WriteLine("</body>");
+    WriteLine("</html>");
+    
+    foreach(VentanaSecundaria vs in this.TapizVentanas.VentanaSecundaria){
+        fileManager.StartNewFile(vs.nombre+".html");
+        WriteLine("Fichero por cada ventana");
+    }
+    fileManager.Process();
+
+#>
