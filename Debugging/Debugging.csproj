@@ -37,6 +37,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="solucionJAVA.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>solucionJAVA.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Dsl\GeneratedCode\JDCCCAJDOMDCMProyectoIPSSchema.xsd">
@@ -60,6 +65,10 @@
     <None Include="Sample.JDCCCAJDOMDCM_DSLProyectoIPS.diagram">
       <DependentUpon>Sample.JDCCCAJDOMDCM_DSLProyectoIPS</DependentUpon>
     </None>
+    <None Include="solucion.JDCCCAJDOMDCM_DSLProyectoIPS" />
+    <None Include="solucion.JDCCCAJDOMDCM_DSLProyectoIPS.diagram">
+      <DependentUpon>solucion.JDCCCAJDOMDCM_DSLProyectoIPS</DependentUpon>
+    </None>
     <None Include="Test.JDCCCAJDOMDCM_DSLProyectoIPS" />
     <None Include="Test.JDCCCAJDOMDCM_DSLProyectoIPS.diagram">
       <DependentUpon>Test.JDCCCAJDOMDCM_DSLProyectoIPS</DependentUpon>
@@ -78,6 +87,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>JDCCCAJDOMDCMProyectoIPSReportVB.tt</DependentUpon>
+    </Content>
+    <Content Include="solucionJAVA.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>solucionJAVA.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

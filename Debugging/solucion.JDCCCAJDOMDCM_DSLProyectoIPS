@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tapizVentanas xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="a0c7f670-b20c-4ee0-ae53-8fda5bc4e5e4" xmlns="http://schemas.microsoft.com/dsltools/JDCCCAJDOMDCMProyectoIPS">
+  <ventanaPrincipal>
+    <tapizVentanasHasVentanaPrincipal Id="454b3ee5-9604-4eaf-9276-d4269d15e666">
+      <ventanaPrincipal Id="c6bff01d-048b-4d96-a456-27bd50e82a93" nombre="v_Principal" altura="300" anchura="300">
+        <menu>
+          <contiene Id="2885d852-0adf-48e3-a15b-441341856ba2">
+            <menu Id="ebd941f7-93ab-49eb-9041-7a104774e819" titulo="Archivo">
+              <itemMenus>
+                <despliega Id="9011597e-2b03-4c17-9aa0-26a8e5953cfe">
+                  <itemMenu Id="3902df9f-c681-436e-966d-0b805d413830" titulo="Abrir">
+                    <ventanas>
+                      <navega Id="26e29dd8-9679-4b58-a91e-6b9a06b99643">
+                        <ventanaSecundariaMoniker Id="a0290b6d-90bd-4c70-98aa-5a1cb88fb3df" />
+                      </navega>
+                    </ventanas>
+                  </itemMenu>
+                </despliega>
+                <despliega Id="04738e9f-f421-4921-83ef-0de07adf151b">
+                  <itemMenu Id="38fca2cd-fc50-45b2-ae66-e25871c60c5e" titulo="Salir">
+                    <finAplicación>
+                      <navegadorReferencesFinAplicación Id="ab3d2ce0-6ac9-4c69-9c5d-596775f5afed">
+                        <finAplicaciónMoniker Id="ff323391-bb00-421a-8e1b-aee5ba5f2048" />
+                      </navegadorReferencesFinAplicación>
+                    </finAplicación>
+                  </itemMenu>
+                </despliega>
+              </itemMenus>
+            </menu>
+          </contiene>
+          <contiene Id="0f11c245-bd77-4b26-a966-c938d204e0aa">
+            <menu Id="acd7610d-e94d-4536-9da1-d0d961a97475" titulo="Ayuda">
+              <itemMenus>
+                <despliega Id="0586bbb1-d2c9-4ef6-9a76-1c56f96e3d78">
+                  <itemMenu Id="c7583452-a77a-419d-928a-448a34b2a379" titulo="AcercaDe">
+                    <ventanas>
+                      <navega Id="d4e5a393-4e66-4757-9f19-514303d379df">
+                        <ventanaSecundariaMoniker Id="b94e2c3f-e3ca-4711-887c-75cd7bd61df3" />
+                      </navega>
+                    </ventanas>
+                  </itemMenu>
+                </despliega>
+              </itemMenus>
+            </menu>
+          </contiene>
+        </menu>
+        <botons>
+          <tiene Id="926a6325-e90b-4a48-b28f-ab6a9dc5539d">
+            <boton Id="f93f86e9-ad1b-4dc9-936a-166a4d7954e9" titulo="Abrir">
+              <ventanas>
+                <navega Id="88998a86-10da-44db-a84e-819d90deddb5">
+                  <ventanaSecundariaMoniker Id="a0290b6d-90bd-4c70-98aa-5a1cb88fb3df" />
+                </navega>
+              </ventanas>
+            </boton>
+          </tiene>
+          <tiene Id="78217b87-a176-43a8-83c1-3398245d0cfb">
+            <boton Id="a6daac5e-b91d-412e-8e4a-594ff7748450" titulo="Salir">
+              <finAplicación>
+                <navegadorReferencesFinAplicación Id="82206e39-5bfb-4565-9337-a38b13e43ac1">
+                  <finAplicaciónMoniker Id="ff323391-bb00-421a-8e1b-aee5ba5f2048" />
+                </navegadorReferencesFinAplicación>
+              </finAplicación>
+            </boton>
+          </tiene>
+        </botons>
+      </ventanaPrincipal>
+    </tapizVentanasHasVentanaPrincipal>
+  </ventanaPrincipal>
+  <ventanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="23e6b14d-2d1f-4b38-8e61-f6cc1de2f2d4">
+      <ventanaSecundaria Id="a0290b6d-90bd-4c70-98aa-5a1cb88fb3df" nombre="v_Abrir" altura="250" anchura="300" modal="true">
+        <botons>
+          <tiene Id="48972dc1-db52-4007-8d7f-833204510a93">
+            <boton Id="843c2849-2d5d-40d9-9a34-8876576cd7d1" titulo="Abrir">
+              <ventanas>
+                <navega Id="3ff64d81-6ad0-4cbf-823e-be5cd4bc52de">
+                  <ventanaPrincipalMoniker Id="c6bff01d-048b-4d96-a456-27bd50e82a93" />
+                </navega>
+              </ventanas>
+            </boton>
+          </tiene>
+          <tiene Id="57d8f3c4-0292-47bc-8036-11d54d7118c3">
+            <boton Id="a6db4596-e079-4002-ad5a-eb5c97eef629" titulo="Cancelar">
+              <ventanas>
+                <navega Id="7d2e504a-f7b9-4c28-b0bf-816dc7685757">
+                  <ventanaPrincipalMoniker Id="c6bff01d-048b-4d96-a456-27bd50e82a93" />
+                </navega>
+              </ventanas>
+            </boton>
+          </tiene>
+        </botons>
+      </ventanaSecundaria>
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="373fd126-b88a-488e-98ae-902c9a847867">
+      <ventanaSecundaria Id="b94e2c3f-e3ca-4711-887c-75cd7bd61df3" nombre="Acerca_De" altura="150" anchura="250" modal="false">
+        <botons>
+          <tiene Id="d37504c2-d0a5-432d-8cd6-270145666425">
+            <boton Id="a3168cfe-e912-48e4-8f13-7970e69692ce" titulo="Atras">
+              <ventanas>
+                <navega Id="fce8a1b2-5e6f-4a0e-bffe-d9a6eecc868d">
+                  <ventanaPrincipalMoniker Id="c6bff01d-048b-4d96-a456-27bd50e82a93" />
+                </navega>
+              </ventanas>
+            </boton>
+          </tiene>
+          <tiene Id="ba473644-0fc6-4e4f-8126-5505003e43ab">
+            <boton Id="4d7413a9-23d3-484b-9e55-3375e2eacade" titulo="Informacion">
+              <ventanas>
+                <navega Id="6f28cbe7-b76e-4f3f-93fa-961172117e2f">
+                  <ventanaSecundariaMoniker Id="bfa1095e-504e-4afe-b781-e72db96d2405" />
+                </navega>
+              </ventanas>
+            </boton>
+          </tiene>
+        </botons>
+      </ventanaSecundaria>
+    </tapizVentanasHasVentanaSecundaria>
+    <tapizVentanasHasVentanaSecundaria Id="5be0f386-82b6-45c2-902c-3aea9de6fb55">
+      <ventanaSecundaria Id="bfa1095e-504e-4afe-b781-e72db96d2405" nombre="v_Informacion" altura="200" anchura="200" modal="true">
+        <botons>
+          <tiene Id="d3d7f2f5-4e76-4d62-982d-37a800ecd353">
+            <boton Id="99725bf8-c9aa-414b-8422-8c221ce4b550" titulo="Atras">
+              <ventanas>
+                <navega Id="f37ef3d7-563c-4989-87a8-c00dea4db014">
+                  <ventanaSecundariaMoniker Id="b94e2c3f-e3ca-4711-887c-75cd7bd61df3" />
+                </navega>
+              </ventanas>
+            </boton>
+          </tiene>
+        </botons>
+      </ventanaSecundaria>
+    </tapizVentanasHasVentanaSecundaria>
+  </ventanaSecundaria>
+  <finAplicación>
+    <tapizVentanasHasFinAplicación Id="2af28b94-8fb0-44ab-9e6d-cfb6aa51106d">
+      <finAplicación Id="ff323391-bb00-421a-8e1b-aee5ba5f2048" />
+    </tapizVentanasHasFinAplicación>
+  </finAplicación>
+</tapizVentanas>
