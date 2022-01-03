@@ -1,0 +1,160 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="True"#>
+<#@ output extension=".java" #>
+<#@ JDCCCAJDOMDCMProyectoIPS processor="JDCCCAJDOMDCMProyectoIPSDirectiveProcessor" requires="fileName='solucion.JDCCCAJDOMDCM_DSLProyectoIPS'" #>
+
+<#
+
+WriteLine ("import java.awt.*;");
+WriteLine ("import java.awt.event.*;");
+WriteLine("");
+
+WriteLine("public class Framev_"+this.TapizVentanas.VentanaPrincipal.nombre+" extends Frame implements ActionListener{");
+WriteLine("");
+
+	foreach (Boton boton in this.TapizVentanas.VentanaPrincipal.Botons){
+		WriteLine("\t private Button boton"+boton.titulo+" ;");
+		if (boton.Ventanas != null){
+			WriteLine("\t private Dialogv_"+boton.Ventanas.nombre+" ventana"+boton.Ventanas.nombre+";");
+		}
+		WriteLine("");
+	}
+
+	foreach (Menu menu in this.TapizVentanas.VentanaPrincipal.Menu){
+		foreach (ItemMenu item in menu.ItemMenus){
+			WriteLine("\t private MenuItem item"+item.titulo+" ;");
+			if (item.Ventanas != null){
+				WriteLine("\t private Dialogv_"+item.Ventanas.nombre+" ventana"+item.Ventanas.nombre+";");
+			}
+			WriteLine("");
+		}
+	}
+
+	WriteLine("");
+	WriteLine("\t public Framev_"+this.TapizVentanas.VentanaPrincipal.nombre+"() {");
+	WriteLine("");
+
+		WriteLine("\t\t super();");
+		WriteLine("");
+
+		WriteLine("\t\t this.setTitle(\"Framev_"+this.TapizVentanas.VentanaPrincipal.nombre+"\");");
+
+		foreach (Boton boton in this.TapizVentanas.VentanaPrincipal.Botons){
+			if (boton.Ventanas != null){
+				if (boton.Ventanas is VentanaSecundaria){
+					VentanaSecundaria ventanaSecundaria = (VentanaSecundaria)boton.Ventanas;
+					if (ventanaSecundaria.modal == true){
+						WriteLine("\t\t ventanav_"+boton.Ventanas.nombre+" = new Dialogv_"+boton.Ventanas.nombre+"(this, true) ;") ;
+					}
+					else{
+						WriteLine("\t\t ventanav_"+boton.Ventanas.nombre+" = new Dialogv_"+boton.Ventanas.nombre+"(this, false) ;") ;
+					}
+				}
+			}
+		}
+		WriteLine("");
+
+		foreach (Menu menu in this.TapizVentanas.VentanaPrincipal.Menu){
+			foreach (ItemMenu item in menu.ItemMenus){
+				if (item.Ventanas != null){
+					if (item.Ventanas is VentanaSecundaria){
+						VentanaSecundaria ventanaSecundaria = (VentanaSecundaria)item.Ventanas;
+						if (ventanaSecundaria.modal == true){
+							WriteLine("\t\t ventanav_"+item.Ventanas.nombre+" = new Dialogv_"+item.Ventanas.nombre+"(this, true) ;") ;
+						}
+						else{
+							WriteLine("\t\t ventanav_"+item.Ventanas.nombre+" = new Dialogv_"+item.Ventanas.nombre+"(this, false) ;") ;
+						}
+					}
+				}
+			}
+		}
+WriteLine("");
+
+		WriteLine("\t\t this.setLayout(new FlowLayout());") ;
+		WriteLine("");
+
+		WriteLine("\t\t MenuBar MB = new MenuBar();") ;
+		WriteLine("\t\t this.setMenuBar(MB);\n") ;
+
+		foreach (Menu menu in this.TapizVentanas.VentanaPrincipal.Menu){
+			WriteLine ("\t\t Menu menu"+menu.titulo+" = new Menu(\""+menu.titulo+"\");");
+			WriteLine("");
+			foreach (ItemMenu item in menu.ItemMenus){
+				WriteLine("\t\t item"+item.titulo+" = new MenuItem(\""+item.titulo+"\");") ;
+				WriteLine("\t\t menu"+menu.titulo+".add(item"+item.titulo+");") ;
+				WriteLine("");
+			}
+			WriteLine ("\t\t MB.add(menu"+menu.titulo+");");
+			WriteLine("");
+		}
+
+		foreach (Boton boton in this.TapizVentanas.VentanaPrincipal.Botons){
+				WriteLine("\t\t boton"+boton.titulo+" = new Button(\""+boton.titulo+"\");") ;
+				WriteLine("\t\t this.add(boton"+boton.titulo+");") ;
+				WriteLine("");
+		}
+
+		foreach (Menu menu in this.TapizVentanas.VentanaPrincipal.Menu){
+			foreach (ItemMenu item in menu.ItemMenus){
+					WriteLine("\t\t item"+item.titulo+".addActionListener(this);") ;
+			}
+		}
+
+		WriteLine("");
+
+		foreach (Boton boton in this.TapizVentanas.VentanaPrincipal.Botons){
+			WriteLine("\t\t boton"+boton.titulo+".addActionListener(this);") ;
+		}
+
+		WriteLine("");
+
+		WriteLine("\t\t this.setSize("+this.TapizVentanas.VentanaPrincipal.anchura+", "+this.TapizVentanas.VentanaPrincipal.altura+");");
+		WriteLine("\t\t this.setVisible(true);");
+		WriteLine("\t }");
+
+		WriteLine("");
+		WriteLine("");
+
+	WriteLine("\t public void actionPerformed (ActionEvent ae) {");
+	WriteLine("");
+
+	WriteLine("\t\t Object o = ae.getSource();");
+	WriteLine("");
+
+	foreach (Menu menu in this.TapizVentanas.VentanaPrincipal.Menu){
+		foreach (ItemMenu item in menu.ItemMenus){
+			if (item.Ventanas != null){
+				WriteLine ("\t\t if (o == item"+item.titulo+"){");
+					WriteLine ("\t\t\t ventanav_"+item.Ventanas.nombre+".setVisible(true);");
+				WriteLine ("\t\t }");
+				WriteLine("");
+			}
+			else if (item.FinAplicación != null){
+				WriteLine ("\t\t if (o == item"+item.titulo+"){");
+					WriteLine ("\t\t\t System.exit(0);");
+				WriteLine ("\t\t }");
+				WriteLine("");
+			}	
+		}
+	}
+	WriteLine("");
+
+	foreach (Boton boton in this.TapizVentanas.VentanaPrincipal.Botons){
+		if (boton.Ventanas != null){
+			WriteLine ("\t\t if (o == boton"+boton.titulo+"){");
+				WriteLine ("\t\t\t ventanav_"+boton.Ventanas.nombre+".setVisible(true);");
+			WriteLine ("\t\t }");
+			WriteLine("");
+		}
+		else if (boton.FinAplicación != null){
+			WriteLine ("\t\t if (o == boton"+boton.titulo+"){");
+				WriteLine ("\t\t\t System.exit(0);");
+			WriteLine ("\t\t }");
+			WriteLine("");
+		}	
+	}
+
+	WriteLine("\t }");
+	WriteLine("}");
+
+#>

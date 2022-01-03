@@ -37,6 +37,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="solucionJAVA_V_Secundaria1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>solucionJAVA_V_Secundaria.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Dsl\GeneratedCode\JDCCCAJDOMDCMProyectoIPSSchema.xsd">
@@ -97,6 +102,19 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>solucionHTML.tt</DependentUpon>
+    </Content>
+    <Content Include="solucionJAVA_V_Principal.java">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>solucionJAVA_V_Principal.tt</DependentUpon>
+    </Content>
+    <Content Include="solucionJAVA_V_Principal.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>solucionJAVA_V_Principal.java</LastGenOutput>
+    </Content>
+    <Content Include="solucionJAVA_V_Secundaria.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>solucionJAVA_V_Secundaria1.cs</LastGenOutput>
     </Content>
     <Content Include="style.css">
       <DependentUpon>solucionHTML.tt</DependentUpon>
