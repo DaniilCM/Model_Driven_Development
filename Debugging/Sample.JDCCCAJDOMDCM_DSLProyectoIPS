@@ -1,11 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<exampleModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="ffeac8de-6cc5-470e-9e5f-6b2524767517" xmlns="http://schemas.microsoft.com/dsltools/JDCCCAJDOMDCMProyectoIPS">
-  <elements>
-    <exampleElement Id="7737b22f-cc7a-4835-8bd9-9a98364c1c2c" name="ExampleElement1">
-      <targets>
-        <exampleElementMoniker name="/ffeac8de-6cc5-470e-9e5f-6b2524767517/ExampleElement2" />
-      </targets>
-    </exampleElement>
-    <exampleElement Id="6c38be1f-cbcf-4b3d-be44-fd8b22e0d492" name="ExampleElement2" />
-  </elements>
-</exampleModel>
+<tapizVentanas xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="b303c152-22d0-4a09-a488-9c5bee4a9186" xmlns="http://schemas.microsoft.com/dsltools/JDCCCAJDOMDCMProyectoIPS">
+  <ventanaPrincipal>
+    <tapizVentanasHasVentanaPrincipal Id="6697be2d-68a0-497b-bee0-b046154c8078">
+      <ventanaPrincipal Id="4e63f759-7c0b-4e9f-9c35-bfccc57781a6" nombre="casa" altura="0" anchura="0" />
+    </tapizVentanasHasVentanaPrincipal>
+  </ventanaPrincipal>
+</tapizVentanas>
