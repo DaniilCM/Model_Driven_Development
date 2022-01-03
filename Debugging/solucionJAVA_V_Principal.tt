@@ -72,20 +72,22 @@ WriteLine("");
 
 		WriteLine("\t\t this.setLayout(new FlowLayout());") ;
 		WriteLine("");
+		if(this.TapizVentanas.VentanaPrincipal.Menu.Count>0)
+		{
+			WriteLine("\t\t MenuBar MB = new MenuBar();") ;
+			WriteLine("\t\t this.setMenuBar(MB);\n") ;
 
-		WriteLine("\t\t MenuBar MB = new MenuBar();") ;
-		WriteLine("\t\t this.setMenuBar(MB);\n") ;
-
-		foreach (Menu menu in this.TapizVentanas.VentanaPrincipal.Menu){
-			WriteLine ("\t\t Menu menu"+menu.titulo+" = new Menu(\""+menu.titulo+"\");");
-			WriteLine("");
-			foreach (ItemMenu item in menu.ItemMenus){
-				WriteLine("\t\t item"+item.titulo+" = new MenuItem(\""+item.titulo+"\");") ;
-				WriteLine("\t\t menu"+menu.titulo+".add(item"+item.titulo+");") ;
+			foreach (Menu menu in this.TapizVentanas.VentanaPrincipal.Menu){
+				WriteLine ("\t\t Menu menu"+menu.titulo+" = new Menu(\""+menu.titulo+"\");");
 				WriteLine("");
-			}
-			WriteLine ("\t\t MB.add(menu"+menu.titulo+");");
-			WriteLine("");
+				foreach (ItemMenu item in menu.ItemMenus){
+					WriteLine("\t\t item"+item.titulo+" = new MenuItem(\""+item.titulo+"\");") ;
+					WriteLine("\t\t menu"+menu.titulo+".add(item"+item.titulo+");") ;
+					WriteLine("");
+				}
+				WriteLine ("\t\t MB.add(menu"+menu.titulo+");");
+				WriteLine("");
+				}
 		}
 
 		foreach (Boton boton in this.TapizVentanas.VentanaPrincipal.Botons){
@@ -156,5 +158,4 @@ WriteLine("");
 
 	WriteLine("\t }");
 	WriteLine("}");
-
 #>

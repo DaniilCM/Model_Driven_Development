@@ -4,3 +4,9 @@ F:\Universidad\5º Cuatrimestre\IPS\Model_Driven_Development\Debugging\obj\Debug
 F:\Universidad\5º Cuatrimestre\IPS\Model_Driven_Development\Debugging\obj\Debug\Debugging.csproj.CoreCompileInputs.cache
 F:\Universidad\5º Cuatrimestre\IPS\Model_Driven_Development\Debugging\obj\Debug\Debugging.dll
 F:\Universidad\5º Cuatrimestre\IPS\Model_Driven_Development\Debugging\obj\Debug\Debugging.pdb
+C:\Users\AinzOoalGown\IPS\JDCCCAJDOMDCMProyectoIPS\Model_Driven_Development\Debugging\bin\Debug\Debugging.dll
+C:\Users\AinzOoalGown\IPS\JDCCCAJDOMDCMProyectoIPS\Model_Driven_Development\Debugging\bin\Debug\Debugging.pdb
+C:\Users\AinzOoalGown\IPS\JDCCCAJDOMDCMProyectoIPS\Model_Driven_Development\Debugging\obj\Debug\Debugging.csproj.AssemblyReference.cache
+C:\Users\AinzOoalGown\IPS\JDCCCAJDOMDCMProyectoIPS\Model_Driven_Development\Debugging\obj\Debug\Debugging.csproj.CoreCompileInputs.cache
+C:\Users\AinzOoalGown\IPS\JDCCCAJDOMDCMProyectoIPS\Model_Driven_Development\Debugging\obj\Debug\Debugging.dll
+C:\Users\AinzOoalGown\IPS\JDCCCAJDOMDCMProyectoIPS\Model_Driven_Development\Debugging\obj\Debug\Debugging.pdb
