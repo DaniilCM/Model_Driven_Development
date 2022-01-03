@@ -5,16 +5,22 @@
 
 <#
 	var fileManager=EntityFrameworkTemplateFileManager.Create(this);
-	fileManager.StartNewFile("style.css");
-	crearCSS();
-	fileManager.StartNewFile("script.js");
-	crearJS();
-    fileManager.StartNewFile(this.TapizVentanas.VentanaPrincipal.nombre+".html");
-	var ventanaPrincipal = this.TapizVentanas.VentanaPrincipal;
-	inicioVentana(ventanaPrincipal);
-	foreach(Ventana ventana in this.TapizVentanas.VentanaSecundaria) {
-		fileManager.StartNewFile(ventana.nombre+ ".html");
-		inicioVentana(ventana);
+	if(this.TapizVentanas.VentanaPrincipal != null){
+		fileManager.StartNewFile("style.css");
+		crearCSS();
+		fileManager.StartNewFile("script.js");
+		crearJS();
+		fileManager.StartNewFile(this.TapizVentanas.VentanaPrincipal.nombre+".html");
+		var ventanaPrincipal = this.TapizVentanas.VentanaPrincipal;
+		inicioVentana(ventanaPrincipal);
+		if(this.TapizVentanas.VentanaSecundaria.Count > 0){
+			foreach(Ventana ventana in this.TapizVentanas.VentanaSecundaria) {
+				fileManager.StartNewFile(ventana.nombre+ ".html");
+				inicioVentana(ventana);
+			}
+		}
+	}else {
+		WriteLine("Debe existir una Ventana Principal  ");
 	}
 	fileManager.Process();
 
