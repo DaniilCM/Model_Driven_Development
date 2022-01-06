@@ -3,6 +3,7 @@
 <#@ JDCCCAJDOMDCMProyectoIPS processor="JDCCCAJDOMDCMProyectoIPSDirectiveProcessor" requires="fileName='solucion.JDCCCAJDOMDCM_DSLProyectoIPS'" #>
 
 <#
+bool encontrado = false;
 
 WriteLine ("import java.awt.*;");
 WriteLine ("import java.awt.event.*;");
@@ -13,18 +14,20 @@ WriteLine("");
 	
 	if(this.TapizVentanas.VentanaPrincipal.Botons.Count>0) foreach (Boton boton in this.TapizVentanas.VentanaPrincipal.Botons){
 		WriteLine("\t private Button boton"+boton.titulo+" ;");
-		if (boton.Ventanas != null && boton.titulo != "Atras" && boton.titulo != "Cancelar" && boton.titulo != "Salir"){
-			WriteLine("\t private Dialogv_"+boton.Ventanas.nombre+" ventana"+boton.Ventanas.nombre+";");
+		if (boton.Ventanas != null){
+			WriteLine("\t private Dialog"+boton.Ventanas.nombre+" ventana"+boton.Ventanas.nombre+";");
 		}
 		WriteLine("");
+		
 	}
 
 	if(this.TapizVentanas.VentanaPrincipal.Menu.Count>0) foreach (Menu menu in this.TapizVentanas.VentanaPrincipal.Menu){
 		if(menu.ItemMenus.Count>0) foreach (ItemMenu item in menu.ItemMenus){
 			WriteLine("\t private MenuItem item"+item.titulo+" ;");
-			if (item.Ventanas != null && item.titulo != "Atras" && item.titulo != "Cancelar" && item.titulo != "Salir"){
-				WriteLine("\t private Dialogv_"+item.Ventanas.nombre+" ventana"+item.Ventanas.nombre+";");
+			if (item.Ventanas != null){
+					WriteLine("\t private Dialog"+item.Ventanas.nombre+" ventana"+item.Ventanas.nombre+";");
 			}
+			
 			WriteLine("");
 		}
 	}
@@ -43,10 +46,10 @@ WriteLine("");
 				if (boton.Ventanas is VentanaSecundaria){
 					VentanaSecundaria ventanaSecundaria = (VentanaSecundaria)boton.Ventanas;
 					if (ventanaSecundaria.modal == true){
-						WriteLine("\t\t ventanav_"+boton.Ventanas.nombre+" = new Dialogv_"+boton.Ventanas.nombre+"(this, true) ;") ;
+						WriteLine("\t\t ventana"+boton.Ventanas.nombre+" = new Dialog"+boton.Ventanas.nombre+"(this, true) ;") ;
 					}
 					else{
-						WriteLine("\t\t ventanav_"+boton.Ventanas.nombre+" = new Dialogv_"+boton.Ventanas.nombre+"(this, false) ;") ;
+						WriteLine("\t\t ventana"+boton.Ventanas.nombre+" = new Dialog"+boton.Ventanas.nombre+"(this, false) ;") ;
 					}
 				}
 			}
@@ -59,10 +62,10 @@ WriteLine("");
 					if (item.Ventanas is VentanaSecundaria){
 						VentanaSecundaria ventanaSecundaria = (VentanaSecundaria)item.Ventanas;
 						if (ventanaSecundaria.modal == true){
-							WriteLine("\t\t ventanav_"+item.Ventanas.nombre+" = new Dialogv_"+item.Ventanas.nombre+"(this, true) ;") ;
+							WriteLine("\t\t ventana"+item.Ventanas.nombre+" = new Dialog"+item.Ventanas.nombre+"(this, true) ;") ;
 						}
 						else{
-							WriteLine("\t\t ventanav_"+item.Ventanas.nombre+" = new Dialogv_"+item.Ventanas.nombre+"(this, false) ;") ;
+							WriteLine("\t\t ventana"+item.Ventanas.nombre+" = new Dialog"+item.Ventanas.nombre+"(this, false) ;") ;
 						}
 					}
 				}
@@ -128,13 +131,13 @@ WriteLine("");
                 if (item.Ventanas != null){
                     if(item.titulo != "Atras" && item.titulo != "Cancelar" && item.titulo != "Salir"){
                         WriteLine ("\t\t if (o == item"+item.titulo+"){");
-                            WriteLine ("\t\t\t ventanav_"+item.Ventanas.nombre+".setVisible(true);");
+                            WriteLine ("\t\t\t ventana"+item.Ventanas.nombre+".setVisible(true);");
                         WriteLine ("\t\t }");
                         WriteLine("");
                     }
                     else{
                         WriteLine ("\t\t if (o == item"+item.titulo+"){");
-                                WriteLine ("\t\t\t ventanav_"+item.Ventanas.nombre+".setVisible(false);");
+                                WriteLine ("\t\t\t ventana"+item.Ventanas.nombre+".setVisible(false);");
                             WriteLine ("\t\t }");
                             WriteLine("");
                     }
@@ -153,13 +156,13 @@ WriteLine("");
 		if (boton.Ventanas != null){
                     if(boton.titulo != "Atras" && boton.titulo != "Cancelar" && boton.titulo != "Salir"){
                         WriteLine ("\t\t if (o == boton"+boton.titulo+"){");
-                            WriteLine ("\t\t\t ventanav_"+boton.Ventanas.nombre+".setVisible(true);");
+                            WriteLine ("\t\t\t ventana"+boton.Ventanas.nombre+".setVisible(true);");
                         WriteLine ("\t\t }");
                         WriteLine("");
                     }
                     else{
                         WriteLine ("\t\t if (o == boton"+boton.titulo+"){");
-                                WriteLine ("\t\t\t ventanav_"+boton.Ventanas.nombre+".setVisible(false);");
+                                WriteLine ("\t\t\t ventana"+boton.Ventanas.nombre+".setVisible(false);");
                             WriteLine ("\t\t }");
                             WriteLine("");
                     }
@@ -174,4 +177,14 @@ WriteLine("");
 
 	WriteLine("\t }");
 	WriteLine("}");
+#>
+
+<#+
+	private bool estaContenido(String []nombres, String ventana){
+		bool encontrado = false;
+		for(int i=0; i<=nombres.Rank; i++){
+			if(nombres[i].CompareTo(ventana) == 0 ) encontrado = true;
+		}
+		return encontrado;
+	}
 #>

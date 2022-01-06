@@ -2,17 +2,16 @@
 import java.awt.*;
 import java.awt.event.*;
 
-public class DialogV_v_Abrir extends Frame implements ActionListener{
+public class Dialogv_Abrir extends Dialog implements ActionListener{
 
 	 private Button botonAbrir ;
-	 private Dialogv_v_Abrir ventanav_Abrir;
 
-	 private Button botonSalir ;
+	 private Button botonCancelar ;
 
-		 public Dialogv_v_Abrir(Frame padre, boolean modal)
+		 public Dialogv_Abrir(Frame padre, boolean modal)
 {
 
-		 super(padre, "Dialogv_v_Abrir", modal);
+		 super(padre, "Dialogv_Abrir", modal);
 
 
 
@@ -38,28 +37,28 @@ public class DialogV_v_Abrir extends Frame implements ActionListener{
 
 
 		 if (o == botonAbrir){
-			 ventanav_v_Principal.setVisible(true);
+			 this.setVisible(false);
 		 }
 
 		 if (o == botonCancelar){
-			 ventanav_v_Principal.setVisible(false);
+			 this.setVisible(false);
 		 }
 
 	 }
 }
-public class DialogV_Acerca_De extends Frame implements ActionListener{
+public class DialogAcerca_De extends Dialog implements ActionListener{
 
-	 private Button botonAbrir ;
-	 private Dialogv_v_Abrir ventanav_Abrir;
+	 private Button botonAtras ;
 
-	 private Button botonSalir ;
+	 private Button botonInformacion ;
+	 private Dialogv_Informacion ventanav_Informacion;
 
-		 public Dialogv_Acerca_De(Frame padre, boolean modal)
+		 public DialogAcerca_De(Frame padre, boolean modal)
 {
 
-		 super(padre, "Dialogv_Acerca_De", modal);
+		 super(padre, "DialogAcerca_De", modal);
 
-		 ventanav_v_Informacion = new Dialogv_v_Informacion(this, true) ;
+		 ventanav_Informacion = new Dialogv_Informacion(this, true) ;
 
 
 		 this.setLayout(new FlowLayout());
@@ -84,28 +83,26 @@ public class DialogV_Acerca_De extends Frame implements ActionListener{
 
 
 		 if (o == botonAtras){
-			 ventanav_v_Principal.setVisible(false);
+			 this.setVisible(false);
 		 }
 
 		 if (o == botonInformacion){
-			 ventanav_v_Informacion.setVisible(true);
+			 ventanav_Informacion.setVisible(true);
 		 }
 
 	 }
 }
-public class DialogV_v_Informacion extends Frame implements ActionListener{
+public class Dialogv_Informacion extends Dialog implements ActionListener{
 
-	 private Button botonAbrir ;
-	 private Dialogv_v_Abrir ventanav_Abrir;
+	 private Button botonAtras ;
+	 private DialogAcerca_De ventanaAcerca_De;
 
-	 private Button botonSalir ;
-
-		 public Dialogv_v_Informacion(Frame padre, boolean modal)
+		 public Dialogv_Informacion(Frame padre, boolean modal)
 {
 
-		 super(padre, "Dialogv_v_Informacion", modal);
+		 super(padre, "Dialogv_Informacion", modal);
 
-		 ventanav_Acerca_De = new Dialogv_Acerca_De(this, false) ;
+		 ventanaAcerca_De = new DialogAcerca_De(this, false) ;
 
 
 		 this.setLayout(new FlowLayout());
@@ -126,7 +123,7 @@ public class DialogV_v_Informacion extends Frame implements ActionListener{
 
 
 		 if (o == botonAtras){
-			 ventanav_Acerca_De.setVisible(false);
+			 ventanaAcerca_De.setVisible(true);
 		 }
 
 	 }

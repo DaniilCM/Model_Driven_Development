@@ -7,13 +7,13 @@ WriteLine ("import java.awt.*;");
 WriteLine ("import java.awt.event.*;");
 WriteLine("");
 if(this.TapizVentanas.VentanaSecundaria.Count>0) foreach (VentanaSecundaria ventanaS in this.TapizVentanas.VentanaSecundaria){
-	WriteLine("public class DialogV_"+ventanaS.nombre+" extends Frame implements ActionListener{");
+	WriteLine("public class Dialog"+ventanaS.nombre+" extends Dialog implements ActionListener{");
 	WriteLine("");
 		
-		if(this.TapizVentanas.VentanaPrincipal.Botons.Count>0) foreach (Boton boton in this.TapizVentanas.VentanaPrincipal.Botons){
+		if(ventanaS.Botons.Count>0) foreach (Boton boton in ventanaS.Botons){
 			WriteLine("\t private Button boton"+boton.titulo+" ;");
-			if (boton.Ventanas != null && boton.titulo != "Atras" && boton.titulo != "Cancelar" && boton.titulo != "Salir"){
-				WriteLine("\t private Dialogv_"+boton.Ventanas.nombre+" ventana"+boton.Ventanas.nombre+";");
+			if (boton.Ventanas != null && boton.Ventanas != this.TapizVentanas.VentanaPrincipal && boton.Ventanas != ventanaS){
+				WriteLine("\t private Dialog"+boton.Ventanas.nombre+" ventana"+boton.Ventanas.nombre+";");
 			}
 			WriteLine("");
 		}
@@ -22,44 +22,44 @@ if(this.TapizVentanas.VentanaSecundaria.Count>0) foreach (VentanaSecundaria vent
 			if(menu.ItemMenus.Count>0) foreach (ItemMenu item in menu.ItemMenus){
 				WriteLine("\t private MenuItem item"+item.titulo+" ;");
 				if (item.Ventanas != null && item.titulo != "Atras" && item.titulo != "Cancelar" && item.titulo != "Salir"){
-					WriteLine("\t private Dialogv_"+item.Ventanas.nombre+" ventana"+item.Ventanas.nombre+";");
+					WriteLine("\t private Dialog"+item.Ventanas.nombre+" ventana"+item.Ventanas.nombre+";");
 				}
 				WriteLine("");
 			}
 		}
 
-		WriteLine("\t\t public Dialogv_"+ventanaS.nombre+"(Frame padre, boolean modal)");
+		WriteLine("\t\t public Dialog"+ventanaS.nombre+"(Frame padre, boolean modal)");
 		WriteLine("{");
 		WriteLine("");
 
-			WriteLine("\t\t super(padre, \"Dialogv_"+ventanaS.nombre+"\", modal);");
+			WriteLine("\t\t super(padre, \"Dialog"+ventanaS.nombre+"\", modal);");
 			WriteLine("");
 
-			if(this.TapizVentanas.VentanaPrincipal.Botons.Count>0) foreach (Boton boton in ventanaS.Botons){
+			if(ventanaS.Botons.Count>0) foreach (Boton boton in ventanaS.Botons){
 				if (boton.Ventanas != null){
 					if (boton.Ventanas is VentanaSecundaria){
 						VentanaSecundaria ventanaSecundaria = (VentanaSecundaria)boton.Ventanas;
 						if (ventanaSecundaria.modal == true){
-							WriteLine("\t\t ventanav_"+boton.Ventanas.nombre+" = new Dialogv_"+boton.Ventanas.nombre+"(this, true) ;") ;
+							WriteLine("\t\t ventana"+boton.Ventanas.nombre+" = new Dialog"+boton.Ventanas.nombre+"(this, true) ;") ;
 						}
 						else{
-							WriteLine("\t\t ventanav_"+boton.Ventanas.nombre+" = new Dialogv_"+boton.Ventanas.nombre+"(this, false) ;") ;
+							WriteLine("\t\t ventana"+boton.Ventanas.nombre+" = new Dialog"+boton.Ventanas.nombre+"(this, false) ;") ;
 						}
 					}
 				}
 			}
 			WriteLine("");
 
-			if(ventanaS.Menu.Count>0) foreach (Menu menu in this.TapizVentanas.VentanaPrincipal.Menu){
+			if(ventanaS.Menu.Count>0) foreach (Menu menu in ventanaS.Menu){
 				if(menu.ItemMenus.Count>0) foreach (ItemMenu item in menu.ItemMenus){
 					if (item.Ventanas != null){
 						if (item.Ventanas is VentanaSecundaria){
 							VentanaSecundaria ventanaSecundaria = (VentanaSecundaria)item.Ventanas;
 							if (ventanaSecundaria.modal == true){
-								WriteLine("\t\t ventanav_"+item.Ventanas.nombre+" = new Dialogv_"+item.Ventanas.nombre+"(this, true) ;") ;
+								WriteLine("\t\t ventana"+item.Ventanas.nombre+" = new Dialog"+item.Ventanas.nombre+"(this, true) ;") ;
 							}
 							else{
-								WriteLine("\t\t ventanav_"+item.Ventanas.nombre+" = new Dialogv_"+item.Ventanas.nombre+"(this, false) ;") ;
+								WriteLine("\t\t ventana"+item.Ventanas.nombre+" = new Dialog"+item.Ventanas.nombre+"(this, false) ;") ;
 							}
 						}
 					}
@@ -87,7 +87,7 @@ if(this.TapizVentanas.VentanaSecundaria.Count>0) foreach (VentanaSecundaria vent
 				}
 			}
 
-			if(this.TapizVentanas.VentanaPrincipal.Botons.Count>0) foreach (Boton boton in ventanaS.Botons){
+			if(ventanaS.Botons.Count>0) foreach (Boton boton in ventanaS.Botons){
 					WriteLine("\t\t boton"+boton.titulo+" = new Button(\""+boton.titulo+"\");") ;
 					WriteLine("\t\t this.add(boton"+boton.titulo+");") ;
 					WriteLine("");
@@ -101,7 +101,7 @@ if(this.TapizVentanas.VentanaSecundaria.Count>0) foreach (VentanaSecundaria vent
 
 			WriteLine("");
 
-			if(this.TapizVentanas.VentanaPrincipal.Botons.Count>0) foreach (Boton boton in ventanaS.Botons){
+			if(ventanaS.Botons.Count>0) foreach (Boton boton in ventanaS.Botons){
 				WriteLine("\t\t boton"+boton.titulo+".addActionListener(this);") ;
 			}
 
@@ -124,13 +124,13 @@ if(this.TapizVentanas.VentanaSecundaria.Count>0) foreach (VentanaSecundaria vent
                 if (item.Ventanas != null){
                     if(item.titulo != "Atras" && item.titulo != "Cancelar" && item.titulo != "Salir"){
                         WriteLine ("\t\t if (o == item"+item.titulo+"){");
-                            WriteLine ("\t\t\t ventanav_"+item.Ventanas.nombre+".setVisible(true);");
+                            WriteLine ("\t\t\t ventana"+item.Ventanas.nombre+".setVisible(true);");
                         WriteLine ("\t\t }");
                         WriteLine("");
                     }
                     else{
                         WriteLine ("\t\t if (o == item"+item.titulo+"){");
-                                WriteLine ("\t\t\t ventanav_"+item.Ventanas.nombre+".setVisible(false);");
+                                WriteLine ("\t\t\t ventana"+item.Ventanas.nombre+".setVisible(false);");
                             WriteLine ("\t\t }");
                             WriteLine("");
                     }
@@ -145,17 +145,17 @@ if(this.TapizVentanas.VentanaSecundaria.Count>0) foreach (VentanaSecundaria vent
         }
         WriteLine("");
 
-		if(this.TapizVentanas.VentanaPrincipal.Botons.Count>0) foreach (Boton boton in ventanaS.Botons){
+		if(ventanaS.Botons.Count>0) foreach (Boton boton in ventanaS.Botons){
             if (boton.Ventanas != null){
-                    if(boton.titulo != "Atras" && boton.titulo != "Cancelar" && boton.titulo != "Salir"){
+                    if(boton.Ventanas == this.TapizVentanas.VentanaPrincipal){
                         WriteLine ("\t\t if (o == boton"+boton.titulo+"){");
-                            WriteLine ("\t\t\t ventanav_"+boton.Ventanas.nombre+".setVisible(true);");
+                            WriteLine ("\t\t\t this.setVisible(false);");
                         WriteLine ("\t\t }");
                         WriteLine("");
                     }
                     else{
                         WriteLine ("\t\t if (o == boton"+boton.titulo+"){");
-                                WriteLine ("\t\t\t ventanav_"+boton.Ventanas.nombre+".setVisible(false);");
+                                WriteLine ("\t\t\t ventana"+boton.Ventanas.nombre+".setVisible(true);");
                             WriteLine ("\t\t }");
                             WriteLine("");
                     }

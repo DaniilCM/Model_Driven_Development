@@ -5,17 +5,17 @@ import java.awt.event.*;
 public class Framev_v_Principal extends Frame implements ActionListener{
 
 	 private Button botonAbrir ;
-	 private Dialogv_v_Abrir ventanav_Abrir;
+	 private Dialogv_Abrir ventanav_Abrir;
 
 	 private Button botonSalir ;
 
 	 private MenuItem itemAbrir ;
-	 private Dialogv_v_Abrir ventanav_Abrir;
+	 private Dialogv_Abrir ventanav_Abrir;
 
 	 private MenuItem itemSalir ;
 
 	 private MenuItem itemAcercaDe ;
-	 private Dialogv_Acerca_De ventanaAcerca_De;
+	 private DialogAcerca_De ventanaAcerca_De;
 
 
 	 public Framev_v_Principal() {
@@ -23,10 +23,10 @@ public class Framev_v_Principal extends Frame implements ActionListener{
 		 super();
 
 		 this.setTitle("Framev_v_Principal");
-		 ventanav_v_Abrir = new Dialogv_v_Abrir(this, true) ;
+		 ventanav_Abrir = new Dialogv_Abrir(this, true) ;
 
-		 ventanav_v_Abrir = new Dialogv_v_Abrir(this, true) ;
-		 ventanav_Acerca_De = new Dialogv_Acerca_De(this, false) ;
+		 ventanav_Abrir = new Dialogv_Abrir(this, true) ;
+		 ventanaAcerca_De = new DialogAcerca_De(this, false) ;
 
 		 this.setLayout(new FlowLayout());
 
@@ -73,7 +73,7 @@ public class Framev_v_Principal extends Frame implements ActionListener{
 		 Object o = ae.getSource();
 
 		 if (o == itemAbrir){
-			 ventanav_v_Abrir.setVisible(true);
+			 ventanav_Abrir.setVisible(true);
 		 }
 
 		 if (o == itemSalir){
@@ -81,12 +81,12 @@ public class Framev_v_Principal extends Frame implements ActionListener{
 		 }
 
 		 if (o == itemAcercaDe){
-			 ventanav_Acerca_De.setVisible(true);
+			 ventanaAcerca_De.setVisible(true);
 		 }
 
 
 		 if (o == botonAbrir){
-			 ventanav_v_Abrir.setVisible(true);
+			 ventanav_Abrir.setVisible(true);
 		 }
 
 		 if (o == botonSalir){
@@ -95,3 +95,4 @@ public class Framev_v_Principal extends Frame implements ActionListener{
 
 	 }
 }
+
