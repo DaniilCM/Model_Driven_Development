@@ -76,14 +76,20 @@
     <Content Include="Acerca_De.html">
       <DependentUpon>solucionHTML.tt</DependentUpon>
     </Content>
-    <Content Include="AplicaciónJAVA.java">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AplicaciónJAVA.tt</DependentUpon>
+    <Content Include="Aplicacion.java">
+      <DependentUpon>solucionJAVA_V_Principal.tt</DependentUpon>
     </Content>
-    <Content Include="AplicaciónJAVA.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AplicaciónJAVA.java</LastGenOutput>
+    <Content Include="DialogAcerca_De.java">
+      <DependentUpon>solucionJAVA_V_Secundaria.tt</DependentUpon>
+    </Content>
+    <Content Include="Dialogv_Abrir.java">
+      <DependentUpon>solucionJAVA_V_Secundaria.tt</DependentUpon>
+    </Content>
+    <Content Include="Dialogv_Informacion.java">
+      <DependentUpon>solucionJAVA_V_Secundaria.tt</DependentUpon>
+    </Content>
+    <Content Include="Framev_Principal.java">
+      <DependentUpon>solucionJAVA_V_Principal.tt</DependentUpon>
     </Content>
     <Content Include="JDCCCAJDOMDCMProyectoIPSReport.txt">
       <AutoGen>True</AutoGen>

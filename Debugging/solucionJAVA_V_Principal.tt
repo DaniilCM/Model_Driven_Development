@@ -1,20 +1,23 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="True"#>
 <#@ output extension=".java" #>
 <#@ JDCCCAJDOMDCMProyectoIPS processor="JDCCCAJDOMDCMProyectoIPSDirectiveProcessor" requires="fileName='solucion.JDCCCAJDOMDCM_DSLProyectoIPS'" #>
-
+<#@ include file="EF.utility.CS.ttinclude" #>
 <#
-bool encontrado = false;
-
+var fileManager=EntityFrameworkTemplateFileManager.Create(this);
+fileManager.StartNewFile("Aplicacion.java");
+aplicacion();
+fileManager.StartNewFile("Frame"+this.TapizVentanas.VentanaPrincipal.nombre+".java");
 WriteLine ("import java.awt.*;");
 WriteLine ("import java.awt.event.*;");
 WriteLine("");
-
-WriteLine("public class Framev_"+this.TapizVentanas.VentanaPrincipal.nombre+" extends Frame implements ActionListener{");
+List<Ventana> nombres = new List<Ventana>(); 
+WriteLine("public class Frame"+this.TapizVentanas.VentanaPrincipal.nombre+" extends Frame implements ActionListener{");
 WriteLine("");
 	
 	if(this.TapizVentanas.VentanaPrincipal.Botons.Count>0) foreach (Boton boton in this.TapizVentanas.VentanaPrincipal.Botons){
 		WriteLine("\t private Button boton"+boton.titulo+" ;");
-		if (boton.Ventanas != null){
+		if (boton.Ventanas != null && !nombres.Contains(boton.Ventanas)){
+			nombres.Add(boton.Ventanas);
 			WriteLine("\t private Dialog"+boton.Ventanas.nombre+" ventana"+boton.Ventanas.nombre+";");
 		}
 		WriteLine("");
@@ -24,22 +27,22 @@ WriteLine("");
 	if(this.TapizVentanas.VentanaPrincipal.Menu.Count>0) foreach (Menu menu in this.TapizVentanas.VentanaPrincipal.Menu){
 		if(menu.ItemMenus.Count>0) foreach (ItemMenu item in menu.ItemMenus){
 			WriteLine("\t private MenuItem item"+item.titulo+" ;");
-			if (item.Ventanas != null){
-					WriteLine("\t private Dialog"+item.Ventanas.nombre+" ventana"+item.Ventanas.nombre+";");
+			if (item.Ventanas != null && !nombres.Contains(item.Ventanas)){
+				nombres.Add(item.Ventanas);
+				WriteLine("\t private Dialog"+item.Ventanas.nombre+" ventana"+item.Ventanas.nombre+";");
 			}
-			
 			WriteLine("");
 		}
 	}
 
 	WriteLine("");
-	WriteLine("\t public Framev_"+this.TapizVentanas.VentanaPrincipal.nombre+"() {");
+	WriteLine("\t public Frame"+this.TapizVentanas.VentanaPrincipal.nombre+"() {");
 	WriteLine("");
 
 		WriteLine("\t\t super();");
 		WriteLine("");
 
-		WriteLine("\t\t this.setTitle(\"Framev_"+this.TapizVentanas.VentanaPrincipal.nombre+"\");");
+		WriteLine("\t\t this.setTitle(\"Frame"+this.TapizVentanas.VentanaPrincipal.nombre+"\");");
 
 		if(this.TapizVentanas.VentanaPrincipal.Botons.Count>0) foreach (Boton boton in this.TapizVentanas.VentanaPrincipal.Botons){
 			if (boton.Ventanas != null){
@@ -162,7 +165,7 @@ WriteLine("");
                     }
                     else{
                         WriteLine ("\t\t if (o == boton"+boton.titulo+"){");
-                                WriteLine ("\t\t\t ventana"+boton.Ventanas.nombre+".setVisible(false);");
+                                WriteLine ("\t\t\t this.setVisible(false);");
                             WriteLine ("\t\t }");
                             WriteLine("");
                     }
@@ -177,14 +180,15 @@ WriteLine("");
 
 	WriteLine("\t }");
 	WriteLine("}");
+	fileManager.Process();
 #>
-
 <#+
-	private bool estaContenido(String []nombres, String ventana){
-		bool encontrado = false;
-		for(int i=0; i<=nombres.Rank; i++){
-			if(nombres[i].CompareTo(ventana) == 0 ) encontrado = true;
-		}
-		return encontrado;
+	private void aplicacion(){
+		WriteLine("\t public class Aplicacion{");
+		WriteLine("\t\t public static void main(String[] args){");
+		WriteLine("\t\t\t new Frame"+this.TapizVentanas.VentanaPrincipal.nombre+"();");
+		WriteLine("\t\t}");
+		WriteLine("\t}");
 	}
+
 #>

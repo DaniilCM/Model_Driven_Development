@@ -1,11 +1,14 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="True"#>
-<#@ output extension=".java" #>
+<#@ output extension=".txt" #>
 <#@ JDCCCAJDOMDCMProyectoIPS processor="JDCCCAJDOMDCMProyectoIPSDirectiveProcessor" requires="fileName='solucion.JDCCCAJDOMDCM_DSLProyectoIPS'" #>
 
 <#
-	WriteLine("\t public class Aplicacion{");
-	WriteLine("\t\t public static void main(String[] args){");
-	WriteLine("\t\t\t new Framev_"+this.TapizVentanas.VentanaPrincipal.nombre+"();");
-	WriteLine("\t\t}");
-	WriteLine("\t}");
+ string main =@"
+	Pepepep
+	\{	peptio\}
+ ";
+
+ WriteLine(main);
+
 #>
+
